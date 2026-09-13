@@ -1,0 +1,216 @@
+{
+  "date": "2026-09-09T06:01:39.088Z",
+  "pages": [
+    {
+      "role": "reader",
+      "route": "sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "sources?q=&kind=source",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "wiki",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "records",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "chat",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "sources",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "sources?q=&kind=source",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "wiki",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "records",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reader",
+      "route": "chat",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "sources?q=&kind=source",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "wiki",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "records",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "chat",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "sources",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "sources?q=&kind=source",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "wiki",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "records",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "writer",
+      "route": "chat",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "sources?q=&kind=source",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "wiki",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "records",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "chat",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "sources",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "sources?q=&kind=source",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "wiki",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "records",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "role": "reviewer",
+      "route": "chat",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    }
+  ],
+  "errors": []
+}

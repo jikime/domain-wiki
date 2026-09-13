@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-09T17:08:03.914Z",
+  "corruptDumpRejected": true,
+  "corruptOriginalRejected": true,
+  "sameProfileRejected": true,
+  "sameProfileMessage": "백업 검사: 복원 대상은 원본과 다른 새 프로필이어야 합니다.",
+  "mainHealth": 200,
+  "existingServiceRejected": true,
+  "existingServiceMessage": "백업 검사: 기존 서비스는 덮어쓰지 않습니다. 새 프로필을 준비하세요.",
+  "restoredHealth": 200
+}

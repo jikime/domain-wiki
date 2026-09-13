@@ -1,0 +1,328 @@
+/* hince 기준 토큰. 업무 전용 상태·가독성 확장은 docs/design/hince/DESIGN.md 참조. */
+:root {
+  --brand: #ce8a99;
+  --brand-deep: #a16e72;
+  --brand-tint: #ce8a991a;
+  --background: #fff;
+  --foreground: #000;
+  --card: #fff;
+  --card-foreground: #000;
+  --popover: #fff;
+  --popover-foreground: #000;
+  --primary: var(--brand);
+  --primary-foreground: #000;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #000;
+  --muted: #f8f8f8;
+  --muted-foreground: #595959;
+  --accent: var(--brand-tint);
+  --accent-foreground: #000;
+  --destructive: #9b2727;
+  --success: #225d3b;
+  --warning: #725018;
+  --border: #ddd;
+  --input: #ddd;
+  --ring: #000;
+  --radius: 0px;
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 44px;
+  --space-8: 60px;
+  --content-width: 1120px;
+  --detail-width: 1370px;
+  --header-offset: 146px;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+html {
+  scroll-padding-top: var(--header-offset);
+}
+body {
+  font-size: 14px;
+  line-height: 1.65;
+  letter-spacing: -0.17px;
+  word-break: keep-all;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+button,
+summary,
+[role="button"] {
+  cursor: pointer;
+}
+a,
+button,
+input,
+textarea,
+summary,
+[tabindex] {
+  outline-offset: 4px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--ring);
+  box-shadow: none;
+}
+::selection {
+  background: var(--brand-tint);
+  color: #000;
+}
+:target {
+  scroll-margin-top: var(--header-offset);
+}
+.eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.35px;
+  color: var(--muted-foreground);
+}
+.muted,
+.field-help,
+.empty-copy,
+.empty-note,
+.search-caption {
+  color: var(--muted-foreground);
+  line-height: 1.8;
+}
+.muted {
+  font-size: 14px;
+}
+.field-help,
+.search-caption {
+  font-size: 12px;
+}
+.empty-copy,
+.empty-note {
+  font-size: 14px;
+  padding-block: 24px;
+}
+.small-tag,
+.stage-badge,
+.state-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
+}
+.state-good {
+  color: #000;
+  background: var(--brand-tint);
+  border-left: 2px solid var(--brand-deep);
+}
+.state-warning {
+  color: var(--warning);
+  background: #fcf8ef;
+  border-left: 2px solid var(--warning);
+}
+.notice-box {
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--brand-deep);
+  background: var(--muted);
+  color: #333;
+  padding: 16px 20px;
+  font-size: 13px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.form-error,
+[data-slot="field-error"] {
+  color: var(--destructive);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.form-success {
+  color: var(--success);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.form-stack,
+.form-stack fieldset,
+.upload-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+[data-slot="field"],
+[data-slot="field-set"],
+[data-slot="field-group"] {
+  min-width: 0;
+}
+[data-slot="field-label"] {
+  font-size: 13px;
+  font-weight: 500;
+}
+[data-slot="field-description"] {
+  font-size: 12px;
+  line-height: 1.8;
+}
+[data-slot="input"]:not([type="hidden"]),
+[data-slot="select-trigger"],
+[data-slot="textarea"] {
+  border: 1px solid var(--input);
+  background: #fff;
+  border-radius: 0;
+  color: var(--foreground);
+  box-shadow: none;
+  font-size: 14px;
+}
+[data-slot="input"]:not([type="hidden"]),
+[data-slot="select-trigger"] {
+  min-height: 44px;
+}
+[data-slot="input"]::placeholder,
+[data-slot="textarea"]::placeholder {
+  color: var(--muted-foreground);
+}
+[data-slot="textarea"] {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.85;
+}
+[data-slot="button"] {
+  min-height: 44px;
+  border-radius: 0;
+  box-shadow: none;
+  padding-inline: 18px;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+[data-slot="button"][data-size^="icon"] {
+  min-width: 44px;
+  padding-inline: 0;
+}
+[data-slot="button"][data-variant="outline"] {
+  border-color: var(--border);
+}
+[data-slot="button"][data-variant="link"] {
+  color: #000;
+  text-decoration: underline;
+}
+[data-slot="button"]:active {
+  transform: none;
+}
+[data-slot="checkbox"] {
+  border: 1px solid #777;
+  border-radius: 0;
+  box-shadow: none;
+}
+[data-slot="select-content"],
+[data-slot="dialog-content"],
+[data-slot="sheet-content"] {
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+[data-slot="select-item"] {
+  border-radius: 0;
+  min-height: 40px;
+}
+[data-slot="select-content"] {
+  z-index: 70;
+}
+[data-slot="dialog-overlay"],
+[data-slot="sheet-overlay"] {
+  background: #0008;
+  backdrop-filter: none;
+}
+[data-slot="dialog-title"],
+[data-slot="sheet-title"] {
+  font-size: 24px;
+  letter-spacing: -0.6px;
+}
+[data-slot="dialog-close"],
+[data-slot="sheet-close"] {
+  border-radius: 0;
+}
+[data-slot="input"][aria-invalid="true"],
+[data-slot="textarea"][aria-invalid="true"],
+[data-slot="select-trigger"][aria-invalid="true"] {
+  border-color: var(--destructive);
+}
+.form-actions,
+.row-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.stack-form {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+  margin-top: 24px;
+}
+.stack-form > button {
+  justify-self: start;
+}
+.stack-form output:empty {
+  display: none;
+}
+@media (max-width: 700px) {
+  :root {
+    --header-offset: 102px;
+  }
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+  [data-slot="input"]:not([type="hidden"]),
+  [data-slot="textarea"],
+  [data-slot="select-trigger"] {
+    font-size: 16px;
+  }
+  .notice-box {
+    padding: 14px 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    /* biome-ignore lint/complexity/noImportantStyles: 동작 줄이기 설정은 컴포넌트별 모션보다 우선한다. */
+    scroll-behavior: auto !important;
+    /* biome-ignore lint/complexity/noImportantStyles: 동작 줄이기 설정은 컴포넌트별 모션보다 우선한다. */
+    animation-duration: 0.01ms !important;
+    /* biome-ignore lint/complexity/noImportantStyles: 동작 줄이기 설정은 컴포넌트별 모션보다 우선한다. */
+    transition-duration: 0.01ms !important;
+  }
+}

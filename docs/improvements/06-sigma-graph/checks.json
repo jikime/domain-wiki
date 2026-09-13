@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-09T17:56:34.077485+00:00",
+  "build": "passed",
+  "typecheck": "passed",
+  "lint": "passed",
+  "fullIntegration": {
+    "passed": 199,
+    "durationMinutes": 10.8
+  },
+  "finalGraphIntegration": {
+    "passed": 7,
+    "durationSeconds": 11.4,
+    "includesFinalResizeKeyboardChanges": true
+  },
+  "browserViews": 10,
+  "browserFixtureViews": 2,
+  "browserErrors": 0,
+  "developmentOrigin": "http://localhost:3010",
+  "deploymentPerformed": false
+}

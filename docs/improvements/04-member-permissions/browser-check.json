@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-09T08:18:23.927Z",
+  "adminAssignedRole": "writer",
+  "effectiveRoles": ["reader", "writer", "reviewer"],
+  "checks": [
+    {
+      "width": 1440,
+      "path": "admin",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 1440,
+      "path": "reviews",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 1440,
+      "path": "reviews/desk",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 1440,
+      "path": "wiki/new",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 1440,
+      "path": "records",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "path": "admin",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "path": "reviews",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "path": "reviews/desk",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "path": "wiki/new",
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "path": "records",
+      "status": 200,
+      "overflow": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "domain" ADD COLUMN "guide" jsonb DEFAULT '{"steps":[],"readingIds":[]}'::jsonb NOT NULL;

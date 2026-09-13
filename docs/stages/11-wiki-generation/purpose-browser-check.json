@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-09T09:13:44.109Z",
+  "checks": [
+    {
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    }
+  ],
+  "errors": [],
+  "saved": false
+}

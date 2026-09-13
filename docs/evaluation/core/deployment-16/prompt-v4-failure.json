@@ -1,0 +1,834 @@
+{
+  "date": "2026-09-09T16:40:06.715Z",
+  "steps": [
+    {
+      "kind": "prepare",
+      "state": "completed",
+      "result": {
+        "units": [
+          {
+            "id": "unit-1",
+            "parts": [
+              {
+                "id": "58de1aff-f402-4279-a86b-d25780a6e0f3:0-17",
+                "end": 17,
+                "text": "# 가상 은하군 관제 운영 지침",
+                "start": 0,
+                "chunkId": "58de1aff-f402-4279-a86b-d25780a6e0f3",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 2,
+                  "heading": "가상 은하군 관제 운영 지침",
+                  "startLine": 1
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침",
+                "structureContext": ""
+              },
+              {
+                "id": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+                "end": 69,
+                "text": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다. 이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+                "start": 0,
+                "chunkId": "532bfc11-f614-4657-99a2-3b4201144be6",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 4,
+                  "heading": "가상 은하군 관제 운영 지침",
+                  "startLine": 3
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침",
+                "structureContext": ""
+              },
+              {
+                "id": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+                "end": 79,
+                "text": "## 정상 갱신\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다. 통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+                "start": 0,
+                "chunkId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 7,
+                  "heading": "정상 갱신",
+                  "startLine": 5
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 정상 갱신",
+                "structureContext": ""
+              },
+              {
+                "id": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "end": 115,
+                "text": "## 통신 중단과 재연결\n통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다. 마지막 수신 값을 최신 값으로 표시하면 안 됩니다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+                "start": 0,
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 10,
+                  "heading": "통신 중단과 재연결",
+                  "startLine": 8
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 통신 중단과 재연결",
+                "structureContext": ""
+              },
+              {
+                "id": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "end": 161,
+                "text": "## 점검 기록\n이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다. 장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다. 담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다. 이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+                "start": 0,
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 13,
+                  "heading": "점검 기록",
+                  "startLine": 11
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 점검 기록",
+                "structureContext": ""
+              }
+            ],
+            "contextBefore": ""
+          }
+        ],
+        "version": "semantic-parts-v1",
+        "excluded": [],
+        "warnings": [],
+        "inputLimit": 40800,
+        "sourceHash": "23879371c4940c4409efbd2a41faab87e8e59ea0b9f320d73c97d48111430372",
+        "totalChars": 441,
+        "totalParts": 5,
+        "totalChunks": 5,
+        "sourceBudget": 24000,
+        "parserVersion": "utf8-lines@1"
+      },
+      "error": null
+    },
+    {
+      "kind": "analyze",
+      "state": "completed",
+      "result": {
+        "parts": [
+          {
+            "partId": "58de1aff-f402-4279-a86b-d25780a6e0f3:0-17",
+            "reason": "문서 제목만 있으며 별도 사실·의무·조건이 없습니다.",
+            "status": "no_facts"
+          },
+          {
+            "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+            "reason": "문서 성격 및 적용 범위를 규정합니다.",
+            "status": "analyzed"
+          },
+          {
+            "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+            "reason": "정상 통신 상태의 화면 갱신 기준과 통신 장애 시 판정 예외를 규정합니다.",
+            "status": "analyzed"
+          },
+          {
+            "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+            "reason": "통신 중단 표시, 마지막 수신 값 표시 금지 및 재연결 후 확인 기한을 규정합니다.",
+            "status": "analyzed"
+          },
+          {
+            "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+            "reason": "점검 기록 보관, 장애 장비 예외, 담당자 기록 의무 및 문서 미기재 사항을 명시합니다.",
+            "status": "analyzed"
+          }
+        ],
+        "claims": [
+          {
+            "kind": "concept",
+            "text": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.",
+            "unit": null,
+            "value": null,
+            "subject": "가상 은하군 관제 운영 지침",
+            "evidence": [
+              {
+                "quote": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.",
+                "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+                "chunkId": "532bfc11-f614-4657-99a2-3b4201144be6"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "문서 성격"
+          },
+          {
+            "kind": "requirement",
+            "text": "이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+            "unit": null,
+            "value": "두 곳",
+            "subject": "이 지침",
+            "evidence": [
+              {
+                "quote": "이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+                "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+                "chunkId": "532bfc11-f614-4657-99a2-3b4201144be6"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "적용 대상"
+          },
+          {
+            "kind": "requirement",
+            "text": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다.",
+            "unit": "초",
+            "value": "30",
+            "subject": "관제 화면",
+            "evidence": [
+              {
+                "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다.",
+                "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+                "chunkId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "정상 통신 상태에서는",
+            "predicate": "갱신 간격"
+          },
+          {
+            "kind": "exception",
+            "text": "통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+            "unit": null,
+            "value": null,
+            "subject": "통신 장애 중",
+            "evidence": [
+              {
+                "quote": "통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+                "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+                "chunkId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf"
+              }
+            ],
+            "polarity": "negated",
+            "condition": "통신 장애 중에는",
+            "predicate": "갱신 기준 충족 판정"
+          },
+          {
+            "kind": "requirement",
+            "text": "통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.",
+            "unit": null,
+            "value": null,
+            "subject": "통신이 끊기면",
+            "evidence": [
+              {
+                "quote": "통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "통신이 끊기면",
+            "predicate": "표시 항목"
+          },
+          {
+            "kind": "requirement",
+            "text": "마지막 수신 값을 최신 값으로 표시하면 안 됩니다.",
+            "unit": null,
+            "value": null,
+            "subject": "마지막 수신 값",
+            "evidence": [
+              {
+                "quote": "마지막 수신 값을 최신 값으로 표시하면 안 됩니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "negated",
+            "condition": null,
+            "predicate": "최신 값 표시"
+          },
+          {
+            "kind": "requirement",
+            "text": "재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+            "unit": "초",
+            "value": "60",
+            "subject": "재연결 후",
+            "evidence": [
+              {
+                "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "재연결 후",
+            "predicate": "새 데이터 수신 여부 확인 기한"
+          },
+          {
+            "kind": "requirement",
+            "text": "이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.",
+            "unit": "시간",
+            "value": "72",
+            "subject": "이 시범사업의 정상 장비 점검 기록",
+            "evidence": [
+              {
+                "quote": "이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "보관 기간"
+          },
+          {
+            "kind": "exception",
+            "text": "장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.",
+            "unit": null,
+            "value": null,
+            "subject": "장애 장비의 기록",
+            "evidence": [
+              {
+                "quote": "장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "negated",
+            "condition": "장애 장비의 기록에는",
+            "predicate": "정상 장비 점검 기록 보관 기간 적용"
+          },
+          {
+            "kind": "requirement",
+            "text": "담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.",
+            "unit": null,
+            "value": "두 교차로",
+            "subject": "담당자",
+            "evidence": [
+              {
+                "quote": "담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "확인 및 기록 의무"
+          },
+          {
+            "kind": "uncertainty",
+            "text": "이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+            "unit": null,
+            "value": null,
+            "subject": "이 문서",
+            "evidence": [
+              {
+                "quote": "이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "negated",
+            "condition": null,
+            "predicate": "사업 예산 및 장애 장비 보관 기간 명시"
+          }
+        ],
+        "summary": "개발용 가상 표본인 본 지침은 가상 은하군 시범 교차로 두 곳에만 적용된다. 정상 통신 시 관제 화면은 30초 간격으로 갱신하며, 통신 장애 중에는 해당 갱신 기준 충족으로 판정하지 않는다. 통신 단절 시 마지막 수신 시각과 중단 표시를 함께 제공하고, 마지막 수신 값을 최신 값으로 표시하지 않는다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 정상 장비 점검 기록은 72시간 보관하되 장애 장비에는 적용하지 않으며, 담당자는 두 교차로의 정상 통신 및 통신 중단 상황을 각각 확인·기록한다. 사업 예산과 장애 장비 보관 기간은 문서에 명시되지 않았다.",
+        "questions": [
+          "장애 장비 기록의 별도 보관 기간은 이 문서에 명시되어 있지 않습니다.",
+          "사업 예산은 이 문서에 명시되어 있지 않습니다."
+        ]
+      },
+      "error": null
+    },
+    {
+      "kind": "integrate",
+      "state": "completed",
+      "result": {
+        "cache": {
+          "reusedUnits": 0,
+          "generatedUnits": 1
+        },
+        "claims": [
+          {
+            "id": "unit-1-claim-1",
+            "kind": "concept",
+            "text": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "가상 은하군 관제 운영 지침",
+            "evidence": [
+              {
+                "quote": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.",
+                "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+                "chunkId": "532bfc11-f614-4657-99a2-3b4201144be6"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "문서 성격"
+          },
+          {
+            "id": "unit-1-claim-2",
+            "kind": "requirement",
+            "text": "이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+            "unit": null,
+            "value": "두 곳",
+            "unitId": "unit-1",
+            "subject": "이 지침",
+            "evidence": [
+              {
+                "quote": "이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+                "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+                "chunkId": "532bfc11-f614-4657-99a2-3b4201144be6"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "적용 대상"
+          },
+          {
+            "id": "unit-1-claim-3",
+            "kind": "requirement",
+            "text": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다.",
+            "unit": "초",
+            "value": "30",
+            "unitId": "unit-1",
+            "subject": "관제 화면",
+            "evidence": [
+              {
+                "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다.",
+                "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+                "chunkId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "정상 통신 상태에서는",
+            "predicate": "갱신 간격"
+          },
+          {
+            "id": "unit-1-claim-4",
+            "kind": "exception",
+            "text": "통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "통신 장애 중",
+            "evidence": [
+              {
+                "quote": "통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+                "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+                "chunkId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf"
+              }
+            ],
+            "polarity": "negated",
+            "condition": "통신 장애 중에는",
+            "predicate": "갱신 기준 충족 판정"
+          },
+          {
+            "id": "unit-1-claim-5",
+            "kind": "requirement",
+            "text": "통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "통신이 끊기면",
+            "evidence": [
+              {
+                "quote": "통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "통신이 끊기면",
+            "predicate": "표시 항목"
+          },
+          {
+            "id": "unit-1-claim-6",
+            "kind": "requirement",
+            "text": "마지막 수신 값을 최신 값으로 표시하면 안 됩니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "마지막 수신 값",
+            "evidence": [
+              {
+                "quote": "마지막 수신 값을 최신 값으로 표시하면 안 됩니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "negated",
+            "condition": null,
+            "predicate": "최신 값 표시"
+          },
+          {
+            "id": "unit-1-claim-7",
+            "kind": "requirement",
+            "text": "재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+            "unit": "초",
+            "value": "60",
+            "unitId": "unit-1",
+            "subject": "재연결 후",
+            "evidence": [
+              {
+                "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+                "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+                "chunkId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": "재연결 후",
+            "predicate": "새 데이터 수신 여부 확인 기한"
+          },
+          {
+            "id": "unit-1-claim-8",
+            "kind": "requirement",
+            "text": "이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.",
+            "unit": "시간",
+            "value": "72",
+            "unitId": "unit-1",
+            "subject": "이 시범사업의 정상 장비 점검 기록",
+            "evidence": [
+              {
+                "quote": "이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "보관 기간"
+          },
+          {
+            "id": "unit-1-claim-9",
+            "kind": "exception",
+            "text": "장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "장애 장비의 기록",
+            "evidence": [
+              {
+                "quote": "장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "negated",
+            "condition": "장애 장비의 기록에는",
+            "predicate": "정상 장비 점검 기록 보관 기간 적용"
+          },
+          {
+            "id": "unit-1-claim-10",
+            "kind": "requirement",
+            "text": "담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.",
+            "unit": null,
+            "value": "두 교차로",
+            "unitId": "unit-1",
+            "subject": "담당자",
+            "evidence": [
+              {
+                "quote": "담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "affirmed",
+            "condition": null,
+            "predicate": "확인 및 기록 의무"
+          },
+          {
+            "id": "unit-1-claim-11",
+            "kind": "uncertainty",
+            "text": "이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+            "unit": null,
+            "value": null,
+            "unitId": "unit-1",
+            "subject": "이 문서",
+            "evidence": [
+              {
+                "quote": "이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+                "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+                "chunkId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7"
+              }
+            ],
+            "polarity": "negated",
+            "condition": null,
+            "predicate": "사업 예산 및 장애 장비 보관 기간 명시"
+          }
+        ],
+        "coverage": {
+          "excluded": [],
+          "totalChars": 441,
+          "totalParts": 5,
+          "totalUnits": 1,
+          "totalChunks": 5,
+          "processedChars": 441,
+          "processedParts": 5,
+          "processedUnits": 1,
+          "processedChunks": 5
+        },
+        "warnings": [],
+        "questions": [
+          "장애 장비 기록의 별도 보관 기간은 이 문서에 명시되어 있지 않습니다.",
+          "사업 예산은 이 문서에 명시되어 있지 않습니다."
+        ],
+        "summaries": [
+          {
+            "text": "개발용 가상 표본인 본 지침은 가상 은하군 시범 교차로 두 곳에만 적용된다. 정상 통신 시 관제 화면은 30초 간격으로 갱신하며, 통신 장애 중에는 해당 갱신 기준 충족으로 판정하지 않는다. 통신 단절 시 마지막 수신 시각과 중단 표시를 함께 제공하고, 마지막 수신 값을 최신 값으로 표시하지 않는다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 정상 장비 점검 기록은 72시간 보관하되 장애 장비에는 적용하지 않으며, 담당자는 두 교차로의 정상 통신 및 통신 중단 상황을 각각 확인·기록한다. 사업 예산과 장애 장비 보관 기간은 문서에 명시되지 않았다.",
+            "unitId": "unit-1"
+          }
+        ],
+        "comparisons": [],
+        "dispositions": [
+          {
+            "partId": "58de1aff-f402-4279-a86b-d25780a6e0f3:0-17",
+            "reason": "문서 제목만 있으며 별도 사실·의무·조건이 없습니다.",
+            "status": "no_facts",
+            "unitId": "unit-1"
+          },
+          {
+            "partId": "532bfc11-f614-4657-99a2-3b4201144be6:0-69",
+            "reason": "문서 성격 및 적용 범위를 규정합니다.",
+            "status": "analyzed",
+            "unitId": "unit-1"
+          },
+          {
+            "partId": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf:0-79",
+            "reason": "정상 통신 상태의 화면 갱신 기준과 통신 장애 시 판정 예외를 규정합니다.",
+            "status": "analyzed",
+            "unitId": "unit-1"
+          },
+          {
+            "partId": "8bdeac5a-e2a3-4e44-9789-adca298e53c4:0-115",
+            "reason": "통신 중단 표시, 마지막 수신 값 표시 금지 및 재연결 후 확인 기한을 규정합니다.",
+            "status": "analyzed",
+            "unitId": "unit-1"
+          },
+          {
+            "partId": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7:0-161",
+            "reason": "점검 기록 보관, 장애 장비 예외, 담당자 기록 의무 및 문서 미기재 사항을 명시합니다.",
+            "status": "analyzed",
+            "unitId": "unit-1"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "kind": "generation-prepare",
+      "state": "completed",
+      "result": {
+        "coverage": {
+          "excluded": [],
+          "totalChars": 441,
+          "totalParts": 5,
+          "totalUnits": 1,
+          "totalChunks": 5,
+          "processedChars": 441,
+          "processedParts": 5,
+          "processedUnits": 1,
+          "processedChunks": 5
+        },
+        "knowledge": {
+          "excluded": [],
+          "candidates": [],
+          "candidateLimit": 40,
+          "relatedSources": [],
+          "sourceEvidence": [
+            {
+              "id": "532bfc11-f614-4657-99a2-3b4201144be6",
+              "text": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다. 이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+              "title": "가상 은하군 관제 운영 지침",
+              "locator": {
+                "kind": "lines",
+                "endLine": 4,
+                "heading": "가상 은하군 관제 운영 지침",
+                "startLine": 3
+              },
+              "sourceId": "d00df683-99d4-4bc3-a3d5-9cf0cde6404c",
+              "versionId": "db07812c-a4a0-4f57-a3ce-17b835b6b7d6"
+            },
+            {
+              "id": "8ebf3c5e-4fc8-48ca-b019-d0c3ee2f9fbf",
+              "text": "## 정상 갱신\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다. 통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+              "title": "가상 은하군 관제 운영 지침",
+              "locator": {
+                "kind": "lines",
+                "endLine": 7,
+                "heading": "정상 갱신",
+                "startLine": 5
+              },
+              "sourceId": "d00df683-99d4-4bc3-a3d5-9cf0cde6404c",
+              "versionId": "db07812c-a4a0-4f57-a3ce-17b835b6b7d6"
+            },
+            {
+              "id": "8bdeac5a-e2a3-4e44-9789-adca298e53c4",
+              "text": "## 통신 중단과 재연결\n통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다. 마지막 수신 값을 최신 값으로 표시하면 안 됩니다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+              "title": "가상 은하군 관제 운영 지침",
+              "locator": {
+                "kind": "lines",
+                "endLine": 10,
+                "heading": "통신 중단과 재연결",
+                "startLine": 8
+              },
+              "sourceId": "d00df683-99d4-4bc3-a3d5-9cf0cde6404c",
+              "versionId": "db07812c-a4a0-4f57-a3ce-17b835b6b7d6"
+            },
+            {
+              "id": "eacc4f1b-104f-4631-87e3-6dc24b7fa1a7",
+              "text": "## 점검 기록\n이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다. 장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다. 담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다. 이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+              "title": "가상 은하군 관제 운영 지침",
+              "locator": {
+                "kind": "lines",
+                "endLine": 13,
+                "heading": "점검 기록",
+                "startLine": 11
+              },
+              "sourceId": "d00df683-99d4-4bc3-a3d5-9cf0cde6404c",
+              "versionId": "db07812c-a4a0-4f57-a3ce-17b835b6b7d6"
+            }
+          ]
+        },
+        "knowledgeStamp": {
+          "wikis": [],
+          "sources": []
+        },
+        "analysisQuestions": [
+          "장애 장비 기록의 별도 보관 기간은 이 문서에 명시되어 있지 않습니다.",
+          "사업 예산은 이 문서에 명시되어 있지 않습니다."
+        ]
+      },
+      "error": null
+    },
+    {
+      "kind": "plan-wiki",
+      "state": "completed",
+      "result": {
+        "pages": [
+          {
+            "key": "page-1",
+            "kind": "new",
+            "type": "source",
+            "links": [
+              {
+                "key": "page-2",
+                "reason": "이 출처에 규정된 정상 갱신, 통신 중단·재연결 확인, 기록 보관 및 담당자 확인 절차를 실행 단위로 함께 확인하기 위해 연결합니다."
+              }
+            ],
+            "scope": "실제 고객 지침이나 법적 기준이 아닌 개발용 가상 표본으로서, 가상 은하군의 시범 교차로 두 곳에만 적용된다. 정상 통신 시 화면 갱신, 통신 장애 및 재연결 표시·확인, 정상 장비 점검 기록과 담당자 기록 의무를 포함한다.",
+            "title": "가상 은하군 관제 운영 지침",
+            "pageId": null,
+            "reason": "제공된 원문의 모든 사실, 수치, 부정문, 적용 조건 및 문서 미기재 사항을 근거 위치와 함께 보존하는 출처 요약이 필요합니다.",
+            "aliases": [],
+            "subject": "가상 은하군 시범 교차로 두 곳을 위한 개발용 가상 표본 관제 운영 지침",
+            "claimIds": [
+              "unit-1-claim-1",
+              "unit-1-claim-2",
+              "unit-1-claim-3",
+              "unit-1-claim-4",
+              "unit-1-claim-5",
+              "unit-1-claim-6",
+              "unit-1-claim-7",
+              "unit-1-claim-8",
+              "unit-1-claim-9",
+              "unit-1-claim-10",
+              "unit-1-claim-11"
+            ],
+            "questions": [
+              "장애 장비 기록의 별도 보관 기간은 이 문서에 명시되어 있지 않습니다.",
+              "사업 예산은 이 문서에 명시되어 있지 않습니다."
+            ],
+            "mergedPageIds": []
+          },
+          {
+            "key": "page-2",
+            "kind": "new",
+            "type": "procedure",
+            "links": [
+              {
+                "key": "page-1",
+                "reason": "절차의 적용 대상, 수치, 예외 및 문서상 미기재 사항을 원 지침 요약에서 확인하기 위해 연결합니다."
+              }
+            ],
+            "scope": "두 시범 교차로에서 정상 통신 여부와 통신 중단 상황을 각각 확인하고 결과를 기록하는 절차이다. 정상 통신 시 30초 간격 화면 갱신, 통신 단절 시 마지막 수신 시각 및 중단 표시, 마지막 수신 값의 최신 값 표시 금지, 재연결 후 60초 안의 새 데이터 수신 여부 확인, 정상 장비 점검 기록의 72시간 보관을 포함한다. 장애 장비 기록에는 72시간 보관 기간을 적용하지 않는다.",
+            "title": "시범 교차로 관제 갱신·통신 장애·점검 기록 절차",
+            "pageId": null,
+            "reason": "원문의 조건부 운영 요구를 담당자가 정상 통신, 통신 중단, 재연결, 점검 기록 상황에서 누락 없이 수행할 수 있는 절차 지식으로 분리합니다.",
+            "aliases": [],
+            "subject": "가상 은하군 시범 교차로 두 곳의 관제 담당자",
+            "claimIds": [
+              "unit-1-claim-2",
+              "unit-1-claim-3",
+              "unit-1-claim-4",
+              "unit-1-claim-5",
+              "unit-1-claim-6",
+              "unit-1-claim-7",
+              "unit-1-claim-8",
+              "unit-1-claim-9",
+              "unit-1-claim-10"
+            ],
+            "questions": [
+              "장애 장비 기록에 적용할 별도 보관 기간은 원문에 없으므로 이 절차에서 정할 수 없습니다."
+            ],
+            "mergedPageIds": []
+          }
+        ],
+        "summary": "가상 은하군 시범 교차로 두 곳에 한정된 개발용 가상 표본 지침의 적용 범위, 정상 통신 시 화면 갱신 기준, 통신 중단·재연결 처리, 정상 장비 점검 기록 보관 및 담당자 확인·기록 의무를 출처 요약과 실행 절차로 정리합니다. 장애 장비 기록의 별도 보관 기간과 사업 예산은 문서에 명시되지 않았음을 보존합니다.",
+        "questions": [
+          "장애 장비 기록의 별도 보관 기간은 원문에 명시되어 있지 않습니다.",
+          "사업 예산은 원문에 명시되어 있지 않습니다."
+        ]
+      },
+      "error": null
+    },
+    {
+      "kind": "generate-wiki",
+      "state": "failed",
+      "result": {
+        "rejected": true,
+        "modelOutput": "{\"sections\":[{\"heading\":\"문서 성격 및 적용 대상\",\"content\":\"이 지침은 개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다. 가상 은하군의 시범 교차로 두 곳에만 적용합니다.\",\"claimIds\":[\"unit-1-claim-1\",\"unit-1-claim-2\"]},{\"heading\":\"정상 통신 시 화면 갱신과 장애 중 판정\",\"content\":\"정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다. 통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.\",\"claimIds\":[\"unit-1-claim-3\",\"unit-1-claim-4\"]},{\"heading\":\"통신 중단 표시 및 재연결 확인\",\"content\":\"통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다. 마지막 수신 값을 최신 값으로 표시하면 안 됩니다.\\n\\n재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.\",\"claimIds\":[\"unit-1-claim-5\",\"unit-1-claim-6\",\"unit-1-claim-7\"]},{\"heading\":\"점검 기록 보관과 담당자 확인\",\"content\":\"이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다. 장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.\\n\\n담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.\",\"claimIds\":[\"unit-1-claim-8\",\"unit-1-claim-9\",\"unit-1-claim-10\"]},{\"heading\":\"문서에 명시되지 않은 사항\",\"content\":\"이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.\",\"claimIds\":[\"unit-1-claim-11\"]}],\"conflict\":false,\"questions\":[]}",
+        "validationError": "생성 단락에서 사실의 적용 대상이 빠졌습니다."
+      },
+      "error": "생성 단락에서 사실의 적용 대상이 빠졌습니다."
+    },
+    {
+      "kind": "generate-wiki",
+      "state": "pending",
+      "result": null,
+      "error": null
+    },
+    {
+      "kind": "assemble-wiki",
+      "state": "pending",
+      "result": null,
+      "error": null
+    }
+  ],
+  "usage": [
+    {
+      "kind": "task-analyze",
+      "state": "completed",
+      "error": null,
+      "inputTokens": 1861,
+      "outputTokens": 2241
+    },
+    {
+      "kind": "task-plan-wiki",
+      "state": "completed",
+      "error": null,
+      "inputTokens": 4343,
+      "outputTokens": 980
+    },
+    {
+      "kind": "task-generate-wiki",
+      "state": "failed",
+      "error": "생성 단락에서 사실의 적용 대상이 빠졌습니다.",
+      "inputTokens": 3185,
+      "outputTokens": 414
+    },
+    {
+      "kind": "task-generate-wiki",
+      "state": "failed",
+      "error": "생성 단락에서 사실의 적용 대상이 빠졌습니다.",
+      "inputTokens": 3185,
+      "outputTokens": 420
+    }
+  ]
+}

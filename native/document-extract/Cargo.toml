@@ -1,0 +1,21 @@
+[package]
+name = "wiki-document-extract"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+license = "GPL-3.0-only"
+
+[dependencies]
+anydoc = "=0.1.6"
+epub = "=2.1.5"
+mobi = "0.8"
+zip = "2"
+html2text = { version = "=0.17.1", default-features = false, features = ["xml"] }
+serde_json = "1"
+image = { version = "=0.25.10", default-features = false, features = ["bmp", "ico", "png"] }
+
+[dev-dependencies]
+uuid = { version = "1", features = ["v4"] }
+
+[profile.release]
+strip = true

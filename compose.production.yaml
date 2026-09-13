@@ -1,0 +1,92 @@
+x-app: &app
+  image: ${APP_IMAGE:?배포 이미지를 지정하세요}
+  environment:
+    DATABASE_URL: ${DATABASE_URL:?DB 주소가 필요합니다}
+    BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?인증 비밀키가 필요합니다}
+    BETTER_AUTH_URL: ${BETTER_AUTH_URL:?서비스 주소가 필요합니다}
+    ORIGINALS_DIR: /var/lib/wiki/originals
+    SOURCE_IMPORT_ROOTS: ${SOURCE_IMPORT_ROOTS:-[]}
+    RESEARCH_SEARCH_PROVIDERS: ${RESEARCH_SEARCH_PROVIDERS:-[]}
+    AI_BASE_URL: ${AI_BASE_URL:-}
+    AI_MODEL: ${AI_MODEL:-}
+    AI_API_KEY: ${AI_API_KEY:-}
+    AI_CHAT_BASE_URL: ${AI_CHAT_BASE_URL:-}
+    AI_CHAT_MODEL: ${AI_CHAT_MODEL:-}
+    AI_CHAT_API_KEY: ${AI_CHAT_API_KEY:-}
+    AI_KNOWLEDGE_BASE_URL: ${AI_KNOWLEDGE_BASE_URL:-}
+    AI_KNOWLEDGE_MODEL: ${AI_KNOWLEDGE_MODEL:-}
+    AI_KNOWLEDGE_API_KEY: ${AI_KNOWLEDGE_API_KEY:-}
+    AI_VISION_MODEL: ${AI_VISION_MODEL:-}
+    AI_VISION_BASE_URL: ${AI_VISION_BASE_URL:-}
+    AI_VISION_API_KEY: ${AI_VISION_API_KEY:-}
+    AI_VISION_CONTEXT_CHARS: ${AI_VISION_CONTEXT_CHARS:-48000}
+    MINERU_BACKEND: ${MINERU_BACKEND:-disabled}
+    MINERU_ENDPOINT: ${MINERU_ENDPOINT:-}
+    MINERU_LOCAL_TOKEN: ${MINERU_LOCAL_TOKEN:-}
+    MINERU_API_KEY: ${MINERU_API_KEY:-}
+    MINERU_MODEL_VERSION: ${MINERU_MODEL_VERSION:-pipeline}
+    MINERU_LOCAL_BACKEND: ${MINERU_LOCAL_BACKEND:-hybrid-engine}
+    MINERU_LANGUAGE: ${MINERU_LANGUAGE:-korean}
+    MINERU_PARSE_METHOD: ${MINERU_PARSE_METHOD:-auto}
+    MINERU_MODEL_SERVER_URL: ${MINERU_MODEL_SERVER_URL:-}
+    AI_CHAT_CONTEXT_CHARS: ${AI_CHAT_CONTEXT_CHARS:-120000}
+    AI_KNOWLEDGE_CONTEXT_CHARS: ${AI_KNOWLEDGE_CONTEXT_CHARS:-48000}
+    AI_TASK_LEASE_SECONDS: ${AI_TASK_LEASE_SECONDS:-30}
+    JOB_LEASE_SECONDS: ${JOB_LEASE_SECONDS:-120}
+    AI_INCLUDE_USAGE: ${AI_INCLUDE_USAGE:-true}
+    AI_EMBEDDING_MODEL: ${AI_EMBEDDING_MODEL:-}
+    AI_EMBEDDING_BASE_URL: ${AI_EMBEDDING_BASE_URL:-}
+    AI_EMBEDDING_API_KEY: ${AI_EMBEDDING_API_KEY:-}
+    AI_TIMEOUT_SECONDS: ${AI_TIMEOUT_SECONDS:-90}
+    AI_MAX_CONCURRENT: ${AI_MAX_CONCURRENT:-3}
+  volumes:
+    - originals:/var/lib/wiki/originals
+  init: true
+  stop_grace_period: 30s
+  security_opt: [no-new-privileges:true]
+  logging:
+    driver: json-file
+    options: {max-size: 10m, max-file: "3"}
+
+services:
+  db:
+    image: pgvector/pgvector:pg17@sha256:cf134a767f474095eeba57e0117be8e568e011a63f33fbf252f14c9b760f8e6f
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?DB 관리자 암호가 필요합니다}
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres -d postgres]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  web:
+    <<: *app
+    ports: ["127.0.0.1:${HTTP_PORT:-3011}:3000"]
+    depends_on:
+      db: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+  worker:
+    <<: *app
+    command: [node, --conditions=react-server, --import, tsx, src/worker/index.ts]
+    depends_on:
+      web: {condition: service_healthy}
+    restart: unless-stopped
+  maintenance:
+    <<: *app
+    profiles: [maintenance]
+    command: [node, --conditions=react-server, --import, tsx, scripts/migrate.ts]
+
+volumes:
+  database:
+  originals:

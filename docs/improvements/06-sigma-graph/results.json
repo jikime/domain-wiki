@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-09T17:49:16.598Z",
+  "source": "기존 실제 모델 평가로 게시한 가상 개발 위키. 이번 그래프 표시는 모델을 호출하지 않음.",
+  "versions": {
+    "sigma": "3.0.2",
+    "@react-sigma/core": "5.0.6",
+    "graphology-layout-forceatlas2": "0.10.1",
+    "graphology": "0.26.0",
+    "graphology-communities-louvain": "2.0.2"
+  },
+  "views": [
+    {
+      "name": "graph",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "communities",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "filters",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "insights",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "selected",
+      "width": 1440,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "graph",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "communities",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "filters",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "insights",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    },
+    {
+      "name": "selected",
+      "width": 390,
+      "overflow": 0,
+      "errors": [],
+      "canvasCount": 7
+    }
+  ],
+  "businessReview": null
+}

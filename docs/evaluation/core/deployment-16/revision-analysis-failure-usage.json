@@ -1,0 +1,18 @@
+[
+  {
+    "id": "5616ac48-ea53-41d3-ba56-e8cc2caed231",
+    "taskId": "1b7ad32c-c5e1-4f27-8d82-b33285264b93",
+    "state": "failed",
+    "inputTokens": 1855,
+    "outputTokens": 2134,
+    "errorMessage": "분석의 적용 대상이 인용 원문 또는 절 제목과 다릅니다."
+  },
+  {
+    "id": "4cdadbfd-5ecd-4625-a1c8-d10dcd17b795",
+    "taskId": "1b7ad32c-c5e1-4f27-8d82-b33285264b93",
+    "state": "failed",
+    "inputTokens": 1855,
+    "outputTokens": 2201,
+    "errorMessage": "분석의 적용 대상이 인용 원문 또는 절 제목과 다릅니다."
+  }
+]

@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX "ingest_run_active_source_unique" ON "ingest_run" USING btree ("workspace_id","source_id") WHERE "ingest_run"."state" IN ('waiting','analysis','generation','review');

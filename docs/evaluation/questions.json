@@ -1,0 +1,129 @@
+[
+  {
+    "id": "Q01",
+    "question": "ITS가 무슨 뜻인가요?",
+    "scope": "교통관제 업무",
+    "answerable": true,
+    "expectedClaims": ["지능형 교통체계"],
+    "evidence": [
+      {
+        "source": "sources/01-project-guide.md",
+        "locator": "용어, 10행",
+        "quote": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다."
+      }
+    ]
+  },
+  {
+    "id": "Q02",
+    "question": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": true,
+    "expectedClaims": [
+      "정상 통신 상태에서 30초",
+      "다른 사업의 10초 기준을 섞지 않음"
+    ],
+    "evidence": [
+      {
+        "source": "sources/01-project-guide.md",
+        "locator": "점검 기준, 13행",
+        "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다."
+      }
+    ]
+  },
+  {
+    "id": "Q03",
+    "question": "통신이 끊겨도 마지막 값을 최신 정보라고 보여 줘도 되나요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": true,
+    "expectedClaims": ["안 됨", "마지막 수신 시각과 통신 중단 표시"],
+    "evidence": [
+      {
+        "source": "sources/01-project-guide.md",
+        "locator": "점검 기준, 14행",
+        "quote": "마지막 수신 값을 최신 값으로 표시하면 안 된다."
+      }
+    ]
+  },
+  {
+    "id": "Q04",
+    "question": "그럼 다시 연결되면 언제까지 확인해야 해요?",
+    "previousQuestion": "통신이 끊기면 어떻게 표시하나요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": true,
+    "expectedClaims": ["재연결 후 60초 안에 새 데이터 수신 여부 확인"],
+    "evidence": [
+      {
+        "source": "sources/01-project-guide.md",
+        "locator": "점검 기준, 15행",
+        "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인한다."
+      }
+    ]
+  },
+  {
+    "id": "Q05",
+    "question": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": true,
+    "expectedClaims": [
+      "마지막 수신 시각이 없어 최신 정보로 오해할 수 있었음",
+      "검토 중이며 반영 완료 아님",
+      "작성자 진술로 구분"
+    ],
+    "evidence": [
+      {
+        "source": "sources/02-field-note.txt",
+        "locator": "판단과 이유, 6행",
+        "quote": "마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다."
+      },
+      {
+        "source": "sources/02-field-note.txt",
+        "locator": "결과, 8행",
+        "quote": "변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다."
+      }
+    ]
+  },
+  {
+    "id": "Q06",
+    "question": "새봄시 사업 예산과 지체상금은 얼마인가요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": false,
+    "reason": "원문에 금액이나 계산 기준 없음",
+    "expectedClaims": ["자료로 확인할 수 없음", "계약서 등 추가 자료 필요"],
+    "evidence": []
+  },
+  {
+    "id": "Q07",
+    "question": "모든 도시의 관제 화면은 법적으로 30초마다 갱신해야 하나요?",
+    "scope": "교통관제 업무",
+    "answerable": false,
+    "reason": "가상 사업별 설정을 법적 의무로 일반화할 수 없음",
+    "expectedClaims": ["개발 표본만으로 법적 의무를 확인할 수 없음"],
+    "evidence": []
+  },
+  {
+    "id": "Q08",
+    "question": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+    "scope": "가상 겨울시 관제 사업",
+    "answerable": true,
+    "expectedClaims": ["10초", "새봄시 사업과 구분"],
+    "evidence": [
+      {
+        "source": "sources/03-other-project.md",
+        "locator": "별도 사업의 설정, 7행",
+        "quote": "이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다."
+      }
+    ]
+  },
+  {
+    "id": "Q09",
+    "question": "이 사업도 겨울시처럼 10초 간격으로 바꾸기로 했나요?",
+    "scope": "가상 새봄시 관제 시범사업",
+    "answerable": false,
+    "reason": "새봄시 사업에 대한 해당 변경 결정 없음",
+    "expectedClaims": [
+      "변경 여부 확인 불가",
+      "다른 프로젝트의 수치를 현재 프로젝트에 적용하지 않음"
+    ],
+    "evidence": []
+  }
+]

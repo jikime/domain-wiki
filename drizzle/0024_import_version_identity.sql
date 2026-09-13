@@ -1,0 +1,4 @@
+ALTER TABLE "source_version" DROP CONSTRAINT "source_version_hash_unique";--> statement-breakpoint
+ALTER TABLE "source_import" ADD CONSTRAINT "source_import_workspace_id_domain_id_domain_workspace_id_id_fk" FOREIGN KEY ("workspace_id","domain_id") REFERENCES "public"."domain"("workspace_id","id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "source_import" ADD CONSTRAINT "source_import_workspace_id_domain_id_project_id_project_workspace_id_domain_id_id_fk" FOREIGN KEY ("workspace_id","domain_id","project_id") REFERENCES "public"."project"("workspace_id","domain_id","id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+CREATE INDEX "source_import_due_idx" ON "source_import" USING btree ("enabled","next_scan_at");

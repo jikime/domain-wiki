@@ -1,0 +1,1 @@
+ALTER TABLE "domain" ADD COLUMN "purpose_guide" jsonb DEFAULT '{"keyQuestions":"","scopeIncluded":"","scopeExcluded":"","workingAssumptions":"","successCriteria":""}'::jsonb NOT NULL;

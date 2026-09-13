@@ -1,0 +1,1 @@
+ALTER TABLE "source_version" ADD COLUMN "folder_media" jsonb DEFAULT '[]'::jsonb NOT NULL;

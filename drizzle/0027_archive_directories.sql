@@ -1,0 +1,1 @@
+ALTER TABLE "archive_file" ADD COLUMN "directory" boolean DEFAULT false NOT NULL;

@@ -1,0 +1,98 @@
+{
+  "date": "2026-09-09T17:12:33.862Z",
+  "image": "my-domain-wiki:stage16-release-20260910",
+  "imageId": "sha256:c4359ab65d37da3491c82d22e996adc2cca081ec9348488b6cc764e9f783d0f6",
+  "businessReview": null,
+  "stablePages": 3,
+  "changedBodies": 2,
+  "unchangedBodies": 1,
+  "heldOutQuestions": 6,
+  "latestCitationsCurrent": true,
+  "sourceVersions": [
+    "db07812c-a4a0-4f57-a3ce-17b835b6b7d6",
+    "3508a145-f7f8-470a-9d48-8b608e47d6d3"
+  ],
+  "generation": {
+    "calls": 15,
+    "inputTokens": 48012,
+    "outputTokens": 15955,
+    "unknown": 0
+  },
+  "quality": {
+    "calls": 12,
+    "inputTokens": 14802,
+    "outputTokens": 4623,
+    "unknown": 0
+  },
+  "chats": {
+    "calls": 6,
+    "inputTokens": 14576,
+    "outputTokens": 411,
+    "unknown": 0
+  },
+  "failedAttemptsIncluded": {
+    "calls": 4,
+    "inputTokens": 10080,
+    "outputTokens": 5169,
+    "unknown": 0
+  },
+  "isolatedProbe": {
+    "calls": 1,
+    "inputTokens": 1955,
+    "outputTokens": 2033,
+    "unknown": 0
+  },
+  "overall": {
+    "calls": 34,
+    "inputTokens": 79345,
+    "outputTokens": 23022,
+    "unknown": 0
+  },
+  "embeddings": {
+    "calls": 10,
+    "inputTokens": 4299,
+    "unknown": 0
+  },
+  "qualityReview": {
+    "staleResolved": 3,
+    "semanticDeferred": 5,
+    "counts": 8,
+    "events": 24
+  },
+  "backup": {
+    "tables": 48,
+    "files": 2,
+    "imageId": "sha256:c4359ab65d37da3491c82d22e996adc2cca081ec9348488b6cc764e9f783d0f6",
+    "databaseSha256": "c6ec065a72ca34f34ef51979ddcec75da011c2ded4e5d07e5820ee491ad9dd73"
+  },
+  "restored": {
+    "sourceHashes": true,
+    "wikiBodies": true,
+    "savedChats": true,
+    "readerRole": true,
+    "views": 12
+  },
+  "guards": {
+    "date": "2026-09-09T17:08:03.914Z",
+    "corruptDumpRejected": true,
+    "corruptOriginalRejected": true,
+    "sameProfileRejected": true,
+    "sameProfileMessage": "백업 검사: 복원 대상은 원본과 다른 새 프로필이어야 합니다.",
+    "mainHealth": 200,
+    "existingServiceRejected": true,
+    "existingServiceMessage": "백업 검사: 기존 서비스는 덮어쓰지 않습니다. 새 프로필을 준비하세요.",
+    "restoredHealth": 200
+  },
+  "rollback": {
+    "date": "2026-09-09T17:11:13.291Z",
+    "profile": "wiki-stage16-restored",
+    "failedImage": "my-domain-wiki:stage16-deliberately-missing",
+    "pullDisabled": true,
+    "rejected": true,
+    "databaseTablesUnchanged": 48,
+    "recoveredImage": "my-domain-wiki:stage16-release-20260910",
+    "recoveredImageId": "sha256:c4359ab65d37da3491c82d22e996adc2cca081ec9348488b6cc764e9f783d0f6",
+    "health": 200,
+    "limitation": "별도 복원 환경에서 잘못된 이미지 기동 실패 후 검증된 동일 스키마 이미지로 복귀. 파괴적 스키마 변경의 역마이그레이션 시험이 아니다."
+  }
+}

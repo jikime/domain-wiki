@@ -1,0 +1,32 @@
+{
+  "fixtureType": "개발 표본",
+  "model": "계약 시험용 고정 응답",
+  "results": [
+    {
+      "question": "ITS",
+      "expectedMatch": true,
+      "found": 1
+    },
+    {
+      "question": "지능형 교통체계",
+      "expectedMatch": true,
+      "found": 1
+    },
+    {
+      "question": "스마트교통",
+      "expectedMatch": true,
+      "found": 1
+    },
+    {
+      "question": "ITS 공통",
+      "expectedMatch": true,
+      "found": 1
+    },
+    {
+      "question": "알수없는무근거문자열",
+      "expectedMatch": false,
+      "found": 0
+    }
+  ],
+  "semanticQuality": "실제 회사 모델 입력 대기"
+}

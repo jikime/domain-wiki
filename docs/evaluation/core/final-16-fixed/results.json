@@ -1,0 +1,1667 @@
+{
+  "phase": "final-16-fixed",
+  "date": "2026-09-09T16:09:38.742Z",
+  "dataClassification": "직접 작성한 가상 개발 표본",
+  "businessReview": null,
+  "queries": [
+    {
+      "id": "Q01",
+      "question": "ITS가 무슨 뜻인가요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": null,
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": ["지능형 교통체계"],
+      "conversationId": "aceab84e-85d9-48d7-9329-8ec0897bd328",
+      "elapsedMs": 4176,
+      "state": "completed",
+      "answer": "ITS는 이 개발 표본에서 **지능형 교통체계**를 뜻합니다. [E1]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "keyword",
+      "inputTokens": 734,
+      "outputTokens": 27,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-15128e6b-1960-4172-9f09-fc37930862d3",
+          "kind": "source",
+          "text": "## 용어\nITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3",
+          "locator": {
+            "kind": "lines",
+            "endLine": 11,
+            "heading": "용어",
+            "startLine": 9
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/01-project-guide.md",
+          "quote": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-15128e6b-1960-4172-9f09-fc37930862d3",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q02",
+      "question": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": [
+        "정상 통신 상태에서 30초",
+        "다른 사업의 10초 기준을 섞지 않음"
+      ],
+      "conversationId": "33f7902b-124f-4786-be28-65f9437b8c28",
+      "elapsedMs": 2788,
+      "state": "completed",
+      "answer": "정상 통신 상태에서는 관제 화면을 **30초 간격**으로 갱신합니다. 이는 가상 새봄시 관제 시범사업의 점검 기준입니다. [E2]  \n\n통신이 끊긴 동안에는 이 30초 갱신 기준을 충족한 것으로 판정하지 않습니다. [E2]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1699,
+      "outputTokens": 78,
+      "citations": [
+        {
+          "key": "E1",
+          "used": false,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E2",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-15128e6b-1960-4172-9f09-fc37930862d3",
+          "kind": "source",
+          "text": "## 용어\nITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3",
+          "locator": {
+            "kind": "lines",
+            "endLine": 11,
+            "heading": "용어",
+            "startLine": 9
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E4",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "kind": "source",
+          "text": "## 목적\n이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 8,
+            "heading": "목적",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E5",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-50d16d36-c4ff-4f48-94c4-53a136602451",
+          "kind": "source",
+          "text": "# 가상 새봄시 관제 시범사업 안내",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "50d16d36-c4ff-4f48-94c4-53a136602451",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 1
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E6",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E7",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "kind": "source",
+          "text": "## 상황\n2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "locator": {
+            "kind": "lines",
+            "endLine": 18,
+            "heading": "상황",
+            "startLine": 16
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E8",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "kind": "source",
+          "text": "상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.\n판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.\n조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다.\n결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.\n추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 15,
+            "heading": "작성 당시 메모",
+            "startLine": 10
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/01-project-guide.md",
+          "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q03",
+      "question": "통신이 끊겨도 마지막 값을 최신 정보라고 보여 줘도 되나요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": ["안 됨", "마지막 수신 시각과 통신 중단 표시"],
+      "conversationId": "4f2286f6-d411-495a-8f51-50bf37be9fea",
+      "elapsedMs": 2785,
+      "state": "completed",
+      "answer": "아니요. 가상 새봄시 관제 시범사업의 점검 기준에서는 통신이 끊긴 경우 마지막 수신 시각과 통신 중단 표시를 함께 보여 주어야 하며, 마지막 수신 값을 최신 값으로 표시하면 안 됩니다. [E2]\n\n현장 점검 기록에서도 마지막 수신 시각이 보이지 않으면 담당자가 이를 최신 정보로 오해할 수 있다고 판단했습니다. [E1]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1597,
+      "outputTokens": 100,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "kind": "source",
+          "text": "상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.\n판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.\n조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다.\n결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.\n추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 15,
+            "heading": "작성 당시 메모",
+            "startLine": 10
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E2",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "kind": "source",
+          "text": "## 상황\n2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "locator": {
+            "kind": "lines",
+            "endLine": 18,
+            "heading": "상황",
+            "startLine": 16
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E4",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-30a57b21-972a-41bd-8dd6-ccbb432f853d",
+          "kind": "source",
+          "text": "## 판단과 이유\n마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "30a57b21-972a-41bd-8dd6-ccbb432f853d",
+          "locator": {
+            "kind": "lines",
+            "endLine": 21,
+            "heading": "판단과 이유",
+            "startLine": 19
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E5",
+          "used": false,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E6",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-15128e6b-1960-4172-9f09-fc37930862d3",
+          "kind": "source",
+          "text": "## 용어\nITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3",
+          "locator": {
+            "kind": "lines",
+            "endLine": 11,
+            "heading": "용어",
+            "startLine": 9
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E7",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/01-project-guide.md",
+          "quote": "마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q04",
+      "question": "그럼 다시 연결되면 언제까지 확인해야 해요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": ["재연결 후 60초 안에 새 데이터 수신 여부 확인"],
+      "conversationId": "8026e5b4-f624-44fa-9b17-76255cb3f17c",
+      "elapsedMs": 5745,
+      "state": "completed",
+      "answer": "재연결 후 **60초 안에 새 데이터 수신 여부를 확인**해야 합니다. [E2]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1521,
+      "outputTokens": 62,
+      "citations": [
+        {
+          "key": "E1",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "kind": "source",
+          "text": "상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.\n판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.\n조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다.\n결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.\n추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 15,
+            "heading": "작성 당시 메모",
+            "startLine": 10
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E2",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E4",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E5",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "kind": "source",
+          "text": "## 상황\n2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "locator": {
+            "kind": "lines",
+            "endLine": 18,
+            "heading": "상황",
+            "startLine": 16
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/01-project-guide.md",
+          "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인한다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q05",
+      "question": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": [
+        "마지막 수신 시각이 없어 최신 정보로 오해할 수 있었음",
+        "검토 중이며 반영 완료 아님",
+        "작성자 진술로 구분"
+      ],
+      "conversationId": "c9810e45-c5cb-4306-a24e-032702b35a5b",
+      "elapsedMs": 3010,
+      "state": "completed",
+      "answer": "현장에서 2번 가상 교차로의 통신 연결을 끊었을 때, 화면에 마지막 값이 계속 남아 있는 문제가 관찰되었습니다. [E8] 작성자는 마지막 수신 시각이 표시되지 않아 담당자가 해당 값을 최신 정보로 오해할 수 있다고 판단했습니다. [E3]\n\n수정과 관련해서는 통신 중단 표시와 마지막 수신 시각을 함께 보여 주는 변경안이 제안된 상태입니다. [E5] 다만 이 변경안은 검토 중이며, 실제 반영이 완료되었는지는 확인할 수 없습니다. [E4] 또한 재연결 뒤 새 데이터의 수신 시각을 별도로 점검할 필요가 있다고 기록되어 있습니다. [E1]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1547,
+      "outputTokens": 165,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-075d6dac-f766-4fc2-812f-6fc32726541c",
+          "kind": "source",
+          "text": "## 추가 확인할 내용\n재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "075d6dac-f766-4fc2-812f-6fc32726541c",
+          "locator": {
+            "kind": "lines",
+            "endLine": 27,
+            "heading": "추가 확인할 내용",
+            "startLine": 25
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E2",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-14516b25-1b38-4fca-87e9-42e6134f3cb7",
+          "kind": "source",
+          "text": "## 연결한 원문 문단\n별도 문서 없음",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "14516b25-1b38-4fca-87e9-42e6134f3cb7",
+          "locator": {
+            "kind": "lines",
+            "endLine": 30,
+            "heading": "연결한 원문 문단",
+            "startLine": 28
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E3",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-30a57b21-972a-41bd-8dd6-ccbb432f853d",
+          "kind": "source",
+          "text": "## 판단과 이유\n마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "30a57b21-972a-41bd-8dd6-ccbb432f853d",
+          "locator": {
+            "kind": "lines",
+            "endLine": 21,
+            "heading": "판단과 이유",
+            "startLine": 19
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E4",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-6b19e82d-b88f-45a2-a95e-7ea712e6fc34",
+          "kind": "source",
+          "text": "## 결과\n변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "6b19e82d-b88f-45a2-a95e-7ea712e6fc34",
+          "locator": {
+            "kind": "lines",
+            "endLine": 24,
+            "heading": "결과",
+            "startLine": 22
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E5",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "kind": "source",
+          "text": "상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.\n판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.\n조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다.\n결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.\n추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 15,
+            "heading": "작성 당시 메모",
+            "startLine": 10
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E6",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-2a88c729-5140-47c0-b875-4d4a624e8e21",
+          "kind": "source",
+          "text": "# 가상 새봄시 현장 점검 기록",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "2a88c729-5140-47c0-b875-4d4a624e8e21",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 현장 점검 기록",
+            "startLine": 1
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E7",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-493fa1d2-3b61-4670-8e56-85a484744079",
+          "kind": "source",
+          "text": "자료 유형: 작성자 진술 (공식 규정과 구분)",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "493fa1d2-3b61-4670-8e56-85a484744079",
+          "locator": {
+            "kind": "lines",
+            "endLine": 4,
+            "heading": "가상 새봄시 현장 점검 기록",
+            "startLine": 3
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E8",
+          "used": true,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "kind": "source",
+          "text": "## 상황\n2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "locator": {
+            "kind": "lines",
+            "endLine": 18,
+            "heading": "상황",
+            "startLine": 16
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/02-field-note.txt",
+          "quote": "마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다.",
+          "found": true
+        },
+        {
+          "source": "sources/02-field-note.txt",
+          "quote": "변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-075d6dac-f766-4fc2-812f-6fc32726541c",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-30a57b21-972a-41bd-8dd6-ccbb432f853d",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-6b19e82d-b88f-45a2-a95e-7ea712e6fc34",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-4f3c4f08-a65f-495a-b7d1-d957f4f5b71b",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-8ee7f405-00d3-42d8-b448-53f0f7ceadab",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q06",
+      "question": "새봄시 사업 예산과 지체상금은 얼마인가요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": false,
+      "expectedClaims": ["자료로 확인할 수 없음", "계약서 등 추가 자료 필요"],
+      "conversationId": "e6fd6f13-7001-4503-a803-4b84283156fd",
+      "elapsedMs": 2490,
+      "state": "completed",
+      "answer": "제공된 원문에는 가상 새봄시 관제 시범사업의 **사업 예산**이나 **계약상 지체상금** 금액이 포함되어 있지 않습니다. [E1]\n\n또한 이 자료는 개발 검증용 가상 자료이며 실제 고객 지침이나 법적 기준이 아니라고 명시합니다. [E4]  \n예산·지체상금이 필요하면 별도의 예산서 또는 계약 문서를 확인해야 합니다.",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1676,
+      "outputTokens": 105,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E2",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-50d16d36-c4ff-4f48-94c4-53a136602451",
+          "kind": "source",
+          "text": "# 가상 새봄시 관제 시범사업 안내",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "50d16d36-c4ff-4f48-94c4-53a136602451",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 1
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E4",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "kind": "source",
+          "text": "자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업\n이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "630c929a-7f3b-43d5-a065-a99f5f402441",
+          "locator": {
+            "kind": "lines",
+            "endLine": 5,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 3
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E5",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "kind": "source",
+          "text": "## 목적\n이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 8,
+            "heading": "목적",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E6",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-493fa1d2-3b61-4670-8e56-85a484744079",
+          "kind": "source",
+          "text": "자료 유형: 작성자 진술 (공식 규정과 구분)",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "493fa1d2-3b61-4670-8e56-85a484744079",
+          "locator": {
+            "kind": "lines",
+            "endLine": 4,
+            "heading": "가상 새봄시 현장 점검 기록",
+            "startLine": 3
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E7",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E8",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-c471a006-951d-41ab-b134-51bcbf2caa58",
+          "kind": "source",
+          "text": "## 작성 당시 메모\n가상 새봄시 현장 점검 기록\n자료 ID: SAMPLE-02 / 버전: 1 / 유형: 작성자 진술 / 프로젝트: 가상 새봄시 관제 시범사업\n이 기록은 개발 검증용 가상 경험이며 공식 규정이 아니다.",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "c471a006-951d-41ab-b134-51bcbf2caa58",
+          "locator": {
+            "kind": "lines",
+            "endLine": 9,
+            "heading": "작성 당시 메모",
+            "startLine": 5
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        }
+      ],
+      "evidenceHits": [],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q07",
+      "question": "모든 도시의 관제 화면은 법적으로 30초마다 갱신해야 하나요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": null,
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": false,
+      "expectedClaims": ["개발 표본만으로 법적 의무를 확인할 수 없음"],
+      "conversationId": "0da26f50-fc20-4f8a-88d2-7158af655432",
+      "elapsedMs": 3935,
+      "state": "completed",
+      "answer": "아니요. 제공된 자료만으로 **모든 도시의 관제 화면에 30초 갱신이라는 법적 의무가 있다고 볼 수는 없습니다.**\n\n- 새봄시의 가상 시범사업에서는 **정상 통신 상태**일 때 관제 화면을 30초 간격으로 갱신하는 점검 기준을 제시합니다. [E3]\n- 다만 해당 위키도 이 조건을 모든 사업의 법적 의무로 일반화하지 않는다고 명시합니다. [E1]\n- 원문은 개발 검증용 가상 자료이며 실제 고객 지침이나 법적 기준이 아니라고 밝힙니다. [E7]\n- 별도 가상 사업인 겨울시는 10초 갱신 설정을 두고 있어, 사업별 설정도 서로 다릅니다. [E5]\n\n따라서 실제 법적 의무 여부는 적용 지역, 관련 법령·고시, 계약 및 운영 지침을 별도로 확인해야 합니다.",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1671,
+      "outputTokens": 217,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E2",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-15128e6b-1960-4172-9f09-fc37930862d3",
+          "kind": "source",
+          "text": "## 용어\nITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3",
+          "locator": {
+            "kind": "lines",
+            "endLine": 11,
+            "heading": "용어",
+            "startLine": 9
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E4",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "kind": "source",
+          "text": "## 목적\n이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 8,
+            "heading": "목적",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E5",
+          "used": true,
+          "id": "5478ae27-d0ff-4c46-942d-ab64b4814c7d",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "kind": "source",
+          "text": "## 별도 사업의 설정\n이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다.\n이 설정을 다른 사업에 동일하게 적용한다는 근거는 없다.",
+          "title": "가상 겨울시 관제 사업 안내",
+          "chunkId": "32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "locator": {
+            "kind": "lines",
+            "endLine": 9,
+            "heading": "별도 사업의 설정",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "5f99088b-011c-48c3-8693-8eb48ec918f8"
+        },
+        {
+          "key": "E6",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E7",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "kind": "source",
+          "text": "자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업\n이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "630c929a-7f3b-43d5-a065-a99f5f402441",
+          "locator": {
+            "kind": "lines",
+            "endLine": 5,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 3
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E8",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-50d16d36-c4ff-4f48-94c4-53a136602451",
+          "kind": "source",
+          "text": "# 가상 새봄시 관제 시범사업 안내",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "50d16d36-c4ff-4f48-94c4-53a136602451",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 1
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        }
+      ],
+      "evidenceHits": [],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q08",
+      "question": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "9a95ab9b-5c42-4ab6-8d2b-cda5de4c9d75",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": true,
+      "expectedClaims": ["10초", "새봄시 사업과 구분"],
+      "conversationId": "bc60d61c-1801-424d-8da9-9fb20174b2f3",
+      "elapsedMs": 1859,
+      "state": "completed",
+      "answer": "가상 겨울시 관제 사업의 관제 화면 갱신 간격은 **10초**로 정해져 있습니다. [E1]\n\n다만 이는 해당 가상 사업에 한정된 설정이며, 다른 사업에 동일하게 적용할 근거는 없습니다. [E1]",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 985,
+      "outputTokens": 65,
+      "citations": [
+        {
+          "key": "E1",
+          "used": true,
+          "id": "5478ae27-d0ff-4c46-942d-ab64b4814c7d",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "kind": "source",
+          "text": "## 별도 사업의 설정\n이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다.\n이 설정을 다른 사업에 동일하게 적용한다는 근거는 없다.",
+          "title": "가상 겨울시 관제 사업 안내",
+          "chunkId": "32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "locator": {
+            "kind": "lines",
+            "endLine": 9,
+            "heading": "별도 사업의 설정",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "5f99088b-011c-48c3-8693-8eb48ec918f8"
+        },
+        {
+          "key": "E2",
+          "used": false,
+          "id": "5478ae27-d0ff-4c46-942d-ab64b4814c7d",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-7cfb4023-3922-46f3-944a-6fb74b0bc5cb",
+          "kind": "source",
+          "text": "# 가상 겨울시 관제 사업 메모",
+          "title": "가상 겨울시 관제 사업 안내",
+          "chunkId": "7cfb4023-3922-46f3-944a-6fb74b0bc5cb",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 겨울시 관제 사업 메모",
+            "startLine": 1
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "5f99088b-011c-48c3-8693-8eb48ec918f8"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "5478ae27-d0ff-4c46-942d-ab64b4814c7d",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-955f477c-0a11-43a0-9177-8cf088cb32be",
+          "kind": "source",
+          "text": "자료 ID: SAMPLE-03 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 겨울시 관제 사업\n개발 표본이며 실제 사업 기준이 아니다. 새봄시 사업의 근거로 사용하지 않는다.",
+          "title": "가상 겨울시 관제 사업 안내",
+          "chunkId": "955f477c-0a11-43a0-9177-8cf088cb32be",
+          "locator": {
+            "kind": "lines",
+            "endLine": 5,
+            "heading": "가상 겨울시 관제 사업 메모",
+            "startLine": 3
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "5f99088b-011c-48c3-8693-8eb48ec918f8"
+        }
+      ],
+      "evidenceHits": [
+        {
+          "source": "sources/03-other-project.md",
+          "quote": "이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다.",
+          "found": true
+        }
+      ],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5478ae27-d0ff-4c46-942d-ab64b4814c7d?version=5f99088b-011c-48c3-8693-8eb48ec918f8#chunk-32cf491c-3f9b-45e3-9fee-a8e459445cc1",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    },
+    {
+      "id": "Q09",
+      "question": "이 사업도 겨울시처럼 10초 간격으로 바꾸기로 했나요?",
+      "scope": {
+        "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+        "projectId": "848969b7-3887-44bf-8140-8cb9e2f84796",
+        "sourceId": null,
+        "wikiId": null
+      },
+      "answerable": false,
+      "expectedClaims": [
+        "변경 여부 확인 불가",
+        "다른 프로젝트의 수치를 현재 프로젝트에 적용하지 않음"
+      ],
+      "conversationId": "3122dc37-cffc-4a91-bfab-d51f219bd1e6",
+      "elapsedMs": 4813,
+      "state": "completed",
+      "answer": "제공된 원문과 위키만으로는 **겨울시처럼 10초 간격으로 변경하기로 했는지 확인할 수 없습니다.** 겨울시의 기준이나 변경 결정·회의록은 제공되지 않았습니다.\n\n현재 확인되는 가상 새봄시 시범사업 기준은 정상 통신 상태에서 관제 화면을 **30초 간격으로 갱신**하는 것입니다. [E2] 이 자료는 개발 검증용 가상 자료이며 실제 고객 지침이나 법적 기준은 아닙니다. [E6]\n\n10초 변경안의 검토 또는 확정 여부를 판단하려면 해당 변경 요청서, 승인 기록 또는 최신 버전의 사업 기준을 확인해야 합니다.",
+      "model": "gpt-5.6-terra",
+      "retrievalMode": "hybrid",
+      "inputTokens": 1629,
+      "outputTokens": 217,
+      "citations": [
+        {
+          "key": "E1",
+          "used": false,
+          "id": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/wiki/1fbeeba5-e100-45cf-b44d-83d08f9127b4?version=ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "kind": "wiki",
+          "text": "가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다.",
+          "title": "새봄시 관제 화면의 정상 갱신 조건",
+          "category": "wiki",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+          "linkedPages": []
+        },
+        {
+          "key": "E2",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "kind": "source",
+          "text": "## 점검 기준\n정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "locator": {
+            "kind": "lines",
+            "endLine": 16,
+            "heading": "점검 기준",
+            "startLine": 12
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E3",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "kind": "source",
+          "text": "## 목적\n이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "locator": {
+            "kind": "lines",
+            "endLine": 8,
+            "heading": "목적",
+            "startLine": 6
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E4",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-50d16d36-c4ff-4f48-94c4-53a136602451",
+          "kind": "source",
+          "text": "# 가상 새봄시 관제 시범사업 안내",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "50d16d36-c4ff-4f48-94c4-53a136602451",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 1
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E5",
+          "used": false,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-5f077754-943f-4038-8998-f1445db72d5f",
+          "kind": "source",
+          "text": "## 검수\n가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f",
+          "locator": {
+            "kind": "lines",
+            "endLine": 20,
+            "heading": "검수",
+            "startLine": 17
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E6",
+          "used": true,
+          "id": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "kind": "source",
+          "text": "자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업\n이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다.",
+          "title": "가상 새봄시 관제 시범사업 안내",
+          "chunkId": "630c929a-7f3b-43d5-a065-a99f5f402441",
+          "locator": {
+            "kind": "lines",
+            "endLine": 5,
+            "heading": "가상 새봄시 관제 시범사업 안내",
+            "startLine": 3
+          },
+          "category": "project",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        {
+          "key": "E7",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-493fa1d2-3b61-4670-8e56-85a484744079",
+          "kind": "source",
+          "text": "자료 유형: 작성자 진술 (공식 규정과 구분)",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "493fa1d2-3b61-4670-8e56-85a484744079",
+          "locator": {
+            "kind": "lines",
+            "endLine": 4,
+            "heading": "가상 새봄시 현장 점검 기록",
+            "startLine": 3
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        },
+        {
+          "key": "E8",
+          "used": false,
+          "id": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/5eaa8d1d-b035-4728-b83d-6a249703a6b2?version=2adcccbd-dd39-40ea-8c7f-8d557f2c7d37#chunk-2a88c729-5140-47c0-b875-4d4a624e8e21",
+          "kind": "source",
+          "text": "# 가상 새봄시 현장 점검 기록",
+          "title": "가상 새봄시 현장 점검 기록",
+          "chunkId": "2a88c729-5140-47c0-b875-4d4a624e8e21",
+          "locator": {
+            "kind": "lines",
+            "endLine": 2,
+            "heading": "가상 새봄시 현장 점검 기록",
+            "startLine": 1
+          },
+          "category": "testimony",
+          "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+          "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37"
+        }
+      ],
+      "evidenceHits": [],
+      "sourceLinks": [
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-b9892654-1f44-41d0-9f79-7666b30e0983",
+          "status": 200
+        },
+        {
+          "href": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a?version=b6e8c47d-9df8-4694-8684-c10f1b99778d#chunk-630c929a-7f3b-43d5-a065-a99f5f402441",
+          "status": 200
+        }
+      ],
+      "businessReview": null
+    }
+  ],
+  "fixture": {
+    "workspaceId": "6b6977fa-2ce5-43bd-98a0-563ef5c21581",
+    "sources": {
+      "01-project-guide.md": {
+        "sourceId": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+        "versionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d",
+        "fileHash": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+      },
+      "02-field-note.txt": {
+        "sourceId": "5eaa8d1d-b035-4728-b83d-6a249703a6b2",
+        "versionId": "2adcccbd-dd39-40ea-8c7f-8d557f2c7d37",
+        "fileHash": "b227d9715667ab60051180c516bc75363c8c856aa71edebd72a1b7bdf35fe8df"
+      },
+      "03-other-project.md": {
+        "sourceId": "5478ae27-d0ff-4c46-942d-ab64b4814c7d",
+        "versionId": "5f99088b-011c-48c3-8693-8eb48ec918f8",
+        "fileHash": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+      }
+    },
+    "projects": {
+      "spring": "848969b7-3887-44bf-8140-8cb9e2f84796",
+      "winter": "9a95ab9b-5c42-4ab6-8d2b-cda5de4c9d75"
+    },
+    "domainId": "6c79639d-d301-4391-8e1a-81d95bb55b14",
+    "wikiId": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+    "wikiVersionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+    "sourceFiles": [
+      "01-project-guide.md",
+      "02-field-note.txt",
+      "03-other-project.md"
+    ]
+  },
+  "role": "reader",
+  "retrievalLimit": 8,
+  "singleProposal": {
+    "generationId": "d6577b2b-d8a5-495c-ac77-cef58213a558",
+    "batchId": "1727d4eb-229b-4b22-aeae-dd8eb20778a1",
+    "state": "draft",
+    "items": [
+      {
+        "body": "## 상황\n- 이 문서는 개발 검증을 위해 작성된 가상 자료이며, 실제 고객 지침이나 법적 기준이 아니다.\n- 가상 새봄시 관제 시범사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.\n- 이 개발 표본에서 ITS는 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다.\n\n## 판단과 이유\n- 정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n- 통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다.\n- 마지막 수신 값을 최신 값으로 표시하면 안 된다.\n- 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다.\n- 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.\n\n## 결과\n- 가상 담당자는 교차로별로 정상 통신 상황과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.\n\n## 추가 확인할 내용\n- 이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+        "kind": "update",
+        "title": "가상 새봄시 관제 시범사업 점검 기준",
+        "pageId": "1fbeeba5-e100-45cf-b44d-83d08f9127b4",
+        "reason": "기존 위키의 정상 통신 시 30초 갱신 조건을 유지하면서, 적용 범위가 가상 시범사업 및 개발 표본임을 명확히 하고 통신 중단·재연결 시의 예외 조건, 검수 조건 및 자료에 없는 사항을 원문에 따라 보완한다.",
+        "chunkIds": [
+          "630c929a-7f3b-43d5-a065-a99f5f402441",
+          "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+          "15128e6b-1960-4172-9f09-fc37930862d3",
+          "b9892654-1f44-41d0-9f79-7666b30e0983",
+          "5f077754-943f-4038-8998-f1445db72d5f"
+        ],
+        "mergedPages": [],
+        "parentVersionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3",
+        "basePublishedVersionId": "ccbf525c-d250-42ec-94c8-c552ec7f02f3"
+      }
+    ],
+    "businessReview": null
+  },
+  "backgroundTask": {
+    "id": "66013ca6-c02d-48ec-aad2-97b0a8762ca0",
+    "sourceId": "4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+    "sourceVersionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d",
+    "kind": "summary",
+    "analysisTaskId": null,
+    "ingestRunId": null,
+    "groups": [],
+    "unavailableReason": "",
+    "state": "completed",
+    "model": "gpt-5.6-terra",
+    "errorMessage": null,
+    "createdAt": "2026-09-09T16:10:35.328Z",
+    "updatedAt": "2026-09-09T16:10:47.216Z",
+    "heartbeatAt": "2026-09-09T16:10:47.117Z",
+    "recoveries": 0,
+    "current": true,
+    "result": {
+      "claims": [
+        {
+          "text": "이 문서는 개발 검증을 위해 만든 가상의 자료이며 실제 고객 지침이나 법적 기준이 아니다.",
+          "quote": "이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다.",
+          "chunkId": "630c929a-7f3b-43d5-a065-a99f5f402441"
+        },
+        {
+          "text": "사업은 가상 교차로 3곳에서 관제 화면 정보 갱신을 점검하는 시범사업이다.",
+          "quote": "이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+          "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b"
+        },
+        {
+          "text": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다.",
+          "quote": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다.",
+          "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3"
+        },
+        {
+          "text": "정상 통신 상태의 갱신 간격은 30초이며, 통신 중단 시 마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+          "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983"
+        },
+        {
+          "text": "재연결 후 60초 안에 새 데이터 수신 여부를 확인하고, 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+          "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983"
+        },
+        {
+          "text": "가상 담당자는 각 교차로에서 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.",
+          "quote": "가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f"
+        },
+        {
+          "text": "작성자 안내에 따르면 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용은 없다.",
+          "quote": "이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+          "chunkId": "5f077754-943f-4038-8998-f1445db72d5f"
+        }
+      ],
+      "summary": "가상 새봄시 관제 시범사업은 가상 교차로 3곳에서 관제 화면 정보 갱신을 점검하는 개발 검증용 가상 자료이며, 실제 고객 지침이나 법적 기준이 아니다. ITS는 이 개발 표본에서 지능형 교통체계를 의미한다. 정상 통신 상태에서는 화면을 30초 간격으로 갱신하며, 통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여야 하고 마지막 수신 값을 최신 값으로 표시해서는 안 된다. 재연결 후에는 60초 안에 새 데이터 수신 여부를 확인하며, 통신 장애 중에는 30초 갱신 기준을 충족한 것으로 판정하지 않는다. 가상 담당자는 교차로별 정상 통신 및 통신 중단 상황을 각각 1회 이상 확인하고 결과를 남긴다. 작성자 안내에 따르면 이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무 내용이 없다.",
+      "coverage": {
+        "excluded": [],
+        "totalChunks": 6,
+        "processedChunks": 6
+      },
+      "warnings": []
+    },
+    "steps": [
+      {
+        "id": "58790324-3736-41f4-9da8-9de245a44421",
+        "ordinal": 0,
+        "kind": "prepare",
+        "state": "completed",
+        "attempts": 0,
+        "reused": false,
+        "errorMessage": null,
+        "input": {
+          "sourceVersionId": "b6e8c47d-9df8-4694-8684-c10f1b99778d"
+        },
+        "result": {
+          "chunkIds": [
+            "50d16d36-c4ff-4f48-94c4-53a136602451",
+            "630c929a-7f3b-43d5-a065-a99f5f402441",
+            "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+            "15128e6b-1960-4172-9f09-fc37930862d3",
+            "b9892654-1f44-41d0-9f79-7666b30e0983",
+            "5f077754-943f-4038-8998-f1445db72d5f"
+          ],
+          "warnings": [],
+          "inputChars": 1865,
+          "sourceHash": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8",
+          "totalChunks": 6,
+          "parserVersion": "utf8-lines@1"
+        }
+      },
+      {
+        "id": "f47f1354-86a4-444c-96fd-3cd13de2fd95",
+        "ordinal": 1,
+        "kind": "summary",
+        "state": "completed",
+        "attempts": 1,
+        "reused": false,
+        "errorMessage": null,
+        "input": {
+          "chunkIds": [
+            "50d16d36-c4ff-4f48-94c4-53a136602451",
+            "630c929a-7f3b-43d5-a065-a99f5f402441",
+            "bd5cdada-97a5-463b-bf90-1813f4a7a75b",
+            "15128e6b-1960-4172-9f09-fc37930862d3",
+            "b9892654-1f44-41d0-9f79-7666b30e0983",
+            "5f077754-943f-4038-8998-f1445db72d5f"
+          ],
+          "inputChars": 1865
+        },
+        "result": {
+          "claims": [
+            {
+              "text": "이 문서는 개발 검증을 위해 만든 가상의 자료이며 실제 고객 지침이나 법적 기준이 아니다.",
+              "quote": "이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다.",
+              "chunkId": "630c929a-7f3b-43d5-a065-a99f5f402441"
+            },
+            {
+              "text": "사업은 가상 교차로 3곳에서 관제 화면 정보 갱신을 점검하는 시범사업이다.",
+              "quote": "이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다.",
+              "chunkId": "bd5cdada-97a5-463b-bf90-1813f4a7a75b"
+            },
+            {
+              "text": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다.",
+              "quote": "ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다.",
+              "chunkId": "15128e6b-1960-4172-9f09-fc37930862d3"
+            },
+            {
+              "text": "정상 통신 상태의 갱신 간격은 30초이며, 통신 중단 시 마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+              "quote": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다.\n통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+              "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983"
+            },
+            {
+              "text": "재연결 후 60초 안에 새 데이터 수신 여부를 확인하고, 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+              "quote": "재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다.",
+              "chunkId": "b9892654-1f44-41d0-9f79-7666b30e0983"
+            },
+            {
+              "text": "가상 담당자는 각 교차로에서 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.",
+              "quote": "가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 결과를 남긴다.",
+              "chunkId": "5f077754-943f-4038-8998-f1445db72d5f"
+            },
+            {
+              "text": "작성자 안내에 따르면 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용은 없다.",
+              "quote": "이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무에 관한 내용이 없다.",
+              "chunkId": "5f077754-943f-4038-8998-f1445db72d5f"
+            }
+          ],
+          "summary": "가상 새봄시 관제 시범사업은 가상 교차로 3곳에서 관제 화면 정보 갱신을 점검하는 개발 검증용 가상 자료이며, 실제 고객 지침이나 법적 기준이 아니다. ITS는 이 개발 표본에서 지능형 교통체계를 의미한다. 정상 통신 상태에서는 화면을 30초 간격으로 갱신하며, 통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여야 하고 마지막 수신 값을 최신 값으로 표시해서는 안 된다. 재연결 후에는 60초 안에 새 데이터 수신 여부를 확인하며, 통신 장애 중에는 30초 갱신 기준을 충족한 것으로 판정하지 않는다. 가상 담당자는 교차로별 정상 통신 및 통신 중단 상황을 각각 1회 이상 확인하고 결과를 남긴다. 작성자 안내에 따르면 이 자료에는 사업 예산, 계약상 지체상금, 실제 법적 의무 내용이 없다."
+        }
+      }
+    ],
+    "usage": [
+      {
+        "inputTokens": 879,
+        "outputTokens": 908,
+        "state": "completed",
+        "model": "gpt-5.6-terra"
+      }
+    ]
+  },
+  "profile": {
+    "profile": {
+      "model": "gpt-5.6-terra",
+      "identity": "e96a91ed63153d7110881c4162776ffd4f41de66199d5391cddee654b1409854",
+      "contextChars": 48000
+    },
+    "prompt_version": "document-summary-v1",
+    "rules_hash": "9bff5230573a3bb93b130680d254dfd3fa57acff487859077963ec446a7bf90c"
+  },
+  "parsers": [
+    {
+      "parser_version": "utf8-lines@1",
+      "sha256": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+    },
+    {
+      "parser_version": "utf8-lines@1",
+      "sha256": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+    },
+    {
+      "parser_version": "utf8-lines@1",
+      "sha256": "4136bbf92d327c8468464dbbfe7c630dcb92904138d5641f58e2cb856a3d72b8"
+    }
+  ],
+  "browser": [
+    {
+      "width": 1440,
+      "route": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/ai-tasks/66013ca6-c02d-48ec-aad2-97b0a8762ca0",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "route": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/ai-tasks/66013ca6-c02d-48ec-aad2-97b0a8762ca0",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "/w/6b6977fa-2ce5-43bd-98a0-563ef5c21581/sources/4fb2ac6f-5fd1-4a50-84d0-3120aaf8ba2a",
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "completedAt": "2026-09-09T16:10:49.812Z"
+}

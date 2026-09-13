@@ -1,0 +1,25 @@
+{
+  "conversations": {
+    "stored": 101,
+    "listed": 100,
+    "oldestSearchResult": 0
+  },
+  "records": {
+    "actualRecords": 1,
+    "newerSources": 100,
+    "listedRecords": 0,
+    "originalStillAccessible": true
+  },
+  "search": {
+    "wikiMatches": 50,
+    "originalMatches": 1,
+    "combinedResults": 50,
+    "originalsInCombined": 0
+  },
+  "wikiHistory": {
+    "actualPages": 2,
+    "revisions": 201,
+    "listedPages": 1,
+    "otherPageStillAccessible": true
+  }
+}

@@ -1,0 +1,1427 @@
+{
+  "date": "2026-09-09T13:51:21.922Z",
+  "dataClassification": "직접 작성한 가상 개발 표본 · 검색어가 반복되는 목차와 두 단계 연결",
+  "businessReview": null,
+  "queries": [
+    {
+      "question": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하나요?",
+      "sourceOnly": false,
+      "conversationId": "ba2897de-da5d-4138-a296-9a8ebcca8a86",
+      "state": "completed",
+      "mode": "hybrid+graph",
+      "model": "gpt-5.6-terra",
+      "elapsedMs": 3573,
+      "inputTokens": 2351,
+      "outputTokens": 119,
+      "answer": "연결 안내 자체는 보관 시간이나 적용 예외를 정하지 않으며, 후속 기준의 원문을 확인하도록 안내합니다. [E1][E2]\n\n확인할 항목은 다음과 같습니다.\n\n- **검증 기록의 보관 시간:** 72시간 [E10]\n- **장애 장비 예외:** 장애가 난 장비에는 해당 조건을 적용하지 않음 [E10]\n- **적용 대상·시점:** 정상 장비의 납품 이후 검증 기록에 적용 [E10]",
+      "citations": [
+        {
+          "id": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+          "key": "E1",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/77c934c1-1ce4-474f-8bc4-6155fcdf0855?version=e6b6901f-fafb-4c1a-9c62-92cb2d0df274",
+          "kind": "wiki",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.\n\n[확인 문서 안내](/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/d5e3edaf-3786-441e-ab14-f8ae1b2278a6)를 따릅니다.",
+          "title": "접수알파절차 목차",
+          "category": "wiki",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "e6b6901f-fafb-4c1a-9c62-92cb2d0df274",
+          "linkedPages": [
+            {
+              "id": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6",
+              "versionId": "c9c550fd-c88c-4800-b0be-100c0d9a2c86"
+            }
+          ],
+          "used": true
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E2",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-12ef18d0-4b02-4c04-8a2b-71ca68909321",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "12ef18d0-4b02-4c04-8a2b-71ca68909321",
+          "locator": {
+            "kind": "lines",
+            "endLine": 128,
+            "heading": "접수알파절차 연결 안내 32",
+            "startLine": 127
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": true
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E3",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-155cf0d1-0830-42ba-82b2-0f5085f79649",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "155cf0d1-0830-42ba-82b2-0f5085f79649",
+          "locator": {
+            "kind": "lines",
+            "endLine": 152,
+            "heading": "접수알파절차 연결 안내 38",
+            "startLine": 151
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E4",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-35193c14-2687-4dbf-bbde-4828774e1281",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "35193c14-2687-4dbf-bbde-4828774e1281",
+          "locator": {
+            "kind": "lines",
+            "endLine": 56,
+            "heading": "접수알파절차 연결 안내 14",
+            "startLine": 55
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E5",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-105253fb-dd22-417d-9329-59b0d3dc2b88",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "105253fb-dd22-417d-9329-59b0d3dc2b88",
+          "locator": {
+            "kind": "lines",
+            "endLine": 179,
+            "heading": "접수알파절차 연결 안내 45",
+            "startLine": 179
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E6",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-2f644f09-1e62-4004-95ac-befdc6c6c2c6",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "2f644f09-1e62-4004-95ac-befdc6c6c2c6",
+          "locator": {
+            "kind": "lines",
+            "endLine": 140,
+            "heading": "접수알파절차 연결 안내 35",
+            "startLine": 139
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E7",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-58701baf-3df4-4814-8622-665ecd141fb1",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "58701baf-3df4-4814-8622-665ecd141fb1",
+          "locator": {
+            "kind": "lines",
+            "endLine": 148,
+            "heading": "접수알파절차 연결 안내 37",
+            "startLine": 147
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E8",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-603d24a3-209b-4f71-9a4d-0848b5f28859",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "603d24a3-209b-4f71-9a4d-0848b5f28859",
+          "locator": {
+            "kind": "lines",
+            "endLine": 32,
+            "heading": "접수알파절차 연결 안내 8",
+            "startLine": 31
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "f5fb44f6-5160-40b2-9cf5-787d9e170ef0",
+          "key": "E9",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/f5fb44f6-5160-40b2-9cf5-787d9e170ef0?version=35da0a53-1543-4659-9691-cdf6d1b9488d#chunk-2e700e59-03f9-4113-a77e-5455136e3df9",
+          "kind": "source",
+          "text": "접수알파절차 이후의 확인은 ‘가상 후속 기준’의 보관 시간과 장애 예외를 대조하는 일입니다. 연결 안내 위키에서 해당 기준으로 이동합니다.",
+          "graph": {
+            "pages": [
+              {
+                "id": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+                "title": "접수알파절차 목차",
+                "versionId": "e6b6901f-fafb-4c1a-9c62-92cb2d0df274"
+              },
+              {
+                "id": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6",
+                "title": "확인 문서 안내",
+                "versionId": "c9c550fd-c88c-4800-b0be-100c0d9a2c86"
+              }
+            ],
+            "score": 3.5,
+            "seedId": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+            "signals": {
+              "directLink": 3,
+              "typeAffinity": 0.5,
+              "sourceOverlap": 0,
+              "commonNeighbor": 0
+            },
+            "sources": [],
+            "targetId": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6"
+          },
+          "title": "연결 문서의 관계 설명",
+          "chunkId": "2e700e59-03f9-4113-a77e-5455136e3df9",
+          "locator": {
+            "kind": "lines",
+            "endLine": 1,
+            "heading": "",
+            "startLine": 1
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "35da0a53-1543-4659-9691-cdf6d1b9488d",
+          "used": false
+        },
+        {
+          "id": "b3764c66-7101-4044-b526-6a493627f3ad",
+          "key": "E10",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/b3764c66-7101-4044-b526-6a493627f3ad?version=7d7412a4-b9a0-496e-a299-7e076800fac0#chunk-0e24ff98-9606-41ff-bc73-a89983a06df1",
+          "kind": "source",
+          "text": "검증 기록은 72시간 보관합니다. 장애가 난 장비에는 이 조건을 적용하지 않습니다. 정상 장비의 납품 이후 검증 기록에 적용합니다.",
+          "graph": {
+            "pages": [
+              {
+                "id": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+                "title": "접수알파절차 목차",
+                "versionId": "e6b6901f-fafb-4c1a-9c62-92cb2d0df274"
+              },
+              {
+                "id": "37523764-2f97-4a40-9f98-2616c3d8c4fe",
+                "title": "후속 검증 기준",
+                "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865"
+              },
+              {
+                "id": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6",
+                "title": "확인 문서 안내",
+                "versionId": "c9c550fd-c88c-4800-b0be-100c0d9a2c86"
+              }
+            ],
+            "score": 2.664042561333445,
+            "seedId": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+            "signals": {
+              "directLink": 0,
+              "typeAffinity": 0.5,
+              "sourceOverlap": 0,
+              "commonNeighbor": 2.164042561333445
+            },
+            "sources": [],
+            "targetId": "37523764-2f97-4a40-9f98-2616c3d8c4fe"
+          },
+          "title": "가상 후속 기준",
+          "chunkId": "0e24ff98-9606-41ff-bc73-a89983a06df1",
+          "locator": {
+            "kind": "lines",
+            "endLine": 1,
+            "heading": "",
+            "startLine": 1
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "7d7412a4-b9a0-496e-a299-7e076800fac0",
+          "used": true
+        }
+      ],
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/77c934c1-1ce4-474f-8bc4-6155fcdf0855?version=e6b6901f-fafb-4c1a-9c62-92cb2d0df274",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-12ef18d0-4b02-4c04-8a2b-71ca68909321",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/b3764c66-7101-4044-b526-6a493627f3ad?version=7d7412a4-b9a0-496e-a299-7e076800fac0#chunk-0e24ff98-9606-41ff-bc73-a89983a06df1",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "question": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하나요?",
+      "sourceOnly": true,
+      "conversationId": "62744cc4-78a4-4e31-b3a5-dc71a39d6f87",
+      "state": "completed",
+      "mode": "hybrid",
+      "model": "gpt-5.6-terra",
+      "elapsedMs": 2539,
+      "inputTokens": 1565,
+      "outputTokens": 114,
+      "answer": "접수알파절차의 연결 안내에 따라, **후속 기준의 원문에서 확인해야 할 사항**을 확인해야 합니다. [E1]\n\n다만 제공된 연결 안내 목차 자체는 **보관 시간이나 적용 예외를 정하지 않으므로**, 구체적인 확인 항목·기간·예외 조건은 현재 근거만으로 알 수 없습니다. [E1]  \n후속 기준 원문을 제공해 주시면 해당 원문 기준으로 확인 항목을 정리할 수 있습니다.",
+      "citations": [
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E1",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-1ef1631d-fcc8-4b06-be7e-b391f7f1d02c",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "1ef1631d-fcc8-4b06-be7e-b391f7f1d02c",
+          "locator": {
+            "kind": "lines",
+            "endLine": 92,
+            "heading": "접수알파절차 연결 안내 23",
+            "startLine": 91
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": true
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E2",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-2f644f09-1e62-4004-95ac-befdc6c6c2c6",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "2f644f09-1e62-4004-95ac-befdc6c6c2c6",
+          "locator": {
+            "kind": "lines",
+            "endLine": 140,
+            "heading": "접수알파절차 연결 안내 35",
+            "startLine": 139
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E3",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-12ef18d0-4b02-4c04-8a2b-71ca68909321",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "12ef18d0-4b02-4c04-8a2b-71ca68909321",
+          "locator": {
+            "kind": "lines",
+            "endLine": 128,
+            "heading": "접수알파절차 연결 안내 32",
+            "startLine": 127
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E4",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-105253fb-dd22-417d-9329-59b0d3dc2b88",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "105253fb-dd22-417d-9329-59b0d3dc2b88",
+          "locator": {
+            "kind": "lines",
+            "endLine": 179,
+            "heading": "접수알파절차 연결 안내 45",
+            "startLine": 179
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E5",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-35193c14-2687-4dbf-bbde-4828774e1281",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "35193c14-2687-4dbf-bbde-4828774e1281",
+          "locator": {
+            "kind": "lines",
+            "endLine": 56,
+            "heading": "접수알파절차 연결 안내 14",
+            "startLine": 55
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E6",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-58701baf-3df4-4814-8622-665ecd141fb1",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "58701baf-3df4-4814-8622-665ecd141fb1",
+          "locator": {
+            "kind": "lines",
+            "endLine": 148,
+            "heading": "접수알파절차 연결 안내 37",
+            "startLine": 147
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E7",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-368f73ee-06d5-40c5-90dd-f9e0b674ef94",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "368f73ee-06d5-40c5-90dd-f9e0b674ef94",
+          "locator": {
+            "kind": "lines",
+            "endLine": 104,
+            "heading": "접수알파절차 연결 안내 26",
+            "startLine": 103
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        },
+        {
+          "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+          "key": "E8",
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-038cfebd-8d96-4032-b878-624962760a83",
+          "kind": "source",
+          "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+          "title": "00 접수알파절차 연결 안내",
+          "chunkId": "038cfebd-8d96-4032-b878-624962760a83",
+          "locator": {
+            "kind": "lines",
+            "endLine": 28,
+            "heading": "접수알파절차 연결 안내 7",
+            "startLine": 27
+          },
+          "category": "reference",
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+          "used": false
+        }
+      ],
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/72565b0e-a755-411b-b7c3-f525963ffd94?version=bdcfc64a-f391-4aa2-a638-b2ab94977856#chunk-1ef1631d-fcc8-4b06-be7e-b391f7f1d02c",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "browser": [
+    {
+      "sourceOnly": false,
+      "status": 200,
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "sourceOnly": true,
+      "status": 200,
+      "width": 390,
+      "overflow": false
+    }
+  ],
+  "indexed": 95,
+  "fixture": {
+    "workspaceId": "e318d0aa-f4a5-457f-9133-fab26f236f45",
+    "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+    "sources": {
+      "entry": {
+        "sourceId": "72565b0e-a755-411b-b7c3-f525963ffd94",
+        "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856",
+        "duplicate": false,
+        "chunks": [
+          {
+            "id": "14ddb77c-ac54-4474-af41-752659a084d8",
+            "text": "## 접수알파절차 연결 안내 1",
+            "locator": {
+              "kind": "lines",
+              "endLine": 2,
+              "heading": "접수알파절차 연결 안내 1",
+              "startLine": 1
+            }
+          },
+          {
+            "id": "de14d108-33f1-462d-8e13-14842eee903e",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 4,
+              "heading": "접수알파절차 연결 안내 1",
+              "startLine": 3
+            }
+          },
+          {
+            "id": "36a21de2-d30b-4e32-9578-1e0b667642c2",
+            "text": "## 접수알파절차 연결 안내 2",
+            "locator": {
+              "kind": "lines",
+              "endLine": 6,
+              "heading": "접수알파절차 연결 안내 2",
+              "startLine": 5
+            }
+          },
+          {
+            "id": "6bdad60f-c378-4acc-963b-93e07fd7c2ec",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 8,
+              "heading": "접수알파절차 연결 안내 2",
+              "startLine": 7
+            }
+          },
+          {
+            "id": "18f74365-dc2a-4357-8c7d-1ff22190b839",
+            "text": "## 접수알파절차 연결 안내 3",
+            "locator": {
+              "kind": "lines",
+              "endLine": 10,
+              "heading": "접수알파절차 연결 안내 3",
+              "startLine": 9
+            }
+          },
+          {
+            "id": "de98aaba-f698-4670-8326-0a1d64e74474",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 12,
+              "heading": "접수알파절차 연결 안내 3",
+              "startLine": 11
+            }
+          },
+          {
+            "id": "db880eb3-776e-4787-80dc-cc9f086f11bf",
+            "text": "## 접수알파절차 연결 안내 4",
+            "locator": {
+              "kind": "lines",
+              "endLine": 14,
+              "heading": "접수알파절차 연결 안내 4",
+              "startLine": 13
+            }
+          },
+          {
+            "id": "8d480818-922b-43ef-9c48-88a325ad76ed",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 16,
+              "heading": "접수알파절차 연결 안내 4",
+              "startLine": 15
+            }
+          },
+          {
+            "id": "0a506bcb-132c-4c69-8f3c-a5725e0f5f2a",
+            "text": "## 접수알파절차 연결 안내 5",
+            "locator": {
+              "kind": "lines",
+              "endLine": 18,
+              "heading": "접수알파절차 연결 안내 5",
+              "startLine": 17
+            }
+          },
+          {
+            "id": "ac418223-f5a4-4c91-a47a-60f6e8eb2a33",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 20,
+              "heading": "접수알파절차 연결 안내 5",
+              "startLine": 19
+            }
+          },
+          {
+            "id": "10193991-cf95-46ed-a82b-75d06d8a4516",
+            "text": "## 접수알파절차 연결 안내 6",
+            "locator": {
+              "kind": "lines",
+              "endLine": 22,
+              "heading": "접수알파절차 연결 안내 6",
+              "startLine": 21
+            }
+          },
+          {
+            "id": "158ffda1-4995-48a8-810b-f71a06c5f1f4",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 24,
+              "heading": "접수알파절차 연결 안내 6",
+              "startLine": 23
+            }
+          },
+          {
+            "id": "4bd32397-b72b-4c72-94ad-36a1eccf2be6",
+            "text": "## 접수알파절차 연결 안내 7",
+            "locator": {
+              "kind": "lines",
+              "endLine": 26,
+              "heading": "접수알파절차 연결 안내 7",
+              "startLine": 25
+            }
+          },
+          {
+            "id": "038cfebd-8d96-4032-b878-624962760a83",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 28,
+              "heading": "접수알파절차 연결 안내 7",
+              "startLine": 27
+            }
+          },
+          {
+            "id": "a902e258-8d2a-40da-b6c8-e7a42f84b17c",
+            "text": "## 접수알파절차 연결 안내 8",
+            "locator": {
+              "kind": "lines",
+              "endLine": 30,
+              "heading": "접수알파절차 연결 안내 8",
+              "startLine": 29
+            }
+          },
+          {
+            "id": "603d24a3-209b-4f71-9a4d-0848b5f28859",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 32,
+              "heading": "접수알파절차 연결 안내 8",
+              "startLine": 31
+            }
+          },
+          {
+            "id": "3e2a8823-bd8c-49ee-9261-c2e0b0cb5b5f",
+            "text": "## 접수알파절차 연결 안내 9",
+            "locator": {
+              "kind": "lines",
+              "endLine": 34,
+              "heading": "접수알파절차 연결 안내 9",
+              "startLine": 33
+            }
+          },
+          {
+            "id": "7438d82e-5d59-409a-9745-648cd42583c3",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 36,
+              "heading": "접수알파절차 연결 안내 9",
+              "startLine": 35
+            }
+          },
+          {
+            "id": "0e5cf939-c8d7-4942-baba-e814315e09fe",
+            "text": "## 접수알파절차 연결 안내 10",
+            "locator": {
+              "kind": "lines",
+              "endLine": 38,
+              "heading": "접수알파절차 연결 안내 10",
+              "startLine": 37
+            }
+          },
+          {
+            "id": "4b8574ad-f5f6-4291-881f-4b19b9500a3a",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 40,
+              "heading": "접수알파절차 연결 안내 10",
+              "startLine": 39
+            }
+          },
+          {
+            "id": "6463051b-94e5-4713-874d-4f31e61fa6c7",
+            "text": "## 접수알파절차 연결 안내 11",
+            "locator": {
+              "kind": "lines",
+              "endLine": 42,
+              "heading": "접수알파절차 연결 안내 11",
+              "startLine": 41
+            }
+          },
+          {
+            "id": "f8a193e2-9f7d-483f-bbd1-f6561484d0e0",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 44,
+              "heading": "접수알파절차 연결 안내 11",
+              "startLine": 43
+            }
+          },
+          {
+            "id": "1929820a-cdba-4d2e-b900-be221c7a1b6c",
+            "text": "## 접수알파절차 연결 안내 12",
+            "locator": {
+              "kind": "lines",
+              "endLine": 46,
+              "heading": "접수알파절차 연결 안내 12",
+              "startLine": 45
+            }
+          },
+          {
+            "id": "a507cd20-c0f5-4e27-b958-436f82ae4513",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 48,
+              "heading": "접수알파절차 연결 안내 12",
+              "startLine": 47
+            }
+          },
+          {
+            "id": "3782b56a-c0e4-4ad1-a54e-ef3525906751",
+            "text": "## 접수알파절차 연결 안내 13",
+            "locator": {
+              "kind": "lines",
+              "endLine": 50,
+              "heading": "접수알파절차 연결 안내 13",
+              "startLine": 49
+            }
+          },
+          {
+            "id": "54a940bc-ff16-4e65-8df2-62715bfedf71",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 52,
+              "heading": "접수알파절차 연결 안내 13",
+              "startLine": 51
+            }
+          },
+          {
+            "id": "94ea2970-2761-446e-9bd3-17cda5c966eb",
+            "text": "## 접수알파절차 연결 안내 14",
+            "locator": {
+              "kind": "lines",
+              "endLine": 54,
+              "heading": "접수알파절차 연결 안내 14",
+              "startLine": 53
+            }
+          },
+          {
+            "id": "35193c14-2687-4dbf-bbde-4828774e1281",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 56,
+              "heading": "접수알파절차 연결 안내 14",
+              "startLine": 55
+            }
+          },
+          {
+            "id": "b09c3994-b9d5-4f70-a32d-824b62c5ebf8",
+            "text": "## 접수알파절차 연결 안내 15",
+            "locator": {
+              "kind": "lines",
+              "endLine": 58,
+              "heading": "접수알파절차 연결 안내 15",
+              "startLine": 57
+            }
+          },
+          {
+            "id": "9943076f-dc57-45ea-b806-fbac962ad02a",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 60,
+              "heading": "접수알파절차 연결 안내 15",
+              "startLine": 59
+            }
+          },
+          {
+            "id": "711bd544-0e3e-4ef8-96b7-2e85e9c2729e",
+            "text": "## 접수알파절차 연결 안내 16",
+            "locator": {
+              "kind": "lines",
+              "endLine": 62,
+              "heading": "접수알파절차 연결 안내 16",
+              "startLine": 61
+            }
+          },
+          {
+            "id": "a2cd1b3d-15d2-4fb5-88d1-a719c81c2494",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 64,
+              "heading": "접수알파절차 연결 안내 16",
+              "startLine": 63
+            }
+          },
+          {
+            "id": "db0edc98-5f58-4c41-bf1f-79dd1799f250",
+            "text": "## 접수알파절차 연결 안내 17",
+            "locator": {
+              "kind": "lines",
+              "endLine": 66,
+              "heading": "접수알파절차 연결 안내 17",
+              "startLine": 65
+            }
+          },
+          {
+            "id": "278b06d2-5636-409f-8252-e5bc899fdb8c",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 68,
+              "heading": "접수알파절차 연결 안내 17",
+              "startLine": 67
+            }
+          },
+          {
+            "id": "3842f162-23fd-4d8e-bc95-084c7af8d627",
+            "text": "## 접수알파절차 연결 안내 18",
+            "locator": {
+              "kind": "lines",
+              "endLine": 70,
+              "heading": "접수알파절차 연결 안내 18",
+              "startLine": 69
+            }
+          },
+          {
+            "id": "bb9c9c22-1034-46d7-8764-c516a760e5dc",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 72,
+              "heading": "접수알파절차 연결 안내 18",
+              "startLine": 71
+            }
+          },
+          {
+            "id": "12e4d00b-321b-4bb7-be3a-9395c6ba5a68",
+            "text": "## 접수알파절차 연결 안내 19",
+            "locator": {
+              "kind": "lines",
+              "endLine": 74,
+              "heading": "접수알파절차 연결 안내 19",
+              "startLine": 73
+            }
+          },
+          {
+            "id": "a792be97-11cf-4b69-85c3-8dd7b0e06be2",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 76,
+              "heading": "접수알파절차 연결 안내 19",
+              "startLine": 75
+            }
+          },
+          {
+            "id": "ec41c672-3310-4fb1-925b-b52023fba7eb",
+            "text": "## 접수알파절차 연결 안내 20",
+            "locator": {
+              "kind": "lines",
+              "endLine": 78,
+              "heading": "접수알파절차 연결 안내 20",
+              "startLine": 77
+            }
+          },
+          {
+            "id": "89f65899-7160-4549-b6d6-6792d5f92f30",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 80,
+              "heading": "접수알파절차 연결 안내 20",
+              "startLine": 79
+            }
+          },
+          {
+            "id": "ca99a66c-5d62-49f7-b2e1-5eb10b2b7488",
+            "text": "## 접수알파절차 연결 안내 21",
+            "locator": {
+              "kind": "lines",
+              "endLine": 82,
+              "heading": "접수알파절차 연결 안내 21",
+              "startLine": 81
+            }
+          },
+          {
+            "id": "bc182aa2-9675-410f-b149-f7152b833446",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 84,
+              "heading": "접수알파절차 연결 안내 21",
+              "startLine": 83
+            }
+          },
+          {
+            "id": "5c93b040-d92a-4dac-a63e-7f935109bbf9",
+            "text": "## 접수알파절차 연결 안내 22",
+            "locator": {
+              "kind": "lines",
+              "endLine": 86,
+              "heading": "접수알파절차 연결 안내 22",
+              "startLine": 85
+            }
+          },
+          {
+            "id": "5c5ffe1b-5a08-4e22-9aec-22907eabe407",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 88,
+              "heading": "접수알파절차 연결 안내 22",
+              "startLine": 87
+            }
+          },
+          {
+            "id": "81efa75c-d4fb-480d-866d-41464e2cd93d",
+            "text": "## 접수알파절차 연결 안내 23",
+            "locator": {
+              "kind": "lines",
+              "endLine": 90,
+              "heading": "접수알파절차 연결 안내 23",
+              "startLine": 89
+            }
+          },
+          {
+            "id": "1ef1631d-fcc8-4b06-be7e-b391f7f1d02c",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 92,
+              "heading": "접수알파절차 연결 안내 23",
+              "startLine": 91
+            }
+          },
+          {
+            "id": "e6d0724e-9597-4195-a499-97efc97efd7b",
+            "text": "## 접수알파절차 연결 안내 24",
+            "locator": {
+              "kind": "lines",
+              "endLine": 94,
+              "heading": "접수알파절차 연결 안내 24",
+              "startLine": 93
+            }
+          },
+          {
+            "id": "f7635dfa-1e1a-4990-9364-964e96bc98af",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 96,
+              "heading": "접수알파절차 연결 안내 24",
+              "startLine": 95
+            }
+          },
+          {
+            "id": "a1d52941-36f7-4639-8d74-4536744219b1",
+            "text": "## 접수알파절차 연결 안내 25",
+            "locator": {
+              "kind": "lines",
+              "endLine": 98,
+              "heading": "접수알파절차 연결 안내 25",
+              "startLine": 97
+            }
+          },
+          {
+            "id": "a941fe1e-9d0d-43e9-8072-919d459cdaa4",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 100,
+              "heading": "접수알파절차 연결 안내 25",
+              "startLine": 99
+            }
+          },
+          {
+            "id": "a6effd3f-f198-4477-a86f-2a6fa6d42c4a",
+            "text": "## 접수알파절차 연결 안내 26",
+            "locator": {
+              "kind": "lines",
+              "endLine": 102,
+              "heading": "접수알파절차 연결 안내 26",
+              "startLine": 101
+            }
+          },
+          {
+            "id": "368f73ee-06d5-40c5-90dd-f9e0b674ef94",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 104,
+              "heading": "접수알파절차 연결 안내 26",
+              "startLine": 103
+            }
+          },
+          {
+            "id": "bd463a20-5954-49b0-b4a8-b8b6e7898f75",
+            "text": "## 접수알파절차 연결 안내 27",
+            "locator": {
+              "kind": "lines",
+              "endLine": 106,
+              "heading": "접수알파절차 연결 안내 27",
+              "startLine": 105
+            }
+          },
+          {
+            "id": "9f6bdcbc-4af6-4e43-967f-e83ad86ed38a",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 108,
+              "heading": "접수알파절차 연결 안내 27",
+              "startLine": 107
+            }
+          },
+          {
+            "id": "d2539514-18df-4c51-99f7-dfa2722fe215",
+            "text": "## 접수알파절차 연결 안내 28",
+            "locator": {
+              "kind": "lines",
+              "endLine": 110,
+              "heading": "접수알파절차 연결 안내 28",
+              "startLine": 109
+            }
+          },
+          {
+            "id": "68ecac78-c4ad-4ae4-9826-8b79ae2399c9",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 112,
+              "heading": "접수알파절차 연결 안내 28",
+              "startLine": 111
+            }
+          },
+          {
+            "id": "d3289ae4-3f42-43da-885f-4c53cdddf9d2",
+            "text": "## 접수알파절차 연결 안내 29",
+            "locator": {
+              "kind": "lines",
+              "endLine": 114,
+              "heading": "접수알파절차 연결 안내 29",
+              "startLine": 113
+            }
+          },
+          {
+            "id": "54459804-0aa8-43a9-80d9-e449a4c6bf9c",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 116,
+              "heading": "접수알파절차 연결 안내 29",
+              "startLine": 115
+            }
+          },
+          {
+            "id": "95a7ad9d-b689-4385-ad54-395831e7d0d9",
+            "text": "## 접수알파절차 연결 안내 30",
+            "locator": {
+              "kind": "lines",
+              "endLine": 118,
+              "heading": "접수알파절차 연결 안내 30",
+              "startLine": 117
+            }
+          },
+          {
+            "id": "b2d63cb1-256a-4599-b271-47f0feb4e673",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 120,
+              "heading": "접수알파절차 연결 안내 30",
+              "startLine": 119
+            }
+          },
+          {
+            "id": "a1a08b12-ac26-485e-b8d8-ffaa5a79fa38",
+            "text": "## 접수알파절차 연결 안내 31",
+            "locator": {
+              "kind": "lines",
+              "endLine": 122,
+              "heading": "접수알파절차 연결 안내 31",
+              "startLine": 121
+            }
+          },
+          {
+            "id": "5989b3be-6a36-4cd2-8289-253b4eee8cd8",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 124,
+              "heading": "접수알파절차 연결 안내 31",
+              "startLine": 123
+            }
+          },
+          {
+            "id": "556c1ff3-1b13-4957-9212-6bd1a5294c4f",
+            "text": "## 접수알파절차 연결 안내 32",
+            "locator": {
+              "kind": "lines",
+              "endLine": 126,
+              "heading": "접수알파절차 연결 안내 32",
+              "startLine": 125
+            }
+          },
+          {
+            "id": "12ef18d0-4b02-4c04-8a2b-71ca68909321",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 128,
+              "heading": "접수알파절차 연결 안내 32",
+              "startLine": 127
+            }
+          },
+          {
+            "id": "909aebb7-af7d-4704-8535-f965c7d06cfd",
+            "text": "## 접수알파절차 연결 안내 33",
+            "locator": {
+              "kind": "lines",
+              "endLine": 130,
+              "heading": "접수알파절차 연결 안내 33",
+              "startLine": 129
+            }
+          },
+          {
+            "id": "79b5c1d6-0b18-443f-ab4e-44c4c44a4901",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 132,
+              "heading": "접수알파절차 연결 안내 33",
+              "startLine": 131
+            }
+          },
+          {
+            "id": "e3304827-527e-47d8-951b-3baa0466beb3",
+            "text": "## 접수알파절차 연결 안내 34",
+            "locator": {
+              "kind": "lines",
+              "endLine": 134,
+              "heading": "접수알파절차 연결 안내 34",
+              "startLine": 133
+            }
+          },
+          {
+            "id": "a9be775f-f867-4099-b172-5370a0024918",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 136,
+              "heading": "접수알파절차 연결 안내 34",
+              "startLine": 135
+            }
+          },
+          {
+            "id": "6b6df1be-8447-4501-ac7d-1dacf5f542f9",
+            "text": "## 접수알파절차 연결 안내 35",
+            "locator": {
+              "kind": "lines",
+              "endLine": 138,
+              "heading": "접수알파절차 연결 안내 35",
+              "startLine": 137
+            }
+          },
+          {
+            "id": "2f644f09-1e62-4004-95ac-befdc6c6c2c6",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 140,
+              "heading": "접수알파절차 연결 안내 35",
+              "startLine": 139
+            }
+          },
+          {
+            "id": "29199046-ba32-4cfe-bc1a-e31a4830caf0",
+            "text": "## 접수알파절차 연결 안내 36",
+            "locator": {
+              "kind": "lines",
+              "endLine": 142,
+              "heading": "접수알파절차 연결 안내 36",
+              "startLine": 141
+            }
+          },
+          {
+            "id": "8cf8ca2f-52c6-45c6-b9fe-bc5c8d4ecc8a",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 144,
+              "heading": "접수알파절차 연결 안내 36",
+              "startLine": 143
+            }
+          },
+          {
+            "id": "a01f3809-b9be-4fbc-85d7-215731ba5702",
+            "text": "## 접수알파절차 연결 안내 37",
+            "locator": {
+              "kind": "lines",
+              "endLine": 146,
+              "heading": "접수알파절차 연결 안내 37",
+              "startLine": 145
+            }
+          },
+          {
+            "id": "58701baf-3df4-4814-8622-665ecd141fb1",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 148,
+              "heading": "접수알파절차 연결 안내 37",
+              "startLine": 147
+            }
+          },
+          {
+            "id": "e4c499cc-5f27-4d1c-ab18-c03508a34b55",
+            "text": "## 접수알파절차 연결 안내 38",
+            "locator": {
+              "kind": "lines",
+              "endLine": 150,
+              "heading": "접수알파절차 연결 안내 38",
+              "startLine": 149
+            }
+          },
+          {
+            "id": "155cf0d1-0830-42ba-82b2-0f5085f79649",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 152,
+              "heading": "접수알파절차 연결 안내 38",
+              "startLine": 151
+            }
+          },
+          {
+            "id": "709887de-d26c-4a63-a211-ece3752a0c48",
+            "text": "## 접수알파절차 연결 안내 39",
+            "locator": {
+              "kind": "lines",
+              "endLine": 154,
+              "heading": "접수알파절차 연결 안내 39",
+              "startLine": 153
+            }
+          },
+          {
+            "id": "ab1bc706-9218-4a66-afc6-6a3a661af2e5",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 156,
+              "heading": "접수알파절차 연결 안내 39",
+              "startLine": 155
+            }
+          },
+          {
+            "id": "0c32b50a-8c56-48d3-aaca-64beee0ae712",
+            "text": "## 접수알파절차 연결 안내 40",
+            "locator": {
+              "kind": "lines",
+              "endLine": 158,
+              "heading": "접수알파절차 연결 안내 40",
+              "startLine": 157
+            }
+          },
+          {
+            "id": "a45220d0-8834-4941-b4aa-905ae91f7155",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 160,
+              "heading": "접수알파절차 연결 안내 40",
+              "startLine": 159
+            }
+          },
+          {
+            "id": "295382a0-eb5d-4c3f-95a6-37687601b646",
+            "text": "## 접수알파절차 연결 안내 41",
+            "locator": {
+              "kind": "lines",
+              "endLine": 162,
+              "heading": "접수알파절차 연결 안내 41",
+              "startLine": 161
+            }
+          },
+          {
+            "id": "b7eef549-85e0-46a9-b791-3644f52a26ad",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 164,
+              "heading": "접수알파절차 연결 안내 41",
+              "startLine": 163
+            }
+          },
+          {
+            "id": "a57f44be-73a0-446f-bc83-b81b4eedaa99",
+            "text": "## 접수알파절차 연결 안내 42",
+            "locator": {
+              "kind": "lines",
+              "endLine": 166,
+              "heading": "접수알파절차 연결 안내 42",
+              "startLine": 165
+            }
+          },
+          {
+            "id": "403daa34-bf83-4ed8-95ea-552c40b5cc46",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 168,
+              "heading": "접수알파절차 연결 안내 42",
+              "startLine": 167
+            }
+          },
+          {
+            "id": "5e82192f-c6d3-49d1-8d4f-2f285e0f0ae8",
+            "text": "## 접수알파절차 연결 안내 43",
+            "locator": {
+              "kind": "lines",
+              "endLine": 170,
+              "heading": "접수알파절차 연결 안내 43",
+              "startLine": 169
+            }
+          },
+          {
+            "id": "7cdd19d1-5a68-4bc5-98a1-35592eb48b0a",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 172,
+              "heading": "접수알파절차 연결 안내 43",
+              "startLine": 171
+            }
+          },
+          {
+            "id": "1754a8cd-b0d7-43ce-af25-bc7a6ce1f2e3",
+            "text": "## 접수알파절차 연결 안내 44",
+            "locator": {
+              "kind": "lines",
+              "endLine": 174,
+              "heading": "접수알파절차 연결 안내 44",
+              "startLine": 173
+            }
+          },
+          {
+            "id": "a689ffbc-ff16-41de-b807-e78234bb5b8b",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 176,
+              "heading": "접수알파절차 연결 안내 44",
+              "startLine": 175
+            }
+          },
+          {
+            "id": "72f58a3f-105e-4edf-8987-1b9e769aba3c",
+            "text": "## 접수알파절차 연결 안내 45",
+            "locator": {
+              "kind": "lines",
+              "endLine": 178,
+              "heading": "접수알파절차 연결 안내 45",
+              "startLine": 177
+            }
+          },
+          {
+            "id": "105253fb-dd22-417d-9329-59b0d3dc2b88",
+            "text": "접수알파절차의 연결 안내를 따라 무엇을 확인해야 하는지는 후속 기준의 원문에서 확인합니다. 이 목차는 보관 시간이나 적용 예외를 정하지 않습니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 179,
+              "heading": "접수알파절차 연결 안내 45",
+              "startLine": 179
+            }
+          }
+        ]
+      },
+      "bridge": {
+        "sourceId": "f5fb44f6-5160-40b2-9cf5-787d9e170ef0",
+        "versionId": "35da0a53-1543-4659-9691-cdf6d1b9488d",
+        "duplicate": false,
+        "chunks": [
+          {
+            "id": "2e700e59-03f9-4113-a77e-5455136e3df9",
+            "text": "접수알파절차 이후의 확인은 ‘가상 후속 기준’의 보관 시간과 장애 예외를 대조하는 일입니다. 연결 안내 위키에서 해당 기준으로 이동합니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 1,
+              "heading": "",
+              "startLine": 1
+            }
+          }
+        ]
+      },
+      "target": {
+        "sourceId": "b3764c66-7101-4044-b526-6a493627f3ad",
+        "versionId": "7d7412a4-b9a0-496e-a299-7e076800fac0",
+        "duplicate": false,
+        "chunks": [
+          {
+            "id": "0e24ff98-9606-41ff-bc73-a89983a06df1",
+            "text": "검증 기록은 72시간 보관합니다. 장애가 난 장비에는 이 조건을 적용하지 않습니다. 정상 장비의 납품 이후 검증 기록에 적용합니다.",
+            "locator": {
+              "kind": "lines",
+              "endLine": 1,
+              "heading": "",
+              "startLine": 1
+            }
+          }
+        ]
+      }
+    },
+    "pages": {
+      "target": {
+        "pageId": "37523764-2f97-4a40-9f98-2616c3d8c4fe",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865"
+      },
+      "bridge": {
+        "pageId": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6",
+        "versionId": "c9c550fd-c88c-4800-b0be-100c0d9a2c86"
+      },
+      "entry": {
+        "pageId": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+        "versionId": "e6b6901f-fafb-4c1a-9c62-92cb2d0df274"
+      }
+    }
+  },
+  "browserErrors": [],
+  "completedAt": "2026-09-09T13:51:31.553Z"
+}

@@ -1,0 +1,962 @@
+{
+  "results": [
+    {
+      "role": "reader",
+      "name": "home",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "sources",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "sources",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "source",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki-detail",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "chat",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "records",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "records",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "record-edit",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-new",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-edit",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "projects",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "project",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "tools",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "tools",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "rfp-detail",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-edit",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-new",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "official",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposals",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposal-new",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "reviews",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "review-desk",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "issues",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "admin",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "operations",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "sites",
+      "width": 1440,
+      "status": 200,
+      "layout": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "home",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "sources",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "sources",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "source",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki-detail",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "chat",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "records",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "records",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "record-edit",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-new",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-edit",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "projects",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "project",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "tools",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "tools",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "rfp-detail",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-edit",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-new",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "official",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposals",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposal-new",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "reviews",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "review-desk",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "issues",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "admin",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "operations",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "sites",
+      "width": 960,
+      "status": 200,
+      "layout": {
+        "width": 960,
+        "scroll": 960,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "home",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "sources",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "sources",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "source",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "wiki-detail",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "chat",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "records",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "records",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "record-edit",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-new",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "wiki-edit",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "projects",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "project",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "tools",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "tools",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "rfp-detail",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-edit",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "rfp-new",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "official",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposals",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "writer",
+      "name": "proposal-new",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "reviews",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reviewer",
+      "name": "review-desk",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "reader",
+      "name": "issues",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "admin",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "operations",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    },
+    {
+      "role": "admin",
+      "name": "sites",
+      "width": 390,
+      "status": 200,
+      "layout": {
+        "width": 390,
+        "scroll": 390,
+        "overflow": []
+      }
+    }
+  ],
+  "errors": []
+}

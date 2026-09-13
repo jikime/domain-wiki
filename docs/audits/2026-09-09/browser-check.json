@@ -1,0 +1,1571 @@
+{
+  "date": "2026-09-09T05:36:38.081Z",
+  "pages": [
+    {
+      "role": "reader",
+      "name": "home",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "오늘은 어떤 업무를 알아볼까요?",
+      "links": [
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "채팅 공간 살펴보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domain=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "질문·근거 확인업무에 질문하기공개 자료에서 근거를 찾아 대화합니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "검토된 지식위키 둘러보기동료가 검토한 개념과 절차를 읽습니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q="
+        },
+        {
+          "text": "원본과 버전자료 모아보기등록한 원본과 처리 상태를 확인합니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q="
+        },
+        {
+          "text": "ITS ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q=ITS"
+        },
+        {
+          "text": "검수 ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q=%EA%B2%80%EC%88%98"
+        },
+        {
+          "text": "1개 · 발주처로 찾기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "가상 새봄시 관제 시범사업 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "chat",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "새 대화",
+      "links": [
+        {
+          "text": "개발 예시에서 관제 화면 갱신 주기는 어떻게 정하나요?9월 9일",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?conversation=46a67282-a80e-4365-9d8c-e990e04e20dc"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "자료실",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "사업 자료공개처리 완료[개발 예시] 관제 RFP개발용-RFP.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 PDF 조건표columns-table.pdf · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 화면설계screen-coordinates.pptx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 Word 조건표conditions-table.docx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499"
+        },
+        {
+          "text": "작성자 진술공개처리 완료[개발 예시] 관제 화면 점검 경험실무기록.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        },
+        {
+          "text": "사업 자료공개처리 완료개발 표본 · 관제 사업 안내01-project-guide.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "wiki",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "게시[개발 예시] 관제 조건 점검 순서버전 1 · 이 페이지는 실제 고객 지침이 아닌 개발 예시입니다.\n\n1. 사업명을 확인합니다.\n2. 표에서 사업명과 통신 조건을 함께 봅니다.\n3. 새봄시 예시의 정상 통신 조건은 30초입니다→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e?version=8fc132ec-3999-47f2-afc4-a90e021188e4"
+        },
+        {
+          "text": "게시개발 예시 · 관제 화면 갱신과 재연결 점검버전 1 · # 관제 화면 점검 기준\n\n> 직접 작성한 개발 표본을 바탕으로 한 예시입니다. 실제 고객 지침이 아닙니다.\n\n## 정상 통신 중\n\n관제 화면은 정상 통신 상태에서 **30초 간격→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/79c14631-733f-4809-858c-942bcf5b6c1e?version=f452174f-833b-4563-b059-27bc37eb0a52"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "source",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "개발 표본 · 관제 사업 안내",
+      "links": [
+        {
+          "text": "← 자료실",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "원본 내려받기",
+          "href": "/api/workspaces/cdf1f2a1-1cd6-4338-b22a-e91387f36593/source-versions/cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e/file"
+        },
+        {
+          "text": "원문",
+          "href": "#source-text"
+        },
+        {
+          "text": "상태·버전",
+          "href": "#source-status"
+        },
+        {
+          "text": "처리 이력",
+          "href": "#source-history"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-190e4c4a-6ccc-42e7-a43f-1a5a75349d37"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-e6e292c8-9f42-4ec0-b5cc-2eaef684abc6"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-c7e6831c-725a-40e2-9265-c5a69d968352"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-914493a6-3e44-4f18-aa02-a733da30da90"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-7dd9aacf-08ed-4abe-96dc-5a9c23a3a2bc"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-dfbfa639-35b0-49a3-b738-c42611b72b63"
+        },
+        {
+          "text": "버전 1 · 공개",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944?version=cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e"
+        },
+        {
+          "text": "이 자료에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?sourceId=059581df-95fc-4cbb-859f-3bd4dff1b944&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "내 신고와 답변 의견 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/issues"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "wiki-detail",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "개발 예시 · 관제 화면 갱신과 재연결 점검",
+      "links": [
+        {
+          "text": "← 위키 목록",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki"
+        },
+        {
+          "text": "본문",
+          "href": "#wiki-body"
+        },
+        {
+          "text": "원문 근거 1",
+          "href": "#wiki-evidence"
+        },
+        {
+          "text": "관련 지식",
+          "href": "#wiki-relations"
+        },
+        {
+          "text": "[1] 개발 표본 · 관제 사업 안내 · 버전 1 · 12~16행 · 점검 기준 ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944?version=cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e#chunk-7dd9aacf-08ed-4abe-96dc-5a9c23a3a2bc"
+        },
+        {
+          "text": "작성자 진술[개발 예시] 관제 화면 점검 경험# [개발 예시] 관제 화면 점검 경험1~2행 · [개발 예시] 관제 화면 점검 경험 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080?version=b2748872-bf9b-4cc0-9789-63fed72a0341#chunk-4464f5d2-5598-4737-a805-b6eb868825fe"
+        },
+        {
+          "text": "이 위키를 바탕으로 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?wikiId=79c14631-733f-4809-858c-942bcf5b6c1e&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "이 위키에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?wikiId=79c14631-733f-4809-858c-942bcf5b6c1e&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "내 신고와 답변 의견 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/issues"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "records",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록",
+      "links": [
+        {
+          "text": "[개발 예시] 관제 화면 점검 경험작성자 진술 · 공개 · 처리 완료기록 읽기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "projects",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "발주처·프로젝트",
+      "links": [
+        {
+          "text": "← 업무 홈",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593"
+        },
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "가상 새봄시가상 새봄시 관제 시범사업권한과 프로젝트 범위를 확인하기 위한 가상의 사업입니다. 실제 사업 정보가 아닙니다.교통관제 업무 (개발 예시) →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "가상 새봄시새봄시 관제 예시문서의 사업 조건과 원문 위치를 살펴보는 개발 예시입니다.문서 품질·입문 안내 예시 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "project",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "새봄시 관제 예시",
+      "links": [
+        {
+          "text": "← 발주처·프로젝트",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects"
+        },
+        {
+          "text": "이 프로젝트에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "자료 검색",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?q=&domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "위키 검색",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?q=&domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "도메인 입문 안내",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 Word 조건표DOCX 개발 표본 — 실제 고객 지침이 아님본문 · 블록 1 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499?version=eb3558dd-d7c3-4a06-898d-f53861a17934#chunk-a2c381cb-154c-4f42-9300-a2a20057fc1e"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 화면설계PPTX 화면설계 개발 표본슬라이드 1 · 본문 · 도형 2 · 문단 1 · 위치 914400, 1828800 EMU →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458?version=3216bee7-d04c-4c18-9a54-d005589462a4#chunk-1d675d0c-0587-4802-9201-50098cc5ff2f"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 RFP# 개발용 RFP1~2행 · 개발용 RFP →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7?version=a07e494f-967f-4449-b12a-ac2849664b5e#chunk-48cda708-a423-40f1-bb26-77d7ab1e3b2b"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 PDF 조건표복잡한 배치 개발 표본\n가상 자료이며 실제 지침이 아닙니다.\n조건 A\n정상 통신: 30초 갱신.\n재연결: 60초 이내 확인.\n예외 B\n통신 중단: 최신 값으로 표시하면 안 된다.\n검토 중인 변경은 반영 완료가 아니다.\n사업 \t주기 \t적용\n새봄시 30초 정상 통신\n겨울시 10초 별도 사업1쪽 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4?version=2b706c9c-5b08-44b7-b2a0-5f118f857488#chunk-757df938-e06d-4705-bd10-ecf7ab38123c"
+        },
+        {
+          "text": "게시 위키[개발 예시] 관제 조건 점검 순서이 페이지는 실제 고객 지침이 아닌 개발 예시입니다.\n\n1. 사업명을 확인합니다.\n2. 표에서 사업명과 통신 조건을 함께 봅니다.\n3. 새봄시 예시의 정상 통신 조건은 30초입니다. 다른 사업의 10초 조건과 구분합니다.\n4. 원문을 열어 부정문과 예외 조건을 확인합니다.게시된 본문 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e?version=8fc132ec-3999-47f2-afc4-a90e021188e4"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "tools",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "업무 도구",
+      "links": [
+        {
+          "text": "RFP 분석 보고서명시 요구·관련 기준·사례·추론을 구분하고 확인 질문을 남깁니다.보고서 살펴보기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "rfp",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 보고서",
+      "links": [
+        {
+          "text": "← 업무 도구",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools"
+        },
+        {
+          "text": "[개발 예시] 관제 요구 검토검토 완료·게시 · 버전 1열기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp/777060c5-6422-4eb0-8864-86569e9ffa69"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "rfp-detail",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "[개발 예시] 관제 요구 검토",
+      "links": [
+        {
+          "text": "← RFP 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        },
+        {
+          "text": "분석 내용",
+          "href": "#rfp-body"
+        },
+        {
+          "text": "검토·버전",
+          "href": "#rfp-review"
+        },
+        {
+          "text": "[개발 예시] 관제 RFP · 3~4행 · 개발용 RFP근거 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7?version=a07e494f-967f-4449-b12a-ac2849664b5e#chunk-01197874-24a1-4e6a-8fa9-48e791b61b1d"
+        },
+        {
+          "text": "RFP 원문 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "보고서 내려받기",
+          "href": "/api/workspaces/cdf1f2a1-1cd6-4338-b22a-e91387f36593/rfp/777060c5-6422-4eb0-8864-86569e9ffa69/file"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "issues",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "내 신고와 답변 의견",
+      "links": [
+        {
+          "text": "← 홈",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593"
+        },
+        {
+          "text": "수정 게시 위키 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "sources",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "자료실",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "사업 자료공개처리 완료[개발 예시] 관제 RFP개발용-RFP.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 PDF 조건표columns-table.pdf · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 화면설계screen-coordinates.pptx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 Word 조건표conditions-table.docx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499"
+        },
+        {
+          "text": "작성자 진술공개처리 완료[개발 예시] 관제 화면 점검 경험실무기록.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        },
+        {
+          "text": "사업 자료공개처리 완료개발 표본 · 관제 사업 안내01-project-guide.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "records",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록",
+      "links": [
+        {
+          "text": "+ 실무 기록 작성",
+          "href": "#new-record"
+        },
+        {
+          "text": "위키 변경 묶음 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        },
+        {
+          "text": "[개발 예시] 관제 화면 점검 경험작성자 진술 · 공개 · 처리 완료기록 읽기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "record-edit",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록 개정",
+      "links": [
+        {
+          "text": "← 기록으로 돌아가기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "wiki-new",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 작성",
+      "links": []
+    },
+    {
+      "role": "writer",
+      "name": "wiki-edit",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "새 변경안 작성",
+      "links": []
+    },
+    {
+      "role": "writer",
+      "name": "proposals",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 변경 묶음",
+      "links": [
+        {
+          "text": "변경 묶음 작성",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals/new"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "proposal-new",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 변경 묶음 작성",
+      "links": [
+        {
+          "text": "← 변경 묶음",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "tools",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "업무 도구",
+      "links": [
+        {
+          "text": "RFP 분석 보고서명시 요구·관련 기준·사례·추론을 구분하고 확인 질문을 남깁니다.보고서 살펴보기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        },
+        {
+          "text": "공식 자료 수집허용한 기관의 원문과 첨부를 보관하고 검토합니다.자료 후보 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/official"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "official",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "공식 자료 수집",
+      "links": [
+        {
+          "text": "← 업무 도구",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "rfp-new",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 작성",
+      "links": [
+        {
+          "text": "← RFP 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "rfp-edit",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 수정",
+      "links": [
+        {
+          "text": "← 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp/777060c5-6422-4eb0-8864-86569e9ffa69"
+        }
+      ]
+    },
+    {
+      "role": "reviewer",
+      "name": "reviews",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "검토함",
+      "links": [
+        {
+          "text": "공개·게시 검토",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "담당·오류 처리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews/desk"
+        },
+        {
+          "text": "변경 묶음 0",
+          "href": "#review-batches"
+        },
+        {
+          "text": "자료 0",
+          "href": "#review-sources"
+        },
+        {
+          "text": "위키 0",
+          "href": "#review-wikis"
+        },
+        {
+          "text": "답변 의견 1",
+          "href": "#review-feedback"
+        },
+        {
+          "text": "전체 묶음 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        }
+      ]
+    },
+    {
+      "role": "reviewer",
+      "name": "review-desk",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "담당 검토·오류 처리",
+      "links": [
+        {
+          "text": "← 검토함",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "공개·게시 검토",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "담당·오류 처리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews/desk"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "admin",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "관리",
+      "links": [
+        {
+          "text": "공식 자료 수집 허용 사이트 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin/sites"
+        },
+        {
+          "text": "작업·사용량·보존 관리 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin/operations"
+        },
+        {
+          "text": "도메인",
+          "href": "#domains"
+        },
+        {
+          "text": "프로젝트",
+          "href": "#projects"
+        },
+        {
+          "text": "직원 계정",
+          "href": "#members"
+        },
+        {
+          "text": "모델 연결",
+          "href": "#model"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "operations",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "작업·사용량·보존 관리",
+      "links": [
+        {
+          "text": "← 관리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "sites",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "수집 허용 사이트",
+      "links": [
+        {
+          "text": "← 관리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "reviews",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0,
+      "title": "검토 직원 역할이 필요합니다",
+      "links": [
+        {
+          "text": "직원 역할 관리 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin#members"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "home",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "오늘은 어떤 업무를 알아볼까요?",
+      "links": [
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "채팅 공간 살펴보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domain=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "질문·근거 확인업무에 질문하기공개 자료에서 근거를 찾아 대화합니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "검토된 지식위키 둘러보기동료가 검토한 개념과 절차를 읽습니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q="
+        },
+        {
+          "text": "원본과 버전자료 모아보기등록한 원본과 처리 상태를 확인합니다열어보기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q="
+        },
+        {
+          "text": "ITS ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q=ITS"
+        },
+        {
+          "text": "검수 ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&q=%EA%B2%80%EC%88%98"
+        },
+        {
+          "text": "1개 · 발주처로 찾기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "가상 새봄시 관제 시범사업 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "chat",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "새 대화",
+      "links": [
+        {
+          "text": "개발 예시에서 관제 화면 갱신 주기는 어떻게 정하나요?9월 9일",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?conversation=46a67282-a80e-4365-9d8c-e990e04e20dc"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "sources",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "자료실",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "사업 자료공개처리 완료[개발 예시] 관제 RFP개발용-RFP.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 PDF 조건표columns-table.pdf · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 화면설계screen-coordinates.pptx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 Word 조건표conditions-table.docx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499"
+        },
+        {
+          "text": "작성자 진술공개처리 완료[개발 예시] 관제 화면 점검 경험실무기록.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        },
+        {
+          "text": "사업 자료공개처리 완료개발 표본 · 관제 사업 안내01-project-guide.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "wiki",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "게시[개발 예시] 관제 조건 점검 순서버전 1 · 이 페이지는 실제 고객 지침이 아닌 개발 예시입니다.\n\n1. 사업명을 확인합니다.\n2. 표에서 사업명과 통신 조건을 함께 봅니다.\n3. 새봄시 예시의 정상 통신 조건은 30초입니다→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e?version=8fc132ec-3999-47f2-afc4-a90e021188e4"
+        },
+        {
+          "text": "게시개발 예시 · 관제 화면 갱신과 재연결 점검버전 1 · # 관제 화면 점검 기준\n\n> 직접 작성한 개발 표본을 바탕으로 한 예시입니다. 실제 고객 지침이 아닙니다.\n\n## 정상 통신 중\n\n관제 화면은 정상 통신 상태에서 **30초 간격→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/79c14631-733f-4809-858c-942bcf5b6c1e?version=f452174f-833b-4563-b059-27bc37eb0a52"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "source",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "개발 표본 · 관제 사업 안내",
+      "links": [
+        {
+          "text": "← 자료실",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "원본 내려받기",
+          "href": "/api/workspaces/cdf1f2a1-1cd6-4338-b22a-e91387f36593/source-versions/cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e/file"
+        },
+        {
+          "text": "원문",
+          "href": "#source-text"
+        },
+        {
+          "text": "상태·버전",
+          "href": "#source-status"
+        },
+        {
+          "text": "처리 이력",
+          "href": "#source-history"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-190e4c4a-6ccc-42e7-a43f-1a5a75349d37"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-e6e292c8-9f42-4ec0-b5cc-2eaef684abc6"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-c7e6831c-725a-40e2-9265-c5a69d968352"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-914493a6-3e44-4f18-aa02-a733da30da90"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-7dd9aacf-08ed-4abe-96dc-5a9c23a3a2bc"
+        },
+        {
+          "text": "이 문단 위치",
+          "href": "#chunk-dfbfa639-35b0-49a3-b738-c42611b72b63"
+        },
+        {
+          "text": "버전 1 · 공개",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944?version=cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e"
+        },
+        {
+          "text": "이 자료에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?sourceId=059581df-95fc-4cbb-859f-3bd4dff1b944&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "내 신고와 답변 의견 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/issues"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "wiki-detail",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "개발 예시 · 관제 화면 갱신과 재연결 점검",
+      "links": [
+        {
+          "text": "← 위키 목록",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki"
+        },
+        {
+          "text": "본문",
+          "href": "#wiki-body"
+        },
+        {
+          "text": "원문 근거 1",
+          "href": "#wiki-evidence"
+        },
+        {
+          "text": "관련 지식",
+          "href": "#wiki-relations"
+        },
+        {
+          "text": "[1] 개발 표본 · 관제 사업 안내 · 버전 1 · 12~16행 · 점검 기준 ↗",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944?version=cc7d7f2e-1742-4fa7-a26f-d6e65fcd0d9e#chunk-7dd9aacf-08ed-4abe-96dc-5a9c23a3a2bc"
+        },
+        {
+          "text": "작성자 진술[개발 예시] 관제 화면 점검 경험# [개발 예시] 관제 화면 점검 경험1~2행 · [개발 예시] 관제 화면 점검 경험 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080?version=b2748872-bf9b-4cc0-9789-63fed72a0341#chunk-4464f5d2-5598-4737-a805-b6eb868825fe"
+        },
+        {
+          "text": "이 위키를 바탕으로 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?wikiId=79c14631-733f-4809-858c-942bcf5b6c1e&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "이 위키에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?wikiId=79c14631-733f-4809-858c-942bcf5b6c1e&domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf&projectId=deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "내 신고와 답변 의견 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/issues"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "records",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록",
+      "links": [
+        {
+          "text": "[개발 예시] 관제 화면 점검 경험작성자 진술 · 공개 · 처리 완료기록 읽기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "projects",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "발주처·프로젝트",
+      "links": [
+        {
+          "text": "← 업무 홈",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593"
+        },
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "가상 새봄시가상 새봄시 관제 시범사업권한과 프로젝트 범위를 확인하기 위한 가상의 사업입니다. 실제 사업 정보가 아닙니다.교통관제 업무 (개발 예시) →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/deed13d4-1aff-4b45-9c88-6d6b37667eb0"
+        },
+        {
+          "text": "가상 새봄시새봄시 관제 예시문서의 사업 조건과 원문 위치를 살펴보는 개발 예시입니다.문서 품질·입문 안내 예시 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects/44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "project",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "새봄시 관제 예시",
+      "links": [
+        {
+          "text": "← 발주처·프로젝트",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/projects"
+        },
+        {
+          "text": "이 프로젝트에 질문하기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/chat?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "자료 검색",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?q=&domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "위키 검색",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki?q=&domainId=de9a05db-d3fe-493e-aa5c-5895891c585b&projectId=44aa6f93-b9e3-4bde-ab24-6a7d282fa45a"
+        },
+        {
+          "text": "도메인 입문 안내",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593?domain=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 Word 조건표DOCX 개발 표본 — 실제 고객 지침이 아님본문 · 블록 1 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499?version=eb3558dd-d7c3-4a06-898d-f53861a17934#chunk-a2c381cb-154c-4f42-9300-a2a20057fc1e"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 화면설계PPTX 화면설계 개발 표본슬라이드 1 · 본문 · 도형 2 · 문단 1 · 위치 914400, 1828800 EMU →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458?version=3216bee7-d04c-4c18-9a54-d005589462a4#chunk-1d675d0c-0587-4802-9201-50098cc5ff2f"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 RFP# 개발용 RFP1~2행 · 개발용 RFP →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7?version=a07e494f-967f-4449-b12a-ac2849664b5e#chunk-48cda708-a423-40f1-bb26-77d7ab1e3b2b"
+        },
+        {
+          "text": "공개 원문[개발 예시] 관제 PDF 조건표복잡한 배치 개발 표본\n가상 자료이며 실제 지침이 아닙니다.\n조건 A\n정상 통신: 30초 갱신.\n재연결: 60초 이내 확인.\n예외 B\n통신 중단: 최신 값으로 표시하면 안 된다.\n검토 중인 변경은 반영 완료가 아니다.\n사업 \t주기 \t적용\n새봄시 30초 정상 통신\n겨울시 10초 별도 사업1쪽 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4?version=2b706c9c-5b08-44b7-b2a0-5f118f857488#chunk-757df938-e06d-4705-bd10-ecf7ab38123c"
+        },
+        {
+          "text": "게시 위키[개발 예시] 관제 조건 점검 순서이 페이지는 실제 고객 지침이 아닌 개발 예시입니다.\n\n1. 사업명을 확인합니다.\n2. 표에서 사업명과 통신 조건을 함께 봅니다.\n3. 새봄시 예시의 정상 통신 조건은 30초입니다. 다른 사업의 10초 조건과 구분합니다.\n4. 원문을 열어 부정문과 예외 조건을 확인합니다.게시된 본문 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e?version=8fc132ec-3999-47f2-afc4-a90e021188e4"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "tools",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "업무 도구",
+      "links": [
+        {
+          "text": "RFP 분석 보고서명시 요구·관련 기준·사례·추론을 구분하고 확인 질문을 남깁니다.보고서 살펴보기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "rfp",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 보고서",
+      "links": [
+        {
+          "text": "← 업무 도구",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools"
+        },
+        {
+          "text": "[개발 예시] 관제 요구 검토검토 완료·게시 · 버전 1열기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp/777060c5-6422-4eb0-8864-86569e9ffa69"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "rfp-detail",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "[개발 예시] 관제 요구 검토",
+      "links": [
+        {
+          "text": "← RFP 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        },
+        {
+          "text": "분석 내용",
+          "href": "#rfp-body"
+        },
+        {
+          "text": "검토·버전",
+          "href": "#rfp-review"
+        },
+        {
+          "text": "[개발 예시] 관제 RFP · 3~4행 · 개발용 RFP근거 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7?version=a07e494f-967f-4449-b12a-ac2849664b5e#chunk-01197874-24a1-4e6a-8fa9-48e791b61b1d"
+        },
+        {
+          "text": "RFP 원문 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "보고서 내려받기",
+          "href": "/api/workspaces/cdf1f2a1-1cd6-4338-b22a-e91387f36593/rfp/777060c5-6422-4eb0-8864-86569e9ffa69/file"
+        }
+      ]
+    },
+    {
+      "role": "reader",
+      "name": "issues",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "내 신고와 답변 의견",
+      "links": [
+        {
+          "text": "← 홈",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593"
+        },
+        {
+          "text": "수정 게시 위키 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/wiki/ee966abd-2121-4365-a01e-befb10a31a5e"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "sources",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "자료실",
+      "links": [
+        {
+          "text": "전체",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources"
+        },
+        {
+          "text": "교통관제 업무 (개발 예시)",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=dcf9f39e-0975-4954-b24e-492fdf9d5adf"
+        },
+        {
+          "text": "문서 품질·입문 안내 예시",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources?domainId=de9a05db-d3fe-493e-aa5c-5895891c585b"
+        },
+        {
+          "text": "사업 자료공개처리 완료[개발 예시] 관제 RFP개발용-RFP.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/8c774faa-bb04-4b38-aaba-f999d02c44f7"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 PDF 조건표columns-table.pdf · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/a093bdd7-0eb6-4578-9006-b3c018a1f1e4"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 화면설계screen-coordinates.pptx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/56d19df7-9aee-4459-a89a-684dd0c2d458"
+        },
+        {
+          "text": "참고 자료공개처리 완료[개발 예시] 관제 Word 조건표conditions-table.docx · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/0e2c9adf-88b0-42f1-8e7a-75acc70cf499"
+        },
+        {
+          "text": "작성자 진술공개처리 완료[개발 예시] 관제 화면 점검 경험실무기록.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        },
+        {
+          "text": "사업 자료공개처리 완료개발 표본 · 관제 사업 안내01-project-guide.md · 버전 1→",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/059581df-95fc-4cbb-859f-3bd4dff1b944"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "records",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록",
+      "links": [
+        {
+          "text": "+ 실무 기록 작성",
+          "href": "#new-record"
+        },
+        {
+          "text": "위키 변경 묶음 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        },
+        {
+          "text": "[개발 예시] 관제 화면 점검 경험작성자 진술 · 공개 · 처리 완료기록 읽기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "record-edit",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "실무 기록 개정",
+      "links": [
+        {
+          "text": "← 기록으로 돌아가기",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/sources/1cf7c0f8-7c8c-475c-be09-6b48d7012080"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "wiki-new",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 작성",
+      "links": []
+    },
+    {
+      "role": "writer",
+      "name": "wiki-edit",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "새 변경안 작성",
+      "links": []
+    },
+    {
+      "role": "writer",
+      "name": "proposals",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 변경 묶음",
+      "links": [
+        {
+          "text": "변경 묶음 작성",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals/new"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "proposal-new",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "위키 변경 묶음 작성",
+      "links": [
+        {
+          "text": "← 변경 묶음",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "tools",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "업무 도구",
+      "links": [
+        {
+          "text": "RFP 분석 보고서명시 요구·관련 기준·사례·추론을 구분하고 확인 질문을 남깁니다.보고서 살펴보기 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        },
+        {
+          "text": "공식 자료 수집허용한 기관의 원문과 첨부를 보관하고 검토합니다.자료 후보 확인 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/official"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "official",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "공식 자료 수집",
+      "links": [
+        {
+          "text": "← 업무 도구",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "rfp-new",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 작성",
+      "links": [
+        {
+          "text": "← RFP 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp"
+        }
+      ]
+    },
+    {
+      "role": "writer",
+      "name": "rfp-edit",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "RFP 분석 수정",
+      "links": [
+        {
+          "text": "← 보고서",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/tools/rfp/777060c5-6422-4eb0-8864-86569e9ffa69"
+        }
+      ]
+    },
+    {
+      "role": "reviewer",
+      "name": "reviews",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "검토함",
+      "links": [
+        {
+          "text": "공개·게시 검토",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "담당·오류 처리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews/desk"
+        },
+        {
+          "text": "변경 묶음 0",
+          "href": "#review-batches"
+        },
+        {
+          "text": "자료 0",
+          "href": "#review-sources"
+        },
+        {
+          "text": "위키 0",
+          "href": "#review-wikis"
+        },
+        {
+          "text": "답변 의견 1",
+          "href": "#review-feedback"
+        },
+        {
+          "text": "전체 묶음 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/proposals"
+        }
+      ]
+    },
+    {
+      "role": "reviewer",
+      "name": "review-desk",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "담당 검토·오류 처리",
+      "links": [
+        {
+          "text": "← 검토함",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "공개·게시 검토",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews"
+        },
+        {
+          "text": "담당·오류 처리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/reviews/desk"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "admin",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "관리",
+      "links": [
+        {
+          "text": "공식 자료 수집 허용 사이트 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin/sites"
+        },
+        {
+          "text": "작업·사용량·보존 관리 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin/operations"
+        },
+        {
+          "text": "도메인",
+          "href": "#domains"
+        },
+        {
+          "text": "프로젝트",
+          "href": "#projects"
+        },
+        {
+          "text": "직원 계정",
+          "href": "#members"
+        },
+        {
+          "text": "모델 연결",
+          "href": "#model"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "operations",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "작업·사용량·보존 관리",
+      "links": [
+        {
+          "text": "← 관리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "sites",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "수집 허용 사이트",
+      "links": [
+        {
+          "text": "← 관리",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin"
+        }
+      ]
+    },
+    {
+      "role": "admin",
+      "name": "reviews",
+      "width": 390,
+      "status": 200,
+      "overflow": 0,
+      "title": "검토 직원 역할이 필요합니다",
+      "links": [
+        {
+          "text": "직원 역할 관리 →",
+          "href": "/w/cdf1f2a1-1cd6-4338-b22a-e91387f36593/admin#members"
+        }
+      ]
+    }
+  ],
+  "browserErrors": [],
+  "menus": {
+    "reader": ["홈", "채팅", "위키", "자료실", "실무 기록", "업무 도구"],
+    "reviewer": [
+      "홈",
+      "채팅",
+      "위키",
+      "자료실",
+      "실무 기록",
+      "업무 도구",
+      "검토함"
+    ],
+    "admin": [
+      "홈",
+      "채팅",
+      "위키",
+      "자료실",
+      "실무 기록",
+      "업무 도구",
+      "검토함",
+      "관리"
+    ]
+  },
+  "findings": {
+    "unsavedWikiDraft": {
+      "leaveDialogs": 0,
+      "titleAfterReturn": "",
+      "bodyAfterReturn": ""
+    },
+    "modelUsage": [
+      {
+        "model": "gpt-5.6-terra",
+        "requests": 2,
+        "unknown": 2,
+        "input": null,
+        "output": null,
+        "failures": 0,
+        "estimate": null
+      },
+      {
+        "model": null,
+        "requests": 3,
+        "unknown": 3,
+        "input": null,
+        "output": null,
+        "failures": 3,
+        "estimate": null
+      }
+    ]
+  }
+}

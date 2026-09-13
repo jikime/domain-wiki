@@ -1,0 +1,11 @@
+{
+  "date": "2026-09-09T04:46:07.653Z",
+  "provider": "OpenAI",
+  "browserErrors": [],
+  "model": "gpt-5.6-terra",
+  "runState": "completed",
+  "retrievalMode": "hybrid",
+  "citationCount": 3,
+  "answerCharacters": 367,
+  "testConversationRemoved": true
+}

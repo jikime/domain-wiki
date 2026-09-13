@@ -1,0 +1,125 @@
+[
+  {
+    "role": "reader",
+    "name": "home",
+    "width": 1440,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "reader",
+    "name": "chat",
+    "width": 1440,
+    "overflow": 0,
+    "question": 971.84375,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "reader",
+    "name": "home",
+    "width": 960,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "reader",
+    "name": "chat",
+    "width": 960,
+    "overflow": 0,
+    "question": 971.84375,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "reader",
+    "name": "home",
+    "width": 390,
+    "overflow": 0,
+    "viewport": 844,
+    "errors": []
+  },
+  {
+    "role": "reader",
+    "name": "chat",
+    "width": 390,
+    "overflow": 0,
+    "question": 1404.078125,
+    "viewport": 844,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "source-actions",
+    "width": 1440,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "wiki-actions",
+    "width": 1440,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "sources",
+    "width": 1440,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "source-actions",
+    "width": 960,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "wiki-actions",
+    "width": 960,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "sources",
+    "width": 960,
+    "overflow": 0,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "source-actions",
+    "width": 390,
+    "overflow": 0,
+    "viewport": 844,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "wiki-actions",
+    "width": 390,
+    "overflow": 0,
+    "viewport": 844,
+    "errors": []
+  },
+  {
+    "role": "writer",
+    "name": "sources",
+    "width": 390,
+    "overflow": 0,
+    "viewport": 844,
+    "errors": []
+  }
+]

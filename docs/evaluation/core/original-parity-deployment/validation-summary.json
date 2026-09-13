@@ -1,0 +1,77 @@
+{
+  "date": "2026-09-10T07:31:26.281Z",
+  "scope": "원본 기능 복원과 기존 회사 업무 기능의 로컬 검증",
+  "integration": {
+    "passed": 253,
+    "existingCases": 199,
+    "restorationCases": 54,
+    "failed": 0,
+    "skipped": 0,
+    "duration": "13.0m",
+    "command": "node scripts/test-integration.mjs"
+  },
+  "referenceFunctions": {
+    "passed": 192,
+    "files": 14,
+    "command": "npm run test:reference"
+  },
+  "nativeConverter": {
+    "passed": 8,
+    "command": "npm run native:test"
+  },
+  "installation": {
+    "node": "22.23.1",
+    "npm": "10.9.8",
+    "cleanLockInstall": true,
+    "hostProductionBuild": true,
+    "linuxProductionBuild": true
+  },
+  "parserFixtures": {
+    "files": 6,
+    "preservationChecks": 8,
+    "report": "parser-regression.json"
+  },
+  "researchProviders": {
+    "protocols": 7,
+    "liveExternalCalls": false
+  },
+  "officialFetchBoundaries": true,
+  "sourcePreservation": {
+    "files": 447,
+    "unchanged": true,
+    "report": "original-preservation.json"
+  },
+  "realModelEvaluation": {
+    "model": "gpt-5.6-terra",
+    "initialPages": 4,
+    "revisedPages": 4,
+    "pageIdsRetained": 4,
+    "coreConditions": 6,
+    "repeatCalls": 0,
+    "report": "../ingest-12-original-parity-20260910/README.md"
+  },
+  "deployment": {
+    "migrations": 30,
+    "tables": 54,
+    "files": 16,
+    "checkedViews": 26,
+    "backupAndRestore": true,
+    "report": "README.md"
+  },
+  "limitations": [
+    "실제 외부 OCR·Vision·검색 제공자의 업무 정확성은 별도 검증",
+    "실제 고객 문서·팀 인수 및 외부 HTTPS 배포는 별도",
+    "ZIP 4 GiB·100,000개 항목 한계 크기 부하 시험은 미실시"
+  ],
+  "logSha256": {
+    "parity-clean-install.log": "410a1ccda9dcfd36adda79dae9913b929b6f9c57333e572dc10c3e7f39db1db1",
+    "parity-final-host-build.log": "e862a416092426f7893e341ef854e9c8f46a5b9e5ec5f6aa8144c4d43b8f2df9",
+    "parity-docker-final-build.log": "6d57a7c647c4e35b58f123f589ce37e9872db48ab59cbbca13d03ded480c12d4",
+    "parity-final-full-integration.log": "5fe9aca1d680679558fbaf7df839ea8ec8f120785ef4cc7c56e878e672f86e90",
+    "parity-final-reference-tests.log": "8e120f3202cd0d317557ddca99ce582b43995028cb2e0e951ad52505e5210dae",
+    "parity-final-native-tests.log": "37885c24318c9feed615c477273630e23557730de31f20bc9b4a0fe0a8cc6293",
+    "parity-final-official-tests.log": "18a0b3293f9dbef5fc17d8784a1440978ab6cd612e38ccf9c6f198101fd7396d",
+    "parity-final-research-contracts.log": "d066d94715d2119b065c1a9086de35b2507af0311a5c2119d496a3849c15b701",
+    "parity-final-parser-evaluation.log": "3107149a2a2508ac17f80b84528c90a573a79db17b8d0e07b2cb049d0e0480c4"
+  }
+}

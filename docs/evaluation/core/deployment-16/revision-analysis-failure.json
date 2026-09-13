@@ -1,0 +1,142 @@
+{
+  "date": "2026-09-09T16:50:27.915Z",
+  "run": {
+    "id": "03f24bfc-6230-4c81-a900-15374a398eac",
+    "sourceVersionId": "3508a145-f7f8-470a-9d48-8b608e47d6d3",
+    "state": "failed",
+    "origin": "automatic",
+    "errorMessage": "분석의 적용 대상이 인용 원문 또는 절 제목과 다릅니다.",
+    "reusedAnalysis": false,
+    "reusedUnits": 0,
+    "reusedPages": 0,
+    "analysisTaskId": "1b7ad32c-c5e1-4f27-8d82-b33285264b93",
+    "generationTaskId": null,
+    "manageable": true,
+    "current": true,
+    "createdAt": "2026-09-09T16:49:36.673Z",
+    "groups": []
+  },
+  "steps": [
+    {
+      "kind": "prepare",
+      "state": "completed",
+      "result": {
+        "units": [
+          {
+            "id": "unit-1",
+            "parts": [
+              {
+                "id": "74518b9b-ec8c-47d6-b169-28fcf82241fa:0-17",
+                "end": 17,
+                "text": "# 가상 은하군 관제 운영 지침",
+                "start": 0,
+                "chunkId": "74518b9b-ec8c-47d6-b169-28fcf82241fa",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 2,
+                  "heading": "가상 은하군 관제 운영 지침",
+                  "startLine": 1
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침",
+                "structureContext": ""
+              },
+              {
+                "id": "6a9e1bf3-f969-43aa-9bd3-f952e2c93f18:0-69",
+                "end": 69,
+                "text": "개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다. 이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.",
+                "start": 0,
+                "chunkId": "6a9e1bf3-f969-43aa-9bd3-f952e2c93f18",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 4,
+                  "heading": "가상 은하군 관제 운영 지침",
+                  "startLine": 3
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침",
+                "structureContext": ""
+              },
+              {
+                "id": "f5ff4aeb-fb19-45e7-b99a-391e296b942f:0-79",
+                "end": 79,
+                "text": "## 정상 갱신\n정상 통신 상태에서는 관제 화면을 45초 간격으로 갱신합니다. 통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.",
+                "start": 0,
+                "chunkId": "f5ff4aeb-fb19-45e7-b99a-391e296b942f",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 7,
+                  "heading": "정상 갱신",
+                  "startLine": 5
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 정상 갱신",
+                "structureContext": ""
+              },
+              {
+                "id": "d5164593-6a9a-4ecb-a19e-f81abc83832e:0-115",
+                "end": 115,
+                "text": "## 통신 중단과 재연결\n통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다. 마지막 수신 값을 최신 값으로 표시하면 안 됩니다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.",
+                "start": 0,
+                "chunkId": "d5164593-6a9a-4ecb-a19e-f81abc83832e",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 10,
+                  "heading": "통신 중단과 재연결",
+                  "startLine": 8
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 통신 중단과 재연결",
+                "structureContext": ""
+              },
+              {
+                "id": "2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161",
+                "end": 161,
+                "text": "## 점검 기록\n이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다. 장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다. 담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다. 이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.",
+                "start": 0,
+                "chunkId": "2955de3f-eeb4-40ac-95b2-9532e0ee26a9",
+                "locator": {
+                  "kind": "lines",
+                  "endLine": 13,
+                  "heading": "점검 기록",
+                  "startLine": 11
+                },
+                "structure": "text",
+                "headingPath": "가상 은하군 관제 운영 지침 > 점검 기록",
+                "structureContext": ""
+              }
+            ],
+            "contextBefore": ""
+          }
+        ],
+        "version": "semantic-parts-v1",
+        "excluded": [],
+        "warnings": [],
+        "inputLimit": 40800,
+        "sourceHash": "16f3e240e360bb363c30a9f1a16979d5434344b372be52f352d8b819343c1fd9",
+        "totalChars": 441,
+        "totalParts": 5,
+        "totalChunks": 5,
+        "sourceBudget": 24000,
+        "parserVersion": "utf8-lines@1"
+      },
+      "error": null
+    },
+    {
+      "kind": "analyze",
+      "state": "failed",
+      "result": {
+        "rejected": true,
+        "modelOutput": "{\"summary\":\"가상 은하군 관제 운영 지침은 개발용 가상 표본으로, 가상 은하군의 시범 교차로 두 곳에만 적용된다. 정상 통신 상태의 관제 화면은 45초 간격으로 갱신하며, 통신 장애 중에는 해당 갱신 기준을 충족한 것으로 판정하지 않는다. 통신 중단 시 마지막 수신 시각과 중단 표시를 함께 제공하고, 재연결 후 60초 이내 새 데이터 수신 여부를 확인한다. 정상 장비 점검 기록은 72시간 보관하되 장애 장비 기록에는 적용하지 않으며, 담당자는 두 교차로의 정상·중단 상황을 각각 확인·기록한다.\",\"claims\":[{\"kind\":\"concept\",\"subject\":\"가상 은하군 관제 운영 지침\",\"predicate\":\"성격\",\"text\":\"개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.\",\"polarity\":\"negated\",\"value\":null,\"unit\":null,\"condition\":null,\"evidence\":[{\"partId\":\"6a9e1bf3-f969-43aa-9bd3-f952e2c93f18:0-69\",\"chunkId\":\"6a9e1bf3-f969-43aa-9bd3-f952e2c93f18\",\"quote\":\"개발용 가상 표본이며 실제 고객 지침이나 법적 기준이 아닙니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"이 지침\",\"predicate\":\"적용 대상\",\"text\":\"이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.\",\"polarity\":\"affirmed\",\"value\":\"두 곳\",\"unit\":\"곳\",\"condition\":null,\"evidence\":[{\"partId\":\"6a9e1bf3-f969-43aa-9bd3-f952e2c93f18:0-69\",\"chunkId\":\"6a9e1bf3-f969-43aa-9bd3-f952e2c93f18\",\"quote\":\"이 지침은 가상 은하군의 시범 교차로 두 곳에만 적용합니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"관제 화면\",\"predicate\":\"갱신 간격\",\"text\":\"정상 통신 상태에서는 관제 화면을 45초 간격으로 갱신합니다.\",\"polarity\":\"affirmed\",\"value\":\"45\",\"unit\":\"초\",\"condition\":\"정상 통신 상태에서는\",\"evidence\":[{\"partId\":\"f5ff4aeb-fb19-45e7-b99a-391e296b942f:0-79\",\"chunkId\":\"f5ff4aeb-fb19-45e7-b99a-391e296b942f\",\"quote\":\"정상 통신 상태에서는 관제 화면을 45초 간격으로 갱신합니다.\"}]},{\"kind\":\"exception\",\"subject\":\"이 갱신 기준\",\"predicate\":\"충족 판정\",\"text\":\"통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.\",\"polarity\":\"negated\",\"value\":null,\"unit\":null,\"condition\":\"통신 장애 중에는\",\"evidence\":[{\"partId\":\"f5ff4aeb-fb19-45e7-b99a-391e296b942f:0-79\",\"chunkId\":\"f5ff4aeb-fb19-45e7-b99a-391e296b942f\",\"quote\":\"통신 장애 중에는 이 갱신 기준을 충족했다고 판정하지 않습니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"통신이 끊긴 경우\",\"predicate\":\"표시 내용\",\"text\":\"통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.\",\"polarity\":\"affirmed\",\"value\":null,\"unit\":null,\"condition\":\"통신이 끊기면\",\"evidence\":[{\"partId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e:0-115\",\"chunkId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e\",\"quote\":\"통신이 끊기면 마지막 수신 시각과 통신 중단 표시를 함께 보여 줍니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"마지막 수신 값\",\"predicate\":\"최신 값 표시\",\"text\":\"마지막 수신 값을 최신 값으로 표시하면 안 됩니다.\",\"polarity\":\"negated\",\"value\":null,\"unit\":null,\"condition\":null,\"evidence\":[{\"partId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e:0-115\",\"chunkId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e\",\"quote\":\"마지막 수신 값을 최신 값으로 표시하면 안 됩니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"재연결 후\",\"predicate\":\"새 데이터 수신 여부 확인 기한\",\"text\":\"재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.\",\"polarity\":\"affirmed\",\"value\":\"60\",\"unit\":\"초\",\"condition\":\"재연결 후\",\"evidence\":[{\"partId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e:0-115\",\"chunkId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e\",\"quote\":\"재연결 후 60초 안에 새 데이터 수신 여부를 확인합니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"이 시범사업의 정상 장비 점검 기록\",\"predicate\":\"보관 기간\",\"text\":\"이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.\",\"polarity\":\"affirmed\",\"value\":\"72\",\"unit\":\"시간\",\"condition\":null,\"evidence\":[{\"partId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161\",\"chunkId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9\",\"quote\":\"이 시범사업의 정상 장비 점검 기록은 72시간 보관합니다.\"}]},{\"kind\":\"exception\",\"subject\":\"장애 장비의 기록\",\"predicate\":\"보관 기간 적용\",\"text\":\"장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.\",\"polarity\":\"negated\",\"value\":null,\"unit\":null,\"condition\":\"장애 장비의 기록에는\",\"evidence\":[{\"partId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161\",\"chunkId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9\",\"quote\":\"장애 장비의 기록에는 이 보관 기간을 적용하지 않습니다.\"}]},{\"kind\":\"requirement\",\"subject\":\"담당자\",\"predicate\":\"확인 및 기록 의무\",\"text\":\"담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.\",\"polarity\":\"affirmed\",\"value\":\"두\",\"unit\":\"교차로\",\"condition\":null,\"evidence\":[{\"partId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161\",\"chunkId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9\",\"quote\":\"담당자는 두 교차로의 정상 통신과 통신 중단 상황을 각각 확인하고 결과를 기록합니다.\"}]},{\"kind\":\"uncertainty\",\"subject\":\"이 문서\",\"predicate\":\"미기재 사항\",\"text\":\"이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.\",\"polarity\":\"negated\",\"value\":null,\"unit\":null,\"condition\":null,\"evidence\":[{\"partId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161\",\"chunkId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9\",\"quote\":\"이 문서에는 사업 예산과 장애 장비의 보관 기간이 적혀 있지 않습니다.\"}]}],\"parts\":[{\"partId\":\"74518b9b-ec8c-47d6-b169-28fcf82241fa:0-17\",\"status\":\"no_facts\",\"reason\":\"문서 제목만 있으며 독립적인 사실 또는 요구사항이 없습니다.\"},{\"partId\":\"6a9e1bf3-f969-43aa-9bd3-f952e2c93f18:0-69\",\"status\":\"analyzed\",\"reason\":\"문서의 성격과 적용 범위\"},{\"partId\":\"f5ff4aeb-fb19-45e7-b99a-391e296b942f:0-79\",\"status\":\"analyzed\",\"reason\":\"정상 갱신 주기와 통신 장애 시 판정 조건\"},{\"partId\":\"d5164593-6a9a-4ecb-a19e-f81abc83832e:0-115\",\"status\":\"analyzed\",\"reason\":\"통신 중단 표시, 최신 값 표시 금지, 재연결 확인 기한\"},{\"partId\":\"2955de3f-eeb4-40ac-95b2-9532e0ee26a9:0-161\",\"status\":\"analyzed\",\"reason\":\"점검 기록 보관, 예외, 담당자 기록 의무 및 미기재 사항\"}],\"questions\":[\"장애 장비의 점검 기록 보관 기간은 이 문서에 명시되어 있지 않습니다.\",\"사업 예산은 이 문서에 명시되어 있지 않습니다.\"]}",
+        "validationError": "분석의 적용 대상이 인용 원문 또는 절 제목과 다릅니다."
+      },
+      "error": "분석의 적용 대상이 인용 원문 또는 절 제목과 다릅니다."
+    },
+    {
+      "kind": "integrate",
+      "state": "pending",
+      "result": null,
+      "error": null
+    }
+  ]
+}

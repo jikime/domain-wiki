@@ -1,0 +1,26 @@
+[
+  {
+    "elapsedMs": 2266,
+    "inputTokens": 1670,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 65,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2154,
+    "inputTokens": 1178,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 75,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1884,
+    "inputTokens": 1306,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 68,
+    "status": 200,
+    "stream": false
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-09-10T11:10:01.410Z",
+  "provider": "tavily",
+  "workspaceId": "cdf1f2a1-1cd6-4338-b22a-e91387f36593",
+  "query": "MDN JavaScript Array.prototype.map 문서를 찾아, 반환값과 원본 배열을 직접 변경하는지 한국어 두 문장으로 설명해 주세요. 웹 출처를 인용해 주세요.",
+  "model": "gpt-5.6-terra",
+  "state": "completed",
+  "answer": "`map()`은 각 요소에 콜백 함수를 적용한 결과를 모은 **새 배열**을 반환합니다. [W2]  \n원본 배열을 직접 변경하지 않으며, 반환된 새 배열을 사용해야 합니다. [W2]",
+  "webReferences": [
+    {
+      "key": "W2",
+      "title": "Array.prototype.map() - JavaScript | MDN",
+      "url": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+      "snippetChars": 2167,
+      "searchedAt": "2026-09-10T11:09:57.820Z"
+    }
+  ],
+  "searchEvents": [
+    {
+      "tool": "web.search",
+      "status": "started"
+    },
+    {
+      "tool": "web.search",
+      "status": "completed"
+    }
+  ],
+  "mobileWidth": 390,
+  "sourcePanelChecked": true,
+  "reloadPreserved": true,
+  "elapsedMs": 6825
+}

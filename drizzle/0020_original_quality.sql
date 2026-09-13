@@ -1,0 +1,2 @@
+ALTER TABLE "quality_finding" ADD COLUMN "suggestion" jsonb DEFAULT '{}'::jsonb NOT NULL;--> statement-breakpoint
+ALTER TABLE "quality_policy" ADD COLUMN "structural_config" jsonb DEFAULT '{"ignoreOrphan":false,"ignoreNoOutlinks":false,"ignorePages":[]}'::jsonb NOT NULL;

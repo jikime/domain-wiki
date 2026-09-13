@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-09T06:38:29.467Z",
+  "provider": "OpenAI",
+  "chat": {
+    "state": "completed",
+    "model": "gpt-5.6-terra",
+    "input_tokens": 949,
+    "output_tokens": 106,
+    "retrieval_mode": "hybrid"
+  },
+  "embedding": [
+    {
+      "model": "text-embedding-3-small",
+      "purpose": "query",
+      "input_tokens": 43,
+      "state": "completed"
+    }
+  ],
+  "operations": {
+    "chatVisible": true,
+    "embeddingVisible": true
+  },
+  "testConversationRemoved": true
+}

@@ -1,0 +1,341 @@
+{
+  "date": "2026-09-09T16:25:50.962Z",
+  "referenceVersion": "0.6.11",
+  "referenceGit": "8bcf9b52",
+  "model": "gpt-5.6-terra",
+  "transport": "원본 네이티브 앱의 API와 기본 OpenAI 연결. 별도 식별자·포트·프로젝트 폴더 사용. 응답 사용량 관측 로그만 복사본에 추가.",
+  "projects": {
+    "all": {
+      "id": "bb352f2a-c4c7-4247-8682-5c60ad2b0f6b",
+      "name": "고정 평가 all",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/all",
+      "inputs": [
+        {
+          "file": "01-project-guide.md",
+          "sha256": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+        },
+        {
+          "file": "02-field-note.txt",
+          "sha256": "b227d9715667ab60051180c516bc75363c8c856aa71edebd72a1b7bdf35fe8df"
+        },
+        {
+          "file": "03-other-project.md",
+          "sha256": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+        }
+      ]
+    },
+    "spring": {
+      "id": "315129dd-8524-4aae-8671-eb871609d74d",
+      "name": "고정 평가 spring",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/spring",
+      "inputs": [
+        {
+          "file": "01-project-guide.md",
+          "sha256": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+        },
+        {
+          "file": "02-field-note.txt",
+          "sha256": "b227d9715667ab60051180c516bc75363c8c856aa71edebd72a1b7bdf35fe8df"
+        }
+      ]
+    },
+    "winter": {
+      "id": "1253b754-ecc6-4fe1-9fbe-74f190933a04",
+      "name": "고정 평가 winter",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/winter",
+      "inputs": [
+        {
+          "file": "03-other-project.md",
+          "sha256": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+        }
+      ]
+    }
+  },
+  "queries": [
+    {
+      "id": "Q02",
+      "question": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+      "scope": "spring",
+      "elapsedMs": 2766,
+      "answer": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다. 통신 장애 중에는 이 30초 갱신 기준을 충족한 것으로 판정하지 않습니다. (raw/sources/01-project-guide.md)",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_4ff71a67-07e7-4236-b2cc-e43badfdca45",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+            "tool": "source.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "source",
+              "path": "raw/sources/02-field-note.txt",
+              "snippet": "가상 새봄시 현장 점검 기록 자료 ID: SAMPLE-02 / 버전: 1 / 유형: 작성자 진술 / 프로젝트: 가상 새봄시 관제 시범사업 이 기록은 개발 검증용 가상 경험이며 공식 규정이 아니다. 상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다. 판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다. 조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다. 결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다. 추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+              "title": "02-field-note.txt"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "reference": {
+              "kind": "source",
+              "path": "raw/sources/01-project-guide.md",
+              "snippet": "# 가상 새봄시 관제 시범사업 안내 자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업 이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다. ## 목적 이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다. ## 용어 ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다. ## 점검 기준 정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다. 통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다. ## 검수 가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 ...",
+              "title": "01-project-guide.md"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "2 result(s), 2 new",
+            "tool": "source.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_4ff71a67-07e7-4236-b2cc-e43badfdca45",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신합니다. 통신 장애 중에는 이 30초 갱신 기준을 충족한 것으로 판정하지 않습니다. (raw/sources/01-project-guide.md)",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [
+          {
+            "kind": "source",
+            "path": "raw/sources/02-field-note.txt",
+            "snippet": "가상 새봄시 현장 점검 기록 자료 ID: SAMPLE-02 / 버전: 1 / 유형: 작성자 진술 / 프로젝트: 가상 새봄시 관제 시범사업 이 기록은 개발 검증용 가상 경험이며 공식 규정이 아니다. 상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다. 판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다. 조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다. 결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다. 추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+            "title": "02-field-note.txt"
+          },
+          {
+            "kind": "source",
+            "path": "raw/sources/01-project-guide.md",
+            "snippet": "# 가상 새봄시 관제 시범사업 안내 자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업 이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다. ## 목적 이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다. ## 용어 ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다. ## 점검 기준 정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다. 통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다. ## 검수 가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 ...",
+            "title": "01-project-guide.md"
+          }
+        ],
+        "sessionId": "stage16_4ff71a67-07e7-4236-b2cc-e43badfdca45",
+        "toolEvents": [
+          {
+            "detail": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+            "status": "started",
+            "tool": "source.search"
+          },
+          {
+            "detail": "2 result(s), 2 new",
+            "status": "completed",
+            "tool": "source.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 214,
+          "promptChars": 6828,
+          "referenceCount": 2,
+          "toolEventCount": 4
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 2266,
+          "inputTokens": 1670,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 65,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+      "scope": "spring",
+      "elapsedMs": 2318,
+      "answer": "현재 제공된 원문 검색 결과에서는 현장에서 발견된 문제나 수정 완료 여부를 확인할 근거가 없습니다. 따라서 문제 내용과 수정 상태를 단정할 수 없습니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_36f06e63-2d5d-497a-9198-17aabe358a71",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+            "tool": "source.search",
+            "type": "toolStart"
+          },
+          {
+            "output": "0 result(s), 0 new",
+            "tool": "source.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_36f06e63-2d5d-497a-9198-17aabe358a71",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "현재 제공된 원문 검색 결과에서는 현장에서 발견된 문제나 수정 완료 여부를 확인할 근거가 없습니다. 따라서 문제 내용과 수정 상태를 단정할 수 없습니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [],
+        "sessionId": "stage16_36f06e63-2d5d-497a-9198-17aabe358a71",
+        "toolEvents": [
+          {
+            "detail": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+            "status": "started",
+            "tool": "source.search"
+          },
+          {
+            "detail": "0 result(s), 0 new",
+            "status": "completed",
+            "tool": "source.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 209,
+          "promptChars": 5898,
+          "referenceCount": 0,
+          "toolEventCount": 4
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 2154,
+          "inputTokens": 1178,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 75,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+      "scope": "winter",
+      "elapsedMs": 2047,
+      "answer": "겨울시 사업의 관제 화면 갱신 간격은 **10초**입니다. 다만 이는 가상 겨울시 관제 사업의 설정이며, 다른 사업에 동일하게 적용할 근거는 없습니다. (raw/sources/03-other-project.md)",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_cf90297e-b7a7-42af-a3e0-9f6f4b652991",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+            "tool": "source.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "source",
+              "path": "raw/sources/03-other-project.md",
+              "snippet": "# 가상 겨울시 관제 사업 메모 자료 ID: SAMPLE-03 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 겨울시 관제 사업 개발 표본이며 실제 사업 기준이 아니다. 새봄시 사업의 근거로 사용하지 않는다. ## 별도 사업의 설정 이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다. 이 설정을 다른 사업에 동일하게 적용한다는 근거는 없다.",
+              "title": "03-other-project.md"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "1 result(s), 1 new",
+            "tool": "source.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_cf90297e-b7a7-42af-a3e0-9f6f4b652991",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "겨울시 사업의 관제 화면 갱신 간격은 **10초**입니다. 다만 이는 가상 겨울시 관제 사업의 설정이며, 다른 사업에 동일하게 적용할 근거는 없습니다. (raw/sources/03-other-project.md)",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "1253b754-ecc6-4fe1-9fbe-74f190933a04",
+        "references": [
+          {
+            "kind": "source",
+            "path": "raw/sources/03-other-project.md",
+            "snippet": "# 가상 겨울시 관제 사업 메모 자료 ID: SAMPLE-03 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 겨울시 관제 사업 개발 표본이며 실제 사업 기준이 아니다. 새봄시 사업의 근거로 사용하지 않는다. ## 별도 사업의 설정 이 가상 사업은 관제 화면을 10초 간격으로 갱신하도록 정했다. 이 설정을 다른 사업에 동일하게 적용한다는 근거는 없다.",
+            "title": "03-other-project.md"
+          }
+        ],
+        "sessionId": "stage16_cf90297e-b7a7-42af-a3e0-9f6f4b652991",
+        "toolEvents": [
+          {
+            "detail": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+            "status": "started",
+            "tool": "source.search"
+          },
+          {
+            "detail": "1 result(s), 1 new",
+            "status": "completed",
+            "tool": "source.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 230,
+          "promptChars": 6135,
+          "referenceCount": 1,
+          "toolEventCount": 4
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 1884,
+          "inputTokens": 1306,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 68,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    }
+  ],
+  "businessReview": null
+}

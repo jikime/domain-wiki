@@ -1,0 +1,154 @@
+[
+  {
+    "elapsedMs": 3910,
+    "inputTokens": 1128,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 137,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1701,
+    "inputTokens": 1138,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 37,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2285,
+    "inputTokens": 1238,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 83,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2738,
+    "inputTokens": 1140,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 48,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 3214,
+    "inputTokens": 1260,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 159,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2343,
+    "inputTokens": 1133,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 47,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2016,
+    "inputTokens": 1634,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 97,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2151,
+    "inputTokens": 1241,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 79,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1774,
+    "inputTokens": 1135,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 39,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2467,
+    "inputTokens": 1165,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 96,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1657,
+    "inputTokens": 1138,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 37,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1581,
+    "inputTokens": 1264,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 47,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 4501,
+    "inputTokens": 1773,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 189,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 4046,
+    "inputTokens": 1141,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 169,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1545,
+    "inputTokens": 1137,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 38,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 1901,
+    "inputTokens": 1137,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 39,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2327,
+    "inputTokens": 1167,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 83,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 2768,
+    "inputTokens": 1140,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 69,
+    "status": 200,
+    "stream": false
+  },
+  {
+    "elapsedMs": 3441,
+    "inputTokens": 1257,
+    "model": "gpt-5.6-terra",
+    "outputTokens": 161,
+    "status": 200,
+    "stream": false
+  }
+]

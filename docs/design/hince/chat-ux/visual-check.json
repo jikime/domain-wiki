@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "overflowX": 0,
+    "overflowY": 0,
+    "composerBottom": 695.5,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "width": 960,
+    "height": 1000,
+    "overflowX": 0,
+    "overflowY": 0,
+    "composerBottom": 663.734375,
+    "viewport": 1000,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflowX": 0,
+    "overflowY": 0,
+    "composerBottom": 538.578125,
+    "viewport": 844,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 500,
+    "overflowX": 0,
+    "overflowY": 0,
+    "composerBottom": 404.78125,
+    "viewport": 500,
+    "errors": []
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "referenceGit": "8bcf9b52",
+  "checkedFiles": 447,
+  "originalUnchanged": true,
+  "copyChangedFiles": [
+    "src-tauri/src/agent/provider.rs",
+    "src-tauri/src/api_server.rs",
+    "src-tauri/src/clip_server.rs",
+    "src-tauri/tauri.conf.json"
+  ],
+  "method": "원본 447개 파일의 실행 전후 SHA-256 일치. 복사본은 앱 식별자·포트와 사용량 관측만 변경. 네이티브 API 사용; 전체 GUI 상호작용 비교 아님."
+}

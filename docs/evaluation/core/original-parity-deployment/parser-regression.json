@@ -1,0 +1,801 @@
+{
+  "evaluatedAt": "2026-09-10T07:22:28.259Z",
+  "scope": "직접 작성한 개발 표본 6개. 실제 고객 문서 품질과 OCR은 평가하지 않음.",
+  "versions": {
+    "node": "v22.23.1",
+    "pdfParse": "2.4.5",
+    "officeParser": "7.8.0",
+    "officePdfJsOverride": "6.3.289"
+  },
+  "checks": {
+    "pdfPageOneCondition": true,
+    "pdfPageOneNegation": true,
+    "pdfPageTwoUnit": true,
+    "scanExplicitFailure": true,
+    "brokenExplicitFailure": true,
+    "docxNegation": true,
+    "docxTableValues": true,
+    "pptxSpeakerNote": true
+  },
+  "results": [
+    {
+      "file": "text-pages.pdf",
+      "sha256": "9b8ccd1ea57ddc980fe8702d762c9b5e7476adca72f7856379de7310a23defcc",
+      "productionParser": {
+        "status": "extracted",
+        "chunks": [
+          {
+            "ordinal": 0,
+            "text": "텍스트 PDF 개발 표본\n가상의 새봄시 사업 자료입니다. 실제 고객 지침이 아닙니다.\n정상 통신 상태에서는 30초 간격으로 갱신한다.\n마지막 수신 값을 최신 값으로 표시하면 안 된다.",
+            "locator": {
+              "kind": "pdf",
+              "page": 1
+            }
+          },
+          {
+            "ordinal": 1,
+            "text": "재연결 점검\n재연결 후 60초 안에 새 데이터 수신 여부를 확인한다.",
+            "locator": {
+              "kind": "pdf",
+              "page": 2
+            }
+          }
+        ],
+        "parserVersion": "pdf-parse@2.4.5/text-table-v2",
+        "warnings": [
+          "표 구조를 확인하지 못했습니다. 표가 포함된 문서라면 페이지 텍스트와 원문의 행·열을 직접 대조해 주세요.",
+          "PDF의 텍스트와 인식한 표를 추출했습니다. 다단 읽기 순서·병합 셀·이미지 속 글자는 원문과 대조해 주세요."
+        ],
+        "images": []
+      },
+      "officeParser": {
+        "status": "extracted",
+        "text": "텍스트 PDF 개발 표본\n가상의 새봄시 사업 자료입니다 . 실제 고객 지침이 아닙니다 .\n정상 통신 상태에서는 30 초 간격으로 갱신한다 .\n마지막 수신 값을 최신 값으로 표시하면 안 된다 .\n재연결 점검\n재연결 후 60 초 안에 새 데이터 수신 여부를 확인한다 .",
+        "nodes": [
+          {
+            "type": "page",
+            "text": "텍스트 PDF 개발 표본\n가상의 새봄시 사업 자료입니다 . 실제 고객 지침이 아닙니다 .\n정상 통신 상태에서는 30 초 간격으로 갱신한다 .\n마지막 수신 값을 최신 값으로 표시하면 안 된다 .",
+            "metadata": {
+              "pageNumber": 1
+            },
+            "children": [
+              {
+                "type": "heading",
+                "text": "텍스트 PDF 개발 표본",
+                "metadata": {
+                  "level": 4
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "텍스트 PDF 개발 표본"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "가상의 새봄시 사업 자료입니다 . 실제 고객 지침이 아닙니다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "가상의 새봄시 사업 자료입니다 . 실제 고객 지침이 아닙니다 ."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "정상 통신 상태에서는 30 초 간격으로 갱신한다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "정상 통신 상태에서는 30 초 간격으로 갱신한다 ."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "마지막 수신 값을 최신 값으로 표시하면 안 된다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "마지막 수신 값을 최신 값으로 표시하면 안 된다 ."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "page",
+            "text": "재연결 점검\n재연결 후 60 초 안에 새 데이터 수신 여부를 확인한다 .",
+            "metadata": {
+              "pageNumber": 2
+            },
+            "children": [
+              {
+                "type": "heading",
+                "text": "재연결 점검",
+                "metadata": {
+                  "level": 4
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "재연결 점검"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "재연결 후 60 초 안에 새 데이터 수신 여부를 확인한다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "재연결 후 60 초 안에 새 데이터 수신 여부를 확인한다 ."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "columns-table.pdf",
+      "sha256": "47e26947e17e26b23281e9dcc946caeeffef9a92d367bead6943c0e83963b74d",
+      "productionParser": {
+        "status": "extracted",
+        "chunks": [
+          {
+            "ordinal": 0,
+            "text": "복잡한 배치 개발 표본\n가상 자료이며 실제 지침이 아닙니다.\n조건 A\n정상 통신: 30초 갱신.\n재연결: 60초 이내 확인.\n예외 B\n통신 중단: 최신 값으로 표시하면 안 된다.\n검토 중인 변경은 반영 완료가 아니다.\n사업 \t주기 \t적용\n새봄시 30초 정상 통신\n겨울시 10초 별도 사업",
+            "locator": {
+              "kind": "pdf",
+              "page": 1
+            }
+          },
+          {
+            "ordinal": 1,
+            "text": "1열: 사업 | 2열: 주기 | 3열: 적용",
+            "locator": {
+              "kind": "pdf",
+              "page": 1,
+              "table": 1,
+              "row": 1
+            }
+          },
+          {
+            "ordinal": 2,
+            "text": "1열(사업): 새봄시 | 2열(주기): 30초 | 3열(적용): 정상 통신",
+            "locator": {
+              "kind": "pdf",
+              "page": 1,
+              "table": 1,
+              "row": 2
+            }
+          },
+          {
+            "ordinal": 3,
+            "text": "1열(사업): 겨울시 | 2열(주기): 10초 | 3열(적용): 별도 사업",
+            "locator": {
+              "kind": "pdf",
+              "page": 1,
+              "table": 1,
+              "row": 3
+            }
+          }
+        ],
+        "parserVersion": "pdf-parse@2.4.5/text-table-v2",
+        "warnings": [
+          "인식한 표는 행·열을 덧붙였습니다. 표 감지는 완전하지 않으므로 병합 셀·단위·조건을 원문과 대조해 주세요.",
+          "PDF의 텍스트와 인식한 표를 추출했습니다. 다단 읽기 순서·병합 셀·이미지 속 글자는 원문과 대조해 주세요."
+        ],
+        "images": []
+      },
+      "officeParser": {
+        "status": "extracted",
+        "text": "복잡한 배치 개발 표본\n가상 자료이며 실제 지침이 아닙니다 .\n조건 A 예외 B\n정상 통신 : 30 초 갱신 . 통신 중단 : 최신 값으로 표시하면 안 된다 .\n재연결 : 60 초 이내 확인 . 검토 중인 변경은 반영 완료가 아니다 .\n사업 주기 적용\n새봄시 30 초 정상 통신\n겨울시 10 초 별도 사업",
+        "nodes": [
+          {
+            "type": "page",
+            "text": "복잡한 배치 개발 표본\n가상 자료이며 실제 지침이 아닙니다 .\n조건 A 예외 B\n정상 통신 : 30 초 갱신 . 통신 중단 : 최신 값으로 표시하면 안 된다 .\n재연결 : 60 초 이내 확인 . 검토 중인 변경은 반영 완료가 아니다 .\n사업 주기 적용\n새봄시 30 초 정상 통신\n겨울시 10 초 별도 사업",
+            "metadata": {
+              "pageNumber": 1
+            },
+            "children": [
+              {
+                "type": "heading",
+                "text": "복잡한 배치 개발 표본",
+                "metadata": {
+                  "level": 4
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "복잡한 배치 개발 표본"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "가상 자료이며 실제 지침이 아닙니다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "가상 자료이며 실제 지침이 아닙니다 ."
+                  }
+                ]
+              },
+              {
+                "type": "heading",
+                "text": "조건 A 예외 B",
+                "metadata": {
+                  "level": 3
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "조건 A 예외 B"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "정상 통신 : 30 초 갱신 . 통신 중단 : 최신 값으로 표시하면 안 된다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "정상 통신 : 30 초 갱신 . 통신 중단 : 최신 값으로 표시하면 안 된다 ."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "재연결 : 60 초 이내 확인 . 검토 중인 변경은 반영 완료가 아니다 .",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "재연결 : 60 초 이내 확인 . 검토 중인 변경은 반영 완료가 아니다 ."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "사업 주기 적용",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "사업 주기 적용"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "새봄시 30 초 정상 통신",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "새봄시 30 초 정상 통신"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "겨울시 10 초 별도 사업",
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "겨울시 10 초 별도 사업"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "scan-only.pdf",
+      "sha256": "fa217a7eb9864d89b052bf605c3ff680d7fb4841ba6bb91975d6cf2754112015",
+      "productionParser": {
+        "status": "rejected",
+        "message": "텍스트가 없는 PDF 페이지가 있습니다. 스캔·이미지·빈 페이지를 확인해 주세요. OCR은 아직 지원하지 않습니다."
+      },
+      "officeParser": {
+        "status": "extracted",
+        "text": "",
+        "nodes": [
+          {
+            "type": "page",
+            "text": "",
+            "metadata": {
+              "pageNumber": 1
+            },
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "file": "broken.pdf",
+      "sha256": "6851ddc978101d75caf8489321e2898f7ee2870abb85517855e364f318c5fc25",
+      "productionParser": {
+        "status": "rejected",
+        "message": "PDF를 읽을 수 없습니다. 손상·암호 설정·지원하지 않는 PDF 구조를 확인해 주세요."
+      },
+      "officeParser": {
+        "status": "rejected",
+        "message": "[OfficeParser]: Invalid PDF structure."
+      }
+    },
+    {
+      "file": "conditions-table.docx",
+      "sha256": "8731d004bebb6458dd4247ac2a40679bfad7314a41b6e5c555ba9d1bd2cc4d1d",
+      "officeParser": {
+        "status": "extracted",
+        "text": "DOCX 개발 표본 — 실제 고객 지침이 아님\n통신 중단 시 최신 값으로 표시하면 안 된다.\n\n| 사업  | 주기  | 조건    | \n| 새봄시 | 30초 | 정상 통신 | \n| 겨울시 | 10초 | 별도 사업 | \n\n검토 중인 변경은 반영 완료가 아니다.",
+        "nodes": [
+          {
+            "type": "paragraph",
+            "text": "DOCX 개발 표본 — 실제 고객 지침이 아님",
+            "metadata": {},
+            "children": [
+              {
+                "type": "text",
+                "text": "DOCX 개발 표본 — 실제 고객 지침이 아님"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "통신 중단 시 최신 값으로 표시하면 안 된다.",
+            "metadata": {},
+            "children": [
+              {
+                "type": "text",
+                "text": "통신 중단 시 최신 값으로 표시하면 안 된다."
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "children": [
+              {
+                "type": "row",
+                "children": [
+                  {
+                    "type": "cell",
+                    "text": "사업",
+                    "metadata": {
+                      "row": 0,
+                      "col": 0
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "사업",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "사업"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "주기",
+                    "metadata": {
+                      "row": 0,
+                      "col": 1
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "주기",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "주기"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "조건",
+                    "metadata": {
+                      "row": 0,
+                      "col": 2
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "조건",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "조건"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "row",
+                "children": [
+                  {
+                    "type": "cell",
+                    "text": "새봄시",
+                    "metadata": {
+                      "row": 1,
+                      "col": 0
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "새봄시",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "새봄시"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "30초",
+                    "metadata": {
+                      "row": 1,
+                      "col": 1
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "30초",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "30초"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "정상 통신",
+                    "metadata": {
+                      "row": 1,
+                      "col": 2
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "정상 통신",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "정상 통신"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "row",
+                "children": [
+                  {
+                    "type": "cell",
+                    "text": "겨울시",
+                    "metadata": {
+                      "row": 2,
+                      "col": 0
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "겨울시",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "겨울시"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "10초",
+                    "metadata": {
+                      "row": 2,
+                      "col": 1
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "10초",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "10초"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "cell",
+                    "text": "별도 사업",
+                    "metadata": {
+                      "row": 2,
+                      "col": 2
+                    },
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "text": "별도 사업",
+                        "metadata": {},
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "별도 사업"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "검토 중인 변경은 반영 완료가 아니다.",
+            "metadata": {},
+            "children": [
+              {
+                "type": "text",
+                "text": "검토 중인 변경은 반영 완료가 아니다."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "screen-notes.pptx",
+      "sha256": "c2d287155263c7da7e6dfa8f46e2b7e0ca37973a216214fe803cd167b5acc8b4",
+      "officeParser": {
+        "status": "extracted",
+        "text": "PPTX 화면설계 개발 표본\n화면: 마지막 수신 시각 표시\n조건: 통신 중단 값을 최신 값으로 표시하면 안 된다.\n발표자 주석: 반영 완료가 아니라 검토 중이다.",
+        "nodes": [
+          {
+            "type": "slide",
+            "metadata": {
+              "slideNumber": 1
+            },
+            "children": [
+              {
+                "type": "paragraph",
+                "text": "PPTX 화면설계 개발 표본",
+                "metadata": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "PPTX 화면설계 개발 표본"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "화면: 마지막 수신 시각 표시",
+                "metadata": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "화면: 마지막 수신 시각 표시"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "text": "조건: 통신 중단 값을 최신 값으로 표시하면 안 된다.",
+                "metadata": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "text": "조건: 통신 중단 값을 최신 값으로 표시하면 안 된다."
+                  }
+                ]
+              }
+            ],
+            "notes": [
+              {
+                "type": "note",
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "text": "발표자 주석: 반영 완료가 아니라 검토 중이다.",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "발표자 주석: 반영 완료가 아니라 검토 중이다.",
+                        "formatting": {}
+                      }
+                    ],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {
+                  "slideNumber": 1,
+                  "noteId": "slide-note-1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "rawLocations": {
+    "docx": [
+      {
+        "locator": {
+          "bodyElement": 1,
+          "kind": "paragraph"
+        },
+        "text": "DOCX 개발 표본 — 실제 고객 지침이 아님"
+      },
+      {
+        "locator": {
+          "bodyElement": 2,
+          "kind": "paragraph"
+        },
+        "text": "통신 중단 시 최신 값으로 표시하면 안 된다."
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 1,
+          "column": 1
+        },
+        "text": "사업"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 1,
+          "column": 2
+        },
+        "text": "주기"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 1,
+          "column": 3
+        },
+        "text": "조건"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 2,
+          "column": 1
+        },
+        "text": "새봄시"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 2,
+          "column": 2
+        },
+        "text": "30초"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 2,
+          "column": 3
+        },
+        "text": "정상 통신"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 3,
+          "column": 1
+        },
+        "text": "겨울시"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 3,
+          "column": 2
+        },
+        "text": "10초"
+      },
+      {
+        "locator": {
+          "bodyElement": 3,
+          "kind": "cell",
+          "row": 3,
+          "column": 3
+        },
+        "text": "별도 사업"
+      },
+      {
+        "locator": {
+          "bodyElement": 4,
+          "kind": "paragraph"
+        },
+        "text": "검토 중인 변경은 반영 완료가 아니다."
+      }
+    ],
+    "pptx": [
+      {
+        "locator": {
+          "slide": 1,
+          "kind": "shape",
+          "shapeId": "2",
+          "part": "ppt/slides/slide1.xml"
+        },
+        "text": "PPTX 화면설계 개발 표본"
+      },
+      {
+        "locator": {
+          "slide": 1,
+          "kind": "shape",
+          "shapeId": "3",
+          "part": "ppt/slides/slide1.xml"
+        },
+        "text": "화면: 마지막 수신 시각 표시"
+      },
+      {
+        "locator": {
+          "slide": 1,
+          "kind": "shape",
+          "shapeId": "4",
+          "part": "ppt/slides/slide1.xml"
+        },
+        "text": "조건: 통신 중단 값을 최신 값으로 표시하면 안 된다."
+      },
+      {
+        "locator": {
+          "slide": 1,
+          "kind": "speaker-note",
+          "shapeId": "5",
+          "part": "ppt/notesSlides/notesSlide1.xml"
+        },
+        "text": "발표자 주석: 반영 완료가 아니라 검토 중이다."
+      }
+    ]
+  }
+}

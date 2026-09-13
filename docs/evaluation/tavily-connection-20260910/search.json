@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-10T11:06:24.490Z",
+  "provider": "tavily",
+  "workspaceId": "cdf1f2a1-1cd6-4338-b22a-e91387f36593",
+  "envFile": ".env",
+  "query": "MDN JavaScript Array map method",
+  "elapsedMs": 2271,
+  "results": [
+    {
+      "title": "JavaScript Array Methods: map() | Treehouse Blog",
+      "url": "https://blog.teamtreehouse.com/javascript-array-methods-map",
+      "snippetChars": 2235
+    },
+    {
+      "title": "Array.prototype.map() - JavaScript | MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map",
+      "snippetChars": 2211
+    },
+    {
+      "title": "Array - JavaScript | MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+      "snippetChars": 1423
+    }
+  ],
+  "otherWorkspaceExcluded": true
+}

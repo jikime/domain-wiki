@@ -1,0 +1,300 @@
+{
+  "date": "2026-09-09T07:00:49.987Z",
+  "checks": [
+    {
+      "role": "reader",
+      "width": 1440,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 1440,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 1440,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 1440,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 390,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 390,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 390,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 390,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reader",
+      "width": 390,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 1440,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 1440,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 1440,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 1440,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 390,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 390,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 390,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 390,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "admin",
+      "width": 390,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 1440,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 1440,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 1440,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 1440,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 390,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 390,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 390,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 390,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "writer",
+      "width": 390,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 1440,
+      "route": "/reviews/desk?filter=mine",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/activity",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/issues",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/projects",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/sources?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/wiki?mode=manage",
+      "status": 200,
+      "overflow": false
+    },
+    {
+      "role": "reviewer",
+      "width": 390,
+      "route": "/reviews/desk?filter=mine",
+      "status": 200,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

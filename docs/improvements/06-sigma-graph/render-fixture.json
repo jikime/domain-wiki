@@ -1,0 +1,574 @@
+{
+  "report": {
+    "classification": "49개 노드의 브라우저 전용 렌더링 표본. 그래프 GET 응답만 가로채며 DB와 실제 자료는 변경하지 않음.",
+    "views": [
+      {
+        "width": 1440,
+        "nodes": 49,
+        "canvasCount": 7,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "nodes": 49,
+        "canvasCount": 7,
+        "errors": []
+      }
+    ]
+  },
+  "input": {
+    "fingerprint": "sigma-render-only-49",
+    "scope": {
+      "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+      "projectId": null,
+      "type": "all",
+      "q": "",
+      "limit": 100,
+      "focusId": null,
+      "hops": 1
+    },
+    "nodes": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": []
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000001"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000003",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000002"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000004",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000003"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000005",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000004"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000006",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000005"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000007",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "관제 운영 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000006"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000008",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000001"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000009",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000008"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000010",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000009"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000011",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000010"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000012",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000011"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000013",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000012"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000014",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "교차로 신호 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000013"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000015",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000008"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000016",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000015"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000017",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000016"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000018",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000017"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000019",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000018"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000020",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000019"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000021",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "현장 점검 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000020"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000022",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000015"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000023",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000022"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000024",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000023"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000025",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000024"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000026",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000025"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000027",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000026"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000028",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "장애 대응 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000027"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000029",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000022"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000030",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000029"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000031",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000030"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000032",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000031"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000033",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000032"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000034",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000033"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000035",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "점검 기록 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000034"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000036",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000029"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000037",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000036"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000038",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000037"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000039",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000038"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000040",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000039"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000041",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000040"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000042",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "통신 장비 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000041"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000043",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 1",
+        "type": "entity",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000036"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000044",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 2",
+        "type": "concept",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000043"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000045",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 3",
+        "type": "source",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000044"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000046",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 4",
+        "type": "procedure",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000045"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000047",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 5",
+        "type": "query",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000046"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000048",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 6",
+        "type": "synthesis",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000047"]
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000049",
+        "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+        "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+        "projectId": null,
+        "title": "수신 데이터 7",
+        "type": "case",
+        "aliases": [],
+        "sources": [],
+        "outLinks": ["00000000-0000-4000-8000-000000000048"]
+      }
+    ],
+    "matched": 49,
+    "truncated": false
+  }
+}

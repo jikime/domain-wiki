@@ -1,0 +1,1144 @@
+{
+  "date": "2026-09-09T16:20:44.417Z",
+  "referenceVersion": "0.6.11",
+  "referenceGit": "8bcf9b52",
+  "model": "gpt-5.6-terra",
+  "transport": "원본 네이티브 앱의 API와 기본 OpenAI 연결. 별도 식별자·포트·프로젝트 폴더 사용. 응답 사용량 관측 로그만 복사본에 추가.",
+  "projects": {
+    "all": {
+      "id": "bb352f2a-c4c7-4247-8682-5c60ad2b0f6b",
+      "name": "고정 평가 all",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/all",
+      "inputs": [
+        {
+          "file": "01-project-guide.md",
+          "sha256": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+        },
+        {
+          "file": "02-field-note.txt",
+          "sha256": "b227d9715667ab60051180c516bc75363c8c856aa71edebd72a1b7bdf35fe8df"
+        },
+        {
+          "file": "03-other-project.md",
+          "sha256": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+        }
+      ]
+    },
+    "spring": {
+      "id": "315129dd-8524-4aae-8671-eb871609d74d",
+      "name": "고정 평가 spring",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/spring",
+      "inputs": [
+        {
+          "file": "01-project-guide.md",
+          "sha256": "3bad1e1ba3e4cc804d80f8f03eaa0753845981b0698a19e9195f9cf343cb1dc8"
+        },
+        {
+          "file": "02-field-note.txt",
+          "sha256": "b227d9715667ab60051180c516bc75363c8c856aa71edebd72a1b7bdf35fe8df"
+        }
+      ]
+    },
+    "winter": {
+      "id": "1253b754-ecc6-4fe1-9fbe-74f190933a04",
+      "name": "고정 평가 winter",
+      "path": "/Users/jikime/Dev/Private/my-domain-wiki/.local/reference-input-stage16/winter",
+      "inputs": [
+        {
+          "file": "03-other-project.md",
+          "sha256": "ba39400e1cb018c5830ecc1ce604bcbf9e6d291352939eb9c17792f4df0f5261"
+        }
+      ]
+    }
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "question": "ITS가 무슨 뜻인가요?",
+      "scope": "all",
+      "elapsedMs": 4074,
+      "answer": "ITS는 문맥에 따라 여러 뜻이 있지만, 가장 흔한 의미는 **Intelligent Transport Systems(지능형 교통 시스템)** 입니다. 교통 정보·통신·제어 기술을 이용해 신호 운영, 실시간 길 안내, 대중교통 정보, 사고 대응 등을 효율화하는 시스템을 말합니다.\n\n다만 IT 조직에서는 **Information Technology Services(정보기술 서비스)**, 교육 분야에서는 **Instructional Technology Services** 등을 뜻할 수도 있습니다. 어떤 문서나 분야에서 본 약어인지 알려주시면 정확히 설명해 드릴 수 있습니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_e4087721-1183-4d20-9429-dce3ba71e1dc",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "session_id": "stage16_e4087721-1183-4d20-9429-dce3ba71e1dc",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "ITS는 문맥에 따라 여러 뜻이 있지만, 가장 흔한 의미는 **Intelligent Transport Systems(지능형 교통 시스템)** 입니다. 교통 정보·통신·제어 기술을 이용해 신호 운영, 실시간 길 안내, 대중교통 정보, 사고 대응 등을 효율화하는 시스템을 말합니다.\n\n다만 IT 조직에서는 **Information Technology Services(정보기술 서비스)**, 교육 분야에서는 **Instructional Technology Services** 등을 뜻할 수도 있습니다. 어떤 문서나 분야에서 본 약어인지 알려주시면 정확히 설명해 드릴 수 있습니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "bb352f2a-c4c7-4247-8682-5c60ad2b0f6b",
+        "references": [],
+        "sessionId": "stage16_e4087721-1183-4d20-9429-dce3ba71e1dc",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 609,
+          "promptChars": 5627,
+          "referenceCount": 0,
+          "toolEventCount": 2
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 3910,
+          "inputTokens": 1128,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 137,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "새봄시 사업에서 화면은 몇 초마다 갱신하나요?",
+      "scope": "spring",
+      "elapsedMs": 4125,
+      "answer": "새봄시 관제 화면은 **5초마다** 갱신됩니다. 이는 화면이 정상적으로 갱신되는 조건으로 정리되어 있습니다(「새봄시 관제 화면의 정상 갱신 조건」, `wiki/baseline.md`).",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_aa0ecfb6-adc9-472a-a62d-e733145a859e",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "새봄시 화면 갱신 주기 초",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "wiki",
+              "knowledgeContext": {
+                "linkCount": 0
+              },
+              "path": "wiki/baseline.md",
+              "score": 18,
+              "snippet": "--- title: 새봄시 관제 화면의 정상 갱신 조건 type: concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업...",
+              "title": "새봄시 관제 화면의 정상 갱신 조건"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_aa0ecfb6-adc9-472a-a62d-e733145a859e",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "새봄시 관제 화면은 **5초마다** 갱신됩니다. 이는 화면이 정상적으로 갱신되는 조건으로 정리되어 있습니다(「새봄시 관제 화면의 정상 갱신 조건」, `wiki/baseline.md`).",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [
+          {
+            "kind": "wiki",
+            "knowledgeContext": {
+              "linkCount": 0
+            },
+            "path": "wiki/baseline.md",
+            "score": 18,
+            "snippet": "--- title: 새봄시 관제 화면의 정상 갱신 조건 type: concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업...",
+            "title": "새봄시 관제 화면의 정상 갱신 조건"
+          }
+        ],
+        "sessionId": "stage16_aa0ecfb6-adc9-472a-a62d-e733145a859e",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "새봄시 화면 갱신 주기 초",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 219,
+          "promptChars": 5870,
+          "referenceCount": 1,
+          "toolEventCount": 6
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 1701,
+          "inputTokens": 1138,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 37,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 2285,
+          "inputTokens": 1238,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 83,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "통신이 끊겨도 마지막 값을 최신 정보라고 보여 줘도 되나요?",
+      "scope": "spring",
+      "elapsedMs": 6090,
+      "answer": "아니요. 통신이 끊긴 경우 마지막 수신값을 **최신 정보로 표시하면 안 됩니다.** 마지막 값이라면 마지막 수신 시각과 통신 단절/데이터 갱신 중단 상태를 함께 명확히 표시해야 합니다.\n\n`wiki/baseline.md`의 「새봄시 관제 화면의 정상 갱신 조건」은 **정상 통신 상태일 때만** 30초 간격 갱신을 전제로 합니다. 따라서 통신 단절 시에는 값의 최신성을 보장할 수 없습니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_d29507a6-530a-429d-8051-ca9f01134c54",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "통신 끊김 마지막 값 최신 정보 표시 stale 데이터 상태 표시",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "wiki",
+              "knowledgeContext": {
+                "linkCount": 0
+              },
+              "path": "wiki/baseline.md",
+              "score": 2,
+              "snippet": "...concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+              "title": "새봄시 관제 화면의 정상 갱신 조건"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_d29507a6-530a-429d-8051-ca9f01134c54",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "아니요. 통신이 끊긴 경우 마지막 수신값을 **최신 정보로 표시하면 안 됩니다.** 마지막 값이라면 마지막 수신 시각과 통신 단절/데이터 갱신 중단 상태를 함께 명확히 표시해야 합니다.\n\n`wiki/baseline.md`의 「새봄시 관제 화면의 정상 갱신 조건」은 **정상 통신 상태일 때만** 30초 간격 갱신을 전제로 합니다. 따라서 통신 단절 시에는 값의 최신성을 보장할 수 없습니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [
+          {
+            "kind": "wiki",
+            "knowledgeContext": {
+              "linkCount": 0
+            },
+            "path": "wiki/baseline.md",
+            "score": 2,
+            "snippet": "...concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+            "title": "새봄시 관제 화면의 정상 갱신 조건"
+          }
+        ],
+        "sessionId": "stage16_d29507a6-530a-429d-8051-ca9f01134c54",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "통신 끊김 마지막 값 최신 정보 표시 stale 데이터 상태 표시",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 486,
+          "promptChars": 5911,
+          "referenceCount": 1,
+          "toolEventCount": 6
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 2738,
+          "inputTokens": 1140,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 48,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 3214,
+          "inputTokens": 1260,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 159,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "그럼 다시 연결되면 언제까지 확인해야 해요?",
+      "scope": "spring",
+      "elapsedMs": 6780,
+      "answer": "재연결 후 **60초 안에 새 데이터가 수신되는지** 확인해야 합니다. 그때까지도 새 데이터가 없으면 정상 복구로 표시하지 말고 통신 상태를 계속 점검해야 합니다. (`raw/sources/01-project-guide.md`, `raw/sources/02-field-note.txt`)",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_e5a8ab09-0644-49c0-a84c-4f5429d6557a",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "session_id": "stage16_e5a8ab09-0644-49c0-a84c-4f5429d6557a",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "재연결 후 **60초 안에 새 데이터가 수신되는지** 확인해야 합니다. 그때까지도 새 데이터가 없으면 정상 복구로 표시하지 말고 통신 상태를 계속 점검해야 합니다. (`raw/sources/01-project-guide.md`, `raw/sources/02-field-note.txt`)",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [],
+        "sessionId": "stage16_e5a8ab09-0644-49c0-a84c-4f5429d6557a",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 284,
+          "promptChars": 5898,
+          "referenceCount": 0,
+          "toolEventCount": 2
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 2343,
+          "inputTokens": 1133,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 47,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 2016,
+          "inputTokens": 1634,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 97,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 2151,
+          "inputTokens": 1241,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 79,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "현장에서는 어떤 문제를 발견했고 수정은 끝났나요?",
+      "scope": "spring",
+      "elapsedMs": 4376,
+      "answer": "현재 프로젝트 위키 검색에서는 관련 기록을 찾지 못했습니다. 따라서 현장에서 발견된 문제의 내용이나 수정 완료 여부를 확인할 근거가 없습니다. 현장 점검 보고서, 이슈 티켓, 배포/수정 내역이 있으면 확인할 수 있습니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_d8b60b9c-073b-4666-82f4-6bd59d1e0f38",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "현장 문제 발견 수정 완료",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "output": "0 result(s), 0 new, mode=keyword, tokenHits=0, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_d8b60b9c-073b-4666-82f4-6bd59d1e0f38",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "현재 프로젝트 위키 검색에서는 관련 기록을 찾지 못했습니다. 따라서 현장에서 발견된 문제의 내용이나 수정 완료 여부를 확인할 근거가 없습니다. 현장 점검 보고서, 이슈 티켓, 배포/수정 내역이 있으면 확인할 수 있습니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [],
+        "sessionId": "stage16_d8b60b9c-073b-4666-82f4-6bd59d1e0f38",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "현장 문제 발견 수정 완료",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "0 result(s), 0 new, mode=keyword, tokenHits=0, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 299,
+          "promptChars": 5727,
+          "referenceCount": 0,
+          "toolEventCount": 6
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 1774,
+          "inputTokens": 1135,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 39,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 2467,
+          "inputTokens": 1165,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 96,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "새봄시 사업 예산과 지체상금은 얼마인가요?",
+      "scope": "spring",
+      "elapsedMs": 7874,
+      "answer": "제공된 자료에서는 새봄시 관제 시범사업의 **예산**이나 **지체상금(지연배상금)** 금액·산정 기준을 확인할 수 없습니다. `raw/sources/01-project-guide.md`와 `wiki/baseline.md`는 화면 갱신·통신 장애 점검 기준만 다루며, `raw/sources/02-field-note.txt`도 현장 점검 기록입니다. 예산서, 계약서 또는 과업지시서가 추가로 필요합니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_b846a4fd-54e7-4070-99f8-5e0406e5410e",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "새봄시 사업 예산 지체상금",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "wiki",
+              "knowledgeContext": {
+                "linkCount": 0
+              },
+              "path": "wiki/baseline.md",
+              "score": 7,
+              "snippet": "...갱신 조건 type: concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+              "title": "새봄시 관제 화면의 정상 갱신 조건"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "input": "새봄시 사업 예산 지체상금",
+            "tool": "source.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "source",
+              "path": "raw/sources/02-field-note.txt",
+              "snippet": "가상 새봄시 현장 점검 기록 자료 ID: SAMPLE-02 / 버전: 1 / 유형: 작성자 진술 / 프로젝트: 가상 새봄시 관제 시범사업 이 기록은 개발 검증용 가상 경험이며 공식 규정이 아니다. 상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다. 판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다. 조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다. 결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다. 추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+              "title": "02-field-note.txt"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "reference": {
+              "kind": "source",
+              "path": "raw/sources/01-project-guide.md",
+              "snippet": "# 가상 새봄시 관제 시범사업 안내 자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업 이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다. ## 목적 이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다. ## 용어 ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다. ## 점검 기준 정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다. 통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다. ## 검수 가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 ...",
+              "title": "01-project-guide.md"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "2 result(s), 2 new",
+            "tool": "source.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_b846a4fd-54e7-4070-99f8-5e0406e5410e",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "제공된 자료에서는 새봄시 관제 시범사업의 **예산**이나 **지체상금(지연배상금)** 금액·산정 기준을 확인할 수 없습니다. `raw/sources/01-project-guide.md`와 `wiki/baseline.md`는 화면 갱신·통신 장애 점검 기준만 다루며, `raw/sources/02-field-note.txt`도 현장 점검 기록입니다. 예산서, 계약서 또는 과업지시서가 추가로 필요합니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [
+          {
+            "kind": "wiki",
+            "knowledgeContext": {
+              "linkCount": 0
+            },
+            "path": "wiki/baseline.md",
+            "score": 7,
+            "snippet": "...갱신 조건 type: concept sources: [raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+            "title": "새봄시 관제 화면의 정상 갱신 조건"
+          },
+          {
+            "kind": "source",
+            "path": "raw/sources/02-field-note.txt",
+            "snippet": "가상 새봄시 현장 점검 기록 자료 ID: SAMPLE-02 / 버전: 1 / 유형: 작성자 진술 / 프로젝트: 가상 새봄시 관제 시범사업 이 기록은 개발 검증용 가상 경험이며 공식 규정이 아니다. 상황: 2번 가상 교차로의 통신 연결을 끊자 화면에 마지막 값이 남아 있었다. 판단과 이유: 마지막 수신 시각이 보이지 않아 담당자가 최신 정보로 오해할 수 있다고 판단했다. 조치: 통신 중단 표시와 마지막 수신 시각을 함께 표시하는 변경안을 제안했다. 결과: 변경안은 아직 검토 중이며 반영 완료로 확인되지 않았다. 추가 확인: 재연결 후 새 데이터 수신 시각을 별도로 점검해야 한다.",
+            "title": "02-field-note.txt"
+          },
+          {
+            "kind": "source",
+            "path": "raw/sources/01-project-guide.md",
+            "snippet": "# 가상 새봄시 관제 시범사업 안내 자료 ID: SAMPLE-01 / 버전: 1 / 도메인: 교통관제 업무 / 프로젝트: 가상 새봄시 관제 시범사업 이 문서는 개발 검증을 위해 만든 가상의 자료입니다. 실제 고객 지침이나 법적 기준이 아닙니다. ## 목적 이 사업은 가상 교차로 3곳에서 관제 화면의 정보 갱신을 점검하는 시범사업이다. ## 용어 ITS는 이 개발 표본에서 지능형 교통체계를 뜻한다. 관제 화면은 수집된 교통 정보를 담당자에게 보여 주는 화면이다. ## 점검 기준 정상 통신 상태에서는 관제 화면을 30초 간격으로 갱신한다. 통신이 끊긴 경우에는 마지막 수신 시각과 통신 중단 표시를 함께 보여 준다. 마지막 수신 값을 최신 값으로 표시하면 안 된다. 재연결 후 60초 안에 새 데이터 수신 여부를 확인한다. 통신 장애 중에는 30초 갱신 기준을 충족했다고 판정하지 않는다. ## 검수 가상 담당자는 교차로별 정상 통신과 통신 중단 상황을 각각 한 번 이상 확인한 뒤 ...",
+            "title": "01-project-guide.md"
+          }
+        ],
+        "sessionId": "stage16_b846a4fd-54e7-4070-99f8-5e0406e5410e",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "새봄시 사업 예산 지체상금",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "새봄시 사업 예산 지체상금",
+            "status": "started",
+            "tool": "source.search"
+          },
+          {
+            "detail": "2 result(s), 2 new",
+            "status": "completed",
+            "tool": "source.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 418,
+          "promptChars": 6923,
+          "referenceCount": 3,
+          "toolEventCount": 10
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 1657,
+          "inputTokens": 1138,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 37,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 1581,
+          "inputTokens": 1264,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 47,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 4501,
+          "inputTokens": 1773,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 189,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "모든 도시의 관제 화면은 법적으로 30초마다 갱신해야 하나요?",
+      "scope": "all",
+      "elapsedMs": 4181,
+      "answer": "현재 프로젝트 문서에서 관련 근거를 찾지 못했으므로, **모든 도시의 관제 화면이 법적으로 30초마다 갱신되어야 한다고 단정할 수 없습니다.**\n\n일반적으로 이런 갱신 주기는 전국 공통 법정 기준이라기보다, 대상 시스템의 종류(교통·CCTV·재난·스마트시티 등), 적용 법령·고시, 발주처 요구사항, 운영 SLA에 따라 달라집니다. 판단하려면 적용 국가·지자체와 해당 관제 시스템의 근거 법령 또는 계약/요구사항 문서가 필요합니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_188e38f8-7a9c-4ab8-8ced-845367bb0b2c",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "session_id": "stage16_188e38f8-7a9c-4ab8-8ced-845367bb0b2c",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "현재 프로젝트 문서에서 관련 근거를 찾지 못했으므로, **모든 도시의 관제 화면이 법적으로 30초마다 갱신되어야 한다고 단정할 수 없습니다.**\n\n일반적으로 이런 갱신 주기는 전국 공통 법정 기준이라기보다, 대상 시스템의 종류(교통·CCTV·재난·스마트시티 등), 적용 법령·고시, 발주처 요구사항, 운영 SLA에 따라 달라집니다. 판단하려면 적용 국가·지자체와 해당 관제 시스템의 근거 법령 또는 계약/요구사항 문서가 필요합니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "bb352f2a-c4c7-4247-8682-5c60ad2b0f6b",
+        "references": [],
+        "sessionId": "stage16_188e38f8-7a9c-4ab8-8ced-845367bb0b2c",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 570,
+          "promptChars": 5648,
+          "referenceCount": 0,
+          "toolEventCount": 2
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 4046,
+          "inputTokens": 1141,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 169,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "겨울시 사업의 화면 갱신 간격은 얼마인가요?",
+      "scope": "winter",
+      "elapsedMs": 4951,
+      "answer": "현재 프로젝트 위키에서 ‘겨울시 사업’ 또는 화면 갱신 간격에 관한 근거를 찾지 못했습니다. 갱신 간격이 정의된 화면명·기능명 또는 관련 소스/문서 위치가 있으면 확인해 드릴 수 있습니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_c2867c0e-c24a-466a-a3a7-50eac76e9879",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "겨울시 사업 화면 갱신 간격",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "output": "0 result(s), 0 new, mode=keyword, tokenHits=0, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_c2867c0e-c24a-466a-a3a7-50eac76e9879",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "현재 프로젝트 위키에서 ‘겨울시 사업’ 또는 화면 갱신 간격에 관한 근거를 찾지 못했습니다. 갱신 간격이 정의된 화면명·기능명 또는 관련 소스/문서 위치가 있으면 확인해 드릴 수 있습니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "1253b754-ecc6-4fe1-9fbe-74f190933a04",
+        "references": [],
+        "sessionId": "stage16_c2867c0e-c24a-466a-a3a7-50eac76e9879",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "겨울시 사업 화면 갱신 간격",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "0 result(s), 0 new, mode=keyword, tokenHits=0, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 258,
+          "promptChars": 5724,
+          "referenceCount": 0,
+          "toolEventCount": 6
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 1901,
+          "inputTokens": 1137,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 39,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 2327,
+          "inputTokens": 1167,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 83,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "question": "이 사업도 겨울시처럼 10초 간격으로 바꾸기로 했나요?",
+      "scope": "spring",
+      "elapsedMs": 6771,
+      "answer": "아니요. 현재 확인된 자료상 새봄시 관제 시범사업의 정상 통신 상태 화면 갱신 주기는 30초입니다. 겨울시처럼 10초 간격으로 변경하기로 했다는 내용은 확인되지 않았습니다. 관련 근거는 `wiki/baseline.md`의 「새봄시 관제 화면의 정상 갱신 조건」입니다.",
+      "response": {
+        "events": [
+          {
+            "session_id": "stage16_08e1729c-5f02-4b66-97e7-218b971baf7b",
+            "type": "agentStart"
+          },
+          {
+            "mode": "standard",
+            "type": "turnStart"
+          },
+          {
+            "input": "겨울시 10초 간격 변경 사업",
+            "tool": "wiki.search",
+            "type": "toolStart"
+          },
+          {
+            "reference": {
+              "kind": "wiki",
+              "knowledgeContext": {
+                "linkCount": 0
+              },
+              "path": "wiki/baseline.md",
+              "score": 2,
+              "snippet": "...[raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+              "title": "새봄시 관제 화면의 정상 갱신 조건"
+            },
+            "type": "referenceAdded"
+          },
+          {
+            "output": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "tool": "wiki.search",
+            "type": "toolEnd"
+          },
+          {
+            "session_id": "stage16_08e1729c-5f02-4b66-97e7-218b971baf7b",
+            "type": "done"
+          }
+        ],
+        "message": {
+          "content": "아니요. 현재 확인된 자료상 새봄시 관제 시범사업의 정상 통신 상태 화면 갱신 주기는 30초입니다. 겨울시처럼 10초 간격으로 변경하기로 했다는 내용은 확인되지 않았습니다. 관련 근거는 `wiki/baseline.md`의 「새봄시 관제 화면의 정상 갱신 조건」입니다.",
+          "role": "assistant"
+        },
+        "mode": "standard",
+        "ok": true,
+        "projectId": "315129dd-8524-4aae-8671-eb871609d74d",
+        "references": [
+          {
+            "kind": "wiki",
+            "knowledgeContext": {
+              "linkCount": 0
+            },
+            "path": "wiki/baseline.md",
+            "score": 2,
+            "snippet": "...[raw/sources/01-project-guide.md] ---  가상 새봄시 관제 시범사업에서는 정상 통신 상태일 때 관제 화면을 30초 간격으로 갱신합니다. 이 조건을 모든 사업의 법적 의무로 일반화하지 않습니다. ",
+            "title": "새봄시 관제 화면의 정상 갱신 조건"
+          }
+        ],
+        "sessionId": "stage16_08e1729c-5f02-4b66-97e7-218b971baf7b",
+        "toolEvents": [
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          },
+          {
+            "detail": "겨울시 10초 간격 변경 사업",
+            "status": "started",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "1 result(s), 1 new, mode=keyword, tokenHits=1, vectorHits=0, graphHits=0",
+            "status": "completed",
+            "tool": "wiki.search"
+          },
+          {
+            "detail": "openai:gpt-5.6-terra",
+            "status": "started",
+            "tool": "llm.generate"
+          },
+          {
+            "status": "completed",
+            "tool": "llm.generate"
+          }
+        ],
+        "usage": {
+          "completionChars": 335,
+          "promptChars": 5891,
+          "referenceCount": 1,
+          "toolEventCount": 6
+        }
+      },
+      "modelCalls": [
+        {
+          "elapsedMs": 2768,
+          "inputTokens": 1140,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 69,
+          "status": 200,
+          "stream": false
+        },
+        {
+          "elapsedMs": 3441,
+          "inputTokens": 1257,
+          "model": "gpt-5.6-terra",
+          "outputTokens": 161,
+          "status": 200,
+          "stream": false
+        }
+      ]
+    }
+  ],
+  "businessReview": null,
+  "completedAt": "2026-09-09T16:23:25.442Z",
+  "calls": [
+    {
+      "elapsedMs": 3910,
+      "inputTokens": 1128,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 137,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1701,
+      "inputTokens": 1138,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 37,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2285,
+      "inputTokens": 1238,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 83,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2738,
+      "inputTokens": 1140,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 48,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 3214,
+      "inputTokens": 1260,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 159,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2343,
+      "inputTokens": 1133,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 47,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2016,
+      "inputTokens": 1634,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 97,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2151,
+      "inputTokens": 1241,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 79,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1774,
+      "inputTokens": 1135,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 39,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2467,
+      "inputTokens": 1165,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 96,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1657,
+      "inputTokens": 1138,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 37,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1581,
+      "inputTokens": 1264,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 47,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 4501,
+      "inputTokens": 1773,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 189,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 4046,
+      "inputTokens": 1141,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 169,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1545,
+      "inputTokens": 1137,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 38,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 1901,
+      "inputTokens": 1137,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 39,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2327,
+      "inputTokens": 1167,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 83,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 2768,
+      "inputTokens": 1140,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 69,
+      "status": 200,
+      "stream": false
+    },
+    {
+      "elapsedMs": 3441,
+      "inputTokens": 1257,
+      "model": "gpt-5.6-terra",
+      "outputTokens": 161,
+      "status": 200,
+      "stream": false
+    }
+  ]
+}

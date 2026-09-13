@@ -1,0 +1,11 @@
+// 교육용 참고 답안입니다. 제품 코드에는 아직 적용하지 않았습니다.
+export function splitAliases(value: string): string[] {
+  return [
+    ...new Set(
+      value
+        .split(/[,，;]/u)
+        .map((item) => item.trim())
+        .filter(Boolean),
+    ),
+  ];
+}

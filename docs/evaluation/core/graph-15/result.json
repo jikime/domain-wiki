@@ -1,0 +1,261 @@
+{
+  "date": "2026-09-09T16:01:49.346Z",
+  "classification": "13·14단계에 공식 계정과 실제 모델로 검증한 가상 개발 자료. 그래프 자체는 모델을 호출하지 않음.",
+  "views": [
+    {
+      "name": "indirect",
+      "width": 1440,
+      "readyMs": 597.0404159999999,
+      "summary": "3개 중 3개 표시 · 연결 3개 · 군집 1개 · 계산 9.2ms",
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/37523764-2f97-4a40-9f98-2616c3d8c4fe?version=9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/b3764c66-7101-4044-b526-6a493627f3ad?version=7d7412a4-b9a0-496e-a299-7e076800fac0#chunk-0e24ff98-9606-41ff-bc73-a89983a06df1",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/chat?domainId=50069fed-b7fe-4d34-b546-64d848960392&wikiId=37523764-2f97-4a40-9f98-2616c3d8c4fe",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources?domainId=50069fed-b7fe-4d34-b546-64d848960392#register-source",
+          "status": 200
+        }
+      ],
+      "overflow": 0,
+      "errors": [],
+      "cacheValidated": true
+    },
+    {
+      "name": "indirect",
+      "width": 390,
+      "readyMs": 474.84574999999995,
+      "summary": "3개 중 3개 표시 · 연결 3개 · 군집 1개 · 계산 6.1ms",
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/37523764-2f97-4a40-9f98-2616c3d8c4fe?version=9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/b3764c66-7101-4044-b526-6a493627f3ad?version=7d7412a4-b9a0-496e-a299-7e076800fac0#chunk-0e24ff98-9606-41ff-bc73-a89983a06df1",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/chat?domainId=50069fed-b7fe-4d34-b546-64d848960392&wikiId=37523764-2f97-4a40-9f98-2616c3d8c4fe",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources?domainId=50069fed-b7fe-4d34-b546-64d848960392#register-source",
+          "status": 200
+        }
+      ],
+      "overflow": 0,
+      "errors": [],
+      "cacheValidated": true
+    },
+    {
+      "name": "quality",
+      "width": 1440,
+      "readyMs": 614.0207500000001,
+      "summary": "3개 중 3개 표시 · 연결 1개 · 군집 2개 · 계산 6.0ms",
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/794f7714-b92e-4cab-b84e-cc4362b90769?version=e01ecf7e-153f-4d08-8d2c-f2a51067cde5",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/00d92516-77a0-4b0b-aa71-af2270dc9823?version=c3b39039-c9d1-4307-ae3f-564962462fb2#chunk-a3a261c5-f9b1-4444-96a1-b3d29f5c54a4",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/chat?domainId=44b9bed3-90c2-48bb-88b9-4a546cbb38c9&wikiId=794f7714-b92e-4cab-b84e-cc4362b90769",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources?domainId=44b9bed3-90c2-48bb-88b9-4a546cbb38c9#register-source",
+          "status": 200
+        }
+      ],
+      "overflow": 0,
+      "errors": [],
+      "cacheValidated": true
+    },
+    {
+      "name": "quality",
+      "width": 390,
+      "readyMs": 457.8462920000002,
+      "summary": "3개 중 3개 표시 · 연결 1개 · 군집 2개 · 계산 6.0ms",
+      "links": [
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/wiki/794f7714-b92e-4cab-b84e-cc4362b90769?version=e01ecf7e-153f-4d08-8d2c-f2a51067cde5",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources/00d92516-77a0-4b0b-aa71-af2270dc9823?version=c3b39039-c9d1-4307-ae3f-564962462fb2#chunk-a3a261c5-f9b1-4444-96a1-b3d29f5c54a4",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/chat?domainId=44b9bed3-90c2-48bb-88b9-4a546cbb38c9&wikiId=794f7714-b92e-4cab-b84e-cc4362b90769",
+          "status": 200
+        },
+        {
+          "href": "/w/e318d0aa-f4a5-457f-9133-fab26f236f45/sources?domainId=44b9bed3-90c2-48bb-88b9-4a546cbb38c9#register-source",
+          "status": 200
+        }
+      ],
+      "overflow": 0,
+      "errors": [],
+      "cacheValidated": true
+    }
+  ],
+  "datasets": [
+    {
+      "name": "indirect",
+      "data": {
+        "fingerprint": "fb93ccb4216aef4d41b73f8b3aa8b091c8f1eba472fa0b917e78b442239bb59a",
+        "scope": {
+          "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+          "projectId": null,
+          "type": "all",
+          "q": "",
+          "limit": 100,
+          "focusId": null,
+          "hops": 1
+        },
+        "nodes": [
+          {
+            "id": "37523764-2f97-4a40-9f98-2616c3d8c4fe",
+            "versionId": "9dc6cdb5-92a7-4093-ac0e-a764e97be865",
+            "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+            "projectId": null,
+            "title": "후속 검증 기준",
+            "type": "concept",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "b3764c66-7101-4044-b526-6a493627f3ad",
+                "chunkId": "0e24ff98-9606-41ff-bc73-a89983a06df1",
+                "versionId": "7d7412a4-b9a0-496e-a299-7e076800fac0"
+              }
+            ],
+            "outLinks": []
+          },
+          {
+            "id": "77c934c1-1ce4-474f-8bc4-6155fcdf0855",
+            "versionId": "e6b6901f-fafb-4c1a-9c62-92cb2d0df274",
+            "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+            "projectId": null,
+            "title": "접수알파절차 목차",
+            "type": "procedure",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "72565b0e-a755-411b-b7c3-f525963ffd94",
+                "chunkId": "de14d108-33f1-462d-8e13-14842eee903e",
+                "versionId": "bdcfc64a-f391-4aa2-a638-b2ab94977856"
+              }
+            ],
+            "outLinks": ["d5e3edaf-3786-441e-ab14-f8ae1b2278a6"]
+          },
+          {
+            "id": "d5e3edaf-3786-441e-ab14-f8ae1b2278a6",
+            "versionId": "c9c550fd-c88c-4800-b0be-100c0d9a2c86",
+            "domainId": "50069fed-b7fe-4d34-b546-64d848960392",
+            "projectId": null,
+            "title": "확인 문서 안내",
+            "type": "procedure",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "f5fb44f6-5160-40b2-9cf5-787d9e170ef0",
+                "chunkId": "2e700e59-03f9-4113-a77e-5455136e3df9",
+                "versionId": "35da0a53-1543-4659-9691-cdf6d1b9488d"
+              }
+            ],
+            "outLinks": ["37523764-2f97-4a40-9f98-2616c3d8c4fe"]
+          }
+        ],
+        "matched": 3,
+        "truncated": false
+      },
+      "apiMs": 41.773416999999995,
+      "responseBytes": 1531
+    },
+    {
+      "name": "quality",
+      "data": {
+        "fingerprint": "001c5f3717e06ca5e53ff3f5aff9fe4fb332251a602f85c6a225f99e7867ed57",
+        "scope": {
+          "domainId": "44b9bed3-90c2-48bb-88b9-4a546cbb38c9",
+          "projectId": null,
+          "type": "all",
+          "q": "",
+          "limit": 100,
+          "focusId": null,
+          "hops": 1
+        },
+        "nodes": [
+          {
+            "id": "794f7714-b92e-4cab-b84e-cc4362b90769",
+            "versionId": "e01ecf7e-153f-4d08-8d2c-f2a51067cde5",
+            "domainId": "44b9bed3-90c2-48bb-88b9-4a546cbb38c9",
+            "projectId": null,
+            "title": "운영 기록 보관 안내",
+            "type": "concept",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "00d92516-77a0-4b0b-aa71-af2270dc9823",
+                "chunkId": "a3a261c5-f9b1-4444-96a1-b3d29f5c54a4",
+                "versionId": "c3b39039-c9d1-4307-ae3f-564962462fb2"
+              }
+            ],
+            "outLinks": []
+          },
+          {
+            "id": "a178b11d-0a12-4dda-a0f0-ec9af8c5ed17",
+            "versionId": "a68d1bcc-3826-4cc5-a8d6-c7e0abdf2b68",
+            "domainId": "44b9bed3-90c2-48bb-88b9-4a546cbb38c9",
+            "projectId": null,
+            "title": "검수 기록 보관 기준",
+            "type": "concept",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "f78625a6-88b4-48e7-96d5-95d263efa761",
+                "chunkId": "40e79f6c-fc19-4b86-9d3c-9ad0894e2f17",
+                "versionId": "53ce9fbc-44cc-465d-bc0a-e9939ae1f323"
+              }
+            ],
+            "outLinks": []
+          },
+          {
+            "id": "b99e19f0-4185-40b0-b961-6f101520625c",
+            "versionId": "b3ac76de-a1da-462d-b36d-e70286784ad3",
+            "domainId": "44b9bed3-90c2-48bb-88b9-4a546cbb38c9",
+            "projectId": null,
+            "title": "운영 기록 보관 요약",
+            "type": "concept",
+            "aliases": [],
+            "sources": [
+              {
+                "id": "f78625a6-88b4-48e7-96d5-95d263efa761",
+                "chunkId": "40e79f6c-fc19-4b86-9d3c-9ad0894e2f17",
+                "versionId": "53ce9fbc-44cc-465d-bc0a-e9939ae1f323"
+              }
+            ],
+            "outLinks": []
+          }
+        ],
+        "matched": 3,
+        "truncated": false
+      },
+      "apiMs": 16.914334000000053,
+      "responseBytes": 1467
+    }
+  ],
+  "businessReview": null
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-09T08:53:31.142Z",
+  "version": "7.22.1",
+  "checks": [
+    {
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    }
+  ],
+  "errors": [],
+  "externalRequests": 0,
+  "checksPassed": [
+    "toolbar-bold",
+    "source-roundtrip-without-edits",
+    "gfm-table",
+    "code",
+    "image-no-fetch",
+    "html-inert"
+  ]
+}

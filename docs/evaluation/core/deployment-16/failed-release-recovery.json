@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-09T17:11:13.291Z",
+  "profile": "wiki-stage16-restored",
+  "failedImage": "my-domain-wiki:stage16-deliberately-missing",
+  "pullDisabled": true,
+  "rejected": true,
+  "databaseTablesUnchanged": 48,
+  "recoveredImage": "my-domain-wiki:stage16-release-20260910",
+  "recoveredImageId": "sha256:c4359ab65d37da3491c82d22e996adc2cca081ec9348488b6cc764e9f783d0f6",
+  "health": 200,
+  "limitation": "별도 복원 환경에서 잘못된 이미지 기동 실패 후 검증된 동일 스키마 이미지로 복귀. 파괴적 스키마 변경의 역마이그레이션 시험이 아니다."
+}

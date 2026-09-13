@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-10T07:16:08.518Z",
+  "backupCreatedAt": "2026-09-10T07:12:35.841Z",
+  "image": "my-domain-wiki:original-parity-20260910",
+  "imageId": "sha256:90cb37ef69c5c1ff15a6e057aeee5b0632b094dc69a78a4aa42dc5eee594b7d7",
+  "tables": 54,
+  "files": 16,
+  "totalBytes": 2969,
+  "migrations": 30,
+  "allRowsAndFileHashesRestored": true,
+  "databaseTamperRejected": true,
+  "fileTamperRejected": true,
+  "sameProfileRejected": true,
+  "incompatibleImageRejected": true,
+  "existingServiceRejected": true
+}
