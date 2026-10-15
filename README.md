@@ -2,7 +2,9 @@
 
 업무 자료와 실무 경험을 함께 쌓고, 근거를 확인하며 질문하는 팀의 지식 공간입니다.
 
-실습 소스: [jikime/domain-wiki](https://github.com/jikime/domain-wiki). 교육생은 **1주차 수업 안에서** [기본 도구·개발용 AI·디자인 하네스 설치](docs/training/environment-setup.md)와 [Git에서 받기·첫 실행](docs/training/getting-started.md)을 진행해 내 PC의 업무환경을 만듭니다. [7주 상세 교육안](docs/training/README.md)에 따라 같은 프로젝트를 이어서 실습합니다. 기술의 목적과 구조를 이해하고, 교육생은 요구·AI 요청·결과 확인을 맡으며 구현과 기술 검사는 AI가 수행합니다.
+**웹 워크북:** 서비스를 실행한 뒤 [http://localhost:3010/workbook](http://localhost:3010/workbook)을 엽니다. 로그인 없이 교재를 읽고, 실습 자료를 내려받으며, 최신 교육생 교재를 인쇄·PDF로 저장할 수 있습니다. 위키 서비스의 로그인 화면과 상단 메뉴에서도 연결됩니다.
+
+실습 소스: [jikime/domain-wiki](https://github.com/jikime/domain-wiki). 교육생은 **1단계 수업 안에서** [기본 도구·개발용 AI·디자인 하네스 설치](docs/training/environment-setup.md)와 [Git에서 받기·첫 실행](docs/training/getting-started.md)을 진행해 내 PC의 업무환경을 만듭니다. [단계별 상세 교육안](docs/training/README.md)에 따라 같은 프로젝트를 이어서 실습합니다. 기술의 목적과 구조를 이해하고, 교육생은 요구·AI 요청·결과 확인을 맡으며 구현과 기술 검사는 AI가 수행합니다.
 
 원본 `llm_wiki`의 반복 탐색 채팅·검색·위키 병합·목적/스키마·템플릿·폴더/URL 가져오기·문서/이미지 처리·선택 문장 AI·품질 수정·심층 조사·프로젝트 ZIP 이동을 웹 환경에 복원했습니다. 원본의 순수 함수와 프롬프트를 옮기고, 회사용 권한·불변 원문·직원 검토와 연결했습니다. [기능별 복원표](docs/ORIGINAL_FEATURE_PARITY.md), [새 실제 모델 정리·개정 평가](docs/evaluation/core/ingest-12-original-parity-20260910/README.md), [운영 이미지·백업 복원](docs/evaluation/core/original-parity-deployment/README.md)에 검증 범위를 기록합니다. 아래 1~16단계의 검사 수는 이번 복원 이전 기록입니다.
 

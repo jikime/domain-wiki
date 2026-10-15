@@ -69,6 +69,10 @@ export function WorkspaceNav({
             <span>{item.name}</span>
           </Link>
         ))}
+      <Link href="/workbook">
+        <BookOpen size={18} />
+        <span>교육 워크북</span>
+      </Link>
     </nav>
   );
 }

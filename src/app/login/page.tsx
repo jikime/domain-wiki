@@ -31,6 +31,9 @@ export default function LoginPage() {
           <h2>다시 만나 반가워요</h2>
           <p className="muted">관리자가 제공한 계정으로 로그인해 주세요.</p>
           <LoginForm />
+          <Link className="back-link" href="/workbook">
+            교육 워크북 보기 →
+          </Link>
           <Link className="back-link" href="/forgot-password">
             비밀번호를 잊으셨나요?
           </Link>
