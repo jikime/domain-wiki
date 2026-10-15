@@ -219,6 +219,18 @@ const server = createServer(async (req, res) => {
           evidence: [{ partId: p.id, chunkId: p.chunkId, quote }],
         };
       });
+    if (payload.sourceTitle.startsWith("주제축적")) {
+      for (const claim of claims) {
+        const m = /(주 화면|보조 화면)은 (\d+)초/.exec(claim.text);
+        if (m)
+          Object.assign(claim, {
+            subject: m[1],
+            predicate: "갱신 주기",
+            value: m[2],
+            unit: "초",
+          });
+      }
+    }
     if (claims.length) {
       const c = claims[0];
       if (payload.sourceTitle.includes("분석수치변조")) c.text += " 999999초";
@@ -239,7 +251,9 @@ const server = createServer(async (req, res) => {
     }));
     if (payload.sourceTitle.includes("분석범위누락")) parts.pop();
     answer = JSON.stringify({
-      summary: `${payload.unit.id}의 원문 조건을 확인했습니다.`,
+      summary: payload.sourceTitle.startsWith("주제축적")
+        ? "가시화응답성"
+        : `${payload.unit.id}의 원문 조건을 확인했습니다.`,
       claims,
       parts,
       questions: [],
@@ -284,6 +298,24 @@ const server = createServer(async (req, res) => {
       reason: "원문의 적용 조건을 독립적으로 확인합니다.",
       questions: [],
     }));
+    if (payload.sourceTitle.startsWith("주제축적")) {
+      const topic = available.find((w) => w.title === "화면 갱신 조건");
+      pages[1].title = "화면 갱신 조건";
+      pages[1].subject = "화면 갱신";
+      pages[1].scope =
+        "현재 사업의 주 화면·보조 화면 갱신 조건과 통신 단절 예외를 대상별로 구분해 정리한다.";
+      pages[1].aliases = ["가시화응답성"];
+      pages[1].claimIds = payload.analysis.claims.map((c) => c.id);
+      if (topic && !payload.sourceTitle.includes("중복오류")) {
+        pages[1].kind = "update";
+        pages[1].pageId = topic.pageId;
+        if (payload.sourceTitle.includes("예외"))
+          pages[0].links.push({
+            key: `wiki:${topic.pageId}`,
+            reason: "같은 주제의 기존 주소",
+          });
+      }
+    }
     if (payload.sourceTitle.includes("생성순환"))
       pages[1].links = [{ key: "page-1", reason: "문서 요약 확인" }];
     if (payload.sourceTitle.includes("자동정리")) {

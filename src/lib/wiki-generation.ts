@@ -2,13 +2,14 @@
 // Copyright (C) 2024-2026 YongSu. SPDX-License-Identifier: GPL-3.0-only
 // File output is replaced by validated DB page plans and evidence-backed sections.
 import { z } from "zod";
+import { validateClaimBindings } from "./claim-grounding";
 import { analysisClaimSchema, messageChars } from "./document-analysis";
 import { purposeContextInstruction } from "./domain-purpose";
 import { markdownReferences } from "./wiki-links";
 import { type WikiMetadata, wikiTypeSchema } from "./wiki-metadata";
+import { validateTopicIdentity } from "./wiki-topic";
 
-export const WIKI_GENERATION_PROMPT_VERSION =
-  "wiki-generation-v7-original-groups";
+export const WIKI_GENERATION_PROMPT_VERSION = "wiki-generation-v10-topic-scope";
 const uniqueStrings = (max: number) =>
   z
     .array(z.string().min(1).max(120))
@@ -132,6 +133,8 @@ export const wikiPlanPrompt = [
   "여러 위키 변경 계획. 완료된 문서 분석을 현재 공개된 위키·원문과 비교하세요. 한국어 JSON만 반환하고 사고 과정·파일 경로·FILE 블록을 출력하지 마세요.",
   purposeContextInstruction,
   "분석의 모든 claim을 적어도 하나의 문서 요약(type=source) 페이지에 배정하세요. 문서 끝·표·각주·조건을 누락하지 마세요. 출처 요약 외에도 독립적으로 쓸 가치가 있는 대상·개념·절차·사례 페이지를 제안하세요. 근거 없는 페이지 수 늘리기는 금지합니다.",
+  "기존 위키 metadata.subject와 metadata.scope는 페이지의 대상·정리 범위입니다. 본문에 현재 한 종류의 사례만 있어도 정리 범위에 다른 대상·예외가 포함되어 있다면 그 범위 안에서 기존 위키를 보완하세요. 주 화면과 보조 화면처럼 서로 다른 대상의 수치는 구분한 단락·표로 보존할 수 있으며, 같은 페이지에 정리하는 것과 같은 조건으로 일반화하는 것은 다릅니다. 정리 범위는 작성 기준이며 사실 근거가 아닙니다. 기존 정리 범위를 새 자료만으로 임의로 확대하지 마세요.",
+  "새 자료마다 같은 주제의 페이지를 복제하지 마세요. 기존 제목·별칭과 겹치는 비문서요약 페이지는 대상·적용 범위를 먼저 대조하고, 동일하면 기존 pageId의 update/conflict로 연결하세요. 다른 대상이면 구분되는 제목을 사용하세요. 문서 요약은 원문별로 별도 유지합니다.",
   "제목이나 공통 단어만으로 같은 대상을 확정하지 마세요. 각 페이지의 subject와 scope에 정확한 대상·적용 범위를 적고, 기존 위키와 동일한 대상인지 reason에서 설명하세요. 서로 다른 대상·사업의 수치·부정·예외를 합치지 마세요.",
   '모든 페이지에는 kind와 type 두 필드를 각각 반드시 작성하세요. kind는 변경 작업(new/update/merge/conflict), type은 지식 분류입니다. 새 절차 페이지는 {"kind":"new","type":"procedure"}이며 kind에 procedure를 넣거나 type을 생략하면 실패합니다.',
   "kind=new는 pageId=null, update/merge/conflict는 제공된 수정 가능한 기존 pageId가 필요합니다. merge에서만 mergedPageIds를 사용하며 같은 범위·같은 대상인지 비교하세요. 같은 페이지를 두 번 수정하거나 병합할 수 없습니다. 모순 가능성이 있으면 conflict로 분리하고 questions에 확인할 조건을 적으세요.",
@@ -146,6 +149,7 @@ export const wikiPagePrompt = [
   purposeContextInstruction,
   "현재 페이지에 배정된 모든 claimId를 sections의 claimIds에 적어도 한 번 사용하세요. 각 단락은 해당 ID의 원문 구절에 근거해야 하며 수치·단위·대상·부정·예외·불확실성을 보존하세요. 입력의 명시적 value·unit·condition은 정확한 문자열로 남기세요. 인용 구절에 없는 새 수치나 의무를 만들지 마세요.",
   "각 단락에서 인용한 모든 claim의 subject를 그 단락 heading 또는 content에 정확한 문자열로 포함하세요. 페이지 제목이나 앞 단락에만 대상이 있으면 부족합니다. 긴 문서 이름을 ‘이 지침’으로 줄이는 대신 정확한 이름을 단락 제목에 적고, 별도 claim의 subject가 ‘이 지침’이면 본문에도 그대로 남기세요. 원문 근거를 벗어나는 설명을 추가하지 마세요.",
+  "수치가 있는 주장은 대상·값·단위·적용 조건을 같은 문장 또는 같은 표의 행에 적으세요. 여러 대상의 수치를 각각이라고 묶거나 다른 문장에 흩어 쓰지 마세요. 표의 수치 셀에도 단위를 명시하세요.",
   "sections.content는 마크다운 단락·목록·표·코드 블록을 쓸 수 있습니다. 표·SQL·설정의 정확한 구조를 원문대로 보존하세요. 링크·이미지·HTML·frontmatter·FILE 블록을 만들지 마세요. 위키 링크와 원문 근거는 서버가 별도로 붙입니다.",
   "sections는 이 페이지에 배정된 모든 현재 claim을 재구성한 근거 단락입니다. 기존 본문과 내용이 겹쳐도 해당 claim을 생략하지 마세요. new/update/merge/conflict 모두 같은 규칙이며 conflict=true여도 모든 claim을 포함한 하나 이상의 sections가 필요합니다. 변경된 사실만 쓰거나 빈 sections를 반환하면 실패합니다.",
   "existingWiki와 mergedWikis는 중복·모순 비교용입니다. 기존 본문과 새 사실의 통합 병합은 다음 단계에서 처리하므로 기존 본문을 sections로 복사하지 마세요. 현재 claims를 모두 사용해 단락을 작성하세요. 기존 문장을 삭제·교체하거나 조건이 모순되면 conflict=true와 questions에 이유를 적으세요. 임시 가정은 사실로 적지 마세요.",
@@ -203,13 +207,26 @@ export function validateWikiPlan(
   const linkedExisting = new Map(
     candidates.map((c) => [`wiki:${c.pageId}`, c]),
   );
-  for (const page of plan.pages)
-    for (const link of page.links) {
+  for (const page of plan.pages) {
+    const seen = new Map<string, string>();
+    const originalKeys = new Set<string>();
+    page.links = page.links.flatMap((link) => {
+      const original = link.key;
+      if (originalKeys.has(original))
+        throw new Error("페이지 계획에 같은 표기의 중복 위키 링크가 있습니다.");
+      originalKeys.add(original);
       if (link.key.startsWith("wiki:")) {
         const changed = plan.pages.find((p) => p.pageId === link.key.slice(5));
         if (changed) link.key = changed.key;
       }
-    }
+      const previous = seen.get(link.key);
+      // The existing UUID and this plan's key can denote the same destination.
+      // Collapse only those equivalent spellings, not raw duplicate/unknown links.
+      if (previous !== undefined && previous !== original) return [];
+      seen.set(link.key, original);
+      return [link];
+    });
+  }
   for (const page of plan.pages) {
     if (page.claimIds.some((id) => !claims.has(id)))
       throw new Error("제공되지 않은 분석 근거를 사용한 페이지 계획입니다.");
@@ -248,6 +265,7 @@ export function validateWikiPlan(
   }
   if (!claims.size || [...claims].some((id) => !summaryClaims.has(id)))
     throw new Error("문서 요약 계획에 전체 분석 근거가 포함되지 않았습니다.");
+  validateTopicIdentity(plan.pages, candidates, projectId);
   groupWikiPlans(plan.pages);
   return plan;
 }
@@ -418,6 +436,7 @@ export function validateGeneratedSections(
       )
         throw new Error("불확실한 분석을 확정된 사실로 생성할 수 없습니다.");
     }
+    validateClaimBindings(section.content, facts, section.heading);
     if (/---\s*FILE:|---END FILE---/i.test(section.content))
       throw new Error("파일 출력 형식 대신 위키 단락을 생성해 주세요.");
   }

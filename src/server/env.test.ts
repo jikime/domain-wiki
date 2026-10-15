@@ -22,7 +22,20 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllEnvs());
 
 describe("API/CLI 환경 설정", () => {
+  it.each([
+    undefined,
+    "",
+  ])("연결 방식이 %s이면 키 없이 Claude Code·sonnet을 사용한다", (value) => {
+    vi.stubEnv("AI_TRANSPORT", value);
+    const env = getServerEnv();
+    expect(env.AI_TRANSPORT).toBe("claude-code");
+    expect(env.AI_MODEL).toBe("sonnet");
+    expect(env.AI_API_KEY).toBeUndefined();
+    expect(env.AI_BASE_URL).toBeUndefined();
+  });
+
   it("기존 OpenAI 키 기본 연결을 보존한다", () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("OPENAI_API_KEY", "test-api-key");
     const env = getServerEnv();
     expect(env.AI_TRANSPORT).toBe("api");
@@ -43,6 +56,7 @@ describe("API/CLI 환경 설정", () => {
   });
 
   it("공통 API와 용도별 CLI를 혼용한다", () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("OPENAI_API_KEY", "test-api-key");
     vi.stubEnv("AI_CHAT_TRANSPORT", "codex-cli");
     vi.stubEnv("AI_CHAT_MODEL", "test-codex");
@@ -54,10 +68,58 @@ describe("API/CLI 환경 설정", () => {
     expect(env.AI_KNOWLEDGE_TRANSPORT).toBe("claude-code");
   });
 
-  it("CLI 공통 설정에서는 OpenAI 키로 모델을 임의 선택하지 않는다", () => {
-    vi.stubEnv("AI_TRANSPORT", "claude-code");
+  it("기존 OpenAI 키가 있어도 CLI 기본 연결과 모델을 유지한다", () => {
     vi.stubEnv("OPENAI_API_KEY", "test-api-key");
+    vi.stubEnv("OPENAI_MODEL", "api-model");
+    const env = getServerEnv();
+    expect(env.AI_TRANSPORT).toBe("claude-code");
+    expect(env.AI_MODEL).toBe("sonnet");
+    expect(env.AI_API_KEY).toBeUndefined();
+  });
+
+  it("Codex에는 Claude 기본 모델을 적용하지 않는다", () => {
+    vi.stubEnv("AI_TRANSPORT", "codex-cli");
     expect(() => getServerEnv()).toThrow("AI_CHAT_MODEL");
+  });
+
+  it("기본 CLI와 별도로 지정한 임베딩 API를 유지한다", () => {
+    vi.stubEnv("OPENAI_API_KEY", "unused-openai-key");
+    vi.stubEnv("OPENAI_EMBEDDING_MODEL", "unused-openai-embedding");
+    vi.stubEnv("AI_EMBEDDING_MODEL", "embedding-model");
+    vi.stubEnv("AI_EMBEDDING_BASE_URL", "https://example.test/v1");
+    vi.stubEnv("AI_EMBEDDING_API_KEY", "embedding-key");
+    expect(getServerEnv()).toMatchObject({
+      AI_TRANSPORT: "claude-code",
+      AI_MODEL: "sonnet",
+      AI_EMBEDDING_MODEL: "embedding-model",
+      AI_EMBEDDING_BASE_URL: "https://example.test/v1",
+      AI_EMBEDDING_API_KEY: "embedding-key",
+    });
+  });
+
+  it("CLI 기본 연결에서도 기존 OpenAI 임베딩을 독립적으로 읽는다", () => {
+    vi.stubEnv("AI_MODEL", "sonnet");
+    vi.stubEnv("OPENAI_API_KEY", "embedding-only-key");
+    vi.stubEnv("OPENAI_MODEL", "unused-generation-model");
+    vi.stubEnv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small");
+    expect(getServerEnv()).toMatchObject({
+      AI_TRANSPORT: "claude-code",
+      AI_MODEL: "sonnet",
+      AI_EMBEDDING_MODEL: "text-embedding-3-small",
+      AI_EMBEDDING_BASE_URL: "https://api.openai.com/v1",
+      AI_EMBEDDING_API_KEY: "embedding-only-key",
+    });
+    expect(getServerEnv().AI_API_KEY).toBeUndefined();
+  });
+
+  it("부분 지정한 임베딩 설정에 다른 제공사의 키를 섞지 않는다", () => {
+    vi.stubEnv("OPENAI_API_KEY", "unused-openai-key");
+    vi.stubEnv("OPENAI_EMBEDDING_MODEL", "unused-openai-model");
+    vi.stubEnv("AI_EMBEDDING_BASE_URL", "https://example.test/v1");
+    const env = getServerEnv();
+    expect(env.AI_EMBEDDING_BASE_URL).toBe("https://example.test/v1");
+    expect(env.AI_EMBEDDING_API_KEY).toBeUndefined();
+    expect(env.AI_EMBEDDING_MODEL).toBeUndefined();
   });
 
   it("공통 CLI와 별도 이미지 API 연결을 혼용한다", () => {
@@ -71,6 +133,7 @@ describe("API/CLI 환경 설정", () => {
   });
 
   it("API로 전환할 때 누락된 주소·키와 잘못된 연결 방식을 거부한다", () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("AI_MODEL", "model-only");
     expect(() => getServerEnv()).toThrow("AI_MODEL");
     vi.stubEnv("AI_TRANSPORT", "shell-command");

@@ -133,6 +133,8 @@ function makeItem(
   );
   const metadata: WikiMetadata = wikiMetadataSchema.parse({
     type: target?.metadata.type ?? page.type,
+    subject: target?.metadata.subject ?? page.subject,
+    scope: target?.metadata.scope ?? page.scope,
     aliases: [
       ...new Set([...(target?.metadata.aliases ?? []), ...page.aliases]),
     ],
@@ -386,6 +388,10 @@ export async function executeWikiGeneration(
           sourceId: source.sourceId,
           existing: oldPages,
           reuse: !!reuse,
+          sections: result.sections,
+          claims: analysis.claims.filter((claim) =>
+            page.claimIds.includes(claim.id),
+          ),
         })
       : undefined;
     items.push(

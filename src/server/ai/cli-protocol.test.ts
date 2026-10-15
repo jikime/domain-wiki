@@ -68,6 +68,28 @@ describe("CLI 대화 입력", () => {
 });
 
 describe("Claude 응답", () => {
+  it("OAuth 만료 결과를 인증 오류로 처리하고 내부 오류 원문은 숨긴다", () => {
+    const parser = new CliResponseParser("claude-code");
+    let caught: unknown;
+    try {
+      parser.consume(
+        line({
+          type: "result",
+          subtype: "success",
+          is_error: true,
+          result:
+            "Failed to authenticate: OAuth session expired and could not be refreshed: private-detail",
+        }),
+      );
+    } catch (error) {
+      caught = error;
+    }
+    expect(caught).toMatchObject({ status: 503 });
+    expect((caught as Error).message).toContain("CLI 로그인을 확인");
+    expect((caught as Error).message).not.toContain("private-detail");
+    expect(() => parser.finish()).toThrow("완성된 답변");
+  });
+
   it("한글 델타·전체 메시지·최종 결과를 중복 없이 연결하고 캐시 토큰을 포함한다", () => {
     const parser = new CliResponseParser("claude-code");
     expect(parser.consume(partial("연결 "))).toBe("연결 ");

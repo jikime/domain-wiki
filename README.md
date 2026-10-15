@@ -2,6 +2,8 @@
 
 업무 자료와 실무 경험을 함께 쌓고, 근거를 확인하며 질문하는 팀의 지식 공간입니다.
 
+실습 소스: [jikime/domain-wiki](https://github.com/jikime/domain-wiki). 교육생은 **1주차 수업 안에서** [기본 도구·개발용 AI·디자인 하네스 설치](docs/training/environment-setup.md)와 [Git에서 받기·첫 실행](docs/training/getting-started.md)을 진행해 내 PC의 업무환경을 만듭니다. [7주 상세 교육안](docs/training/README.md)에 따라 같은 프로젝트를 이어서 실습합니다. 기술의 목적과 구조를 이해하고, 교육생은 요구·AI 요청·결과 확인을 맡으며 구현과 기술 검사는 AI가 수행합니다.
+
 원본 `llm_wiki`의 반복 탐색 채팅·검색·위키 병합·목적/스키마·템플릿·폴더/URL 가져오기·문서/이미지 처리·선택 문장 AI·품질 수정·심층 조사·프로젝트 ZIP 이동을 웹 환경에 복원했습니다. 원본의 순수 함수와 프롬프트를 옮기고, 회사용 권한·불변 원문·직원 검토와 연결했습니다. [기능별 복원표](docs/ORIGINAL_FEATURE_PARITY.md), [새 실제 모델 정리·개정 평가](docs/evaluation/core/ingest-12-original-parity-20260910/README.md), [운영 이미지·백업 복원](docs/evaluation/core/original-parity-deployment/README.md)에 검증 범위를 기록합니다. 아래 1~16단계의 검사 수는 이번 복원 이전 기록입니다.
 
 누락 기능 구현 이전 전체 통합시험 **253개**, 원본 함수 **192개**, 네이티브 변환기 **8개**를 통과했습니다. 당시 새 의존성 설치의 빌드와 실제 모델 최초·개정 4개 위키, 54개 테이블·파일 16개의 별도 환경 복원도 확인했습니다. OCR·Vision·웹 검색의 실제 외부 제공자 품질은 별도 검증 대상입니다.
@@ -20,7 +22,9 @@ UI는 hince 디자인 시스템으로 전면 교체했습니다. 상단 탐색·
 
 ## 로컬 실행
 
-모델 연결은 **API·Claude Code CLI·Codex CLI** 중에서 선택할 수 있습니다. 채팅과 지식 생성의 연결을 따로 지정하고, 임베딩·Tavily 검색은 기존 API를 유지할 수 있습니다. CLI 두 종류의 로컬 실제 응답을 확인했습니다. [서버 설정 예시·인증·검사 안내](docs/MODEL_TRANSPORTS.md)를 참고하세요.
+**이미 첫 설정을 마쳤다면** Docker Desktop을 켜고 프로젝트에서 `npm run dev:all`을 실행합니다. DB 준비 후 웹 서버·작업자가 함께 시작되며, 접속 주소는 `http://localhost:3010`입니다. `Ctrl+C`로 웹 서버·작업자를 함께 종료하고 DB는 켜 둡니다. 처음 설치하는 경우에는 아래 준비 과정을 먼저 진행합니다.
+
+모델 연결의 기본값은 **Claude Code CLI·sonnet**입니다. API·Codex CLI도 선택할 수 있습니다. 채팅과 지식 생성의 연결을 따로 지정하고, 임베딩·Tavily 검색은 기존 API를 유지할 수 있습니다. CLI 두 종류의 로컬 실제 응답을 확인했습니다. [서버 설정 예시·인증·검사 안내](docs/MODEL_TRANSPORTS.md)를 참고하세요.
 
 Node.js 22.23.1, npm 10.9.8의 새 설치와 실행 중인 Docker 환경에서 확인했습니다. 원본 문서 변환기를 직접 빌드하려면 Rust도 필요합니다.
 
@@ -39,7 +43,9 @@ npm run dev
 
 초기 관리자·이용 직원 계정과 무작위 비밀번호는 `.local/initial-accounts.json`, 작성·검토 직원 계정은 `.local/content-accounts.json`에 저장됩니다. 이 파일들과 `.env.local`은 Git에서 제외합니다. 기존 환경·DB·계정은 초기화 명령을 반복해도 유지합니다.
 
-OpenAI 연결은 프로젝트 루트의 `.env`에 있는 `OPENAI_API_KEY`를 채운 뒤 웹 서버와 작업자를 재시작합니다. 준비된 모델은 채팅·지식 생성용 `gpt-5.6-terra`, 의미 검색용 `text-embedding-3-small`이며 같은 파일에서 변경할 수 있습니다. 키가 비어 있으면 미연결 상태로 실행합니다. 기존 `AI_BASE_URL`·`AI_MODEL`·`AI_API_KEY`가 설정되어 있으면 해당 세 항목이 우선합니다. `.env`도 Git과 Docker 이미지에서 제외됩니다. [OpenAI 공식 모델 문서](https://developers.openai.com/api/docs/models/gpt-5.6-terra).
+웹 서버·작업자를 실행하는 사용자 계정에서 Claude Code를 설치하고 `claude`로 로그인합니다. 초기 설정은 `AI_TRANSPORT=claude-code`, `AI_MODEL=sonnet`이며, 별도 생성용 API 키 없이 기존 CLI 인증을 사용합니다. 설정 변경 후 웹 서버와 작업자를 함께 재시작합니다. 실제 연결은 관리자 화면의 **모델 연결 확인**으로 점검합니다.
+
+임베딩은 별도의 HTTP API를 사용합니다. 기존 `OPENAI_API_KEY`·`OPENAI_EMBEDDING_MODEL`이 있으면 CLI를 사용하면서도 의미 검색을 유지합니다. 직접 지정한 `AI_EMBEDDING_*` 또는 공통 API 설정이 우선합니다. 생성까지 OpenAI API로 바꾸려면 `AI_TRANSPORT=api`를 명시하고 [API 설정 예시](docs/MODEL_TRANSPORTS.md)를 따릅니다. `.env`·`.env.local`은 Git과 Docker 이미지에서 제외됩니다.
 
 2026-09-09에 키 적용과 웹·작업자 재시작을 완료했습니다. [실제 OpenAI 연결·검색·출처 답변 확인](docs/openai/VERIFICATION.md)에 결과를 기록했습니다.
 

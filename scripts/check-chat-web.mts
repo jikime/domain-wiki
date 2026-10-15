@@ -105,6 +105,10 @@ const config = JSON.stringify([
 ]);
 Object.assign(process.env, {
   RESEARCH_SEARCH_PROVIDERS: config,
+  AI_TRANSPORT: "api",
+  AI_CHAT_TRANSPORT: "api",
+  AI_KNOWLEDGE_TRANSPORT: "api",
+  AI_VISION_TRANSPORT: "api",
   AI_BASE_URL: `${fixtureUrl}/v1`,
   AI_MODEL: "web-fixture",
   AI_API_KEY: "local-model-key",

@@ -35,6 +35,8 @@ export function wikiTypesForSchema(schema = "") {
 export const wikiMetadataSchema = z
   .object({
     type: wikiTypeSchema,
+    subject: z.string().trim().min(1).max(200).optional(),
+    scope: z.string().trim().min(1).max(600).optional(),
     aliases: z.array(z.string().trim().min(1).max(100)).max(20),
     path: z
       .string()

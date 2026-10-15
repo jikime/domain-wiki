@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-24T06:55:41.388Z",
+  "scope": "실제 모델의 계획 선택만 평가. 분석 주장은 사람이 구성한 가상 표본이며 본문 생성·병합·DB 게시를 실행하지 않음.",
+  "transport": "claude-code",
+  "model": "sonnet",
+  "promptVersion": "wiki-generation-v9-topic-identity",
+  "cases": [
+    {
+      "case": 1,
+      "passed": false,
+      "input": {
+        "sourceTitle": "보조 화면 설계 기준",
+        "sourceId": "a450a463-3427-4d78-af12-3b6cf51facea",
+        "category": "project",
+        "projectId": "03fa986e-ac9a-462d-810c-f8d13f2c628d",
+        "domain": {
+          "name": "가상 교통관제",
+          "purpose": "같은 사업의 화면 갱신 조건과 예외를 주제별로 축적하고 새 요구사항 검토에 활용한다.",
+          "terms": [],
+          "recordTemplate": "상황·조건·예외·근거"
+        },
+        "analysis": {
+          "summaries": [
+            {
+              "unitId": "u1",
+              "text": "보조 화면은 90초마다 갱신한다."
+            }
+          ],
+          "claims": [
+            {
+              "id": "claim-1",
+              "unitId": "u1",
+              "kind": "requirement",
+              "subject": "보조 화면",
+              "predicate": "갱신 주기",
+              "text": "보조 화면은 90초마다 갱신한다.",
+              "polarity": "affirmed",
+              "value": "90",
+              "unit": "초",
+              "condition": null,
+              "evidence": [
+                {
+                  "partId": "part-1",
+                  "chunkId": "cabcac61-a16f-402c-b851-c3c0a3e0644a",
+                  "quote": "보조 화면은 90초마다 갱신한다."
+                }
+              ]
+            }
+          ],
+          "comparisons": [],
+          "questions": [],
+          "dispositions": [
+            {
+              "partId": "part-1",
+              "status": "analyzed",
+              "reason": "표본 원문 전체",
+              "unitId": "u1"
+            }
+          ],
+          "coverage": {
+            "totalChunks": 1,
+            "processedChunks": 1,
+            "totalUnits": 1,
+            "processedUnits": 1,
+            "totalParts": 1,
+            "processedParts": 1,
+            "totalChars": 18,
+            "processedChars": 18,
+            "excluded": []
+          },
+          "warnings": []
+        },
+        "existingWikis": [
+          {
+            "pageId": "fb1d01d5-f446-4343-a666-6199986a61ff",
+            "publishedVersionId": "93af0d85-ea2f-4d11-a09e-f8692d09ed19",
+            "latestVersionId": "93af0d85-ea2f-4d11-a09e-f8692d09ed19",
+            "projectId": "03fa986e-ac9a-462d-810c-f8d13f2c628d",
+            "title": "화면 갱신 조건",
+            "body": "주 화면은 30초마다 갱신한다.",
+            "chunkIds": [
+              "ff0e822d-d3c1-4bc9-a2b7-b4ae1a1d1696"
+            ],
+            "sourceIds": [
+              "d176114f-dba3-4261-b9cd-6efc8d878ec9"
+            ],
+            "metadata": {
+              "type": "concept",
+              "aliases": [
+                "가시화응답성"
+              ],
+              "links": []
+            },
+            "score": 1
+          }
+        ],
+        "relatedSources": [],
+        "excludedCandidates": []
+      },
+      "plan": {
+        "summary": "보조 화면 설계 기준 원문에서 보조 화면의 90초 갱신 주기 요구사항을 원문 요약 페이지로 신규 생성하고, 기존 '화면 갱신 조건' 위키는 대상이 주 화면으로 한정되어 있어 보조 화면 갱신 조건은 별도 개념 페이지로 신규 작성한다.",
+        "pages": [
+          {
+            "key": "page-1",
+            "kind": "new",
+            "type": "source",
+            "title": "보조 화면 설계 기준 - 갱신 주기 요약",
+            "subject": "보조 화면 설계 기준 문서",
+            "scope": "보조 화면 설계 기준 원문 전체(표본, 총 1개 청크·1개 단위 전량 처리)에서 도출된 갱신 주기 요구사항",
+            "pageId": null,
+            "mergedPageIds": [],
+            "claimIds": [
+              "claim-1"
+            ],
+            "aliases": [],
+            "links": [
+              {
+                "key": "page-2",
+                "reason": "이 원문의 핵심 요구사항인 보조 화면 갱신 조건 개념 페이지와 함께 검토"
+              }
+            ],
+            "reason": "신규 원문(보조 화면 설계 기준)에 대한 문서 요약 페이지가 기존 위키에 없으므로 원문별 source 페이지를 새로 생성한다.",
+            "questions": []
+          },
+          {
+            "key": "page-2",
+            "kind": "new",
+            "type": "concept",
+            "title": "보조 화면 갱신 조건",
+            "subject": "보조 화면",
+            "scope": "보조 화면의 갱신 주기(90초) 조건. 기존 위키 '화면 갱신 조건'(pageId fb1d01d5-f446-4343-a666-6199986a61ff)은 주 화면(30초 주기)을 대상으로 하며 보조 화면과는 대상이 다르므로 별도 페이지로 유지한다.",
+            "pageId": null,
+            "mergedPageIds": [],
+            "claimIds": [
+              "claim-1"
+            ],
+            "aliases": [
+              "보조화면 갱신주기"
+            ],
+            "links": [
+              {
+                "key": "page-1",
+                "reason": "이 개념의 근거가 된 원문 요약"
+              },
+              {
+                "key": "wiki:fb1d01d5-f446-4343-a666-6199986a61ff",
+                "reason": "같은 사업 내 화면 갱신 조건 주제이나 대상(주 화면)이 달라 상호 참조용으로만 연결"
+              }
+            ],
+            "reason": "기존 '화면 갱신 조건' 페이지는 제목상 유사하지만 본문 대상이 주 화면으로 한정되어 있어 보조 화면(다른 대상, 90초로 값도 상이)에 대한 요구사항을 같은 페이지에 병합하면 서로 다른 대상의 수치가 섞이게 된다. 따라서 update가 아닌 구분되는 제목의 신규 개념 페이지로 생성한다.",
+            "questions": []
+          }
+        ],
+        "questions": [
+          "기존 위키 '화면 갱신 조건'을 주 화면·보조 화면을 모두 포괄하는 상위 페이지로 재구성할지, 아니면 화면 종류별로 계속 별도 페이지를 유지할지 확인이 필요합니다."
+        ]
+      },
+      "sameTopicId": "fb1d01d5-f446-4343-a666-6199986a61ff",
+      "durationMs": 27232,
+      "inputTokens": 9345,
+      "outputTokens": 2575
+    }
+  ]
+}

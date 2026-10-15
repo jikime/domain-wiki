@@ -10,13 +10,13 @@
 | `claude-code` | 서버의 `claude` 실행 파일, JSON 스트림 | 모델·서버 운영 계정의 CLI 인증 |
 | `codex-cli` | 서버의 `codex exec`, JSONL 응답 | 모델·서버 운영 계정의 CLI 인증 |
 
-`AI_TRANSPORT`의 기본값은 `api`다. `AI_CHAT_TRANSPORT`, `AI_KNOWLEDGE_TRANSPORT`, `AI_VISION_TRANSPORT`를 비워두면 공통 연결을 따른다. 모델·주소·키도 기존 용도별 우선순위를 유지한다. 다만 문서의 이미지 설명은 `AI_VISION_MODEL`을 직접 지정해야 활성화된다. 채팅 첨부 이미지는 채팅 모델에 전달하므로 채팅 모델이 이미지 입력을 지원해야 한다.
+`AI_TRANSPORT`의 기본값은 `claude-code`다. 이 연결에서 `AI_MODEL`이 비어 있으면 `sonnet`을 사용한다. 초기 설정 생성도 두 값을 기록한다. `codex-cli`에는 사용할 모델을 직접 지정하고, API는 `AI_TRANSPORT=api`로 선택한다. `AI_CHAT_TRANSPORT`, `AI_KNOWLEDGE_TRANSPORT`, `AI_VISION_TRANSPORT`를 비워두면 공통 연결을 따른다. 모델·주소·키도 기존 용도별 우선순위를 유지한다. 다만 문서의 이미지 설명은 `AI_VISION_MODEL`을 직접 지정해야 활성화된다. 채팅 첨부 이미지는 채팅 모델에 전달하므로 채팅 모델이 이미지 입력을 지원해야 한다.
 
 설정은 서버 환경 변수로 관리한다. 관리자 화면에서는 채팅·지식 생성의 현재 연결 방식과 모델을 확인하고 **모델 연결 확인**으로 실제 응답을 점검한다. 설정을 바꾼 뒤에는 웹 서버와 작업자를 함께 재시작한다. `.env.local` 등 우선순위가 높은 파일에 같은 변수가 있으면 `.env`의 변경이 적용되지 않을 수 있다.
 
 ### 기존 OpenAI API 유지
 
-기존 `OPENAI_API_KEY` 자동 연결은 `AI_TRANSPORT=api`일 때 유지된다. 공통 `AI_BASE_URL`, `AI_MODEL`, `AI_API_KEY`를 직접 설정한 경우에는 이 세 항목이 우선한다.
+생성용 `OPENAI_API_KEY` 자동 연결은 `AI_TRANSPORT=api`를 명시할 때 유지된다. CLI 기본 연결에서는 이 키가 채팅·지식 생성 모델을 바꾸지 않는다. 공통 `AI_BASE_URL`, `AI_MODEL`, `AI_API_KEY`를 직접 설정한 경우에는 이 세 항목이 우선한다.
 
 ```dotenv
 AI_TRANSPORT=api
@@ -28,7 +28,7 @@ OPENAI_MODEL=gpt-5.6-terra
 OPENAI_EMBEDDING_MODEL=text-embedding-3-small
 ```
 
-### 채팅·지식 생성 모두 Claude Code 사용
+### 기본 연결 · 채팅·지식 생성 모두 Claude Code 사용
 
 ```dotenv
 AI_TRANSPORT=claude-code
@@ -67,7 +67,9 @@ AI_VISION_TRANSPORT=claude-code
 AI_VISION_MODEL=sonnet
 ```
 
-공통 연결 자체를 CLI로 바꾼 경우에는 `OPENAI_*` 자동 연결이 적용되지 않는다. 의미 검색을 계속 사용하려면 임베딩을 별도로 설정한다. 아래 `${OPENAI_API_KEY}`는 기존 서버 환경 파일의 키 참조이며 새 키를 만들라는 의미가 아니다.
+생성용 CLI와 임베딩 API는 독립적으로 설정한다. 별도 임베딩·공통 API 설정이 없고 `OPENAI_API_KEY`·`OPENAI_EMBEDDING_MODEL`이 있으면 기존 OpenAI 임베딩을 유지한다. 이 키는 CLI 자식 프로세스로 전달하지 않는다. `AI_EMBEDDING_*` 또는 공통 API 설정을 직접 지정한 경우에는 그 설정을 우선하며, 누락된 항목을 다른 제공사의 값으로 채우지 않는다.
+
+다른 임베딩 연결을 직접 지정할 때는 아래 세 항목을 사용한다. `${OPENAI_API_KEY}`를 참조하려면 키 정의와 참조를 같은 환경 파일에 둔다. 우선순위가 높은 `.env.local`에서 나중에 읽는 `.env`의 변수를 참조하면 빈 값이 될 수 있다.
 
 ```dotenv
 AI_EMBEDDING_MODEL=text-embedding-3-small
@@ -115,7 +117,7 @@ npm run model:check-cli -- --transport claude-code --model sonnet
 npm run model:check-cli -- --transport codex-cli --model gpt-5.6-terra
 ```
 
-2026-09-13 로컬 실제 호출 결과:
+2026-09-13 로컬 실제 호출 결과(이전 API 기본값에서 CLI를 명시한 검사):
 
 | 연결 | 모델 | 완료 | 응답 길이 | 입력/출력 토큰 |
 | --- | --- | --- | --- | --- |
@@ -124,4 +126,16 @@ npm run model:check-cli -- --transport codex-cli --model gpt-5.6-terra
 
 최종 검사: `npm run test:ai` 4개 파일의 36개 검사 통과(3.45초), `npm run typecheck`, `npm run env:check`, 변경 코드 16개 파일의 Biome 검사, `git diff --check` 통과. npm의 기존 사용자 설정 `python` 경고와 Vite의 향후 설정 로더 변경 예고가 출력되었으며 검사 실패는 없었다.
 
-집중 검사는 API 요청·SSE 호환, 용도별 혼용, 이미지 입력, CLI 출력 중복 제거·완료 판정, 환경 비밀 분리, 대기 취소·프로세스 그룹 종료·임시 파일 삭제, 오류 시 API 미전환을 다룬다. 실제 호출은 짧은 연결 문구 확인이며 원격 운영 서버 설치나 업무 답변·이미지 해석 품질 검증을 대신하지 않는다. 실제 `.env`·`.env.local`의 활성 연결 설정은 변경하지 않았다. 전체 통합시험·운영 빌드·Docker 작업은 이번 검사에 포함하지 않았다.
+집중 검사는 API 요청·SSE 호환, 용도별 혼용, 이미지 입력, CLI 출력 중복 제거·완료 판정, 환경 비밀 분리, 대기 취소·프로세스 그룹 종료·임시 파일 삭제, 오류 시 API 미전환을 다룬다. 실제 호출은 짧은 연결 문구 확인이며 원격 운영 서버 설치나 업무 답변·이미지 해석 품질 검증을 대신하지 않는다. 이 당시에는 실제 `.env`·`.env.local`의 활성 연결 설정을 변경하지 않았다. 이후 CLI 기본값 적용 결과는 아래 개정 기록을 따른다. 전체 통합시험·운영 빌드·Docker 작업은 이번 검사에 포함하지 않았다.
+
+
+## 2026-09-14 · Claude Code CLI 기본 연결 적용
+
+원본 `llm_wiki`의 `src/lib/llm-client.ts`, `claude-cli-transport.ts`, `src-tauri/src/commands/claude_cli.rs`와 `cli_resolver.rs`를 다시 대조했다. 원본은 CLI 제공자를 선택하면 HTTP 분기 전에 설치된 CLI를 실행하고 JSON 스트림을 읽는다. 원본 초기 저장 상태 자체는 OpenAI이며, 이번 변경은 도메인 위키의 기본 선택을 Claude Code CLI로 바꾸는 것이다. 원본 파일은 수정하지 않았다.
+
+- 코드 기본값·새 로컬 설정·환경 예제를 `claude-code`·`sonnet`으로 맞췄다. 실제 `.env.local`도 이 두 항목만 변경했다. 명시적 API·Codex·용도별 설정은 유지하며 API 모의 서버를 사용하는 검사에는 API 선택을 명시했다.
+- 생성과 임베딩의 설정을 분리했다. CLI 기본 연결에서도 기존 OpenAI 임베딩 설정을 읽고, 별도로 지정한 임베딩·공통 API 설정은 우선한다. 전환 전후 임베딩 식별자가 같음을 확인했으므로 모델 변경에 따른 재색인은 요구하지 않는다.
+- macOS의 Claude Code 2.1.270에서 실제 공통 모델 호출을 시도했지만 OAuth 세션 만료로 실패했다. 인증 오류를 일반 응답 실패로 표시하던 부분을 보완하고 만료 오류의 분류·비공개 처리 검사를 추가했다. 사용자에게 CLI 로그인 갱신을 요청했으며 **채팅·지식 생성의 실제 응답 성공은 아직 미확인**이다. API로 자동 전환하거나 다른 인증을 대신 사용하지 않았다.
+- 집중 검사 4개 파일·44개 항목, 타입 검사, 환경 검사, 변경 핵심 코드 6개 파일의 Biome 검사를 통과했다. 새 로컬 설정 생성과 기존 파일 보존도 확인했다. 전체 통합시험은 실행하지 않았다.
+- 웹 서버·작업자를 새 설정으로 재시작했다. 기존 관리자 계정으로 실제 관리자 페이지 HTTP 200과 Claude Code CLI·sonnet·임베딩 모델 표시를 확인했다. 별도 임베딩 API 실제 호출은 1,536차원 벡터 수신에 성공했다. 기존 데이터나 계정은 초기화하지 않았다.
+- 인증 갱신 후 공통 호출의 한국어 근거 답변·지식 생성 JSON과 관리자 화면의 모델 연결 확인을 이어서 검사한다. Windows 실제 장비 확인은 별도이며 Docker 조작·Git 게시·PDF 갱신은 수행하지 않았다.

@@ -24,7 +24,7 @@ export function cliFailure(transport: CliTransport, detail: string) {
   // Classify diagnostics without returning stderr, tokens, prompts or paths
   // from the CLI to workspace users or persisting them in application logs.
   if (
-    /unauthenticated|not logged in|please.*log\s*in|authentication.*fail|invalid.*(?:key|token)|401|login required/i.test(
+    /unauthenticated|not logged in|please.*log\s*in|authentication.*fail|failed to authenticate|oauth.*(?:expired|refresh)|invalid.*(?:key|token)|401|login required/i.test(
       detail,
     )
   )

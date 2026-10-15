@@ -1,0 +1,51 @@
+{
+  "evaluation": "deterministic model fixture; real API, worker, PostgreSQL, approval and readback",
+  "phases": [
+    {
+      "phase": 1,
+      "topicId": "0c35282a-fcd5-50ed-94b4-d165fe95b843",
+      "version": 1,
+      "evidenceCount": 1,
+      "preservedInputs": 1,
+      "kind": "new",
+      "draftDidNotReplacePublished": true
+    },
+    {
+      "phase": 2,
+      "topicId": "0c35282a-fcd5-50ed-94b4-d165fe95b843",
+      "version": 2,
+      "evidenceCount": 2,
+      "preservedInputs": 2,
+      "kind": "update",
+      "draftDidNotReplacePublished": true
+    },
+    {
+      "phase": 3,
+      "topicId": "0c35282a-fcd5-50ed-94b4-d165fe95b843",
+      "version": 3,
+      "evidenceCount": 3,
+      "preservedInputs": 3,
+      "kind": "update",
+      "draftDidNotReplacePublished": true
+    }
+  ],
+  "counts": [
+    {
+      "type": "concept",
+      "count": 1
+    },
+    {
+      "type": "source",
+      "count": 3
+    }
+  ],
+  "date": "2026-09-24",
+  "integrationStats": {
+    "startTime": "2026-09-24T07:01:34.491Z",
+    "duration": 46387.892,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

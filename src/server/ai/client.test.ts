@@ -28,7 +28,26 @@ afterEach(() => {
 });
 
 describe("공통 모델 호출", () => {
+  it("초기 설정에서 채팅·지식 생성을 CLI로 보내고 HTTP를 호출하지 않는다", async () => {
+    vi.stubEnv("OPENAI_API_KEY", "existing-embedding-key");
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+    for (const purpose of ["chat", "knowledge"] as const) {
+      await streamModel(
+        [{ role: "user", content: "기본 연결 확인" }],
+        async () => {},
+        AbortSignal.timeout(1000),
+        purpose,
+      );
+      expect(streamCliModel).toHaveBeenLastCalledWith(
+        expect.objectContaining({ transport: "claude-code", model: "sonnet" }),
+      );
+    }
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
   it("기존 API 요청·스트리밍·사용량을 유지한다", async () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("AI_MODEL", "test-model");
     vi.stubEnv("AI_BASE_URL", "https://example.test/v1");
     vi.stubEnv("AI_API_KEY", "test-api-key");
@@ -101,6 +120,7 @@ describe("공통 모델 호출", () => {
   });
 
   it("지식 생성·이미지 설명에도 용도별 연결을 적용한다", async () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("OPENAI_API_KEY", "test-api-key");
     vi.stubEnv("AI_KNOWLEDGE_TRANSPORT", "claude-code");
     vi.stubEnv("AI_KNOWLEDGE_MODEL", "sonnet");
@@ -203,6 +223,7 @@ describe("공통 모델 호출", () => {
   });
 
   it("CLI 모델 식별에 HTTP 주소를 사용하지 않고 연결 방식 변경을 구별한다", () => {
+    vi.stubEnv("AI_TRANSPORT", "api");
     vi.stubEnv("AI_BASE_URL", "https://example.test/v1");
     vi.stubEnv("AI_API_KEY", "test-api-key");
     vi.stubEnv("AI_MODEL", "same-model-name");

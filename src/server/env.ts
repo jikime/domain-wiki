@@ -19,7 +19,7 @@ const schema = z
     JOB_LEASE_SECONDS: z.coerce.number().int().min(5).max(3600).default(120),
     AI_TRANSPORT: z.preprocess(
       (value) => (value === "" ? undefined : value),
-      z.enum(modelTransports).default("api"),
+      z.enum(modelTransports).default("claude-code"),
     ),
     AI_CHAT_TRANSPORT: optionalTransport,
     AI_KNOWLEDGE_TRANSPORT: optionalTransport,
@@ -145,17 +145,16 @@ const schema = z
   });
 
 export function getServerEnv() {
+  const transport = process.env.AI_TRANSPORT || "claude-code";
   const openAIKey = process.env.OPENAI_API_KEY?.trim();
   const hasGenericModel = [
     process.env.AI_BASE_URL,
     process.env.AI_MODEL,
     process.env.AI_API_KEY,
   ].some(Boolean);
-  // 기존 AI_* 설정을 우선하며, OpenAI 키를 입력한 경우에만 기본 연결을 활성화한다.
-  const input =
-    openAIKey &&
-    !hasGenericModel &&
-    (!process.env.AI_TRANSPORT || process.env.AI_TRANSPORT === "api")
+  // API를 명시한 경우에만 기존 OpenAI 자동 연결을 사용한다.
+  const input: NodeJS.ProcessEnv =
+    openAIKey && !hasGenericModel && transport === "api"
       ? {
           ...process.env,
           AI_BASE_URL:
@@ -166,8 +165,35 @@ export function getServerEnv() {
             process.env.AI_EMBEDDING_MODEL ||
             process.env.OPENAI_EMBEDDING_MODEL,
         }
-      : process.env;
-  const parsed = schema.safeParse(input);
+      : {
+          ...process.env,
+          AI_MODEL:
+            process.env.AI_MODEL ||
+            (transport === "claude-code" ? "sonnet" : undefined),
+        };
+  // 생성용 CLI 인증과 임베딩용 OpenAI 연결은 독립적이다.
+  // 별도 임베딩 또는 공통 API 설정이 있으면 그 설정을 우선한다.
+  const useOpenAIEmbedding =
+    openAIKey &&
+    process.env.OPENAI_EMBEDDING_MODEL &&
+    ![
+      input.AI_EMBEDDING_MODEL,
+      input.AI_EMBEDDING_BASE_URL,
+      input.AI_EMBEDDING_API_KEY,
+      input.AI_BASE_URL,
+      input.AI_API_KEY,
+    ].some(Boolean);
+  const parsed = schema.safeParse({
+    ...input,
+    ...(useOpenAIEmbedding
+      ? {
+          AI_EMBEDDING_MODEL: process.env.OPENAI_EMBEDDING_MODEL,
+          AI_EMBEDDING_BASE_URL:
+            process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
+          AI_EMBEDDING_API_KEY: openAIKey,
+        }
+      : {}),
+  });
   if (!parsed.success) {
     const fields = [
       ...new Set(parsed.error.issues.map((issue) => issue.path.join("."))),

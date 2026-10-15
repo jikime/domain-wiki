@@ -54,6 +54,10 @@ await new Promise<void>((resolve) => mock.listen(0, "127.0.0.1", resolve));
 const address = mock.address();
 assert.ok(address && typeof address !== "string");
 Object.assign(process.env, {
+  AI_TRANSPORT: "api",
+  AI_CHAT_TRANSPORT: "api",
+  AI_KNOWLEDGE_TRANSPORT: "api",
+  AI_VISION_TRANSPORT: "api",
   AI_BASE_URL: `http://127.0.0.1:${address.port}/v1`,
   AI_API_KEY: "local-fixture-only",
   AI_MODEL: "image-fixture",

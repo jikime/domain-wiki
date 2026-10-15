@@ -122,7 +122,7 @@ export async function loadGenerationKnowledge(
     SELECT p.id AS page_id,p.project_id,p.published_version_id,p.latest_version_id,v.title,v.body,v.metadata,
       ARRAY(SELECT e.chunk_id FROM wiki_evidence e WHERE e.version_id=v.id ORDER BY e.chunk_id) AS chunk_ids,
       ARRAY(SELECT DISTINCT sv.source_id FROM wiki_evidence e JOIN source_chunk sc ON sc.id=e.chunk_id JOIN source_version sv ON sv.id=sc.version_id WHERE e.version_id=v.id) AS source_ids,
-      (SELECT count(*) FROM unnest(${sql.param(tokens)}::text[]) token WHERE strpos(lower(v.title||' '||v.body),lower(token))>0)
+      (SELECT count(*) FROM unnest(${sql.param(tokens)}::text[]) token WHERE strpos(lower(v.title||' '||v.body||' '||COALESCE(v.metadata->'aliases','[]'::jsonb)::text),lower(token))>0)
       + CASE WHEN EXISTS(SELECT 1 FROM wiki_evidence e JOIN source_chunk c ON c.id=e.chunk_id WHERE e.version_id=v.id AND c.version_id=${task.sourceVersionId}) THEN 100 ELSE 0 END AS score
     FROM wiki_page p JOIN wiki_version v ON v.id=p.published_version_id AND v.workspace_id=p.workspace_id
     WHERE p.workspace_id=${task.workspaceId} AND p.domain_id=${task.domainId}

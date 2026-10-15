@@ -1,9 +1,15 @@
 import "server-only";
 import { z } from "zod";
+import { validateMergedGrounding } from "@/lib/claim-grounding";
 import { parseFrontmatter } from "@/lib/reference/frontmatter";
 import { mergePageContent } from "@/lib/reference/page-merge";
 import { buildPageMergeSystemPrompt } from "@/lib/reference/page-merge-prompt";
-import { generationMessages, type WikiCandidate } from "@/lib/wiki-generation";
+import {
+  type GeneratedSections,
+  type GenerationClaim,
+  generationMessages,
+  type WikiCandidate,
+} from "@/lib/wiki-generation";
 import { AccessError } from "@/server/errors";
 import type { TaskExecution } from "./task-execution";
 
@@ -25,19 +31,41 @@ export async function mergeGeneratedWiki(input: {
   sourceId: string;
   existing: WikiCandidate[];
   reuse: boolean;
+  sections: GeneratedSections["sections"];
+  claims: GenerationClaim[];
 }) {
   const { run, existing, incoming } = input;
   const first = existing[0];
+  const check = (body: string, preservePrevious: boolean) =>
+    validateMergedGrounding(
+      body,
+      input.sections,
+      input.claims,
+      preservePrevious ? existing.map((page) => page.body) : [],
+    );
   const saved = await run.step(input.ordinal);
-  if (saved.state === "completed" && saved.result?.mergedBody)
-    return z
+  if (saved.state === "completed" && saved.result?.mergedBody) {
+    const cached = z
       .object({
         mergedBody: z.string(),
         fallback: z.boolean(),
         replaced: z.boolean(),
       })
       .parse(saved.result);
+    // Retry/cache paths must enforce today's validation too.
+    try {
+      check(cached.mergedBody, !cached.fallback && !cached.replaced);
+      return cached;
+    } catch {
+      check(incoming, false);
+      const result = { mergedBody: incoming, fallback: true, replaced: false };
+      await run.guard((await import("@/server/db")).getDb());
+      await run.save(input.ordinal, result);
+      return result;
+    }
+  }
   if (input.reuse) {
+    check(first.body, false);
     const result = { mergedBody: first.body, fallback: false, replaced: false };
     await run.save(input.ordinal, result);
     return result;
@@ -72,16 +100,20 @@ export async function mergeGeneratedWiki(input: {
     oldDoc,
     async (oldContent, newContent, sourceFileName) => {
       const messages = generationMessages(
-        `${buildPageMergeSystemPrompt()}\n\n전송 형식: 위의 COMPLETE file 내용을 content 문자열에 넣은 JSON {"content":"---\\n..."} 하나를 반환하세요. 한국어 본문을 유지하세요.`,
+        `${buildPageMergeSystemPrompt()}\n\n전송 형식: 위의 COMPLETE file 내용을 content 문자열에 넣은 JSON {"content":"---\\n..."} 하나를 반환하세요. 한국어 본문을 유지하세요. 검증된 새 문장과 기존 수치·조건 문장은 고치거나 생략하지 마세요. 중복 제거·순서 조정·제목 구성으로 통합하고 사실 문장을 새로 바꾸지 마세요.`,
         {
           sourceFileName,
           existingContent: oldContent,
           incomingContent: newContent,
         },
       );
-      const result = await run.model(input.ordinal, messages, (raw) =>
-        z.object({ content: z.string().min(1).max(200000) }).parse(raw),
-      );
+      const result = await run.model(input.ordinal, messages, (raw) => {
+        const value = z
+          .object({ content: z.string().min(1).max(200000) })
+          .parse(raw);
+        check(parseFrontmatter(value.content).body, true);
+        return value;
+      });
       return result.content;
     },
     {
@@ -100,7 +132,17 @@ export async function mergeGeneratedWiki(input: {
   const parsed = parseFrontmatter(merged);
   if (!parsed.body.trim())
     throw new AccessError(502, "병합한 위키 본문이 비어 있습니다.");
-  const result = { mergedBody: parsed.body.trim(), fallback, replaced };
+  let mergedBody = parsed.body.trim();
+  try {
+    check(mergedBody, !fallback && !replaced);
+  } catch {
+    // Keep the validated incoming draft and require explicit conflict resolution.
+    // The existing published version remains untouched.
+    check(incoming, false);
+    mergedBody = incoming;
+    fallback = true;
+  }
+  const result = { mergedBody, fallback, replaced };
   await run.save(input.ordinal, result);
   return result;
 }
