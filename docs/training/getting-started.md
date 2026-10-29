@@ -24,9 +24,13 @@ npm run db:up
 npm run db:migrate
 npm run db:bootstrap
 npm run db:content-team
+npm run db:seed-training
+npm run db:check-training
 ```
 
-이 명령들은 실행에 필요한 패키지를 설치하고 개인 설정 파일 `.env.local`, 교육용 DB와 계정을 준비합니다. DB는 Docker에서, 웹 서버와 문서 작업자는 Node.js에서 실행됩니다.
+이 명령들은 실행에 필요한 패키지를 설치하고 개인 설정 파일 `.env.local`, 교육용 DB·계정·샘플을 준비합니다. DB는 Docker에서, 웹 서버와 문서 작업자는 Node.js에서 실행됩니다.
+
+샘플 준비가 끝나면 프로젝트 2개·공개 자료 6건·게시 위키 2건을 사용할 수 있습니다. 같은 이름의 교육용 도메인이 있으면 기존 작업을 유지합니다. [샘플 넣기와 백업 파일](sample-data.md)에서 화면 확인 순서와 다시 준비하는 방법을 볼 수 있습니다.
 
 AI 기본 연결은 **Claude Code CLI·sonnet**입니다. 같은 PC 사용자·실습 터미널에서 `claude`로 로그인하고 `.env.local`의 `AI_TRANSPORT=claude-code`, `AI_MODEL=sonnet`을 확인합니다. 기존 설정 파일은 자동으로 덮어쓰지 않으므로 두 항목을 직접 확인합니다. 임베딩용 API와 다른 연결 방식은 [모델 연결 안내](../MODEL_TRANSPORTS.md)를 따릅니다. 키·인증 정보는 Git에 올리지 않습니다.
 
@@ -77,4 +81,4 @@ npm run worker
 
 ## 4. 실습 시작
 
-로그인 후 [개발 준비 실습](weeks/01-experience.md)에 따라 자료 등록·검토·검색을 진행합니다. 실습 파일은 `docs/training/samples`에 있으며, 이후 수업도 같은 프로젝트 폴더에서 이어 갑니다.
+로그인 후 ‘가상 교통관제 자료’ 도메인을 고르고 [샘플 화면 확인](sample-data.md#2-화면에서-확인하기)을 마칩니다. 이어 [개발 준비 실습](weeks/01-experience.md)에 따라 자료 등록·검토·검색을 진행합니다. 이미 준비된 샘플을 중복 등록하지 않으며, 이후 수업도 같은 프로젝트 폴더에서 이어 갑니다.

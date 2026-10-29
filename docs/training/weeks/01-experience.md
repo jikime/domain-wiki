@@ -37,7 +37,7 @@
 [함께 볼 강의 화면](/lectures/week-01.html#slide-07)
 
 1. 환경 준비에서 자기 운영체제의 절차를 따라 설치하고 프로젝트를 받으세요.
-2. 첫 실행 안내의 설정을 확인하고 명령을 한 줄씩 실행하세요. 기존 환경은 다시 실행 안내를 씁니다.
+2. 첫 실행 안내의 명령을 한 줄씩 실행하세요. 샘플 준비 뒤 가상 교통관제 자료의 원문과 위키를 엽니다. 기존 환경은 다시 실행 안내를 씁니다.
 3. 개발용 AI의 실제 응답을 확인하고 폴더·실행 주소·역할을 개발 노트에 남기세요.
 
 **입력할 곳:** 일반 터미널 · 처음 준비하는 프로젝트 폴더
@@ -51,6 +51,8 @@ npm run db:up
 npm run db:migrate
 npm run db:bootstrap
 npm run db:content-team
+npm run db:seed-training
+npm run db:check-training
 npm run dev:all
 ```
 
@@ -58,7 +60,7 @@ npm run dev:all
 
 명령이 실패하면 그 단계에서 멈춰 화면을 보여 주세요. 설치가 막히면 배정된 개발 환경에서 이어 갑니다.
 
-참고: [내 PC 환경 준비](../environment-setup.md) · [위키 받기와 첫 실행](../getting-started.md) · [다시 실행하고 이어서 사용하기](../daily-use.md)
+참고: [내 PC 환경 준비](../environment-setup.md) · [위키 받기와 첫 실행](../getting-started.md) · [교육용 샘플 넣기와 백업 파일](../sample-data.md)
 
 ## 3. 자료 등록·공개·위키·질문 연결하기
 

@@ -38,12 +38,16 @@ npm run db:up
 npm run db:migrate
 npm run db:bootstrap
 npm run db:content-team
+npm run db:seed-training
+npm run db:check-training
 npm run dev
 ```
 
 [http://localhost:3010](http://localhost:3010)으로 접속합니다. 별도 터미널에서 `npm run worker`를 실행해야 등록된 문서가 처리됩니다. 기존 `.env.local`을 유지한 경우 `BETTER_AUTH_URL`도 `http://localhost:3010`으로 맞춥니다.
 
 초기 관리자·이용 직원 계정과 무작위 비밀번호는 `.local/initial-accounts.json`, 작성·검토 직원 계정은 `.local/content-accounts.json`에 저장됩니다. 이 파일들과 `.env.local`은 Git에서 제외합니다. 기존 환경·DB·계정은 초기화 명령을 반복해도 유지합니다.
+
+교육용 샘플은 `db:seed-training`으로 준비합니다. 저장소의 `docs/training/samples/training-snapshot.json`에서 A/B 프로젝트·자료 6건·게시 위키 2건과 원본·근거를 추가하며, 기존 교육용 도메인이 있으면 덮어쓰지 않습니다. 계정·비밀번호는 각 PC의 것을 유지합니다. [샘플 준비와 복구 안내](docs/training/sample-data.md), [웹 안내](http://localhost:3010/workbook/sample-data)에서 검색 확인 순서와 백업 다운로드를 볼 수 있습니다.
 
 웹 서버·작업자를 실행하는 사용자 계정에서 Claude Code를 설치하고 `claude`로 로그인합니다. 초기 설정은 `AI_TRANSPORT=claude-code`, `AI_MODEL=sonnet`이며, 별도 생성용 API 키 없이 기존 CLI 인증을 사용합니다. 설정 변경 후 웹 서버와 작업자를 함께 재시작합니다. 실제 연결은 관리자 화면의 **모델 연결 확인**으로 점검합니다.
 

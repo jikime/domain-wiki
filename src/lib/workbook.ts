@@ -26,6 +26,11 @@ export const workbookGroups: WorkbookGroup[] = [
         title: "위키 받기와 첫 실행",
         file: "getting-started.md",
       },
+      {
+        slug: "sample-data",
+        title: "교육용 샘플 넣기와 백업 파일",
+        file: "sample-data.md",
+      },
     ],
   },
   {
@@ -187,6 +192,7 @@ export const workbookPages = workbookGroups.flatMap((group) => group.items);
 export const workbookDownloads = [
   ...workbookPages.map((page) => page.file),
   "samples/evaluation-questions.csv",
+  "samples/training-snapshot.json",
   "exercises/check-aliases.mjs",
 ];
 export const workbookHref = (slug: string) => `/workbook/${slug}`;
