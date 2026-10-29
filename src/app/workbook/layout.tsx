@@ -5,7 +5,8 @@ import "@/styles/workbook.css";
 
 export const metadata: Metadata = {
   title: { default: "도메인 위키 워크북", template: "%s | 도메인 위키 워크북" },
-  description: "엠큐닉 · 회사 자료로 위키를 만들고 채팅에 활용하는 실습 워크북",
+  description:
+    "엠큐닉 · 강사와 AI의 도움으로 회사 위키를 개발하고 운영하는 실습 워크북",
 };
 
 export default function WorkbookLayout({
@@ -24,6 +25,7 @@ export default function WorkbookLayout({
         </Link>
         <nav aria-label="워크북 주요 메뉴">
           <Link href="/workbook/start-here">시작하기</Link>
+          <a href="/lectures/index.html">강의실</a>
           <Link href="/workbook/wiki-chat">실제 사용법</Link>
           <Link href="/workbook/print" prefetch={false}>
             인쇄 · PDF
@@ -35,7 +37,7 @@ export default function WorkbookLayout({
       {children}
       <footer className="wb-footer">
         <p>엠큐닉 · 도메인 위키 실습 워크북</p>
-        <p>김동학 / Anthony Kim · 회사 자료로 배우는 위키 실습</p>
+        <p>김동학 / Anthony Kim · 함께 개발하고 운영하는 회사 위키</p>
       </footer>
     </div>
   );

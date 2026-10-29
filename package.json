@@ -30,7 +30,8 @@
     "test:workbook": "node --conditions=react-server --import tsx --test src/server/workbook.test.ts",
     "model:check-cli": "node --conditions=react-server --import tsx scripts/check-model-cli.ts",
     "native:build": "cargo build --release --locked --manifest-path native/document-extract/Cargo.toml",
-    "native:test": "cargo test --locked --manifest-path native/document-extract/Cargo.toml"
+    "native:test": "cargo test --locked --manifest-path native/document-extract/Cargo.toml",
+    "lectures:build": "node --import tsx scripts/build-lectures.mjs"
   },
   "dependencies": {
     "@better-auth/drizzle-adapter": "1.7.3",

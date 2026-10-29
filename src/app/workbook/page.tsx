@@ -9,17 +9,17 @@ export default function WorkbookHome() {
       <section className="wb-hero">
         <div>
           <p className="wb-kicker">
-            엠큐닉 · AI와 함께 만드는 우리 회사의 지식
+            엠큐닉 · AI와 함께 개발하는 우리 회사 위키
           </p>
           <h1>
-            회사에 쌓인 자료를
+            우리 회사 위키를
             <br />
-            <em>함께 쓰는 지식으로.</em>
+            <em>함께 개발합니다.</em>
           </h1>
           <p className="wb-lead">
-            업무 자료를 위키로 정리하고 채팅으로 질문해 보세요.
-            <br className="wb-desktop-break" /> 우리 회사 업무에 맞게 위키를
-            만들고 고쳐 보는 실습 교재입니다.
+            스타터킷에 회사의 요구를 하나씩 반영합니다.
+            <br className="wb-desktop-break" /> 강사의 코칭을 받으며 개발하고,
+            만든 위키를 회사에서 계속 사용하는 과정입니다.
           </p>
           <div className="wb-hero-actions">
             <Button asChild size="lg">
@@ -28,12 +28,20 @@ export default function WorkbookHome() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/workbook/wiki-chat">실제 사용법 먼저 보기</Link>
+              <Link href="/workbook/week-02">첫 화면 변경 살펴보기</Link>
+            </Button>
+          </div>
+          <div className="wb-hero-actions">
+            <Button asChild size="lg" variant="outline">
+              <a href="/lectures/index.html">강의 프레젠테이션 열기</a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/workbook/company-project">회사 개발 노트</Link>
             </Button>
           </div>
           <div className="wb-facts">
-            <span>설치부터 업무 적용까지</span>
-            <span>직접 따라 하는 실습</span>
+            <span>개발부터 회사 운영까지</span>
+            <span>강사 코칭과 직접 개발</span>
             <span>같은 프로젝트로 끝까지</span>
           </div>
         </div>
@@ -41,22 +49,22 @@ export default function WorkbookHome() {
           <BookOpen size={26} />
           <p className="wb-kicker">이 워크북에서</p>
           <h2>
-            직접 만들어 보고
+            직접 개발하고
             <br />
-            근거로 확인합니다.
+            같은 위키를 키웁니다.
           </h2>
           <ol>
             <li>
-              <span>01</span> 회사 자료 등록하기
+              <span>01</span> 회사 요구와 작업 범위 정하기
             </li>
             <li>
-              <span>02</span> 위키로 정리하고 게시하기
+              <span>02</span> AI와 화면·기능 개발하기
             </li>
             <li>
-              <span>03</span> 채팅에서 질문하고 확인하기
+              <span>03</span> 실제 업무로 확인하고 개선하기
             </li>
             <li>
-              <span>04</span> AI와 함께 기능 다듬기
+              <span>04</span> 회사에 적용하고 운영 이어가기
             </li>
           </ol>
         </aside>
@@ -64,14 +72,14 @@ export default function WorkbookHome() {
       <section className="wb-quick">
         <div>
           <MessagesSquare size={22} />
-          <h2>“직접 쓴 위키도 채팅에서 쓸 수 있나요?”</h2>
+          <h2>어디부터 바꿔야 할지 막히나요?</h2>
           <p>
-            글을 쓰고 근거를 연결한 뒤 검토를 거쳐 게시합니다. 질문하고 답변을
-            저장하는 과정까지 화면 순서대로 따라 해 보세요.
+            현재 화면과 원하는 결과를 나란히 놓아 보세요. 강사와 범위를 정하고
+            AI에게 계획을 요청한 뒤 직접 구현·확인합니다.
           </p>
         </div>
-        <Link href="/workbook/wiki-chat">
-          위키 작성부터 채팅까지 <ArrowRight size={18} />
+        <Link href="/workbook/prompts">
+          AI와 개발하는 요청 순서 <ArrowRight size={18} />
         </Link>
       </section>
       <section className="wb-contents" aria-labelledby="contents-title">
@@ -105,7 +113,7 @@ export default function WorkbookHome() {
         <h2>
           한 가지 업무를 정하고,
           <br />
-          작은 위키 하나부터 시작하세요.
+          실행되는 위키를 함께 고쳐 보세요.
         </h2>
         <p>입력할 곳, 따라 할 순서, 확인할 결과를 각 실습에 담았습니다.</p>
         <Link href="/workbook/week-01">첫 실습 시작하기 →</Link>

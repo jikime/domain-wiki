@@ -29,9 +29,14 @@ export const workbookGroups: WorkbookGroup[] = [
     ],
   },
   {
-    label: "실제 사용하기",
-    description: "자료를 위키로 정리해 채팅에서 찾아봅니다.",
+    label: "회사 위키 만들기",
+    description: "회사 목표와 개발 작업을 이어 가고 필요한 조작을 찾아봅니다.",
     items: [
+      {
+        slug: "company-project",
+        title: "회사 개발 노트",
+        file: "company-project.md",
+      },
       {
         slug: "wiki-chat",
         title: "위키 작성부터 채팅까지",
@@ -50,42 +55,42 @@ export const workbookGroups: WorkbookGroup[] = [
     ],
   },
   {
-    label: "단계별 실습",
-    description: "같은 프로젝트를 이어 가며 우리 회사의 위키를 만듭니다.",
+    label: "함께 개발하는 순서",
+    description: "강의와 같은 순서로 개발하고, 이전 결과를 이어서 고칩니다.",
     items: [
       {
         slug: "week-01",
-        title: "01 · 설치와 첫 업무 체험",
+        title: "실행하고 개발할 곳 찾기",
         file: "weeks/01-experience.md",
       },
       {
         slug: "week-02",
-        title: "02 · 구조 이해와 첫 변경",
+        title: "우리 업무에 필요한 자료를 모아 쓰는 위키 만들기",
         file: "weeks/02-architecture.md",
       },
       {
         slug: "week-03",
-        title: "03 · 회사 지식과 작성 기준",
+        title: "회사 지식과 작성 방식 적용하기",
         file: "weeks/03-domain.md",
       },
       {
         slug: "week-04",
-        title: "04 · 위키와 답변 확인",
+        title: "회사 업무에 맞게 검색 고도화하기",
         file: "weeks/04-evaluation.md",
       },
       {
         slug: "week-05",
-        title: "05 · AI와 기능 개선",
+        title: "기능을 끝까지 연결하기",
         file: "weeks/05-development.md",
       },
       {
         slug: "week-06",
-        title: "06 · 오류 수정과 지식 갱신",
+        title: "실제 사용에 맞게 안정화하기",
         file: "weeks/06-debugging.md",
       },
       {
         slug: "week-07",
-        title: "07 · 팀 업무 적용과 인계",
+        title: "회사가 이어서 운영하기",
         file: "weeks/07-application.md",
       },
     ],
@@ -136,12 +141,12 @@ export const workbookGroups: WorkbookGroup[] = [
       },
       {
         slug: "acceptance-v2",
-        title: "6단계 · 검수 조건 v2",
+        title: "개정 예제 · 검수 조건 v2",
         file: "instructor/materials/acceptance-v2.md",
       },
       {
         slug: "new-rfp",
-        title: "7단계 · 신규 요청 문서",
+        title: "업무 적용 예제 · 신규 요청 문서",
         file: "instructor/materials/new-rfp.md",
       },
     ],
@@ -150,6 +155,17 @@ export const workbookGroups: WorkbookGroup[] = [
     label: "필요할 때 찾아보기",
     description: "실습을 기록하거나 낯선 말과 오류를 만났을 때 찾아보세요.",
     items: [
+      {
+        slug: "design-harness",
+        title: "화면 변경에 디자인 하네스 활용",
+        file: "design-harness.md",
+      },
+      {
+        slug: "development-recipes",
+        title: "기능 개발 예제",
+        file: "development-recipes.md",
+      },
+      { slug: "operations", title: "회사 적용과 운영", file: "operations.md" },
       { slug: "templates", title: "실습 기록 양식", file: "templates.md" },
       { slug: "glossary", title: "쉬운 용어집", file: "glossary.md" },
       {

@@ -1,0 +1,170 @@
+[
+  {
+    "week": 1,
+    "slides": 17,
+    "workMinutes": 160,
+    "workbook": "week-01",
+    "blocks": [
+      {
+        "title": "샘플 위키로 업무 한 번 해보기",
+        "id": "slide-04"
+      },
+      {
+        "title": "내 개발 환경과 AI 실행하기",
+        "id": "slide-07"
+      },
+      {
+        "title": "자료 등록·공개·위키·질문 연결하기",
+        "id": "slide-10"
+      },
+      {
+        "title": "첫 변경의 계획을 확인하고 구현하기",
+        "id": "slide-13"
+      }
+    ]
+  },
+  {
+    "week": 2,
+    "slides": 20,
+    "workMinutes": 160,
+    "workbook": "week-02",
+    "blocks": [
+      {
+        "title": "업무별 검색과 검색 조건 저장하기",
+        "id": "slide-04"
+      },
+      {
+        "title": "즐겨찾기를 업무별 폴더로 나누기",
+        "id": "slide-08"
+      },
+      {
+        "title": "내 메모와 읽음 표시로 자료 관리하기",
+        "id": "slide-12"
+      },
+      {
+        "title": "홈에 즐겨찾기 폴더와 검색 바로가기 만들기",
+        "id": "slide-16"
+      }
+    ]
+  },
+  {
+    "week": 3,
+    "slides": 19,
+    "workMinutes": 160,
+    "workbook": "week-03",
+    "blocks": [
+      {
+        "title": "회사 자료를 위키와 즐겨찾기에 연결하기",
+        "id": "slide-04"
+      },
+      {
+        "title": "회사 작성 예시를 관리하고 보여 주기",
+        "id": "slide-07"
+      },
+      {
+        "title": "저장 전에 기록 내용과 범위 확인하기",
+        "id": "slide-11"
+      },
+      {
+        "title": "회사 기록을 조건으로 다시 찾기",
+        "id": "slide-15"
+      }
+    ]
+  },
+  {
+    "week": 4,
+    "slides": 20,
+    "workMinutes": 160,
+    "workbook": "week-04",
+    "blocks": [
+      {
+        "title": "같은 자료의 검색 결과 묶기",
+        "id": "slide-04"
+      },
+      {
+        "title": "묶음 안의 문단을 읽고 근거 열기",
+        "id": "slide-08"
+      },
+      {
+        "title": "회사 동의어 입력을 편하게 만들기",
+        "id": "slide-12"
+      },
+      {
+        "title": "검색에 쓰인 용어와 결과 없음 안내하기",
+        "id": "slide-16"
+      }
+    ]
+  },
+  {
+    "week": 5,
+    "slides": 20,
+    "workMinutes": 160,
+    "workbook": "week-05",
+    "blocks": [
+      {
+        "title": "남은 기능과 DB 연결 마무리하기",
+        "id": "slide-04"
+      },
+      {
+        "title": "역할별 계정으로 직접 확인하고 고치기",
+        "id": "slide-08"
+      },
+      {
+        "title": "각자의 코드와 DB 변경을 합치기",
+        "id": "slide-12"
+      },
+      {
+        "title": "공용 반영 계획과 확인 순서 준비하기",
+        "id": "slide-16"
+      }
+    ]
+  },
+  {
+    "week": 6,
+    "slides": 20,
+    "workMinutes": 160,
+    "workbook": "week-06",
+    "blocks": [
+      {
+        "title": "실패해도 작업을 이어 갈 수 있게 만들기",
+        "id": "slide-04"
+      },
+      {
+        "title": "자료 개정 사실을 확인하고 근거 유지하기",
+        "id": "slide-08"
+      },
+      {
+        "title": "다른 탭과 재접속에서도 저장 내용 맞추기",
+        "id": "slide-12"
+      },
+      {
+        "title": "운영 안내를 실제 화면에 연결하기",
+        "id": "slide-16"
+      }
+    ]
+  },
+  {
+    "week": 7,
+    "slides": 17,
+    "workMinutes": 160,
+    "workbook": "week-07",
+    "blocks": [
+      {
+        "title": "새로운 업무에 위키 적용하기",
+        "id": "slide-04"
+      },
+      {
+        "title": "마지막 사용 불편 수정하기",
+        "id": "slide-07"
+      },
+      {
+        "title": "운영 담당자가 직접 갱신·점검하기",
+        "id": "slide-11"
+      },
+      {
+        "title": "실제 결과 시연과 후속 개발 결정하기",
+        "id": "slide-14"
+      }
+    ]
+  }
+]
