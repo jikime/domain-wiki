@@ -1,0 +1,96 @@
+{
+  "format": "domain-wiki-record-practice-input",
+  "version": 1,
+  "purpose": "3회차에서 개발한 개인 DB 초안 기능에 사용할 가상 입력 예제. DB 백업이 아닙니다.",
+  "preconditions": [
+    "유형 선택과 개인 DB 초안 저장 기능을 먼저 개발한다.",
+    "개발용 환경·작업공간·작성 계정을 확인한다.",
+    "현재 계정과 사례 ID로 중복을 구분하고 기존 입력을 덮어쓰지 않는다.",
+    "근거 힌트는 아직 연결된 문단이 아니다. 실제 원문에서 사용자가 선택한다.",
+    "검토 요청·공개 승인·기존 자료 삭제를 수행하지 않는다."
+  ],
+  "cases": [
+    {
+      "caseId": "C1",
+      "title": "[가상 실습 C1] 프로젝트 A 검수 범위 확인",
+      "domainName": "가상 교통관제 자료",
+      "projectName": "프로젝트 A · 가람시",
+      "recordTypeName": "검수",
+      "fields": {
+        "situation": "검수 준비를 위해 프로젝트 A 검수 조건과 사업 개요를 읽었다.",
+        "reasoning": "사업 전체 대상과 검수 표본이 같은 범위인지 확인하려고 두 문서를 비교했다.",
+        "result": "사업 개요의 도로전광표지는 24대, 검수 조건의 교육용 표본은 3대다. 실제 장비 시험은 하지 않았다.",
+        "followUp": "표본 장비 번호와 검수 일정 담당을 확인해야 한다. 두 원문만으로는 확인하지 못했다."
+      },
+      "rawNote": "가상 교육 사례. 실제 현장 점검 결과가 아닙니다.",
+      "evidenceHints": [
+        {
+          "sourceFile": "01-project-a.md",
+          "findText": "도로전광표지 24대"
+        },
+        {
+          "sourceFile": "03-acceptance-v1.md",
+          "findText": "교육용 표본 장비 3대"
+        }
+      ],
+      "initialStage": "private_draft"
+    },
+    {
+      "caseId": "C2",
+      "title": "[가상 실습 C2] 프로젝트 A 조회 조건 확인",
+      "domainName": "가상 교통관제 자료",
+      "projectName": "프로젝트 A · 가람시",
+      "recordTypeName": "장애 대응",
+      "fields": {
+        "situation": "이력 목록이 비어 보인다는 가상 문의를 받고 확인 순서를 준비했다.",
+        "reasoning": "기존 날짜 필터 경험 기록을 참고해 날짜·프로젝트·권한부터 확인하기로 했다.",
+        "result": "아직 문의 화면을 확인하지 않았다. 날짜 필터가 이번 문의의 원인이라고 결론 내리지 않았다.",
+        "followUp": "문의한 화면의 조회 기간과 선택 프로젝트를 확인한다."
+      },
+      "rawNote": "가상 교육 사례. 실제 현장 점검 결과가 아닙니다.",
+      "evidenceHints": [],
+      "initialStage": "private_draft"
+    },
+    {
+      "caseId": "C3",
+      "title": "[가상 실습 C3] 프로젝트 B 사업별 조건 구분",
+      "domainName": "가상 교통관제 자료",
+      "projectName": "프로젝트 B · 누리시",
+      "recordTypeName": "검수",
+      "fields": {
+        "situation": "프로젝트 B의 상태 조회 조건을 검수 준비에 사용하려고 읽었다.",
+        "reasoning": "같은 도메인의 프로젝트 A 조건과 섞지 않도록 프로젝트 이름과 문서를 함께 확인했다.",
+        "result": "프로젝트 B 문서의 도로전광표지는 12대, 갱신 주기는 120초 이내, 이력 보관은 30일이다. 실제 성능 시험은 하지 않았다.",
+        "followUp": "실제 검수에서 사용할 장비와 확인 순서를 담당자와 정해야 한다."
+      },
+      "rawNote": "가상 교육 사례. 실제 현장 점검 결과가 아닙니다.",
+      "evidenceHints": [
+        {
+          "sourceFile": "05-project-b.md",
+          "findText": "도로전광표지는 12대"
+        },
+        {
+          "sourceFile": "05-project-b.md",
+          "findText": "이 문서는 누리시의 가상 프로젝트 B에만 적용한다."
+        }
+      ],
+      "initialStage": "private_draft"
+    },
+    {
+      "caseId": "C4",
+      "title": "[가상 실습 C4] 프로젝트 B 조회 문의 확인 대기",
+      "domainName": "가상 교통관제 자료",
+      "projectName": "프로젝트 B · 누리시",
+      "recordTypeName": "장애 대응",
+      "fields": {
+        "situation": "프로젝트 B의 조회 문의에 대응하기 위해 확인할 사항을 정리 중이다.",
+        "reasoning": "",
+        "result": "",
+        "followUp": "문의 화면과 조회 조건을 아직 받지 못했다."
+      },
+      "rawNote": "가상 교육 사례. 실제 현장 점검 결과가 아닙니다.",
+      "evidenceHints": [],
+      "initialStage": "private_draft"
+    }
+  ]
+}

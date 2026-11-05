@@ -49,25 +49,25 @@
   },
   {
     "week": 3,
-    "slides": 19,
+    "slides": 61,
     "workMinutes": 160,
     "workbook": "week-03",
     "blocks": [
       {
-        "title": "회사 자료를 위키와 즐겨찾기에 연결하기",
+        "title": "작성 화면과 업무 유형별 안내 만들기",
         "id": "slide-04"
       },
       {
-        "title": "회사 작성 예시를 관리하고 보여 주기",
-        "id": "slide-07"
+        "title": "여러 초안을 저장하고 이어 쓰기",
+        "id": "slide-19"
       },
       {
-        "title": "저장 전에 기록 내용과 범위 확인하기",
-        "id": "slide-11"
+        "title": "근거를 붙여 기록 완성하기",
+        "id": "slide-33"
       },
       {
-        "title": "회사 기록을 조건으로 다시 찾기",
-        "id": "slide-15"
+        "title": "기록 검색과 개인 할 일 관리하기",
+        "id": "slide-47"
       }
     ]
   },

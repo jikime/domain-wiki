@@ -8,10 +8,11 @@ const root = new URL("../", import.meta.url);
 const course = JSON.parse(
   await readFile(new URL("docs/lectures/course.json", root), "utf8"),
 );
-const [css, js, art] = await Promise.all([
+const [css, js, art, workflowCss] = await Promise.all([
   readFile(new URL("src/styles/lectures.css", root), "utf8"),
   readFile(new URL("scripts/lib/lecture-navigation.js", root), "utf8"),
   readFile(new URL("public/lectures/assets/knowledge-library.png", root)),
+  readFile(new URL("src/styles/lecture-workflow.css", root), "utf8"),
 ]);
 const timing = course.timing;
 if (
@@ -80,17 +81,21 @@ function cover(week) {
     throw new Error(`Invalid opening: ${week.week}`);
   const example = opening.example;
   const source = captureAssets.get(example.asset);
+  const captureImage = `<img src="${source}" width="706" height="382" alt="${esc(example.alt || `개선 전 스타터킷 홈의 ‘${example.before}’ 카드`)}">`;
+  const capture = example.captureLabel
+    ? `<button class="focus-capture" type="button" data-capture aria-label="${esc(example.captureLabel)}">${captureImage}<span class="focus-expand js-only">크게 보기 ↗</span></button>`
+    : captureImage;
   const preview = example.dashboard
-    ? `<div class="opening-dashboard"><p class="opening-dashboard-search">${esc(example.dashboard.searchLabel)}</p><h2>${esc(example.dashboard.title)}</h2><p class="opening-dashboard-summary">${esc(example.dashboard.summary)}</p><ul>${example.dashboard.items.map((item) => `<li><strong>${esc(item.title)}</strong><span>${esc(item.meta)}</span></li>`).join("")}</ul></div>`
+    ? `<div class="opening-dashboard"><p class="opening-dashboard-search">${esc(example.dashboard.searchLabel)}</p><h2>${esc(example.dashboard.title)}</h2>${example.dashboard.summary ? `<p class="opening-dashboard-summary">${esc(example.dashboard.summary)}</p>` : ""}<ul>${example.dashboard.items.map((item) => `<li><strong>${esc(item.title)}</strong><span>${esc(item.meta)}</span></li>`).join("")}</ul></div>`
     : example.choices
       ? `<div class="opening-choice-preview"><p class="shortcut-eyebrow">${esc(example.targetLabel)}</p><ol class="opening-choices">${example.choices.map((choice) => `<li><h2>${esc(choice.title)}</h2><p>${esc(choice.example)}</p><p class="opening-choice-action">${esc(choice.action)}</p></li>`).join("")}</ol></div>`
       : `<div class="shortcut-preview"><span class="shortcut-eyebrow">${esc(example.targetLabel)}</span><strong class="shortcut-label">${esc(example.after)} <span aria-hidden="true">↗</span></strong><span class="shortcut-connector">${esc(example.constraint)} <span aria-hidden="true">↓</span></span><div class="shortcut-result">${icon("search", 24)}<strong>${esc(example.destination)}</strong></div></div>`;
   return `<div class="opening-layout"><div class="opening-stage">
     <header class="opening-header"><p class="opening-tag">${pad(week.week)} / 07 <span>${esc(course.customer)} · 회사 위키 개발</span></p><h1>${title(opening.heading)}</h1><p class="opening-message">${esc(opening.message)}</p></header>
     <div class="opening-comparison">
-      <figure class="opening-panel"><figcaption><strong>현재 화면</strong><span>${esc(example.location)}</span></figcaption><div class="opening-card-visual"><img src="${source}" width="706" height="382" alt="개선 전 스타터킷 홈의 ‘${esc(example.before)}’ 카드"></div><p class="opening-panel-note">${esc(example.question)}</p></figure>
+      <figure class="opening-panel"><figcaption><strong>현재 화면</strong><span>${esc(example.location)}</span></figcaption><div class="opening-card-visual">${capture}</div><p class="opening-panel-note">${esc(example.question)}</p></figure>
       <span class="opening-change-arrow" aria-hidden="true">→</span>
-      <figure class="opening-panel opening-target"><figcaption><strong>이번에 만들 화면 · 예시</strong><span>앞으로 만들 모습입니다</span></figcaption>
+      <figure class="opening-panel opening-target"><figcaption><strong>${esc(example.previewTitle || "이번에 만들 화면 · 예시")}</strong><span>${esc(example.previewNote || "앞으로 만들 모습입니다")}</span></figcaption>
         ${preview}
         <p class="opening-panel-note">${esc(example.check)}</p>
       </figure>
@@ -108,6 +113,17 @@ function agenda(week) {
     plan.practice.length !== 3
   )
     throw new Error(`Invalid agenda: ${week.week}`);
+  if (plan.layout === "workflow") {
+    const columns = [
+      ["start", "시작할 화면"],
+      ["body", "개발할 동작"],
+      ["output", "완성 결과"],
+      ["next", "이어서 할 일"],
+    ];
+    if (plan.steps.some((step) => columns.some(([key]) => !step[key]?.trim())))
+      throw new Error(`Incomplete workflow agenda: ${week.week}`);
+    return `<div class="plan-layout"><div class="plan-stage plan-workflow"><header class="plan-header"><p class="plan-tag">${pad(week.week)} / 07 <span>교시별 작업과 연결</span></p><h2>${title(plan.title)}</h2><p class="plan-message">${esc(plan.message)}</p></header><table class="workflow-table" aria-label="교시별 시작 화면과 개발 동작, 완성 결과, 이어서 할 일"><thead><tr><th scope="col">교시</th>${columns.map(([, label], i) => `<th scope="col"><span>${pad(i + 1)}</span> ${esc(label)}</th>`).join("")}</tr></thead><tbody>${plan.steps.map((step, i) => `<tr><th scope="row"><strong>${i + 1}</strong><span>교시</span></th>${columns.map(([key, label]) => `<td data-label="${esc(label)}"><p>${title(step[key])}</p></td>`).join("")}</tr>`).join("")}</tbody></table><section class="plan-options" aria-label="각 교시의 개발과 업무 적용">${plan.practice.map((item) => `<div><h3>${esc(item.title)}</h3><p>${esc(item.body)}</p></div>`).join("")}</section></div></div>`;
+  }
   return `<div class="plan-layout"><div class="plan-stage"><header class="plan-header"><p class="plan-tag">${pad(week.week)} / 07 <span>오늘의 작업 순서</span></p><h2>${title(plan.title)}</h2><p class="plan-message">${esc(plan.message)}</p></header><ol class="plan-path" aria-label="네 교시의 작업 순서">${plan.steps.map((step, i) => `<li><div class="plan-period"><span>${pad(i + 1)}</span><span>교시</span></div><h3>${title(step.title)}</h3><p class="plan-description">${esc(step.body)}</p><div class="plan-output"><span>남길 것</span><strong>${esc(step.output)}</strong></div></li>`).join("")}</ol><section class="plan-options" aria-label="내 진행에 맞게 이어가기">${plan.practice.map((item) => `<div><h3>${esc(item.title)}</h3><p>${esc(item.body)}</p></div>`).join("")}</section></div></div>`;
 }
 function workbook(slug, label, anchor) {
@@ -119,10 +135,12 @@ function preparation(week) {
   const prep = week.preparation;
   if (!prep.title || !captureAssets.has(prep.wiki.asset) || !prep.warmup?.text)
     throw new Error(`Invalid preparation: ${week.week}`);
-  return `<div class="prepare-layout"><div class="prepare-stage"><header class="prepare-header"><p class="prepare-tag">${pad(week.week)} / 07 <span>${esc(prep.tag || "작은 성공부터 시작하기")}</span></p><h2>${title(prep.title)}</h2><p>${esc(prep.message)}</p></header><div class="prepare-desk"><section class="prepare-wiki"><div class="prepare-label"><span>01</span><h3>내 위키</h3></div><p class="prepare-action">${esc(prep.wiki.action)}</p><figure><button type="button" class="prepare-capture" data-capture aria-label="홈 화면 예시 크게 보기"><img src="${captureAssets.get(prep.wiki.asset)}" alt="${esc(prep.wiki.alt)}"><span class="prepare-expand js-only">크게 보기 ↗</span></button><figcaption>실제 스타터킷 · 가상 교육 자료 · 개선 전 홈</figcaption></figure><p class="prepare-detail">${esc(prep.wiki.check)}</p></section><div class="prepare-tools"><section class="prepare-ai"><div class="prepare-label"><span>02</span><h3>개발용 AI</h3></div><p class="prepare-action">${esc(prep.ai.action)}</p><pre id="prepare-warmup" class="prepare-prompt copy-source">${esc(prep.warmup.text)}</pre><div class="prepare-copy js-only"><button type="button" class="copy" data-copy="prepare-warmup" data-copy-message="복사했습니다. 한 번에 입력하세요.">전체 요청문 복사</button><span class="status" role="status"></span></div><p class="prepare-tool-note">${esc(prep.ai.hint)}</p></section><section class="prepare-record"><div class="prepare-label"><span>03</span><h3>${esc(prep.record.action)}</h3></div><blockquote><p>${esc(prep.record.example)}</p></blockquote><p class="prepare-tool-note">${esc(prep.record.hint)}</p></section></div></div><footer class="prepare-ready"><div><span>준비가 되면</span><strong>${esc(prep.ready)}</strong></div><nav aria-label="실습 준비 워크북">${workbook("week-02", "시작 실습과 개발 순서")}${workbook("company-project", "작업 카드 양식")}</nav></footer></div></div>`;
+  return `<div class="prepare-layout"><div class="prepare-stage"><header class="prepare-header"><p class="prepare-tag">${pad(week.week)} / 07 <span>${esc(prep.tag || "작은 성공부터 시작하기")}</span></p><h2>${title(prep.title)}</h2><p>${esc(prep.message)}</p></header><div class="prepare-desk"><section class="prepare-wiki"><div class="prepare-label"><span>01</span><h3>내 위키</h3></div><p class="prepare-action">${esc(prep.wiki.action)}</p><figure><button type="button" class="prepare-capture" data-capture aria-label="${esc(prep.wiki.captureLabel || "홈 화면 예시 크게 보기")}"><img src="${captureAssets.get(prep.wiki.asset)}" alt="${esc(prep.wiki.alt)}"><span class="prepare-expand js-only">크게 보기 ↗</span></button><figcaption>${esc(prep.wiki.caption || "실제 스타터킷 · 가상 교육 자료 · 개선 전 홈")}</figcaption></figure><p class="prepare-detail">${esc(prep.wiki.check)}</p></section><div class="prepare-tools"><section class="prepare-ai"><div class="prepare-label"><span>02</span><h3>개발용 AI</h3></div><p class="prepare-action">${esc(prep.ai.action)}</p><pre id="prepare-warmup" class="prepare-prompt copy-source">${esc(prep.warmup.text)}</pre><div class="prepare-copy js-only"><button type="button" class="copy" data-copy="prepare-warmup" data-copy-message="복사했습니다. 한 번에 입력하세요.">전체 요청문 복사</button><span class="status" role="status"></span></div>${prep.ai.hint ? `<p class="prepare-tool-note">${esc(prep.ai.hint)}</p>` : ""}</section><section class="prepare-record"><div class="prepare-label"><span>03</span><h3>${esc(prep.record.action)}</h3></div><blockquote><p>${esc(prep.record.example)}</p></blockquote><p class="prepare-tool-note">${esc(prep.record.hint)}</p></section></div></div><footer class="prepare-ready"><div><span>준비가 되면</span><strong>${esc(prep.ready)}</strong></div><nav aria-label="실습 준비 워크북">${workbook(`week-${pad(week.week)}`, "시작 실습과 개발 순서")}${workbook("company-project", "작업 카드 양식")}</nav></footer></div></div>`;
 }
-const refs = (slugs = []) =>
-  `<nav class="refs" aria-label="자세히 볼 워크북"><span>워크북</span>${[...new Set(slugs)].map((slug) => workbook(slug)).join("")}</nav>`;
+const refs = (slugs = [], anchor) =>
+  slugs.length
+    ? `<nav class="refs" aria-label="자세히 볼 워크북"><span>워크북</span>${[...new Set(slugs)].map((slug, index) => workbook(slug, undefined, index === 0 ? anchor : undefined)).join("")}</nav>`
+    : "";
 const note = (text) =>
   text
     ? `<p class="note">${icon("check", 20)}<span>${esc(text)}</span></p>`
@@ -130,8 +148,8 @@ const note = (text) =>
 const items = (values, cls = "plain-list") =>
   `<ul class="${cls}">${values.map((v) => `<li>${esc(v)}</li>`).join("")}</ul>`;
 const header = `<a class="skip" href="#main">본문으로 건너뛰기</a><header class="topbar"><a class="brand" href="index.html">${icon("book", 22)}<span>도메인 위키 <em>강의실</em></span></a><nav aria-label="자료 이동">${workbook("company-project", "회사 개발 노트")}<a href="domain-wiki-lectures.zip" download>전체 내려받기 ↓</a></nav></header>`;
-const shell = (name, body, className = "") =>
-  `<!doctype html>\n<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="엠큐닉 · 교육생과 함께 보고 실습하는 도메인 위키 강의"><title>${esc(name)}</title><style>${css}</style></head><body class="${className}" data-title="${esc(name)}">${header}${body}<script>${js}</script></body></html>\n`;
+const shell = (name, body, className = "", extraCss = "") =>
+  `<!doctype html>\n<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="엠큐닉 · 교육생과 함께 보고 실습하는 도메인 위키 강의"><title>${esc(name)}</title><style>${css}${extraCss}</style></head><body class="${className}" data-title="${esc(name)}">${header}${body}<script>${js}</script></body></html>\n`;
 const kinds = {
   concept: "이해하기",
   flow: "흐름 살펴보기",
@@ -163,7 +181,7 @@ function content(s, id, period = 1, periodStart = false) {
   if (s.kind === "compare" && s.layout === "verification") {
     if (s.observations.length !== 3 || !s.exampleLabel || !s.followUp.body)
       throw new Error(`Invalid verification slide: ${s.title}`);
-    return `<div class="iteration-layout"><div class="iteration-stage"><header class="focus-header">${periodContext(period, s.stageTag, periodStart)}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><section class="verification-example" aria-label="직접 확인하고 보완할 곳을 정하는 예시"><p class="verification-caption">${esc(s.exampleLabel)}</p><ol class="verification-observations">${s.observations.map((item, i) => `<li><div><span aria-hidden="true">${pad(i + 1)}</span><h3>${esc(item.title)}</h3></div><p>${esc(item.body)}</p></li>`).join("")}</ol><div class="verification-next"><span>${esc(s.followUp.label)}</span><strong>${esc(s.followUp.body)}</strong></div></section><div class="focus-discussion"><div><h3>${esc(s.question)}</h3><p>${esc(s.action)}</p></div></div><footer class="focus-footer"><p>${esc(s.note)}</p>${refs(s.refs)}</footer></div></div>`;
+    return `<div class="iteration-layout"><div class="iteration-stage"><header class="focus-header">${periodContext(period, s.stageTag, periodStart)}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><section class="verification-example" aria-label="직접 확인하고 보완할 곳을 정하는 예시"><p class="verification-caption">${esc(s.exampleLabel)}</p><ol class="verification-observations">${s.observations.map((item, i) => `<li><div><span aria-hidden="true">${pad(i + 1)}</span><h3>${esc(item.title)}</h3></div><p>${esc(item.body)}</p></li>`).join("")}</ol><div class="verification-next"><span>${esc(s.followUp.label)}</span><strong>${esc(s.followUp.body)}</strong></div></section><div class="focus-discussion"><div><h3>${esc(s.question)}</h3><p>${esc(s.action)}</p></div></div><footer class="focus-footer"><p>${esc(s.note)}</p>${refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
   }
   if (s.kind === "compare" && s.layout === "iteration") {
     if (
@@ -185,18 +203,22 @@ function content(s, id, period = 1, periodStart = false) {
     )
       throw new Error(`Invalid lab slide: ${s.title}`);
     const requestId = `slide-${pad(Number(id.slice(6)) - 1)}`;
-    const extra = s.extensions
-      ? `<section class="lab-record lab-extensions"><h3>기본을 마쳤다면 · 선택 과제</h3><ul>${s.extensions.map((item) => `<li><strong>${esc(item.title)}</strong><span>${esc(item.body)}</span></li>`).join("")}</ul></section>`
-      : `<section class="lab-record"><h3>${esc(s.recordHeading || "내 기록 문서에 남길 것")}</h3><ul>${s.recordFields.map((field) => `<li>${esc(field)}</li>`).join("")}</ul><p>${esc(s.recordExample)}</p></section>`;
+    const extra = s.inputExample
+      ? `<section class="lab-record"><h3>${esc(s.inputExample.title)}</h3>${s.inputExample.fields.map((field) => `<p><strong>${esc(field.label)}</strong> · ${esc(field.value)}</p>`).join("")}</section>`
+      : s.nextTask
+        ? `<section class="lab-record"><h3>${esc(s.nextTask.title)}</h3><p>${esc(s.nextTask.body)}</p></section>`
+        : s.extensions
+          ? `<section class="lab-record lab-extensions"><h3>기본을 마쳤다면 · 선택 과제</h3><ul>${s.extensions.map((item) => `<li><strong>${esc(item.title)}</strong><span>${esc(item.body)}</span></li>`).join("")}</ul></section>`
+          : `<section class="lab-record"><h3>${esc(s.recordHeading || "내 기록 문서에 남길 것")}</h3><ul>${s.recordFields.map((field) => `<li>${esc(field)}</li>`).join("")}</ul><p>${esc(s.recordExample)}</p></section>`;
     const nextId = `slide-${pad(Number(id.slice(6)) + 1)}`;
-    return `<div class="lab-layout"><div class="lab-stage"><header class="lab-header"><div><p class="lab-tag">${period}교시 <span>${esc(s.stageTag || "이제 내 프로젝트에서")}</span></p><h2>${title(s.title)}</h2><p class="lab-lead">${esc(s.lead)}</p></div></header><ol class="lab-steps" aria-label="직접 작업 순서">${s.steps.map((step, i) => `<li><span class="lab-number">${pad(i + 1)}</span><span class="lab-step-location">${esc(s.stepLocations[i])}</span><h3>${esc(s.stepTitles[i])}</h3><p>${esc(step)}</p></li>`).join("")}</ol><div class="lab-outcomes">${extra}<section class="lab-done"><h3>${esc(s.doneHeading || "이름 변경 예시의 확인 기준")}</h3><ul>${s.doneChecks.map((check) => `<li>${esc(check)}</li>`).join("")}</ul><small>${esc(s.scope)}</small></section></div><footer class="lab-footer"><p>${esc(s.note)}</p><nav aria-label="실습 참고 자료"><a href="#${requestId}">요청문 다시 보기 ↗</a>${workbook(s.refs[0], s.workbookAnchor ? "실습 순서·다음 요청" : "실습 순서", s.workbookAnchor)}${workbook(s.refs[1], "작업 카드")}<a href="#${nextId}">${esc(s.nextLabel || "다음 작업 고르기 →")}</a></nav></footer></div></div>`;
+    return `<div class="lab-layout"><div class="lab-stage"><header class="lab-header"><div><p class="lab-tag">${period}교시 <span>${esc(s.stageTag || "이제 내 프로젝트에서")}</span></p><h2>${title(s.title)}</h2><p class="lab-lead">${esc(s.lead)}</p></div></header><ol class="lab-steps" aria-label="직접 작업 순서">${s.steps.map((step, i) => `<li><span class="lab-number">${pad(i + 1)}</span><span class="lab-step-location">${esc(s.stepLocations[i])}</span><h3>${esc(s.stepTitles[i])}</h3><p>${esc(step)}</p></li>`).join("")}</ol><div class="lab-outcomes">${extra}<section class="lab-done"><h3>${esc(s.doneHeading || "이름 변경 예시의 확인 기준")}</h3><ul>${s.doneChecks.map((check) => `<li>${esc(check)}</li>`).join("")}</ul><small>${esc(s.scope)}</small></section></div><footer class="lab-footer"><p>${esc(s.note)}</p><nav aria-label="실습 참고 자료"><a href="#${requestId}">요청문 다시 보기 ↗</a>${s.showWorkbookLinks === false ? "" : `${workbook(s.refs[0], s.workbookLabel || (s.workbookAnchor ? "실습 순서·다음 요청" : "실습 순서"), s.workbookAnchor)}${workbook(s.refs[1], "작업 카드")}`}${s.showNextLink === false ? "" : `<a href="#${nextId}">${esc(s.nextLabel || "다음 작업 고르기 →")}</a>`}</nav></footer></div></div>`;
   }
   if (s.kind === "input" && s.layout === "request") {
     if (!s.text.trim() || s.checks.length !== 3)
       throw new Error(`Invalid request: ${s.title}`);
     const prompt = esc(s.text);
     const flow = s.flow || ["내 작업으로 바꾸기", "입력", "화면 확인"];
-    return `<div class="request-layout"><div class="request-stage" data-phase="${esc(s.phase || "implement")}"><header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag || "작은 변경부터 요청하기")}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header><div class="request-grid"><section class="request-panel" aria-label="복사해서 쓸 요청 예시"><div class="request-location"><span>입력할 곳</span><strong>${esc(s.where)}</strong></div><pre id="${id}-input" class="request-source copy-source">${prompt}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="${s.phase === "plan" ? "계획 요청을 복사했습니다. 답변을 확인한 뒤 실행 요청으로 넘어가세요." : "실행 요청을 복사했습니다. 계획을 확인한 경우에만 보내세요."}">${s.phase === "plan" ? "계획 요청 복사" : "실행 요청 복사"}</button><span class="status" role="status"></span></div></section><aside class="request-review"><h3>${esc(s.reviewHeading || "내가 정할 것")}</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol><div class="request-adapt"><strong>예시를 내 작업으로</strong><p>${esc(s.adapt)}</p></div></aside></div><footer class="request-footer"><p>${flow.map(esc).join(' <span aria-hidden="true">→</span> ')}</p>${s.alternative ? `<nav class="refs" aria-label="선택한 기능의 요청 예시">${workbook(s.refs[0], "A·B 요청 보기", s.workbookAnchor)}${workbook(s.refs[1], "회사 개발 노트")}</nav>` : refs(s.refs)}</footer></div></div>`;
+    return `<div class="request-layout"><div class="request-stage" data-phase="${esc(s.phase || "implement")}"><header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag || "작은 변경부터 요청하기")}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header><div class="request-grid"><section class="request-panel" aria-label="복사해서 쓸 요청 예시"><div class="request-location"><span>입력할 곳</span><strong>${esc(s.where)}</strong></div><pre id="${id}-input" class="request-source copy-source">${prompt}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="${s.phase === "plan" ? "계획 요청을 복사했습니다. 답변을 확인한 뒤 실행 요청으로 넘어가세요." : "실행 요청을 복사했습니다. 계획을 확인한 경우에만 보내세요."}">${s.phase === "plan" ? "계획 요청 복사" : "실행 요청 복사"}</button><span class="status" role="status"></span></div></section><aside class="request-review"><h3>${esc(s.reviewHeading || "내가 정할 것")}</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol><div class="request-adapt"><strong>${esc(s.adaptHeading || "예시를 내 작업으로")}</strong><p>${esc(s.adapt)}</p></div></aside></div><footer class="request-footer"><p>${flow.map(esc).join(' <span aria-hidden="true">→</span> ')}</p>${s.alternative ? `<nav class="refs" aria-label="선택한 기능의 요청 예시">${workbook(s.refs[0], "A·B 요청 보기", s.workbookAnchor)}${workbook(s.refs[1], "회사 개발 노트")}</nav>` : refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
   }
   if (s.kind === "capture" && s.layout === "focus") {
     if (
@@ -276,15 +298,97 @@ for (const week of course.weeks) {
   if (week.blocks.length !== 4)
     throw new Error(`${week.week}: four lesson blocks required`);
   for (const block of week.blocks) {
+    const practice = block.slides.find((s) => s.kind === "practice");
+    for (const slide of block.slides.filter((s) => s.followup !== undefined)) {
+      const followup = practice?.followups?.[slide.followup];
+      if (
+        !Number.isInteger(slide.followup) ||
+        !followup ||
+        slide.kind !== "input" ||
+        !["plan", "implement"].includes(slide.phase)
+      )
+        throw new Error(`Invalid follow-up slide: ${slide.title}`);
+      slide.text = slide.phase === "plan" ? followup.plan : followup.text;
+    }
+    const applicationRequests = block.slides.filter(
+      (s) => s.applicationStep !== undefined,
+    );
+    for (const slide of applicationRequests) {
+      const step = block.application?.executionSteps?.[slide.applicationStep];
+      if (
+        !Number.isInteger(slide.applicationStep) ||
+        !step ||
+        slide.kind !== "input" ||
+        !["plan", "implement"].includes(slide.phase) ||
+        !step.plan?.includes("아직 바꾸지 마") ||
+        !step.review?.length ||
+        !step.text?.trim()
+      )
+        throw new Error(`Invalid application request: ${slide.title}`);
+      slide.text = slide.phase === "plan" ? step.plan : step.text;
+    }
+    if (applicationRequests.length) {
+      let previous = practice;
+      for (const [index, step] of block.application.executionSteps.entries()) {
+        const pair = applicationRequests.filter(
+          (s) => s.applicationStep === index,
+        );
+        if (
+          pair.length !== 2 ||
+          pair[0].phase !== "plan" ||
+          pair[1].phase !== "implement" ||
+          block.slides.indexOf(pair[0]) <= block.slides.indexOf(previous) ||
+          block.slides.indexOf(pair[1]) !== block.slides.indexOf(pair[0]) + 1
+        )
+          throw new Error(`Invalid application request order: ${step.title}`);
+        previous = pair[1];
+      }
+    }
+    const allRequests = block.slides.filter((s) => s.kind === "input");
+    const setupRequests = allRequests.filter((s) => s.setup);
+    const requests = allRequests.filter(
+      (s) =>
+        !s.setup && s.followup === undefined && s.applicationStep === undefined,
+    );
     if (
-      block.slides.filter((s) => s.kind === "input").length !==
-        (block.mode === "development" ? 2 : 1) ||
+      requests.length !== (block.mode === "development" ? 2 : 1) ||
       block.slides.filter((s) => s.kind === "practice").length !== 1
     )
       throw new Error("Development needs separate plan and execution requests");
-    const requests = block.slides.filter((s) => s.kind === "input");
     const request = requests.at(-1);
-    const practice = block.slides.find((s) => s.kind === "practice");
+    let finalRequest = request;
+    for (const [index, followup] of (practice.followups || []).entries()) {
+      const pair = allRequests.filter((s) => s.followup === index);
+      if (!pair.length) continue;
+      if (
+        block.mode !== "development" ||
+        pair.length !== 2 ||
+        pair[0].phase !== "plan" ||
+        pair[1].phase !== "implement" ||
+        block.slides.indexOf(pair[0]) !==
+          block.slides.indexOf(finalRequest) + 1 ||
+        block.slides.indexOf(pair[1]) !== block.slides.indexOf(pair[0]) + 1
+      )
+        throw new Error(`Invalid follow-up request order: ${followup.title}`);
+      finalRequest = pair[1];
+    }
+    if (block.setup || setupRequests.length) {
+      if (
+        block.mode !== "development" ||
+        !block.setup?.title ||
+        !block.setup?.checks?.length ||
+        !block.setup?.next ||
+        setupRequests.length !== 2 ||
+        setupRequests[0].phase !== "plan" ||
+        setupRequests[1].phase !== "implement" ||
+        !setupRequests[0].text.includes("아직 바꾸지 마") ||
+        block.slides.indexOf(setupRequests[0]) + 1 !==
+          block.slides.indexOf(setupRequests[1]) ||
+        block.slides.indexOf(setupRequests[1]) + 1 !==
+          block.slides.indexOf(requests[0])
+      )
+        throw new Error(`Incomplete setup plan and execution: ${block.title}`);
+    }
     if (
       block.mode === "development" &&
       (requests[0].phase !== "plan" ||
@@ -292,12 +396,13 @@ for (const week of course.weeks) {
         !requests[0].text.includes("아직 바꾸지 마") ||
         block.slides.indexOf(requests[0]) + 1 !==
           block.slides.indexOf(request) ||
-        block.slides.indexOf(practice) !== block.slides.indexOf(request) + 1)
+        block.slides.indexOf(practice) !==
+          block.slides.indexOf(finalRequest) + 1)
     )
       throw new Error(
         `Practice must continue from its request slide: ${block.title}`,
       );
-    if (requests.some((r) => !r.where?.trim() || !r.text?.trim()))
+    if (allRequests.some((r) => !r.where?.trim() || !r.text?.trim()))
       throw new Error(`Incomplete request: ${block.title}`);
     for (const followup of practice.followups || []) {
       if (
@@ -408,6 +513,7 @@ for (const week of course.weeks) {
       `${week.week}회차 · ${week.title}`,
       `${chapters}${toc}<main class="deck" id="main">${slides.map((s) => s.html).join("\n")}</main>${controls}${captureDialog}`,
       "lecture-page",
+      week.agenda?.layout === "workflow" ? workflowCss : "",
     ),
   );
   manifests.push({
@@ -439,10 +545,20 @@ ${warmup.text}
     : "";
   const sections = week.blocks.map((block, i) => {
     const practice = block.slides.find((s) => s.kind === "practice");
-    const plan = block.slides.find((s) => s.phase === "plan");
+    const plan = block.slides.find(
+      (s) => s.phase === "plan" && !s.setup && s.followup === undefined,
+    );
     const input =
-      block.slides.find((s) => s.phase === "implement") ||
-      block.slides.find((s) => s.kind === "input");
+      block.slides.find(
+        (s) => s.phase === "implement" && !s.setup && s.followup === undefined,
+      ) || block.slides.find((s) => s.kind === "input");
+    const setupPlan = block.slides.find((s) => s.setup && s.phase === "plan");
+    const setupInput = block.slides.find(
+      (s) => s.setup && s.phase === "implement",
+    );
+    const setupSection = block.setup
+      ? `### 먼저 · ${block.setup.title}\n\n${block.setup.intro}\n\n**입력할 곳:** ${setupPlan.where}\n\n**계획 요청**\n\n\`\`\`text\n${setupPlan.text}\n\`\`\`\n\n**계획에서 내가 판단할 것**\n\n${setupPlan.checks.map((c) => `- **${c.title}** ${c.body}`).join("\n")}\n\n**계획을 확인한 뒤 실행**\n\n\`\`\`text\n${setupInput.text}\n\`\`\`\n\n**만든 뒤 직접 눌러 보기**\n\n${block.setup.checks.map((c, index) => `${index + 1}. ${c}`).join("\n")}\n\n**저장 기준:** ${block.setup.storage}\n\n**이어서:** ${block.setup.next}\n\n### 이어서 · ${practice.workbookTitle || practice.title}\n\n`
+      : "";
     const planSection = plan
       ? `### 1. 계획 요청\n\n\`\`\`text\n${plan.text}\n\`\`\`\n\n**계획을 읽고 내가 확인할 것**\n\n${plan.checks.map((c) => `- **${c.title}** ${c.body}`).join("\n")}\n\n내 결정과 다르면 계획부터 고칩니다. 확인하기 전에는 아래 실행 요청을 보내지 않습니다.\n\n### 2. 확인한 뒤 실행\n\n`
       : input.activityType === "record"
@@ -454,16 +570,50 @@ ${warmup.text}
       .filter((slug) => slug !== page.slug)
       .map(mdLink);
     const followups = practice.followups?.length
-      ? `**이어서 개발하기**\n\n기본 기능을 확인한 뒤 이어갑니다. 각 요청 상자는 한 번에 입력하되, 계획과 실행을 함께 보내지 않습니다. 이미 완성한 동작은 확인하고 건너뜁니다. 선택 과제는 기본 기능 뒤에 진행합니다.\n\n${practice.followups.map((item) => `### ${item.optional ? "선택 과제" : "다음 기능"} · ${item.title}\n\n**먼저 계획 요청**\n\n\`\`\`text\n${item.plan}\n\`\`\`\n\n**내가 확인할 것**\n\n${item.review.map((r) => `- ${r}`).join("\n")}\n\n**계획을 확인한 뒤 실행**\n\n\`\`\`text\n${item.text}\n\`\`\``).join("\n\n")}\n\n`
+      ? `**이어서 개발하기**\n\n기본 기능을 확인한 뒤 이어갑니다. 각 요청 상자는 한 번에 입력하되, 계획과 실행을 함께 보내지 않습니다. 이미 완성한 동작은 확인하고 건너뜁니다. ${block.application ? (block.application.mode === "sequence" ? "후속 두 기능과 아래 두 단계의 업무 적용까지 모두 기본 실습입니다. 강사와 같은 순서로 진행합니다." : "후속 두 기능과 아래 업무 적용 한 가지까지 기본 실습입니다. 그다음 추가 도전을 고릅니다.") : "선택 과제는 기본 기능 뒤에 진행합니다."}\n\n${practice.followups.map((item) => `### ${item.optional ? "선택 과제" : "다음 기능"} · ${item.title}\n\n${item.intro ? `${item.intro}\n\n` : ""}**먼저 계획 요청**\n\n\`\`\`text\n${item.plan}\n\`\`\`\n\n**내가 확인할 것**\n\n${item.review.map((r) => `- ${r}`).join("\n")}\n\n**계획을 확인한 뒤 실행**\n\n\`\`\`text\n${item.text}\n\`\`\`${item.verify?.length ? `\n\n**다음 기능 전에 직접 확인**\n\n${item.verify.map((step, index) => `${index + 1}. ${step}`).join("\n")}` : ""}`).join("\n\n")}\n\n`
+      : "";
+    const application = block.application;
+    const perStepPlan = application?.executionSteps?.some((step) => step.plan);
+    const applicationSection = application
+      ? `### ${i + 1}교시 내 업무에 적용하기
+
+**여기까지 기본 실습입니다.** ${application.intro}
+
+${application.mode === "sequence" ? "| 함께 진행할 순서 | 개발할 것 | 확인할 결과 |" : "| 적용할 상황 | 직접 정하고 개발할 것 | 확인할 결과 |"}
+| --- | --- | --- |
+${application.choices.map((c) => `| ${c.title} | ${c.task} | ${c.check} |`).join("\n")}
+
+${
+  perStepPlan
+    ? "모두 아래 순서로 진행합니다. 각 단계의 계획을 확인하고 실행한 뒤 화면에서 결과를 확인합니다."
+    : `**${application.mode === "sequence" ? "먼저 두 단계의 계획 요청" : "먼저 내 요구를 정해 계획 요청"}**
+
+${application.mode === "sequence" ? "모두 같은 순서로 진행합니다. 아래 계획 요청은 같은 Claude Code 대화에 한 번에 입력하고, 답변을 확인한 뒤 각 단계의 실행 요청을 따로 보냅니다." : "괄호를 내 결정으로 바꿉니다. 요청을 그대로 복사하기 전에 사용할 화면과 기대 결과를 정하세요."}
+
+\`\`\`text
+${application.plan}
+\`\`\`
+
+**계획에서 판단할 것**
+
+${application.review.map((r) => `- ${r}`).join("\n")}`
+}
+
+${application.executionSteps?.length ? application.executionSteps.map((step) => `**${step.title}**\n\n${step.plan ? `**먼저 계획 요청**\n\n\`\`\`text\n${step.plan}\n\`\`\`\n\n**계획에서 판단할 것**\n\n${step.review.map((r) => `- ${r}`).join("\n")}\n\n**확인한 뒤 실행**\n\n` : ""}\`\`\`text\n${step.text}\n\`\`\`\n\n**직접 확인한 뒤 다음 단계로**\n\n${step.verify.map((item, index) => `${index + 1}. ${item}`).join("\n")}`).join("\n\n") : `**확인한 뒤 실행**\n\n\`\`\`text\n${application.execute}\n\`\`\``}
+
+**직접 확인:** ${application.done}
+
+${application.checkSteps?.length ? `${application.checkSteps.map((step, index) => `${index + 1}. ${step}`).join("\n")}\n\n` : ""}${application.roleChecks?.map((role) => `**${role.title}**\n\n${role.steps.map((step, index) => `${index + 1}. ${step}`).join("\n")}\n\n`).join("") || ""}${application.next ? `**다음으로 이어가기:** ${application.next}\n\n` : ""}
+`
       : "";
     const walkthroughs = practice.walkthroughs?.length
-      ? `**만든 뒤 직접 눌러 보기**\n\n${practice.walkthroughs.map((guide) => `### ${guide.title}\n\n${guide.intro}\n\n${guide.steps.map((step, index) => `${index + 1}. ${step}`).join("\n")}\n\n${guide.note}`).join("\n\n")}\n\n`
+      ? `**만든 뒤 직접 눌러 보기**\n\n${practice.walkthroughs.map((guide, index) => `### ${guide.title}\n\n${guide.intro}\n\n${index === 0 && practice.inputExample ? `| 입력칸 | 확인용 예시 |\n| --- | --- |\n${practice.inputExample.fields.map((field) => `| ${field.label} | ${field.value} |`).join("\n")}\n\n` : ""}${guide.steps.map((step, index) => `${index + 1}. ${step}`).join("\n")}\n\n${guide.note}`).join("\n\n")}\n\n`
       : "";
     return `## ${i + 1}. ${block.title}
 
 [함께 볼 강의 화면](/lectures/week-${pad(week.week)}.html#${starts[i].id})
 
-${(practice.workbookSteps || practice.steps).map((step, index) => `${index + 1}. ${step}`).join("\n")}
+${block.startFrom ? `**앞에서 이어받을 것:** ${block.startFrom}\n\n` : ""}${setupSection}${(practice.workbookSteps || practice.steps).map((step, index) => `${index + 1}. ${step}`).join("\n")}
 
 ${practice.decision ? `**내가 정할 것:** ${practice.decision}\n\n` : ""}${block.storage ? `**저장 기준:** ${block.storage}\n\n` : ""}**입력할 곳:** ${input.where}
 
@@ -471,7 +621,7 @@ ${planSection}${input.workbookLabel ? `### ${input.workbookLabel}\n\n` : ""}\`\`
 ${input.text}
 \`\`\`
 
-${input.alternative ? `### ${input.alternative.label}\n\n\`\`\`text\n${input.alternative.text}\n\`\`\`\n\n` : ""}${followups}${practice.designPrompt ? `### 추가할 기능을 정해서 요청하기\n\n괄호를 내 업무에 맞게 채워 한 번에 입력하세요. 아래에서는 내가 고른 기능의 예시를 참고합니다.\n\n\`\`\`text\n${practice.designPrompt}\n\`\`\`\n\n${practice.designExamples.map((e) => `- **${e.title}:** ${e.text}`).join("\n")}\n\n` : ""}${walkthroughs}**확인:** ${practice.result}
+${input.verify?.length ? `**만든 뒤 직접 확인**\n\n${input.verify.map((step, index) => `${index + 1}. ${step}`).join("\n")}\n\n` : ""}${input.alternative ? `### ${input.alternative.label}\n\n\`\`\`text\n${input.alternative.text}\n\`\`\`\n\n` : ""}${followups}${practice.designPrompt ? `### 추가할 기능을 정해서 요청하기\n\n괄호를 내 업무에 맞게 채워 한 번에 입력하세요. 아래에서는 내가 고른 기능의 예시를 참고합니다.\n\n\`\`\`text\n${practice.designPrompt}\n\`\`\`\n\n${practice.designExamples.map((e) => `- **${e.title}:** ${e.text}`).join("\n")}\n\n` : ""}${walkthroughs}${applicationSection}**확인:** ${practice.result}
 
 ${practice.scenarios ? `| 먼저 준비할 것 | 직접 해 볼 일 | 이렇게 되면 성공 |\n| --- | --- | --- |\n${practice.scenarios.map((s) => `| ${s.given} | ${s.action} | ${s.expected} |`).join("\n")}\n\n` : ""}${
   practice.extensions
@@ -497,7 +647,7 @@ ${week.goal}
 
 ${week.workflow || ""}
 
-${week.projectBrief ? `${week.projectBrief}\n` : ""}${warmupSection}${sections.join("\n\n")}
+${week.projectBrief ? `${week.projectBrief}\n` : ""}${week.roleVerification?.length ? `## 계정을 나눠 확인하기\n\n관리자 예: admin@wiki.local / 일반 사용자 예: writer@wiki.local. 강사가 배정한 계정으로 바꿔도 됩니다. 같은 서버 주소에서 계정을 전환하거나 별도 브라우저·프로필로 확인합니다.\n\n${week.roleVerification.map((role) => `**${role.title}**\n\n${role.steps.map((step) => `- ${step}`).join("\n")}`).join("\n\n")}\n\n` : ""}${warmupSection}${sections.join("\n\n")}
 
 ${week.wrapupPrompt ? `## 화면에서 확인한 뒤 코드 보관하기\n\n${week.wrapupIntro || "직접 확인한 결과와 미확인 항목을 구분합니다."}\n\n**먼저 보관할 변경 확인**\n\n\`\`\`text\n${week.wrapupPrompt}\n\`\`\`\n\n${week.wrapupExecute ? `**포함할 코드·DB 변경과 제외할 설정을 확인한 뒤 실행**\n\n\`\`\`text\n${week.wrapupExecute}\n\`\`\`\n\n` : ""}` : ""}## 이어서 할 일
 

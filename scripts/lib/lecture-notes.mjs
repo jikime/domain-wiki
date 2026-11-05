@@ -1,7 +1,10 @@
 export function lectureNotes(week, slides) {
+  const hasApplication = week.blocks.some((block) => block.application);
+  if (week.slideConnections && week.slideConnections.length !== slides.length)
+    throw new Error(`Invalid slide connections: ${week.week}`);
   const rows = week.blocks.map((block, i) => {
     const members = slides.filter((s) => s.block === i + 1);
-    return `| ${i + 1}교시 | ${Number(members[0].id.slice(6))}–${Number(members.at(-1).id.slice(6))}장 | ${block.title} | ${block.mode === "development" ? "현재 화면 → 계획 → 확인 후 실행 → 직접 작업" : "현재 화면 → 활동 안내 → 직접 수행"} |`;
+    return `| ${i + 1}교시 | ${Number(members[0].id.slice(6))}–${Number(members.at(-1).id.slice(6))}장 | ${block.title} | ${block.mode === "development" ? (block.setup ? `${block.setup.title} → 본 과제 계획·실행 → 기본 개발 → 내 업무 적용` : block.application ? "현재 화면 → 계획 → 실행 → 기본 개발 → 내 업무 적용" : "현재 화면 → 계획 → 확인 후 실행 → 직접 작업") : "현재 화면 → 활동 안내 → 직접 수행"} |`;
   });
   const notes = slides.map((slide, index) => {
     const block = week.blocks[slide.block - 1];
@@ -24,8 +27,9 @@ export function lectureNotes(week, slides) {
         example = `첫 교시의 ‘${week.blocks[0].title}’에서 사용할 자료와 업무를 짚는다.`;
         ending =
           "계획을 확인한 뒤 실행하고, 직접 눌러 본 결과로 다음 작업을 정하겠습니다.";
-        transition =
-          "네 교시의 연결과 기본·선택 과제를 구분하면 준비 화면으로 넘어간다.";
+        transition = hasApplication
+          ? "공통 기능과 업무 적용이 기본임을 이해하고 추가 도전과 구분하면 준비 화면으로 넘어간다."
+          : "네 교시의 연결과 기본·선택 과제를 구분하면 준비 화면으로 넘어간다.";
       } else if (index === 2) {
         core = week.start;
         opening =
@@ -46,13 +50,28 @@ export function lectureNotes(week, slides) {
         transition =
           "직접 확인·AI 검사·미확인을 구분하고 다음에 열 작업 카드가 남으면 마친다.";
       }
+    } else if (source.phase === "application") {
+      core =
+        block.application.mode === "sequence"
+          ? `모두 ${block.application.choices.map((c) => c.title).join(" → ")} 순서로 진행한다. 계획을 확인한 뒤 한 단계씩 구현하고 직접 확인한다.`
+          : "공통 예제를 완성한 뒤 자기 업무의 요구를 정하고 추가 개발까지 수행한다. 이 장은 선택 과제가 아니다.";
+      opening =
+        "첫 기능이 끝났다면 이제 다른 업무에서도 쓰도록 직접 요구를 정해 보겠습니다.";
+      order =
+        "적용할 업무 선택 → 현재 불편 설명 → 계획 판단 → 추가 개발 → 기존 기능과 함께 확인";
+      example = block.application.choices
+        .map((c) => `${c.title}: ${c.task}`)
+        .join(" / ");
+      ending =
+        "버튼 이름만 바꾸지 말고 실제 동작이 달라진 한 가지를 직접 확인해 주세요.";
+      transition = block.application.done;
     } else if (source.phase === "plan") {
       core =
         "AI의 계획을 읽고 동작·저장·권한·확인 방법을 교육생이 판단한다. 이 단계에서는 구현하지 않는다.";
       opening =
         "아직 실행 요청을 보내지 마세요. 이 계획이 내가 원하는 사용 방식인지 먼저 보겠습니다.";
       order = source.checks.map((c) => `${c.title} ${c.body}`).join(" → ");
-      example = block.slides.at(-1).decision;
+      example = block.slides.find((s) => s.kind === "practice")?.decision;
       ending =
         "다른 점이 있으면 계획부터 고치세요. 내가 확인한 뒤 다음 장의 실행 요청을 보냅니다.";
       transition =
@@ -66,7 +85,7 @@ export function lectureNotes(week, slides) {
       opening =
         "어느 환경에 어떤 순서로 반영할지 확인했으면 담당자가 따라갈 절차를 정리하겠습니다.";
       order = "대상·버전 → 코드·DB 적용 순서 → 중단·복구 기준 → 실제 확인 결과";
-      example = block.slides.at(-1).decision;
+      example = block.slides.find((s) => s.kind === "practice")?.decision;
       ending =
         "실제 반영은 담당 절차로 진행하고, 준비되지 않은 환경은 미반영으로 남깁니다.";
       transition =
@@ -77,7 +96,7 @@ export function lectureNotes(week, slides) {
       opening =
         "확인한 계획과 지금 요청이 같은지 보고 이번 단계만 실행하겠습니다.";
       order = "내 결정 반영 → AI 구현·필요한 DB 적용 → 검사 결과 → 직접 확인";
-      example = block.slides.at(-1).decision;
+      example = block.slides.find((s) => s.kind === "practice")?.decision;
       ending = "AI의 완료 보고를 본 뒤 내 화면에서 실제로 눌러 보세요.";
       transition =
         "변경한 화면을 열 수 있고 실제로 확인할 입력과 기대 결과를 알면 직접 작업을 이어간다.";
@@ -90,10 +109,12 @@ export function lectureNotes(week, slides) {
         source.walkthroughs?.[0]?.steps?.[0] ||
         source.decision ||
         source.steps[0];
-      ending =
-        "기본 완료 기준을 확인한 분은 선택 과제의 계획을 세워 이어가세요.";
-      transition =
-        "기본 동작을 직접 수행하면 다음 기능으로 간다. 못한 부분은 숨기지 않고 같은 작업 카드에 남긴다.";
+      ending = block.application
+        ? "공통 세 동작을 확인했으면 다음 장에서 내 업무에 맞춘 기능을 더 만드세요. 업무 적용까지 기본입니다."
+        : "기본 완료 기준을 확인한 분은 선택 과제의 계획을 세워 이어가세요.";
+      transition = block.application
+        ? "공통 기능을 수행하면 다음 업무 적용 장으로 간다. 그 적용까지 마친 뒤 추가 도전을 고른다."
+        : "기본 동작을 직접 수행하면 다음 기능으로 간다. 못한 부분은 숨기지 않고 같은 작업 카드에 남긴다.";
     } else if (source.kind === "input") {
       core =
         source.activityType === "record"
@@ -122,7 +143,7 @@ export function lectureNotes(week, slides) {
         "현재 화면 → 불편한 조작 → 원하는 결과";
       example =
         source.example ||
-        block.slides.at(-1).decision ||
+        block.slides.find((s) => s.kind === "practice")?.decision ||
         source.callouts?.[1]?.body ||
         block.title;
       ending =
@@ -130,6 +151,16 @@ export function lectureNotes(week, slides) {
       transition =
         "현재 동작과 개발할 목표를 구분하고 교육생이 바꿀 이유를 설명하면 계획으로 넘어간다.";
     }
+    const connection = week.slideConnections?.[index];
+    if (connection) {
+      core = connection.core || core;
+      opening = connection.opening || opening;
+      order = connection.order || order;
+      example = connection.example || example;
+      ending = connection.ending;
+      transition = connection.transition;
+    }
+    const storage = source?.setup ? block.setup.storage : block?.storage;
     return `### ${index + 1}장 · ${slide.title.replaceAll("\n", " ")}
 
 - **꼭 전할 말:** ${core}
@@ -138,7 +169,7 @@ export function lectureNotes(week, slides) {
 - **사례 하나:** ${example}
 - **마무리할 말:** “${ending}”
 - **전환 기준:** ${transition}
-${block?.storage ? `- **저장·권한 코칭:** ${block.storage}\n` : ""}${source?.kind === "practice" && source.extensions?.length ? `- **시간이 남으면:** ${source.extensions.map((e) => `${e.title}: ${e.body}`).join(" / ")}\n` : ""}`;
+${storage ? `- **저장·권한 코칭:** ${storage}\n` : ""}${source?.kind === "practice" && source.extensions?.length ? `- **시간이 남으면:** ${source.extensions.map((e) => `${e.title}: ${e.body}`).join(" / ")}\n` : ""}`;
   });
   return `# ${week.week}회차 강사용 설명 메모 — ${week.title}
 
@@ -160,13 +191,13 @@ ${rows.join("\n")}
 
 계획의 기술 용어를 읽는 대신 ‘원하는 동작인가 / 무엇을 누구의 기록으로 남길까 / 누가 볼 수 있을까 / 어떻게 확인할까’를 묻습니다. 코드 조사·구현·기술 검사는 AI가 맡고 교육생에게 코드 독해를 완료 조건으로 요구하지 않습니다.
 
-기본을 마친 교육생은 같은 기능의 선택 과제를 계획하고 이어 만듭니다. 막히면 다음 기능에 필요한 최소 동작부터 함께 완성하되 미완료 항목을 완료로 표시하지 않습니다. 오류나 AI 대기 시간이 있어야 성립하는 실습으로 운영하지 않습니다.
+${week.applicationGuidance || (hasApplication ? "공통 기능을 마치면 자기 업무에 적용할 기능 한 가지를 정해 이어 만듭니다. 여기까지가 기본 실습이며, 먼저 마친 교육생은 추가 도전으로 넓힙니다." : "기본을 마친 교육생은 같은 기능의 선택 과제를 계획하고 이어 만듭니다.")} 막히면 다음 기능에 필요한 최소 동작부터 함께 완성하되 미완료 항목을 완료로 표시하지 않습니다. 오류나 AI 대기 시간이 있어야 성립하는 실습으로 운영하지 않습니다.
 
 각자 위키를 개발하고 배정된 역할별 계정으로 본인이 확인합니다. 동료의 사용을 실습 완료 조건으로 삼지 않습니다. 자료 공개·위키 게시의 별도 검토 담당과 제품의 권한 규칙은 유지합니다. 공용 환경 반영과 실제 운영 인수는 담당의 준비·확인 상태를 따로 기록합니다.
 
 DB 구조 변경 파일, 실제 개발용 DB 적용, 화면의 저장·조회는 각각 확인합니다. 새로고침만으로 DB 저장을 증명하지 않습니다. 같은 서버 주소에 다른 브라우저로 로그인해 확인하고, 다른 사람의 개인 기록이 보이지 않는지도 확인합니다. 서로 다른 개인 서버의 DB는 자동으로 합쳐지지 않습니다.
 
-## 장별 설명
+${week.roleVerification?.length ? `## 회차 전체의 계정별 확인\n\n관리자와 일반 사용자의 확인을 교육생 본인이 나눠 수행합니다. 같은 서버 주소를 사용하고 계정을 전환하거나 별도 브라우저·프로필을 사용합니다.\n\n${week.roleVerification.map((role) => `### ${role.title}\n\n${role.steps.map((step) => `- ${step}`).join("\n")}`).join("\n\n")}\n\n` : ""}${week.rehearsal ? `## 이번 회차의 분량 운영과 리허설\n\n${week.rehearsal}\n\n` : ""}## 장별 설명
 
 ${notes.join("\n")}
 

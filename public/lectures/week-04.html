@@ -331,37 +331,67 @@ svg {
   aspect-ratio: 16 / 9;
   container-type: inline-size;
 }
+/* 모든 강의 템플릿의 헤더: 교시·활동 → 제목 → 설명. */
+.opening-header,
+.plan-header,
+.prepare-header,
+.focus-header,
+.request-header,
+.lab-header {
+  text-align: left;
+}
+.opening-tag,
+.plan-tag,
+.prepare-tag,
+.focus-tag,
+.request-tag,
+.lab-tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 0.3cqw 1cqw;
+  margin: 0 0 0.8cqw;
+  color: var(--brand-deep);
+  font-size: 1.15cqw;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.opening-tag span,
+.plan-tag span,
+.prepare-tag span,
+.focus-tag span,
+.request-tag span,
+.lab-tag span {
+  color: var(--muted);
+}
+.opening-header h1,
+.plan-header h2,
+.prepare-header h2,
+.focus-header h2,
+.request-header h2,
+.lab-header h2 {
+  margin: 0;
+  font-size: 3.5cqw;
+  line-height: 1.2;
+}
+.opening-message,
+.plan-message,
+.prepare-header > p:last-child,
+.focus-header > p:last-child,
+.request-lead,
+.lab-lead {
+  margin: 0.8cqw 0 0;
+  color: var(--muted);
+  font-size: 1.45cqw;
+  line-height: 1.65;
+}
 .opening-stage {
   height: 100%;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 1cqw;
-  padding: 1.5cqw 3.5cqw;
-}
-.opening-header {
-  text-align: center;
-}
-.opening-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1cqw;
-  margin: 0 0 1cqw;
-  color: var(--brand-deep);
-  font-size: 1.15cqw;
-}
-.opening-tag span {
-  color: var(--muted);
-}
-.opening-header h1 {
-  margin: 0;
-  font-size: 4cqw;
-  line-height: 1.2;
-}
-.opening-message {
-  margin: 1cqw 0 0;
-  font-size: 1.55cqw;
-  color: var(--muted);
+  padding: 2cqw 3.5cqw;
 }
 .opening-comparison {
   display: grid;
@@ -595,31 +625,6 @@ svg {
   gap: 1.6cqw;
   padding: 2cqw 3.5cqw;
 }
-.plan-header {
-  text-align: center;
-}
-.plan-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1cqw;
-  margin: 0 0 1cqw;
-  color: var(--brand-deep);
-  font-size: 1.15cqw;
-}
-.plan-tag span {
-  color: var(--muted);
-}
-.plan-header h2 {
-  margin: 0;
-  font-size: 3.5cqw;
-  line-height: 1.2;
-}
-.plan-message {
-  margin: 1cqw 0 0;
-  color: var(--muted);
-  font-size: 1.45cqw;
-}
 .plan-path {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -703,39 +708,16 @@ svg {
 }
 
 .prepare-stage {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(min-content, 1fr) auto;
   gap: 1.8cqw;
   padding: 2cqw 3.5cqw;
 }
-.prepare-header {
-  text-align: center;
-}
-.prepare-tag {
-  display: flex;
-  justify-content: center;
-  gap: 1cqw;
-  margin: 0 0 1cqw;
-  font-size: 1.15cqw;
-  color: var(--brand-deep);
-}
-.prepare-tag span {
-  color: var(--muted);
-}
-.prepare-header h2 {
-  margin: 0;
-  font-size: 3.5cqw;
-  line-height: 1.2;
-}
-.prepare-header > p:last-child {
-  margin: 1cqw 0 0;
-  font-size: 1.45cqw;
-  color: var(--muted);
-}
 .prepare-desk {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 1.5cqw;
   min-height: 0;
 }
@@ -823,7 +805,8 @@ svg {
 }
 .prepare-tools {
   display: grid;
-  grid-template-rows: minmax(0, 1.8fr) minmax(0, 1fr);
+  /* 긴 요청문과 복사 버튼까지 카드 안에 들어가도록 내용으로 높이를 정한다. */
+  grid-template-rows: auto auto;
   min-height: 0;
   gap: 1.2cqw;
 }
@@ -831,6 +814,7 @@ svg {
 .prepare-record {
   display: flex;
   flex-direction: column;
+  min-height: min-content;
 }
 .prepare-tool-note {
   margin: auto 0 0;
@@ -855,6 +839,7 @@ svg {
 }
 .prepare-copy {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 0.8cqw;
   flex-wrap: wrap;
@@ -922,30 +907,6 @@ svg {
   grid-template-rows: auto minmax(0, 1fr) auto auto;
   gap: 1.3cqw;
   padding: 2cqw 3.5cqw;
-}
-.focus-header {
-  text-align: center;
-}
-.focus-tag {
-  display: flex;
-  justify-content: center;
-  gap: 1cqw;
-  margin: 0 0 0.8cqw;
-  font-size: 1.15cqw;
-  color: var(--brand-deep);
-}
-.focus-tag span {
-  color: var(--muted);
-}
-.focus-header h2 {
-  margin: 0;
-  font-size: 3.5cqw;
-  line-height: 1.2;
-}
-.focus-header > p:last-child {
-  margin: 0.8cqw 0 0;
-  font-size: 1.45cqw;
-  color: var(--muted);
 }
 .focus-grid {
   display: grid;
@@ -1240,7 +1201,7 @@ svg {
   margin-bottom: 12px;
   text-align: left;
 }
-.period-context .focus-tag {
+.slide:not(.slide-stage) .period-context .focus-tag {
   justify-content: flex-start;
   gap: 12px;
   margin: 0;
@@ -1248,12 +1209,8 @@ svg {
 }
 
 .slide-stage .period-context {
-  gap: 1cqw;
-  margin-bottom: 0.8cqw;
-}
-.slide-stage .period-context .focus-tag {
-  gap: 1cqw;
-  font-size: 1.15cqw;
+  display: block;
+  margin: 0;
 }
 
 .verification-example {
@@ -1326,30 +1283,6 @@ svg {
   grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 1.6cqw;
   padding: 2cqw 3.5cqw;
-}
-.request-header {
-  text-align: center;
-}
-.request-tag {
-  display: flex;
-  justify-content: center;
-  gap: 1cqw;
-  margin: 0 0 0.8cqw;
-  font-size: 1.15cqw;
-  color: var(--brand-deep);
-}
-.request-tag span {
-  color: var(--muted);
-}
-.request-header h2 {
-  margin: 0;
-  font-size: 3.5cqw;
-  line-height: 1.2;
-}
-.request-lead {
-  margin: 0.8cqw 0 0;
-  font-size: 1.45cqw;
-  color: var(--muted);
 }
 
 .request-grid {
@@ -1500,33 +1433,6 @@ svg {
   grid-template-rows: auto minmax(0, 1fr) auto auto;
   gap: 1.5cqw;
   padding: 2cqw 3.5cqw;
-}
-.lab-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2cqw;
-}
-.lab-tag {
-  display: flex;
-  gap: 1.2cqw;
-  margin: 0 0 0.8cqw;
-  font-size: 1.05cqw;
-  font-weight: 600;
-}
-.lab-tag span {
-  color: var(--muted);
-}
-.lab-header h2 {
-  margin: 0;
-  font-size: 3.4cqw;
-  line-height: 1.25;
-}
-.lab-lead {
-  margin: 0.7cqw 0 0;
-  color: var(--muted);
-  font-size: 1.45cqw;
-  line-height: 1.5;
 }
 
 .lab-steps {
@@ -2548,7 +2454,7 @@ tbody th {
 @media screen and (max-width: 800px) {
   .bundle-stage {
     height: auto;
-    padding: 24px 20px;
+    padding: 28px 20px;
     gap: 20px;
   }
   .bundle-grid,
@@ -2800,6 +2706,33 @@ tbody th {
   .iteration-layout {
     aspect-ratio: auto;
   }
+  .opening-tag,
+  .plan-tag,
+  .prepare-tag,
+  .focus-tag,
+  .request-tag,
+  .lab-tag {
+    gap: 4px 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .opening-header h1,
+  .plan-header h2,
+  .prepare-header h2,
+  .focus-header h2,
+  .request-header h2,
+  .lab-header h2 {
+    font-size: 30px;
+  }
+  .opening-message,
+  .plan-message,
+  .prepare-header > p:last-child,
+  .focus-header > p:last-child,
+  .request-lead,
+  .lab-lead {
+    margin-top: 16px;
+    font-size: 17px;
+  }
   .opening-stage {
     height: auto;
     padding: 28px 20px;
@@ -2808,18 +2741,6 @@ tbody th {
   .opening-comparison {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-  .opening-tag {
-    gap: 12px;
-    margin-bottom: 16px;
-    font-size: 12px;
-  }
-  .opening-header h1 {
-    font-size: 34px;
-  }
-  .opening-message {
-    margin-top: 16px;
-    font-size: 18px;
   }
   .opening-panel {
     grid-template-rows: auto auto auto;
@@ -2925,18 +2846,6 @@ tbody th {
     padding: 28px 20px;
     gap: 28px;
   }
-  .plan-tag {
-    gap: 12px;
-    margin-bottom: 16px;
-    font-size: 12px;
-  }
-  .plan-header h2 {
-    font-size: 32px;
-  }
-  .plan-message {
-    margin-top: 16px;
-    font-size: 18px;
-  }
   .plan-path {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -2977,18 +2886,6 @@ tbody th {
     height: auto;
     padding: 28px 20px;
     gap: 24px;
-  }
-  .prepare-tag {
-    margin-bottom: 12px;
-    gap: 12px;
-    font-size: 13px;
-  }
-  .prepare-header h2 {
-    font-size: 30px;
-  }
-  .prepare-header > p:last-child {
-    margin-top: 16px;
-    font-size: 17px;
   }
   .prepare-desk,
   .prepare-tools {
@@ -3072,18 +2969,6 @@ tbody th {
     height: auto;
     padding: 28px 20px;
     gap: 24px;
-  }
-  .focus-tag {
-    margin-bottom: 12px;
-    gap: 12px;
-    font-size: 13px;
-  }
-  .focus-header h2 {
-    font-size: 30px;
-  }
-  .focus-header > p:last-child {
-    margin-top: 16px;
-    font-size: 17px;
   }
   .focus-grid {
     grid-template-columns: 1fr;
@@ -3229,14 +3114,12 @@ tbody th {
   .iteration-check strong {
     margin-right: 8px;
   }
-  .period-context,
-  .slide-stage .period-context {
+  .slide:not(.slide-stage) .period-context {
     display: grid;
     gap: 10px;
     margin-bottom: 16px;
   }
-  .period-context .focus-tag,
-  .slide-stage .period-context .focus-tag {
+  .slide:not(.slide-stage) .period-context .focus-tag {
     gap: 12px;
     font-size: 13px;
   }
@@ -3287,18 +3170,6 @@ tbody th {
     height: auto;
     padding: 28px 20px;
     gap: 24px;
-  }
-  .request-tag {
-    margin-bottom: 12px;
-    gap: 12px;
-    font-size: 13px;
-  }
-  .request-header h2 {
-    font-size: 30px;
-  }
-  .request-lead {
-    margin-top: 16px;
-    font-size: 17px;
   }
 
   .request-grid {
@@ -3384,22 +3255,6 @@ tbody th {
     grid-template-rows: none;
     padding: 28px 20px;
     gap: 24px;
-  }
-  .lab-header {
-    display: grid;
-    gap: 20px;
-  }
-  .lab-tag {
-    gap: 12px;
-    margin-bottom: 12px;
-    font-size: 12px;
-  }
-  .lab-header h2 {
-    font-size: 30px;
-  }
-  .lab-lead {
-    margin-top: 12px;
-    font-size: 16px;
   }
 
   .lab-steps,

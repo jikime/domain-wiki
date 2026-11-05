@@ -75,7 +75,7 @@ export const workbookGroups: WorkbookGroup[] = [
       },
       {
         slug: "week-03",
-        title: "회사 지식과 작성 방식 적용하기",
+        title: "회사 경험을 기록하고 다시 찾는 위키 만들기",
         file: "weeks/03-domain.md",
       },
       {
@@ -145,6 +145,11 @@ export const workbookGroups: WorkbookGroup[] = [
         file: "samples/domain-settings.md",
       },
       {
+        slug: "record-practice",
+        title: "기록 개발 실습 사례",
+        file: "samples/record-practice.md",
+      },
+      {
         slug: "acceptance-v2",
         title: "개정 예제 · 검수 조건 v2",
         file: "instructor/materials/acceptance-v2.md",
@@ -193,6 +198,7 @@ export const workbookDownloads = [
   ...workbookPages.map((page) => page.file),
   "samples/evaluation-questions.csv",
   "samples/training-snapshot.json",
+  "samples/record-practice.json",
   "exercises/check-aliases.mjs",
 ];
 export const workbookHref = (slug: string) => `/workbook/${slug}`;
