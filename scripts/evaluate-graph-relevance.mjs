@@ -23,7 +23,7 @@ const state = existsSync(path)
   : { sources: {}, pages: {} };
 const save = () =>
   writeFileSync(path, JSON.stringify(state, null, 2), { mode: 0o600 });
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   base = `/api/workspaces/${fixture.workspaceId}`,
   out = "docs/evaluation/core/graph-13-indirect";
 mkdirSync(out, { recursive: true });

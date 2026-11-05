@@ -2,7 +2,7 @@
 
 업무 자료와 실무 경험을 함께 쌓고, 근거를 확인하며 질문하는 팀의 지식 공간입니다.
 
-**웹 워크북:** 서비스를 실행한 뒤 [http://localhost:3010/workbook](http://localhost:3010/workbook)을 엽니다. 로그인 없이 교재를 읽고, 실습 자료를 내려받으며, 최신 교육생 교재를 인쇄·PDF로 저장할 수 있습니다. 위키 서비스의 로그인 화면과 상단 메뉴에서도 연결됩니다.
+**웹 워크북:** 서비스를 실행한 뒤 [http://localhost:3012/workbook](http://localhost:3012/workbook)을 엽니다. 로그인 없이 교재를 읽고, 실습 자료를 내려받으며, 최신 교육생 교재를 인쇄·PDF로 저장할 수 있습니다. 위키 서비스의 로그인 화면과 상단 메뉴에서도 연결됩니다.
 
 실습 소스: [jikime/domain-wiki](https://github.com/jikime/domain-wiki). 교육생은 **1단계 수업 안에서** [기본 도구·개발용 AI·디자인 하네스 설치](docs/training/environment-setup.md)와 [Git에서 받기·첫 실행](docs/training/getting-started.md)을 진행해 내 PC의 업무환경을 만듭니다. [단계별 상세 교육안](docs/training/README.md)에 따라 같은 프로젝트를 이어서 실습합니다. 기술의 목적과 구조를 이해하고, 교육생은 요구·AI 요청·결과 확인을 맡으며 구현과 기술 검사는 AI가 수행합니다.
 
@@ -24,7 +24,7 @@ UI는 hince 디자인 시스템으로 전면 교체했습니다. 상단 탐색·
 
 ## 로컬 실행
 
-**이미 첫 설정을 마쳤다면** Docker Desktop을 켜고 프로젝트에서 `npm run dev:all`을 실행합니다. DB 준비 후 웹 서버·작업자가 함께 시작되며, 접속 주소는 `http://localhost:3010`입니다. `Ctrl+C`로 웹 서버·작업자를 함께 종료하고 DB는 켜 둡니다. 처음 설치하는 경우에는 아래 준비 과정을 먼저 진행합니다.
+**이미 첫 설정을 마쳤다면** Docker Desktop을 켜고 프로젝트에서 `npm run dev:all`을 실행합니다. DB 준비 후 웹 서버·작업자가 함께 시작되며, 접속 주소는 `http://localhost:3012`입니다. `Ctrl+C`로 웹 서버·작업자를 함께 종료하고 DB는 켜 둡니다. 처음 설치하는 경우에는 아래 준비 과정을 먼저 진행합니다.
 
 모델 연결의 기본값은 **Claude Code CLI·sonnet**입니다. API·Codex CLI도 선택할 수 있습니다. 채팅과 지식 생성의 연결을 따로 지정하고, 임베딩·Tavily 검색은 기존 API를 유지할 수 있습니다. CLI 두 종류의 로컬 실제 응답을 확인했습니다. [서버 설정 예시·인증·검사 안내](docs/MODEL_TRANSPORTS.md)를 참고하세요.
 
@@ -43,11 +43,11 @@ npm run db:check-training
 npm run dev
 ```
 
-[http://localhost:3010](http://localhost:3010)으로 접속합니다. 별도 터미널에서 `npm run worker`를 실행해야 등록된 문서가 처리됩니다. 기존 `.env.local`을 유지한 경우 `BETTER_AUTH_URL`도 `http://localhost:3010`으로 맞춥니다.
+[http://localhost:3012](http://localhost:3012)으로 접속합니다. 별도 터미널에서 `npm run worker`를 실행해야 등록된 문서가 처리됩니다. 기존 `.env.local`을 유지한 경우 `BETTER_AUTH_URL`도 `http://localhost:3012`으로 맞춥니다.
 
 초기 관리자·이용 직원 계정과 무작위 비밀번호는 `.local/initial-accounts.json`, 작성·검토 직원 계정은 `.local/content-accounts.json`에 저장됩니다. 이 파일들과 `.env.local`은 Git에서 제외합니다. 기존 환경·DB·계정은 초기화 명령을 반복해도 유지합니다.
 
-교육용 샘플은 `db:seed-training`으로 준비합니다. 저장소의 `docs/training/samples/training-snapshot.json`에서 A/B 프로젝트·자료 6건·게시 위키 2건과 원본·근거를 추가하며, 기존 교육용 도메인이 있으면 덮어쓰지 않습니다. 계정·비밀번호는 각 PC의 것을 유지합니다. [샘플 준비와 복구 안내](docs/training/sample-data.md), [웹 안내](http://localhost:3010/workbook/sample-data)에서 검색 확인 순서와 백업 다운로드를 볼 수 있습니다.
+교육용 샘플은 `db:seed-training`으로 준비합니다. 저장소의 `docs/training/samples/training-snapshot.json`에서 A/B 프로젝트·자료 6건·게시 위키 2건과 원본·근거를 추가하며, 기존 교육용 도메인이 있으면 덮어쓰지 않습니다. 계정·비밀번호는 각 PC의 것을 유지합니다. [샘플 준비와 복구 안내](docs/training/sample-data.md), [웹 안내](http://localhost:3012/workbook/sample-data)에서 검색 확인 순서와 백업 다운로드를 볼 수 있습니다.
 
 웹 서버·작업자를 실행하는 사용자 계정에서 Claude Code를 설치하고 `claude`로 로그인합니다. 초기 설정은 `AI_TRANSPORT=claude-code`, `AI_MODEL=sonnet`이며, 별도 생성용 API 키 없이 기존 CLI 인증을 사용합니다. 설정 변경 후 웹 서버와 작업자를 함께 재시작합니다. 실제 연결은 관리자 화면의 **모델 연결 확인**으로 점검합니다.
 

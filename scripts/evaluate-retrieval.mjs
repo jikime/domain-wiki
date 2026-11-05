@@ -28,7 +28,7 @@ const statusRecheck = process.argv.includes("--status-recheck");
 const ingest = JSON.parse(
   readFileSync(".local/ingest-evaluation.json", "utf8"),
 );
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   base = `/api/workspaces/${fixture.workspaceId}`;
 const api = await request.newContext({
   baseURL: origin,

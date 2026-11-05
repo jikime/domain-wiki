@@ -2,7 +2,7 @@
   const offline = location.protocol === "file:";
   if (offline) {
     for (const link of document.querySelectorAll("[data-workbook]")) {
-      link.href = `http://localhost:3010${link.dataset.workbook}`;
+      link.href = `http://localhost:3012${link.dataset.workbook}`;
     }
     for (const link of document.querySelectorAll(
       'a[href="domain-wiki-lectures.zip"]',

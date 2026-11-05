@@ -19,7 +19,7 @@ const accounts = {
   writer: team.accounts.find((a) => a.role === "writer"),
   reviewer: team.accounts.find((a) => a.role === "reviewer"),
 };
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
 const manifestPath = process.argv.includes("--isolated")
     ? `.local/core-${phase}.json`

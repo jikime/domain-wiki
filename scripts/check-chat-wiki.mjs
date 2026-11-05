@@ -8,7 +8,7 @@ import { hashPassword } from "better-auth/crypto";
 import pg from "pg";
 
 nextEnv.loadEnvConfig(process.cwd());
-const origin = "http://localhost:3010";
+const origin = "http://localhost:3012";
 const database = new URL(process.env.DATABASE_URL);
 assert.ok(["localhost", "127.0.0.1"].includes(database.hostname));
 const pool = new pg.Pool({ connectionString: database.href, max: 2 });

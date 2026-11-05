@@ -42,4 +42,4 @@
 
 추가로 49개 노드·100개 연결의 브라우저 전용 표본을 1440px/390px에서 확인했다. 그래프 GET 응답만 시험 데이터로 바꾸었으며 DB에 자료를 추가하지 않았다. [입력과 결과](render-fixture.json), [49개 노드 화면](fixture-49-1440.png).
 
-재실행: `node scripts/evaluate-sigma-graph.mjs`. 개발 서버 3010과 기존 평가 계정·자료를 사용하며 게시 자료를 변경하지 않는다.
+재실행: `node scripts/evaluate-sigma-graph.mjs`. 개발 서버 3012과 기존 평가 계정·자료를 사용하며 게시 자료를 변경하지 않는다.

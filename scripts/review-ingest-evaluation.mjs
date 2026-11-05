@@ -30,7 +30,7 @@ expect(current.fileHash).toBe(
 );
 expect(current.run.state).toBe("review");
 expect(current.batches).toHaveLength(1);
-const origin = "http://localhost:3010";
+const origin = "http://localhost:3012";
 const base = `/api/workspaces/${fixture.workspaceId}`;
 const root = `/w/${fixture.workspaceId}`;
 const api = await request.newContext({

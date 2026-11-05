@@ -16,7 +16,7 @@ import pg from "pg";
 import sharp from "sharp";
 
 nextEnv.loadEnvConfig(process.cwd());
-const origin = "http://localhost:3010";
+const origin = "http://localhost:3012";
 assert.ok(
   ["localhost", "127.0.0.1"].includes(
     new URL(process.env.DATABASE_URL ?? "").hostname,

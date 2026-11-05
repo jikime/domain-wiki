@@ -19,7 +19,7 @@ beforeEach(() => {
     "BETTER_AUTH_SECRET",
     "test-secret-012345678901234567890123456789",
   );
-  vi.stubEnv("BETTER_AUTH_URL", "http://localhost:3010");
+  vi.stubEnv("BETTER_AUTH_URL", "http://localhost:3012");
 });
 afterEach(() => {
   vi.restoreAllMocks();

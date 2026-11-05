@@ -4,13 +4,13 @@
 
 ## 열기
 
-- 강의: http://localhost:3010/lectures/index.html
-- 워크북: http://localhost:3010/workbook
+- 강의: http://localhost:3012/lectures/index.html
+- 워크북: http://localhost:3012/workbook
 - HTML 묶음: public/lectures/domain-wiki-lectures.zip
 
 7개 강의, 총 175장입니다. 회차별로 17·20·61·20·20·20·17장입니다. 개발 교시에 계획과 실행 장을 따로 두므로 장수를 16장으로 고정하지 않습니다.
 
-각 HTML에는 이미지·스타일·탐색 코드가 포함됩니다. ZIP을 같은 폴더에 풀면 강의 사이를 이동할 수 있습니다. 파일에서 연 워크북 링크는 http://localhost:3010으로 연결되므로 서비스 실행이 필요합니다.
+각 HTML에는 이미지·스타일·탐색 코드가 포함됩니다. ZIP을 같은 폴더에 풀면 강의 사이를 이동할 수 있습니다. 파일에서 연 워크북 링크는 http://localhost:3012으로 연결되므로 서비스 실행이 필요합니다.
 
 ## 수업 구성
 

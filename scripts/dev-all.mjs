@@ -126,7 +126,7 @@ if (!stopping && dbCode !== 0) {
 } else if (!stopping) {
   children.delete(database.child);
   console.log(
-    "웹 서버·작업자를 시작합니다. 준비 로그를 확인한 뒤 http://localhost:3010 으로 접속하세요. 종료: Ctrl+C",
+    "웹 서버·작업자를 시작합니다. 준비 로그를 확인한 뒤 http://localhost:3012 으로 접속하세요. 종료: Ctrl+C",
   );
   for (const script of ["dev", "worker"]) {
     const running = launch(script);

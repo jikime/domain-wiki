@@ -17,7 +17,7 @@ const accounts = {
   writer: team.accounts.find((a) => a.role === "writer"),
   reviewer: team.accounts.find((a) => a.role === "reviewer"),
 };
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   base = `/api/workspaces/${fixture.workspaceId}`,
   root = `/w/${fixture.workspaceId}`;
 const statePath = ".local/analysis-evaluation.json";

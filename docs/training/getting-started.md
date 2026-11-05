@@ -44,7 +44,7 @@ AI 기본 연결은 **Claude Code CLI·sonnet**입니다. 같은 PC 사용자·�
 npm run dev:all
 ```
 
-DB 준비가 끝난 뒤 웹 서버와 문서 작업자가 함께 실행됩니다. 준비 로그를 확인한 뒤 `http://localhost:3010`에 접속합니다. `Ctrl+C`를 누르면 함께 실행한 웹 서버·작업자를 종료하고 DB는 켜 둡니다. 한 프로그램에 오류가 나면 함께 실행한 나머지 프로그램도 종료됩니다. 오류를 확인한 뒤 다시 실행합니다.
+DB 준비가 끝난 뒤 웹 서버와 문서 작업자가 함께 실행됩니다. 준비 로그를 확인한 뒤 `http://localhost:3012`에 접속합니다. `Ctrl+C`를 누르면 함께 실행한 웹 서버·작업자를 종료하고 DB는 켜 둡니다. 한 프로그램에 오류가 나면 함께 실행한 나머지 프로그램도 종료됩니다. 오류를 확인한 뒤 다시 실행합니다.
 
 ‘필요한 패키지가 설치되지 않았습니다’라는 안내가 나오면 이 프로젝트 폴더에서 `npm ci`를 실행한 뒤 다시 시작합니다. 소스를 새로 받았거나 `node_modules` 폴더가 없는 경우에 필요한 준비이며, DB가 정상이어도 패키지가 없으면 서비스를 실행할 수 없습니다.
 
@@ -64,7 +64,7 @@ npm run dev
 npm run worker
 ```
 
-브라우저에서 [http://localhost:3010](http://localhost:3010)에 접속합니다. 로그인 정보는 `.local/initial-accounts.json`과 `.local/content-accounts.json`에서 확인합니다. 수업 중에는 두 터미널을 실행 상태로 둡니다.
+브라우저에서 [http://localhost:3012](http://localhost:3012)에 접속합니다. 로그인 정보는 `.local/initial-accounts.json`과 `.local/content-accounts.json`에서 확인합니다. 수업 중에는 두 터미널을 실행 상태로 둡니다.
 
 다음에 다시 사용할 때는 DB가 켜져 있는지 확인하고 앱을 실행하면 됩니다. DB가 꺼져 있으면 `npm run db:up`으로 먼저 켭니다.
 

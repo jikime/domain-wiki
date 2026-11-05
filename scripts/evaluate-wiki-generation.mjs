@@ -19,7 +19,7 @@ const accounts = {
   reviewer: team.accounts.find((a) => a.role === "reviewer"),
   reader: initial.accounts.find((a) => !a.isAdmin),
 };
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   base = `/api/workspaces/${fixture.workspaceId}`,
   root = `/w/${fixture.workspaceId}`;
 const out = "docs/evaluation/core/generation-11",

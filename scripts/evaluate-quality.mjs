@@ -18,7 +18,7 @@ const accounts = {
 };
 const path = ".local/quality-evaluation.json",
   out = "docs/evaluation/core/quality-14",
-  origin = "http://localhost:3010",
+  origin = "http://localhost:3012",
   base = `/api/workspaces/${fixture.workspaceId}`,
   root = `/w/${fixture.workspaceId}`;
 mkdirSync(out, { recursive: true });

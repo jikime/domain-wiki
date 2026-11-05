@@ -6,7 +6,7 @@ const source = JSON.parse(readFileSync(".local/graph-evaluation.json", "utf8"));
 const account = JSON.parse(
   readFileSync(".local/content-accounts.json", "utf8"),
 ).accounts.find((a) => a.role === "writer");
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   out = "docs/improvements/06-sigma-graph";
 mkdirSync(out, { recursive: true });
 const api = await request.newContext({

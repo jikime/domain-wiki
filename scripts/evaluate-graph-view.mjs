@@ -6,7 +6,7 @@ const core = JSON.parse(readFileSync(".local/core-evaluation.json", "utf8")),
   quality = JSON.parse(readFileSync(".local/quality-evaluation.json", "utf8"));
 const team = JSON.parse(readFileSync(".local/content-accounts.json", "utf8")),
   account = team.accounts.find((a) => a.role === "writer");
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   out = "docs/evaluation/core/graph-15";
 mkdirSync(out, { recursive: true });
 const api = await request.newContext({

@@ -19,7 +19,7 @@ assert.ok(
     new URL(process.env.DATABASE_URL ?? "").hostname,
   ),
 );
-const origin = "http://localhost:3010",
+const origin = "http://localhost:3012",
   workspace = randomUUID(),
   outside = randomUUID(),
   domain = randomUUID();

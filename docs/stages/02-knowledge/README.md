@@ -26,7 +26,7 @@ npm run dev
 npm run worker
 ```
 
-접속 주소는 [http://localhost:3010](http://localhost:3010)이다. 현재 `dev` 스크립트의 포트에 맞춰 환경 예시와 신규 환경 생성 기본값을 3010으로 맞췄다. 기존 `.env.local`은 덮어쓰지 않으므로 `BETTER_AUTH_URL=http://localhost:3010`인지 확인한다. 1단계 문서는 당시 3000번 포트의 검증 기록을 유지한다.
+접속 주소는 [http://localhost:3012](http://localhost:3012)이다. 현재 `dev` 스크립트의 포트에 맞춰 환경 예시와 신규 환경 생성 기본값을 3012으로 맞췄다. 기존 `.env.local`은 덮어쓰지 않으므로 `BETTER_AUTH_URL=http://localhost:3012`인지 확인한다. 1단계 문서는 당시 3000번 포트의 검증 기록을 유지한다.
 
 Node.js 22.23.1과 PostgreSQL 17에서 검증했다. `pg-boss`는 Node.js 22.12 이상이 필요하다. 작업자가 실행되지 않아도 업로드는 DB 대기열에 남는다. 웹과 작업자는 같은 DB와 `ORIGINALS_DIR`에 접근해야 한다.
 
