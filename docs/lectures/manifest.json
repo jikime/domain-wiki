@@ -73,97 +73,97 @@
   },
   {
     "week": 4,
-    "slides": 20,
+    "slides": 54,
     "workMinutes": 160,
     "workbook": "week-04",
     "blocks": [
       {
-        "title": "같은 자료의 검색 결과 묶기",
+        "title": "자료별 검색과 원문 탐색",
         "id": "slide-04"
       },
       {
-        "title": "묶음 안의 문단을 읽고 근거 열기",
-        "id": "slide-08"
-      },
-      {
-        "title": "회사 동의어 입력을 편하게 만들기",
-        "id": "slide-12"
-      },
-      {
-        "title": "검색에 쓰인 용어와 결과 없음 안내하기",
+        "title": "근거를 보며 업무 절차 작성",
         "id": "slide-16"
+      },
+      {
+        "title": "본문 위치별 의견과 보완·게시",
+        "id": "slide-29"
+      },
+      {
+        "title": "원문 개정과 관련 위키 보완",
+        "id": "slide-41"
       }
     ]
   },
   {
     "week": 5,
-    "slides": 20,
+    "slides": 55,
     "workMinutes": 160,
     "workbook": "week-05",
     "blocks": [
       {
-        "title": "남은 기능과 DB 연결 마무리하기",
+        "title": "질문 저장과 범위 재사용",
         "id": "slide-04"
       },
       {
-        "title": "역할별 계정으로 직접 확인하고 고치기",
-        "id": "slide-08"
+        "title": "답변 근거와 개인 확인 기록",
+        "id": "slide-17"
       },
       {
-        "title": "각자의 코드와 DB 변경을 합치기",
-        "id": "slide-12"
+        "title": "관련 위키 비교와 탐색 복귀",
+        "id": "slide-30"
       },
       {
-        "title": "공용 반영 계획과 확인 순서 준비하기",
-        "id": "slide-16"
+        "title": "대표 구현과 첫 통합",
+        "id": "slide-42"
       }
     ]
   },
   {
     "week": 6,
-    "slides": 20,
+    "slides": 58,
     "workMinutes": 160,
     "workbook": "week-06",
     "blocks": [
       {
-        "title": "실패해도 작업을 이어 갈 수 있게 만들기",
+        "title": "RFP 항목 확인과 버전별 재확인",
         "id": "slide-04"
       },
       {
-        "title": "자료 개정 사실을 확인하고 근거 유지하기",
-        "id": "slide-08"
+        "title": "질문 답변과 후속 판단 관리",
+        "id": "slide-19"
       },
       {
-        "title": "다른 탭과 재접속에서도 저장 내용 맞추기",
-        "id": "slide-12"
+        "title": "회사 용어와 메뉴별 이용 안내",
+        "id": "slide-32"
       },
       {
-        "title": "운영 안내를 실제 화면에 연결하기",
-        "id": "slide-16"
+        "title": "추가 통합과 역할별 업무 확인",
+        "id": "slide-45"
       }
     ]
   },
   {
     "week": 7,
-    "slides": 17,
+    "slides": 45,
     "workMinutes": 160,
     "workbook": "week-07",
     "blocks": [
       {
-        "title": "새로운 업무에 위키 적용하기",
+        "title": "후속 단계 인수인계 준비하기",
         "id": "slide-04"
       },
       {
-        "title": "마지막 사용 불편 수정하기",
-        "id": "slide-07"
+        "title": "즐겨찾기 메모 저장 안정화하기",
+        "id": "slide-13"
       },
       {
-        "title": "운영 담당자가 직접 갱신·점검하기",
-        "id": "slide-11"
+        "title": "자료 갱신과 운영 점검하기",
+        "id": "slide-26"
       },
       {
-        "title": "실제 결과 시연과 후속 개발 결정하기",
-        "id": "slide-14"
+        "title": "최종 반영과 운영 인계하기",
+        "id": "slide-35"
       }
     ]
   }

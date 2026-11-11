@@ -960,6 +960,13 @@ svg {
   width: 100%;
   height: auto;
 }
+.opening-card-visual > .focus-capture {
+  height: 100%;
+}
+.opening-card-visual .focus-capture img {
+  height: 100%;
+  object-fit: contain;
+}
 .focus-expand {
   position: absolute;
   top: 0.4em;

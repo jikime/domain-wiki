@@ -80,22 +80,22 @@ export const workbookGroups: WorkbookGroup[] = [
       },
       {
         slug: "week-04",
-        title: "회사 업무에 맞게 검색 고도화하기",
+        title: "자료를 회사 업무 위키로 정리하기",
         file: "weeks/04-evaluation.md",
       },
       {
         slug: "week-05",
-        title: "기능을 끝까지 연결하기",
+        title: "채팅과 지식 그래프로 근거 확인하기",
         file: "weeks/05-development.md",
       },
       {
         slug: "week-06",
-        title: "실제 사용에 맞게 안정화하기",
+        title: "업무 결과물과 회사 설정 관리하기",
         file: "weeks/06-debugging.md",
       },
       {
         slug: "week-07",
-        title: "회사가 이어서 운영하기",
+        title: "통합 위키로 업무를 확인하고 운영 인계하기",
         file: "weeks/07-application.md",
       },
     ],
@@ -148,6 +148,36 @@ export const workbookGroups: WorkbookGroup[] = [
         slug: "record-practice",
         title: "기록 개발 실습 사례",
         file: "samples/record-practice.md",
+      },
+      {
+        slug: "wiki-practice",
+        title: "업무 절차 위키 실습 사례",
+        file: "samples/wiki-practice.md",
+      },
+      {
+        slug: "chat-graph-practice",
+        title: "질문·답변 확인·위키 비교 실습 사례",
+        file: "samples/chat-graph-practice.md",
+      },
+      {
+        slug: "rfp-practice",
+        title: "RFP·회사 설정 실습 사례",
+        file: "samples/rfp-practice.md",
+      },
+      {
+        slug: "handover-practice",
+        title: "운영 인수인계 실습 사례",
+        file: "samples/handover-practice.md",
+      },
+      {
+        slug: "handover-source-v1",
+        title: "운영 연습 원문 v1",
+        file: "samples/handover-source-v1.md",
+      },
+      {
+        slug: "handover-source-v2",
+        title: "운영 연습 원문 v2",
+        file: "samples/handover-source-v2.md",
       },
       {
         slug: "acceptance-v2",

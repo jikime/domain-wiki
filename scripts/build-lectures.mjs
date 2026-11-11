@@ -176,7 +176,7 @@ function content(s, id, period = 1, periodStart = false) {
     const current = s.asset
       ? `<figure class="bundle-current"><figcaption><strong>현재 화면</strong><span>${esc(s.route)}</span></figcaption><button class="bundle-capture" type="button" data-capture aria-label="${esc(s.route)} 실제 화면 크게 보기"><img src="${captureAssets.get(s.asset)}" alt="${esc(s.alt)}"><span class="js-only">크게 보기 ↗</span></button><p>${esc(s.current)}</p><small>실제 스타터킷 · 가상 자료 · 개선 전 캡처</small></figure>`
       : `<section class="bundle-current"><div class="bundle-caption"><strong>${esc(s.currentLabel || "현재 연결")}</strong><span>${esc(s.currentBasis || "코드에서 확인한 흐름")}</span></div><ol class="bundle-current-flow">${s.currentFlow.map((step, i) => `<li><span>${pad(i + 1)}</span><div><h3>${esc(step.title)}</h3><p>${esc(step.body)}</p></div></li>`).join("")}</ol><p>${esc(s.current)}</p><small>${esc(s.currentNote || "브라우저 뒤로 가기와 화면 안의 목록 링크는 다릅니다.")}</small></section>`;
-    return `<div class="iteration-layout bundle-layout"><div class="bundle-stage"><header class="focus-header">${periodContext(period, "이번에 이어 만들 기능")}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><div class="bundle-grid">${current}<section class="bundle-target"><div class="bundle-caption"><strong>이번에 만들 화면 · 예시</strong><span>앞으로 만들 모습입니다</span></div><p class="bundle-target-title">${esc(s.target)}</p><ol>${s.features.map((feature, i) => `<li><span>${pad(i + 1)}</span><div><h3>${esc(feature.title)}</h3><p>${esc(feature.body)}</p></div></li>`).join("")}</ol></section></div><div class="bundle-question"><h3>${esc(s.question)}</h3><p>${esc(s.example)}</p></div><footer class="focus-footer"><p>${esc(s.footer || "첫 동작을 만들고, 다음 두 기능을 이어 개발합니다.")}</p>${refs(s.refs)}</footer></div></div>`;
+    return `<div class="iteration-layout bundle-layout"><div class="bundle-stage"><header class="focus-header">${periodContext(period, s.bundleLabel || "이번에 이어 만들 기능")}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><div class="bundle-grid">${current}<section class="bundle-target"><div class="bundle-caption"><strong>${esc(s.targetHeading || "이번에 만들 화면 · 예시")}</strong><span>${esc(s.targetNote || "앞으로 만들 모습입니다")}</span></div><p class="bundle-target-title">${esc(s.target)}</p><ol>${s.features.map((feature, i) => `<li><span>${pad(i + 1)}</span><div><h3>${esc(feature.title)}</h3><p>${esc(feature.body)}</p></div></li>`).join("")}</ol></section></div><div class="bundle-question"><h3>${esc(s.question)}</h3><p>${esc(s.example)}</p></div><footer class="focus-footer"><p>${esc(s.footer || "첫 동작을 만들고, 다음 두 기능을 이어 개발합니다.")}</p>${refs(s.refs)}</footer></div></div>`;
   }
   if (s.kind === "compare" && s.layout === "verification") {
     if (s.observations.length !== 3 || !s.exampleLabel || !s.followUp.body)
@@ -218,7 +218,7 @@ function content(s, id, period = 1, periodStart = false) {
       throw new Error(`Invalid request: ${s.title}`);
     const prompt = esc(s.text);
     const flow = s.flow || ["내 작업으로 바꾸기", "입력", "화면 확인"];
-    return `<div class="request-layout"><div class="request-stage" data-phase="${esc(s.phase || "implement")}"><header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag || "작은 변경부터 요청하기")}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header><div class="request-grid"><section class="request-panel" aria-label="복사해서 쓸 요청 예시"><div class="request-location"><span>입력할 곳</span><strong>${esc(s.where)}</strong></div><pre id="${id}-input" class="request-source copy-source">${prompt}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="${s.phase === "plan" ? "계획 요청을 복사했습니다. 답변을 확인한 뒤 실행 요청으로 넘어가세요." : "실행 요청을 복사했습니다. 계획을 확인한 경우에만 보내세요."}">${s.phase === "plan" ? "계획 요청 복사" : "실행 요청 복사"}</button><span class="status" role="status"></span></div></section><aside class="request-review"><h3>${esc(s.reviewHeading || "내가 정할 것")}</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol><div class="request-adapt"><strong>${esc(s.adaptHeading || "예시를 내 작업으로")}</strong><p>${esc(s.adapt)}</p></div></aside></div><footer class="request-footer"><p>${flow.map(esc).join(' <span aria-hidden="true">→</span> ')}</p>${s.alternative ? `<nav class="refs" aria-label="선택한 기능의 요청 예시">${workbook(s.refs[0], "A·B 요청 보기", s.workbookAnchor)}${workbook(s.refs[1], "회사 개발 노트")}</nav>` : refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
+    return `<div class="request-layout"><div class="request-stage" data-phase="${esc(s.phase || "implement")}"><header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag || "작은 변경부터 요청하기")}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header><div class="request-grid"><section class="request-panel" aria-label="복사해서 쓸 요청 예시"><div class="request-location"><span>입력할 곳</span><strong>${esc(s.where)}</strong></div><pre id="${id}-input" class="request-source copy-source">${prompt}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="${esc(s.copyMessage || (s.phase === "plan" ? "계획 요청을 복사했습니다. 답변을 확인한 뒤 실행 요청으로 넘어가세요." : "실행 요청을 복사했습니다. 계획을 확인한 경우에만 보내세요."))}">${esc(s.copyLabel || (s.phase === "plan" ? "계획 요청 복사" : "실행 요청 복사"))}</button><span class="status" role="status"></span></div></section><aside class="request-review"><h3>${esc(s.reviewHeading || "내가 정할 것")}</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol><div class="request-adapt"><strong>${esc(s.adaptHeading || "예시를 내 작업으로")}</strong><p>${esc(s.adapt)}</p></div></aside></div><footer class="request-footer"><p>${flow.map(esc).join(' <span aria-hidden="true">→</span> ')}</p>${s.alternative ? `<nav class="refs" aria-label="선택한 기능의 요청 예시">${workbook(s.refs[0], "A·B 요청 보기", s.workbookAnchor)}${workbook(s.refs[1], "회사 개발 노트")}</nav>` : refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
   }
   if (s.kind === "capture" && s.layout === "focus") {
     if (
@@ -345,10 +345,21 @@ for (const week of course.weeks) {
       }
     }
     const allRequests = block.slides.filter((s) => s.kind === "input");
+    if (
+      allRequests.some(
+        (s) =>
+          s.supplemental &&
+          (s.phase !== "activity" || s.activityType !== "record"),
+      )
+    )
+      throw new Error("Supplemental input must be an activity record");
     const setupRequests = allRequests.filter((s) => s.setup);
     const requests = allRequests.filter(
       (s) =>
-        !s.setup && s.followup === undefined && s.applicationStep === undefined,
+        !s.setup &&
+        !s.supplemental &&
+        s.followup === undefined &&
+        s.applicationStep === undefined,
     );
     if (
       requests.length !== (block.mode === "development" ? 2 : 1) ||
@@ -389,6 +400,14 @@ for (const week of course.weeks) {
       )
         throw new Error(`Incomplete setup plan and execution: ${block.title}`);
     }
+    const requestIndex = block.slides.indexOf(finalRequest);
+    const practiceIndex = block.slides.indexOf(practice);
+    const practiceContext = block.slides.slice(requestIndex + 1, practiceIndex);
+    const practiceFollowsRequest =
+      practiceIndex === requestIndex + 1 ||
+      (block.allowPracticeContext &&
+        practiceIndex > requestIndex &&
+        practiceContext.every((s) => s.kind === "compare" || s.supplemental));
     if (
       block.mode === "development" &&
       (requests[0].phase !== "plan" ||
@@ -396,8 +415,7 @@ for (const week of course.weeks) {
         !requests[0].text.includes("아직 바꾸지 마") ||
         block.slides.indexOf(requests[0]) + 1 !==
           block.slides.indexOf(request) ||
-        block.slides.indexOf(practice) !==
-          block.slides.indexOf(finalRequest) + 1)
+        !practiceFollowsRequest)
     )
       throw new Error(
         `Practice must continue from its request slide: ${block.title}`,
@@ -570,7 +588,7 @@ ${warmup.text}
       .filter((slug) => slug !== page.slug)
       .map(mdLink);
     const followups = practice.followups?.length
-      ? `**이어서 개발하기**\n\n기본 기능을 확인한 뒤 이어갑니다. 각 요청 상자는 한 번에 입력하되, 계획과 실행을 함께 보내지 않습니다. 이미 완성한 동작은 확인하고 건너뜁니다. ${block.application ? (block.application.mode === "sequence" ? "후속 두 기능과 아래 두 단계의 업무 적용까지 모두 기본 실습입니다. 강사와 같은 순서로 진행합니다." : "후속 두 기능과 아래 업무 적용 한 가지까지 기본 실습입니다. 그다음 추가 도전을 고릅니다.") : "선택 과제는 기본 기능 뒤에 진행합니다."}\n\n${practice.followups.map((item) => `### ${item.optional ? "선택 과제" : "다음 기능"} · ${item.title}\n\n${item.intro ? `${item.intro}\n\n` : ""}**먼저 계획 요청**\n\n\`\`\`text\n${item.plan}\n\`\`\`\n\n**내가 확인할 것**\n\n${item.review.map((r) => `- ${r}`).join("\n")}\n\n**계획을 확인한 뒤 실행**\n\n\`\`\`text\n${item.text}\n\`\`\`${item.verify?.length ? `\n\n**다음 기능 전에 직접 확인**\n\n${item.verify.map((step, index) => `${index + 1}. ${step}`).join("\n")}` : ""}`).join("\n\n")}\n\n`
+      ? `**이어서 개발하기**\n\n기본 기능을 확인한 뒤 이어갑니다. 각 요청 상자는 한 번에 입력하되, 계획과 실행을 함께 보내지 않습니다. 이미 완성한 동작은 확인하고 건너뜁니다. ${practice.followupIntro || (block.application ? (block.application.mode === "sequence" ? "후속 두 기능과 아래 두 단계의 업무 적용까지 모두 기본 실습입니다. 강사와 같은 순서로 진행합니다." : "후속 두 기능과 아래 업무 적용 한 가지까지 기본 실습입니다. 그다음 추가 도전을 고릅니다.") : "선택 과제는 기본 기능 뒤에 진행합니다.")}\n\n${practice.followups.map((item) => `### ${item.optional ? "선택 과제" : "다음 기능"} · ${item.title}\n\n${item.intro ? `${item.intro}\n\n` : ""}**먼저 계획 요청**\n\n\`\`\`text\n${item.plan}\n\`\`\`\n\n**내가 확인할 것**\n\n${item.review.map((r) => `- ${r}`).join("\n")}\n\n**계획을 확인한 뒤 실행**\n\n\`\`\`text\n${item.text}\n\`\`\`${item.verify?.length ? `\n\n**다음 기능 전에 직접 확인**\n\n${item.verify.map((step, index) => `${index + 1}. ${step}`).join("\n")}` : ""}`).join("\n\n")}\n\n`
       : "";
     const application = block.application;
     const perStepPlan = application?.executionSteps?.some((step) => step.plan);
@@ -613,7 +631,7 @@ ${application.checkSteps?.length ? `${application.checkSteps.map((step, index) =
 
 [함께 볼 강의 화면](/lectures/week-${pad(week.week)}.html#${starts[i].id})
 
-${block.startFrom ? `**앞에서 이어받을 것:** ${block.startFrom}\n\n` : ""}${setupSection}${(practice.workbookSteps || practice.steps).map((step, index) => `${index + 1}. ${step}`).join("\n")}
+${block.startFrom ? `**앞에서 이어받을 것:** ${block.startFrom}\n\n` : ""}${block.workbookContext ? `${block.workbookContext}\n\n` : ""}${setupSection}${(practice.workbookSteps || practice.steps).map((step, index) => `${index + 1}. ${step}`).join("\n")}
 
 ${practice.decision ? `**내가 정할 것:** ${practice.decision}\n\n` : ""}${block.storage ? `**저장 기준:** ${block.storage}\n\n` : ""}**입력할 곳:** ${input.where}
 
