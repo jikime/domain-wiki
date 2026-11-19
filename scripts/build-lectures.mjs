@@ -182,7 +182,11 @@ function content(s, id, period = 1, periodStart = false) {
   if (s.kind === "compare" && s.layout === "verification") {
     if (s.observations.length !== 3 || !s.exampleLabel || !s.followUp.body)
       throw new Error(`Invalid verification slide: ${s.title}`);
-    return `<div class="iteration-layout"><div class="iteration-stage"><header class="focus-header">${periodContext(period, s.stageTag, periodStart)}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><section class="verification-example" aria-label="직접 확인하고 보완할 곳을 정하는 예시"><p class="verification-caption">${esc(s.exampleLabel)}</p><ol class="verification-observations">${s.observations.map((item, i) => `<li><div><span aria-hidden="true">${pad(i + 1)}</span><h3>${esc(item.title)}</h3></div><p>${esc(item.body)}</p></li>`).join("")}</ol><div class="verification-next"><span>${esc(s.followUp.label)}</span><strong>${esc(s.followUp.body)}</strong></div></section><div class="focus-discussion"><div><h3>${esc(s.question)}</h3><p>${esc(s.action)}</p></div></div><footer class="focus-footer"><p>${esc(s.note)}</p>${refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
+    const discussion =
+      s.question && s.action
+        ? `<div class="focus-discussion"><div><h3>${esc(s.question)}</h3><p>${esc(s.action)}</p></div></div>`
+        : "";
+    return `<div class="iteration-layout"><div class="iteration-stage"><header class="focus-header">${periodContext(period, s.stageTag, periodStart)}<h2>${title(s.title)}</h2><p>${esc(s.lead)}</p></header><section class="verification-example" aria-label="직접 확인하고 보완할 곳을 정하는 예시"><p class="verification-caption">${esc(s.exampleLabel)}</p><ol class="verification-observations">${s.observations.map((item, i) => `<li><div><span aria-hidden="true">${pad(i + 1)}</span><h3>${esc(item.title)}</h3></div><p>${esc(item.body)}</p></li>`).join("")}</ol><div class="verification-next"><span>${esc(s.followUp.label)}</span><strong>${esc(s.followUp.body)}</strong></div></section>${discussion}<footer class="focus-footer"><p>${esc(s.note)}</p>${refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
   }
   if (s.kind === "compare" && s.layout === "iteration") {
     if (
@@ -290,10 +294,10 @@ function combinedRequest(s, id, period) {
 <div class="request-grid">
 <section class="request-panel" aria-label="계획 요청"><div class="request-location"><span>① 계획 요청</span><strong>${esc(s.where)}</strong></div>
 <pre id="${id}-input" class="request-source copy-source">${esc(s.text)}</pre>
-<div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="계획 요청을 복사했습니다. AI의 계획을 읽고 오른쪽 항목을 확인하세요.">계획 요청 복사</button><span class="status" role="status"></span></div></section>
+<div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="계획 요청을 복사했습니다.">계획 요청 복사</button><span class="status" role="status"></span></div></section>
 <aside class="request-review"><h3>② 계획에서 확인할 점</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol>
-<section class="request-execution" aria-label="계획 확인 후 실행"><h3>③ 확인했으면 같은 대화에</h3><pre id="${id}-execute" class="copy-source">${esc(s.execute)}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-execute" data-copy-message="실행 요청을 복사했습니다. 확인한 계획의 대화에 보내세요.">실행 요청 복사</button><span class="status" role="status"></span></div></section></aside>
-</div><footer class="request-footer request-inline-check"><strong>실행 후 확인</strong><p>${esc(s.afterExecute)}</p></footer></div></div>`;
+<section class="request-execution" aria-label="계획 확인 후 실행"><h3>③ 확인했으면 같은 대화에</h3><pre id="${id}-execute" class="copy-source">${esc(s.execute)}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-execute" data-copy-message="실행 요청을 복사했습니다.">실행 요청 복사</button><span class="status" role="status"></span></div></section></aside>
+</div><footer class="request-footer request-inline-check"><strong>④ 직접 해 보기</strong><p>${esc(s.afterExecute)}</p></footer></div></div>`;
 }
 
 function validateCombinedBlock(block, practice) {
