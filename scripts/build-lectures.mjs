@@ -8,11 +8,12 @@ const root = new URL("../", import.meta.url);
 const course = JSON.parse(
   await readFile(new URL("docs/lectures/course.json", root), "utf8"),
 );
-const [css, js, art, workflowCss] = await Promise.all([
+const [css, js, art, workflowCss, combinedCss] = await Promise.all([
   readFile(new URL("src/styles/lectures.css", root), "utf8"),
   readFile(new URL("scripts/lib/lecture-navigation.js", root), "utf8"),
   readFile(new URL("public/lectures/assets/knowledge-library.png", root)),
   readFile(new URL("src/styles/lecture-workflow.css", root), "utf8"),
+  readFile(new URL("src/styles/lecture-combined.css", root), "utf8"),
 ]);
 const timing = course.timing;
 if (
@@ -202,7 +203,7 @@ function content(s, id, period = 1, periodStart = false) {
       s.recordFields.length !== 3
     )
       throw new Error(`Invalid lab slide: ${s.title}`);
-    const requestId = `slide-${pad(Number(id.slice(6)) - 1)}`;
+    const requestId = `slide-${pad(Number(id.slice(6)) - (s.requestOffset || 1))}`;
     const extra = s.inputExample
       ? `<section class="lab-record"><h3>${esc(s.inputExample.title)}</h3>${s.inputExample.fields.map((field) => `<p><strong>${esc(field.label)}</strong> · ${esc(field.value)}</p>`).join("")}</section>`
       : s.nextTask
@@ -216,6 +217,7 @@ function content(s, id, period = 1, periodStart = false) {
   if (s.kind === "input" && s.layout === "request") {
     if (!s.text.trim() || s.checks.length !== 3)
       throw new Error(`Invalid request: ${s.title}`);
+    if (s.execute) return combinedRequest(s, id, period);
     const prompt = esc(s.text);
     const flow = s.flow || ["내 작업으로 바꾸기", "입력", "화면 확인"];
     return `<div class="request-layout"><div class="request-stage" data-phase="${esc(s.phase || "implement")}"><header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag || "작은 변경부터 요청하기")}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header><div class="request-grid"><section class="request-panel" aria-label="복사해서 쓸 요청 예시"><div class="request-location"><span>입력할 곳</span><strong>${esc(s.where)}</strong></div><pre id="${id}-input" class="request-source copy-source">${prompt}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="${esc(s.copyMessage || (s.phase === "plan" ? "계획 요청을 복사했습니다. 답변을 확인한 뒤 실행 요청으로 넘어가세요." : "실행 요청을 복사했습니다. 계획을 확인한 경우에만 보내세요."))}">${esc(s.copyLabel || (s.phase === "plan" ? "계획 요청 복사" : "실행 요청 복사"))}</button><span class="status" role="status"></span></div></section><aside class="request-review"><h3>${esc(s.reviewHeading || "내가 정할 것")}</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol><div class="request-adapt"><strong>${esc(s.adaptHeading || "예시를 내 작업으로")}</strong><p>${esc(s.adapt)}</p></div></aside></div><footer class="request-footer"><p>${flow.map(esc).join(' <span aria-hidden="true">→</span> ')}</p>${s.alternative ? `<nav class="refs" aria-label="선택한 기능의 요청 예시">${workbook(s.refs[0], "A·B 요청 보기", s.workbookAnchor)}${workbook(s.refs[1], "회사 개발 노트")}</nav>` : refs(s.refs, s.workbookAnchor)}</footer></div></div>`;
@@ -282,6 +284,49 @@ function content(s, id, period = 1, periodStart = false) {
   }
   return `${body}${note(s.note)}${refs(s.refs)}`;
 }
+function combinedRequest(s, id, period) {
+  return `<div class="request-layout"><div class="request-stage request-combined" data-phase="combined">
+<header class="request-header"><p class="request-tag">${period}교시 <span>${esc(s.stageTag)}</span></p><h2>${title(s.title)}</h2><p class="request-lead">${esc(s.lead)}</p></header>
+<div class="request-grid">
+<section class="request-panel" aria-label="계획 요청"><div class="request-location"><span>① 계획 요청</span><strong>${esc(s.where)}</strong></div>
+<pre id="${id}-input" class="request-source copy-source">${esc(s.text)}</pre>
+<div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-input" data-copy-message="계획 요청을 복사했습니다. AI의 계획을 읽고 오른쪽 항목을 확인하세요.">계획 요청 복사</button><span class="status" role="status"></span></div></section>
+<aside class="request-review"><h3>② 계획에서 확인할 점</h3><ol>${s.checks.map((check, i) => `<li><span aria-hidden="true">${pad(i + 1)}</span><div><h4>${esc(check.title)}</h4><p>${esc(check.body)}</p></div></li>`).join("")}</ol>
+<section class="request-execution" aria-label="계획 확인 후 실행"><h3>③ 확인했으면 같은 대화에</h3><pre id="${id}-execute" class="copy-source">${esc(s.execute)}</pre><div class="request-copy js-only"><button type="button" class="copy" data-copy="${id}-execute" data-copy-message="실행 요청을 복사했습니다. 확인한 계획의 대화에 보내세요.">실행 요청 복사</button><span class="status" role="status"></span></div></section></aside>
+</div><footer class="request-footer request-inline-check"><strong>실행 후 확인</strong><p>${esc(s.afterExecute)}</p></footer></div></div>`;
+}
+
+function validateCombinedBlock(block, practice) {
+  const requests = block.slides.filter((s) => s.kind === "input");
+  if (
+    block.mode !== "development" ||
+    block.slides.filter((s) => s.kind === "practice").length !== 1 ||
+    requests.length !== 1 + (practice?.followups?.length || 0)
+  )
+    throw new Error(`Invalid combined block: ${block.title}`);
+  let previous = -1;
+  for (const [index, request] of requests.entries()) {
+    const position = block.slides.indexOf(request);
+    if (
+      request.phase !== "plan" ||
+      request.layout !== "request" ||
+      request.requestStep !== index ||
+      request.followup !== (index ? index - 1 : undefined) ||
+      !request.where?.trim() ||
+      !request.text?.includes("아직 바꾸지 마") ||
+      request.execute !== "계획한 대로 실행해줘." ||
+      request.checks?.length !== 3 ||
+      request.verify?.length !== 3 ||
+      !request.afterExecute?.trim() ||
+      (index && position !== previous + 1)
+    )
+      throw new Error(`Invalid combined request: ${request.title}`);
+    previous = position;
+  }
+  if (block.slides.indexOf(practice) !== previous + 1)
+    throw new Error(`Combined practice order: ${block.title}`);
+}
+
 await mkdir(output, { recursive: true });
 const files = new Map();
 const manifests = [];
@@ -309,6 +354,11 @@ for (const week of course.weeks) {
       )
         throw new Error(`Invalid follow-up slide: ${slide.title}`);
       slide.text = slide.phase === "plan" ? followup.plan : followup.text;
+      if (block.requestLayout === "combined") slide.execute = followup.text;
+    }
+    if (block.requestLayout === "combined") {
+      validateCombinedBlock(block, practice);
+      continue;
     }
     const applicationRequests = block.slides.filter(
       (s) => s.applicationStep !== undefined,
@@ -531,7 +581,10 @@ for (const week of course.weeks) {
       `${week.week}회차 · ${week.title}`,
       `${chapters}${toc}<main class="deck" id="main">${slides.map((s) => s.html).join("\n")}</main>${controls}${captureDialog}`,
       "lecture-page",
-      week.agenda?.layout === "workflow" ? workflowCss : "",
+      (week.agenda?.layout === "workflow" ? workflowCss : "") +
+        (week.blocks.some((b) => b.requestLayout === "combined")
+          ? combinedCss
+          : ""),
     ),
   );
   manifests.push({
@@ -567,9 +620,12 @@ ${warmup.text}
       (s) => s.phase === "plan" && !s.setup && s.followup === undefined,
     );
     const input =
-      block.slides.find(
-        (s) => s.phase === "implement" && !s.setup && s.followup === undefined,
-      ) || block.slides.find((s) => s.kind === "input");
+      block.requestLayout === "combined"
+        ? { ...plan, text: plan.execute }
+        : block.slides.find(
+            (s) =>
+              s.phase === "implement" && !s.setup && s.followup === undefined,
+          ) || block.slides.find((s) => s.kind === "input");
     const setupPlan = block.slides.find((s) => s.setup && s.phase === "plan");
     const setupInput = block.slides.find(
       (s) => s.setup && s.phase === "implement",

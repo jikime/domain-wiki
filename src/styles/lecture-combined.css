@@ -1,0 +1,71 @@
+/* 계획·실행을 한 장에 묶는 강의에만 포함합니다. */
+.request-combined .request-review ol {
+  flex: 1;
+}
+.request-execution {
+  margin-top: 0.7cqw;
+  border: 1px solid var(--border);
+  background: var(--brand-tint);
+}
+.request-execution h3 {
+  margin: 0;
+  padding: 0.8cqw 1cqw 0;
+  font-size: 1.2cqw;
+  line-height: 1.5;
+}
+.request-execution .copy-source {
+  margin: 0;
+  padding: 0.8cqw 1cqw;
+  background: transparent;
+  white-space: pre-wrap;
+  font: inherit;
+  font-size: 1.5cqw;
+  line-height: 1.5;
+}
+.request-execution .request-copy {
+  flex-wrap: wrap;
+  padding: 0.6cqw 1cqw;
+}
+.request-combined .request-panel .copy-source {
+  min-height: 0;
+  flex: 1 1 auto;
+}
+.request-combined .request-panel > .request-copy {
+  flex-shrink: 0;
+}
+.request-inline-check {
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-top: 0.8cqw;
+  border-top: 1px solid var(--border);
+}
+.request-inline-check > strong {
+  flex-shrink: 0;
+  font-size: 1.3cqw;
+  color: var(--brand-deep);
+}
+.request-inline-check > p {
+  line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .request-inline-check {
+    padding-top: 16px;
+  }
+  .request-inline-check > strong {
+    font-size: 16px;
+  }
+  .request-execution {
+    margin-top: 16px;
+  }
+  .request-execution h3 {
+    padding: 16px 16px 0;
+    font-size: 16px;
+  }
+  .request-execution .copy-source {
+    padding: 16px;
+    font-size: 20px;
+  }
+  .request-execution .request-copy {
+    padding: 12px 16px;
+  }
+}

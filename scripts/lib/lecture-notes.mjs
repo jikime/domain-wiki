@@ -65,6 +65,17 @@ export function lectureNotes(week, slides) {
       ending =
         "버튼 이름만 바꾸지 말고 실제 동작이 달라진 한 가지를 직접 확인해 주세요.";
       transition = block.application.done;
+    } else if (source.phase === "plan" && source.execute) {
+      core =
+        "계획과 실행을 같은 장에서 진행하되, 교육생이 계획을 확인한 뒤 실행한다.";
+      opening =
+        "계획을 요청하고 오른쪽 기준으로 원하는 동작인지 확인해 보겠습니다.";
+      order = "계획 요청 → 내가 확인·수정 → 같은 대화에서 실행";
+      example = source.checks.map((c) => `${c.title}: ${c.body}`).join(" / ");
+      ending =
+        "계획이 맞으면 실행 요청을 보내고, 이 장 하단의 사례로 직접 확인하세요.";
+      transition =
+        "계획과 실행의 복사 버튼을 따로 사용하고 요구사항을 다시 나열하지 않는다.";
     } else if (source.phase === "plan") {
       core =
         "AI의 계획을 읽고 동작·저장·권한·확인 방법을 교육생이 판단한다. 이 단계에서는 구현하지 않는다.";
@@ -169,7 +180,7 @@ export function lectureNotes(week, slides) {
 - **사례 하나:** ${example}
 - **마무리할 말:** “${ending}”
 - **전환 기준:** ${transition}
-${storage ? `- **저장·권한 코칭:** ${storage}\n` : ""}${source?.kind === "practice" && source.extensions?.length ? `- **시간이 남으면:** ${source.extensions.map((e) => `${e.title}: ${e.body}`).join(" / ")}\n` : ""}`;
+${storage ? `- **저장·권한 코칭:** ${storage}\n` : ""}${source?.execute && source.verify?.length ? `- **실행 후 직접 확인:** ${source.verify.join(" / ")}\n` : ""}${source?.kind === "practice" && source.extensions?.length ? `- **시간이 남으면:** ${source.extensions.map((e) => `${e.title}: ${e.body}`).join(" / ")}\n` : ""}`;
   });
   return `# ${week.week}회차 강사용 설명 메모 — ${week.title}
 

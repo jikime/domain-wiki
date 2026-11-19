@@ -97,7 +97,7 @@
   },
   {
     "week": 5,
-    "slides": 55,
+    "slides": 39,
     "workMinutes": 160,
     "workbook": "week-05",
     "blocks": [
@@ -107,15 +107,15 @@
       },
       {
         "title": "답변 근거와 개인 확인 기록",
-        "id": "slide-17"
+        "id": "slide-13"
       },
       {
         "title": "관련 위키 비교와 탐색 복귀",
-        "id": "slide-30"
+        "id": "slide-22"
       },
       {
         "title": "대표 구현과 첫 통합",
-        "id": "slide-42"
+        "id": "slide-30"
       }
     ]
   },
